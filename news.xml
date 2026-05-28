@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fireblocks Office Ticker — Crypto News</title>
+    <link>https://dmfbks.github.io/office-ticker/news.xml</link>
+    <description>Curated crypto news headlines. Refreshed every 30 min.</description>
+    <language>en-us</language>
+    <ttl>30</ttl>
+    <item>
+      <title>       Bitcoin hits 6-week low as U.S.-Iran strikes roil global markets</title>
+      <guid isPermaLink="false">news-1f383c9a852a713e</guid>
+    </item>
+    <item>
+      <title>       BlackRock&#x27;s IBIT sees $528M outflow, second-largest daily withdrawal on record</title>
+      <guid isPermaLink="false">news-33f645c5b50a8b2a</guid>
+    </item>
+    <item>
+      <title>       Samsung units to take $408M stake in South Korea&#x27;s largest crypto exchange</title>
+      <guid isPermaLink="false">news-25117e8c114a643d</guid>
+    </item>
+    <item>
+      <title>       CFTC seeks to reverse prior settlement deal with crypto exchange Gemini</title>
+      <guid isPermaLink="false">news-bc715a23378ea9aa</guid>
+    </item>
+    <item>
+      <title>       White House reviews CFTC prediction-market rule; Trump backs federal oversight</title>
+      <guid isPermaLink="false">news-950186283698d643</guid>
+    </item>
+    <item>
+      <title>       BIS Project Agorá demonstrates tokenized cross-border payments settling in seconds</title>
+      <guid isPermaLink="false">news-4f629204597b2ea0</guid>
+    </item>
+    <item>
+      <title>       Chainalysis report finds crypto firms tightening compliance, but gaps remain</title>
+      <guid isPermaLink="false">news-11a59d119fcb6160</guid>
+    </item>
+    <item>
+      <title>       Ether falls below $2,000 even as ETH futures open interest hits record 16M</title>
+      <guid isPermaLink="false">news-720c6d230c5a6a5e</guid>
+    </item>
+    <item>
+      <title>       Polymarket says KYC requirements limited to beta product, not main platform</title>
+      <guid isPermaLink="false">news-3dc205be618e01eb</guid>
+    </item>
+    <item>
+      <title>       Most Bitcoin CME gaps near resolution; three remain unfilled</title>
+      <guid isPermaLink="false">news-5f3b584bedf27b61</guid>
+    </item>
+  </channel>
+</rss>

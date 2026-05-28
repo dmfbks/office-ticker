@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fireblocks Office Ticker — Crypto Prices</title>
+    <link>https://dmfbks.github.io/office-ticker/prices.xml</link>
+    <description>Live crypto prices (BTC, ETH, SOL, XRP). Refreshed every 10 min.</description>
+    <language>en-us</language>
+    <ttl>10</ttl>
+    <item>
+      <title>       BTC  $73,284  -3.20%</title>
+      <guid isPermaLink="false">prices-btc</guid>
+    </item>
+    <item>
+      <title>       ETH  $1,986  -4.47%</title>
+      <guid isPermaLink="false">prices-eth</guid>
+    </item>
+    <item>
+      <title>       SOL  $80.63  -3.96%</title>
+      <guid isPermaLink="false">prices-sol</guid>
+    </item>
+    <item>
+      <title>       XRP  $1.28  -3.27%</title>
+      <guid isPermaLink="false">prices-xrp</guid>
+    </item>
+  </channel>
+</rss>
