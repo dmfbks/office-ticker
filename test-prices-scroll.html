@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <title>Office Ticker — Prices (Scroll Test)</title>
+
+  <!-- Figtree from Google Fonts. If Colorlight player can't reach googleapis,
+       we'll self-host the .woff2 files in /fonts/ — easy swap. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --scroll-duration: 50s;     /* time to scroll one full set off-screen */
+      --color-bg: #000;
+      --color-text: #fff;
+      --color-up: #22c55e;        /* bright LED-friendly green */
+      --color-down: #ef4444;      /* bright LED-friendly red */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    .ticker-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: baseline;
+      animation: scroll-left var(--scroll-duration) linear infinite;
+      font-size: clamp(28px, 9vh, 96px);
+      letter-spacing: 0.01em;
+      will-change: transform;
+    }
+    .item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.4em;
+      padding: 0 1.5em;
+      white-space: nowrap;
+    }
+    .symbol { color: var(--color-text); font-weight: 800; }
+    .price  { color: var(--color-text); font-weight: 500; }
+    .change { font-weight: 700; }
+    .up     { color: var(--color-up); }
+    .down   { color: var(--color-down); }
+
+    @keyframes scroll-left {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-50%, 0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker-wrap">
+    <!-- Items are duplicated below: the second set lets the animation loop
+         seamlessly. After scrolling 50% of the track width (= one full set),
+         the visible content at position -50% matches position 0, so the
+         snap-back is invisible. -->
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <div class="item"><span class="symbol">BTC</span><span class="price">$67,432</span><span class="change up">+1.84%</span></div>
+      <div class="item"><span class="symbol">ETH</span><span class="price">$3,521</span><span class="change down">-0.92%</span></div>
+      <div class="item"><span class="symbol">SOL</span><span class="price">$164.27</span><span class="change up">+3.47%</span></div>
+      <div class="item"><span class="symbol">XRP</span><span class="price">$0.52</span><span class="change down">-2.13%</span></div>
+      <div class="item"><span class="symbol">BNB</span><span class="price">$612.45</span><span class="change up">+1.20%</span></div>
+      <div class="item"><span class="symbol">ADA</span><span class="price">$0.41</span><span class="change down">-0.85%</span></div>
+      <div class="item"><span class="symbol">DOGE</span><span class="price">$0.12</span><span class="change up">+2.45%</span></div>
+      <div class="item"><span class="symbol">AVAX</span><span class="price">$24.61</span><span class="change down">-1.78%</span></div>
+      <!-- Set 2 (identical) -->
+      <div class="item"><span class="symbol">BTC</span><span class="price">$67,432</span><span class="change up">+1.84%</span></div>
+      <div class="item"><span class="symbol">ETH</span><span class="price">$3,521</span><span class="change down">-0.92%</span></div>
+      <div class="item"><span class="symbol">SOL</span><span class="price">$164.27</span><span class="change up">+3.47%</span></div>
+      <div class="item"><span class="symbol">XRP</span><span class="price">$0.52</span><span class="change down">-2.13%</span></div>
+      <div class="item"><span class="symbol">BNB</span><span class="price">$612.45</span><span class="change up">+1.20%</span></div>
+      <div class="item"><span class="symbol">ADA</span><span class="price">$0.41</span><span class="change down">-0.85%</span></div>
+      <div class="item"><span class="symbol">DOGE</span><span class="price">$0.12</span><span class="change up">+2.45%</span></div>
+      <div class="item"><span class="symbol">AVAX</span><span class="price">$24.61</span><span class="change down">-1.78%</span></div>
+    </div>
+  </div>
+</body>
+</html>
