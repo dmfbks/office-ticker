@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <title>Office Ticker — News (Scroll Test)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --scroll-duration: 90s;     /* news has more text per item, slower scroll */
+      --color-bg: #000;
+      --color-text: #fff;
+      --color-divider: rgba(255, 255, 255, 0.25);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    .ticker-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      /* `reverse` makes the same keyframe play backwards — content scrolls
+         left-to-right instead of right-to-left (opposite of prices ticker). */
+      animation: scroll-left var(--scroll-duration) linear infinite reverse;
+      font-size: clamp(28px, 8.5vh, 88px);
+      letter-spacing: 0.01em;
+      will-change: transform;
+    }
+    .item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 2em;
+      white-space: nowrap;
+      border-right: 1px solid var(--color-divider);
+      font-weight: 500;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-50%, 0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <div class="item">SEC approves spot ETH ETF; first U.S. fund to trade Monday under ticker ETHA</div>
+      <div class="item">Coinbase posts $1.6B Q1 revenue, up 24% YoY, driven by stablecoin volume</div>
+      <div class="item">BlackRock IBIT records third consecutive week of net inflows above $500M</div>
+      <div class="item">Tether expands USDT issuance on Solana, total supply crosses $115B across chains</div>
+      <div class="item">Mt. Gox trustee resumes BTC repayments to creditors, ~36,000 BTC to be distributed</div>
+      <div class="item">Solana network sees record 65M daily transactions amid DePIN and memecoin activity</div>
+      <div class="item">EU MiCA enforcement begins for stablecoin issuers; non-compliant tokens face delisting</div>
+      <div class="item">Ripple secures BitLicense from New York DFS, expands U.S. enterprise payment services</div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="item">SEC approves spot ETH ETF; first U.S. fund to trade Monday under ticker ETHA</div>
+      <div class="item">Coinbase posts $1.6B Q1 revenue, up 24% YoY, driven by stablecoin volume</div>
+      <div class="item">BlackRock IBIT records third consecutive week of net inflows above $500M</div>
+      <div class="item">Tether expands USDT issuance on Solana, total supply crosses $115B across chains</div>
+      <div class="item">Mt. Gox trustee resumes BTC repayments to creditors, ~36,000 BTC to be distributed</div>
+      <div class="item">Solana network sees record 65M daily transactions amid DePIN and memecoin activity</div>
+      <div class="item">EU MiCA enforcement begins for stablecoin issuers; non-compliant tokens face delisting</div>
+      <div class="item">Ripple secures BitLicense from New York DFS, expands U.S. enterprise payment services</div>
+    </div>
+  </div>
+</body>
+</html>
