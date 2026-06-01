@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <title>Office Ticker — Prices (Test)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: clamp(28px, 9vh, 96px);
+      letter-spacing: 0.02em;
+    }
+    .item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6em;
+      padding: 0 1em;
+      white-space: nowrap;
+    }
+    .symbol { color: #fff; font-weight: 700; }
+    .price  { color: #fff; font-weight: 500; }
+    .change { font-weight: 700; }
+    .up     { color: #22c55e; }
+    .down   { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="ticker">
+    <div class="item"><span class="symbol">BTC</span><span class="price">$67,432</span><span class="change up">+1.84%</span></div>
+    <div class="item"><span class="symbol">ETH</span><span class="price">$3,521</span><span class="change down">-0.92%</span></div>
+    <div class="item"><span class="symbol">SOL</span><span class="price">$164.27</span><span class="change up">+3.47%</span></div>
+    <div class="item"><span class="symbol">XRP</span><span class="price">$0.52</span><span class="change down">-2.13%</span></div>
+  </div>
+</body>
+</html>
