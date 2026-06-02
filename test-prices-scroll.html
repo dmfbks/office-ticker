@@ -53,10 +53,18 @@
     /* Per-element margin instead of `gap` — Colorlight's webview is older Chromium
        and doesn't honor `gap` on inline-flex. margin-right works everywhere. */
     .symbol { color: var(--color-text); font-weight: 800; margin-right: 0.9em; }
-    .price  { color: var(--color-text); font-weight: 500; margin-right: 0.75em; }
-    .change { font-weight: 700; }
-    .up     { color: var(--color-up); }
-    .down   { color: var(--color-down); }
+    .price  { color: var(--color-text); font-weight: 500; margin-right: 0.6em; }
+    /* Apple-Stocks-style filled chip for % change */
+    .change {
+      font-weight: 700;
+      color: #fff;
+      padding: 0.18em 0.6em;
+      border-radius: 0.22em;
+      display: inline-block;
+      line-height: 1;
+    }
+    .change.up   { background: var(--color-up); }
+    .change.down { background: var(--color-down); }
 
     @keyframes scroll-left {
       from { transform: translate3d(0, 0, 0); }
@@ -71,6 +79,9 @@
          the visible content at position -50% matches position 0, so the
          snap-back is invisible. -->
     <div class="ticker-track">
+      <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
+      <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,274</span><span class="change up">+0.83%</span></div>
       <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
       <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
       <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
@@ -81,6 +92,9 @@
       <div class="item"><span class="symbol">DOGE</span><span class="price">$0.10</span><span class="change down">-0.30%</span></div>
       <div class="item"><span class="symbol">LEO</span><span class="price">$9.98</span><span class="change down">-0.69%</span></div>
       <div class="item"><span class="symbol">ZEC</span><span class="price">$547.04</span><span class="change down">-0.06%</span></div>
+      <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
+      <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,274</span><span class="change up">+0.83%</span></div>
       <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
       <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
       <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
