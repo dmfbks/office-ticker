@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Ticker — News (Canvas)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #010101;
+      overflow: hidden;
+    }
+    canvas { display: block; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <canvas id="ticker"></canvas>
+
+  <script>
+    // Canvas-rendered news ticker, left-to-right scroll.
+    // Same pixel-perfect approach as the prices canvas, but with text-only items
+    // and reverse scroll direction.
+    (function () {
+      const canvas = document.getElementById('ticker');
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+
+      const COLORS = {
+        bg:   '#010101',
+        text: '#ffffff',
+      };
+
+      // 6 news headlines (interleaved with separator after each)
+      const HEADLINES = [
+        'Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline',
+        'Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K',
+        'MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push',
+        'Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi',
+        'MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000',
+        'Grayscale files updated HYPE ETF prospectus with competitive fee structure',
+      ];
+
+      const SPEED_PX_PER_SEC = 20;
+      let fontSize = 0;
+      let itemPaddingX = 0;
+      let separatorGap = 0;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        // Match HTML news font: clamp(36px, 11vh, 112px)
+        fontSize = Math.round(Math.max(36, Math.min(112, canvas.height * 0.11)));
+        itemPaddingX = Math.round(fontSize * 1.7);   // matches the HTML's padding: 0 1.7em
+        separatorGap = Math.round(fontSize * 2);     // 2em on each side of logo
+      }
+
+      function setFont() {
+        ctx.font = '600 ' + fontSize + 'px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      }
+
+      const logo = new Image();
+      let logoReady = false;
+      logo.onload = function () { logoReady = true; };
+      logo.src = 'logo.svg';
+
+      // Build the logical sequence: headline, separator, headline, separator, ...
+      const sequence = [];
+      for (const h of HEADLINES) {
+        sequence.push({ kind: 'text', text: h });
+        sequence.push({ kind: 'sep' });
+      }
+
+      let widths = [];
+      let totalWidth = 0;
+
+      function measure() {
+        setFont();
+        widths = sequence.map(function (item) {
+          if (item.kind === 'sep') {
+            return separatorGap * 2 + Math.round(fontSize * 0.85);
+          }
+          // headline: padding + text + padding (no extra padding inside)
+          return Math.round(ctx.measureText(item.text).width + 2 * itemPaddingX);
+        });
+        totalWidth = widths.reduce(function (a, b) { return a + b; }, 0);
+      }
+
+      function drawItem(item, x, y) {
+        if (item.kind === 'sep') {
+          if (logoReady) {
+            const h = Math.round(fontSize * 0.85);
+            const w = h;
+            ctx.globalAlpha = 0.85;
+            ctx.drawImage(logo, Math.round(x + separatorGap), Math.round(y - h / 2), w, h);
+            ctx.globalAlpha = 1.0;
+          }
+          return;
+        }
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = COLORS.text;
+        ctx.fillText(item.text, Math.round(x + itemPaddingX), y);
+      }
+
+      let startTime = null;
+
+      function draw(now) {
+        if (startTime === null) startTime = now;
+        const elapsed = (now - startTime) / 1000;
+
+        // For LEFT-to-RIGHT scroll (news), offset wraps 0 → totalWidth
+        // Items drawn at (cursor + offset - totalWidth) so they start off-screen left.
+        const offset = Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+
+        ctx.fillStyle = COLORS.bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        setFont();
+
+        const y = Math.round(canvas.height / 2);
+
+        // Draw two copies of the sequence offset by totalWidth so loop is seamless.
+        let cursor = offset - totalWidth;
+        for (let copy = 0; copy < 2; copy++) {
+          for (let i = 0; i < sequence.length; i++) {
+            if (cursor + widths[i] > 0 && cursor < canvas.width) {
+              drawItem(sequence[i], cursor, y);
+            }
+            cursor += widths[i];
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+
+      function init() {
+        resize();
+        measure();
+        requestAnimationFrame(draw);
+      }
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () { setTimeout(init, 100); });
+      } else {
+        setTimeout(init, 800);
+      }
+      window.addEventListener('resize', function () { resize(); measure(); });
+    })();
+  </script>
+</body>
+</html>

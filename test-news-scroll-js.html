@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Ticker — News (JS pixel-aligned scroll)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #010101;
+      --color-text: #fff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeSpeed;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    .ticker-wrap {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .ticker-track {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      font-size: clamp(36px, 11vh, 112px);
+      letter-spacing: 0.01em;
+    }
+    .item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 1.7em;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .separator {
+      padding: 0 2em;
+      display: inline-flex;
+      align-items: center;
+      opacity: 0.85;
+    }
+    .separator img { height: 0.85em; width: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="track">
+      <div class="item">Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Grayscale files updated HYPE ETF prospectus with competitive fee structure</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <!-- Duplicate set -->
+      <div class="item">Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+      <div class="item">Grayscale files updated HYPE ETF prospectus with competitive fee structure</div>
+      <div class="item separator"><img src="logo.svg" alt="Fireblocks"></div>
+    </div>
+  </div>
+
+  <script>
+    // JS-driven pixel-aligned animation, REVERSE direction (left-to-right).
+    // For reverse: translateX starts at -halfWidth and increases to 0.
+    // Items appear from the left edge and slide rightward off the right.
+    (function () {
+      const track = document.getElementById('track');
+      const SPEED_PX_PER_SEC = 20;  // slow scroll for readability + smaller stutter
+
+      let halfWidth = 0;
+      let startTime = null;
+
+      function measure() {
+        halfWidth = track.scrollWidth / 2;
+      }
+
+      function tick(now) {
+        if (startTime === null) startTime = now;
+        const elapsed = (now - startTime) / 1000;
+        // Phase ranges from 0 to halfWidth (modulo for loop)
+        const phase = (elapsed * SPEED_PX_PER_SEC) % halfWidth;
+        // For left-to-right scroll: x starts at -halfWidth, increases to 0
+        const x = Math.round(-halfWidth + phase);
+        track.style.transform = 'translateX(' + x + 'px)';
+        requestAnimationFrame(tick);
+      }
+
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          measure();
+          requestAnimationFrame(tick);
+        }, 200);
+      });
+      window.addEventListener('resize', measure);
+    })();
+  </script>
+</body>
+</html>
