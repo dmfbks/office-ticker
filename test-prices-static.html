@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Ticker — Prices (Static)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #010101;
+      --color-text: #fff;
+      --color-up: #22c55e;
+      --color-down: #ef4444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeSpeed;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+    }
+    /* All items on one row, distributed evenly across the screen.
+       No scrolling, no animation = no LED motion smear. */
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-around;
+      /* Use clamp so the font auto-shrinks if items don't fit at the larger size */
+      font-size: clamp(20px, 7vh, 72px);
+      letter-spacing: 0.01em;
+      padding: 0 0.5em;
+    }
+    .item {
+      display: inline-flex;
+      align-items: baseline;
+      white-space: nowrap;
+      flex-shrink: 1;
+      min-width: 0;
+    }
+    .symbol { color: var(--color-text); font-weight: 900; margin-right: 0.55em; }
+    .price  { color: var(--color-text); font-weight: 600; margin-right: 0.45em; }
+    .change {
+      font-weight: 800;
+      color: #fff;
+      padding: 0.15em 0.5em;
+      border-radius: 0.22em;
+      display: inline-block;
+      line-height: 1;
+    }
+    .change.up   { background: var(--color-up); }
+    .change.down { background: var(--color-down); }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+    .logo img { height: 0.85em; width: auto; display: block; }
+  </style>
+</head>
+<body>
+  <div class="ticker">
+    <span class="logo"><img src="logo.svg" alt="Fireblocks"></span>
+    <div class="item"><span class="symbol">S&amp;P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
+    <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
+    <div class="item"><span class="symbol">TA-125</span><span class="price">4,204</span><span class="change down">-0.84%</span></div>
+    <div class="item"><span class="symbol">BTC</span><span class="price">$69,510</span><span class="change down">-4.32%</span></div>
+    <div class="item"><span class="symbol">ETH</span><span class="price">$1,980</span><span class="change down">-0.13%</span></div>
+    <div class="item"><span class="symbol">BNB</span><span class="price">$678.62</span><span class="change down">-3.62%</span></div>
+    <div class="item"><span class="symbol">XRP</span><span class="price">$1.26</span><span class="change down">-3.09%</span></div>
+    <div class="item"><span class="symbol">SOL</span><span class="price">$79.27</span><span class="change down">-2.15%</span></div>
+  </div>
+</body>
+</html>
