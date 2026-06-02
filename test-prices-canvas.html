@@ -97,11 +97,11 @@
         if (item.kind === 'separator') {
           return separatorGap * 2 + Math.round(fontSize * 0.85);  // approx logo size
         }
-        setFont('900');
+        setFont('700');
         const wSymbol = ctx.measureText(item.symbol).width;
-        setFont('600');
+        setFont('500');
         const wPrice  = ctx.measureText(item.price).width;
-        setFont('800');
+        setFont('700');
         const wChange = ctx.measureText(item.change).width;
         return Math.round(
           wSymbol + intraItemGap +
@@ -149,17 +149,17 @@
         let cursor = x;
         ctx.textBaseline = 'middle';
         // Symbol
-        setFont('900');
+        setFont('700');
         ctx.fillStyle = COLORS.text;
         ctx.fillText(item.symbol, Math.round(cursor), y);
         cursor += ctx.measureText(item.symbol).width + intraItemGap;
         // Price
-        setFont('600');
+        setFont('500');
         ctx.fillStyle = COLORS.text;
         ctx.fillText(item.price, Math.round(cursor), y);
         cursor += ctx.measureText(item.price).width + intraItemGap;
         // Change as colored text (no badge): green if up, red if down
-        setFont('800');
+        setFont('700');
         ctx.fillStyle = item.direction === 'up' ? COLORS.up : COLORS.down;
         ctx.fillText(item.change, Math.round(cursor), y);
       }

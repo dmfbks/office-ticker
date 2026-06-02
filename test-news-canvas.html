@@ -53,8 +53,8 @@
       function resize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        // Match HTML news font: clamp(36px, 11vh, 112px)
-        fontSize = Math.round(Math.max(36, Math.min(112, canvas.height * 0.11)));
+        // Match HTML news font: clamp(32px, 10vh, 104px)
+        fontSize = Math.round(Math.max(32, Math.min(104, canvas.height * 0.10)));
         itemPaddingX = Math.round(fontSize * 1.7);   // matches the HTML's padding: 0 1.7em
         separatorGap = Math.round(fontSize * 2);     // 2em on each side of logo
       }
