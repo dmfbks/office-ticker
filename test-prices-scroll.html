@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="60">
   <title>Office Ticker — Prices (Scroll Test)</title>
 
   <!-- Figtree from Google Fonts. If Colorlight player can't reach googleapis,
@@ -43,6 +42,8 @@
       font-size: clamp(28px, 9vh, 96px);
       letter-spacing: 0.01em;
       will-change: transform;
+      transform: translateZ(0);
+      backface-visibility: hidden;
     }
     .item {
       display: inline-flex;
@@ -81,30 +82,20 @@
     <div class="ticker-track">
       <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
       <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
-      <div class="item"><span class="symbol">TA-125</span><span class="price">4,274</span><span class="change up">+0.83%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,242</span><span class="change up">+0.07%</span></div>
       <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
       <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
       <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
       <div class="item"><span class="symbol">XRP</span><span class="price">$1.30</span><span class="change down">-2.31%</span></div>
       <div class="item"><span class="symbol">SOL</span><span class="price">$80.97</span><span class="change down">-1.78%</span></div>
-      <div class="item"><span class="symbol">TRX</span><span class="price">$0.35</span><span class="change up">+0.39%</span></div>
-      <div class="item"><span class="symbol">HYPE</span><span class="price">$72.85</span><span class="change up">+7.13%</span></div>
-      <div class="item"><span class="symbol">DOGE</span><span class="price">$0.10</span><span class="change down">-0.30%</span></div>
-      <div class="item"><span class="symbol">LEO</span><span class="price">$9.98</span><span class="change down">-0.69%</span></div>
-      <div class="item"><span class="symbol">ZEC</span><span class="price">$547.04</span><span class="change down">-0.06%</span></div>
       <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
       <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
-      <div class="item"><span class="symbol">TA-125</span><span class="price">4,274</span><span class="change up">+0.83%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,242</span><span class="change up">+0.07%</span></div>
       <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
       <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
       <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
       <div class="item"><span class="symbol">XRP</span><span class="price">$1.30</span><span class="change down">-2.31%</span></div>
       <div class="item"><span class="symbol">SOL</span><span class="price">$80.97</span><span class="change down">-1.78%</span></div>
-      <div class="item"><span class="symbol">TRX</span><span class="price">$0.35</span><span class="change up">+0.39%</span></div>
-      <div class="item"><span class="symbol">HYPE</span><span class="price">$72.85</span><span class="change up">+7.13%</span></div>
-      <div class="item"><span class="symbol">DOGE</span><span class="price">$0.10</span><span class="change down">-0.30%</span></div>
-      <div class="item"><span class="symbol">LEO</span><span class="price">$9.98</span><span class="change down">-0.69%</span></div>
-      <div class="item"><span class="symbol">ZEC</span><span class="price">$547.04</span><span class="change down">-0.06%</span></div>
     </div>
   </div>
 </body>

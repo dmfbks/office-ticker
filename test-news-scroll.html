@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="60">
   <title>Office Ticker — News (Scroll Test)</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +40,8 @@
       font-size: clamp(28px, 9vh, 96px);
       letter-spacing: 0.01em;
       will-change: transform;
+      transform: translateZ(0);
+      backface-visibility: hidden;
     }
     .item {
       display: inline-flex;
