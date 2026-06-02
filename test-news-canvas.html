@@ -68,12 +68,8 @@
       logo.onload = function () { logoReady = true; };
       logo.src = 'logo.svg';
 
-      // Build the logical sequence: headline, separator, headline, separator, ...
-      const sequence = [];
-      for (const h of HEADLINES) {
-        sequence.push({ kind: 'text', text: h });
-        sequence.push({ kind: 'sep' });
-      }
+      // Build the logical sequence: just headlines (no separators)
+      const sequence = HEADLINES.map(function (h) { return { kind: 'text', text: h }; });
 
       let widths = [];
       let totalWidth = 0;

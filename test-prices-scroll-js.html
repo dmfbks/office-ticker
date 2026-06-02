@@ -39,7 +39,7 @@
       display: inline-flex;
       flex-shrink: 0;
       align-items: baseline;
-      font-size: clamp(28px, 9vh, 96px);
+      font-size: clamp(36px, 11vh, 112px);
       letter-spacing: 0.01em;
       /* NO CSS animation. Position controlled by JS for integer pixels. */
     }
@@ -51,16 +51,9 @@
     }
     .symbol { color: var(--color-text); font-weight: 900; margin-right: 0.9em; }
     .price  { color: var(--color-text); font-weight: 600; margin-right: 0.6em; }
-    .change {
-      font-weight: 800;
-      color: #fff;
-      padding: 0.18em 0.6em;
-      border-radius: 0.22em;
-      display: inline-block;
-      line-height: 1;
-    }
-    .change.up   { background: var(--color-up); }
-    .change.down { background: var(--color-down); }
+    .change { font-weight: 800; }
+    .change.up   { color: var(--color-up); }
+    .change.down { color: var(--color-down); }
     .separator {
       padding: 0 2em;
       display: inline-flex;

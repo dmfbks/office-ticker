@@ -75,10 +75,10 @@
         canvas.width = w;
         canvas.height = h;
 
-        // Match the HTML scrolling version: clamp(28, 9vh, 96)
+        // Match the HTML scrolling version: clamp(36, 11vh, 112)  (same as news)
         // BUG FIX: previous version used 0.55 (55% of height) — way too big on
         // a tall-ish viewport, made everything "fat". Should be 0.09 (= 9vh).
-        fontSize = Math.round(Math.max(28, Math.min(96, h * 0.09)));
+        fontSize = Math.round(Math.max(36, Math.min(112, h * 0.11)));
         badgeRadius = Math.round(fontSize * 0.18);
         badgePaddingX = Math.round(fontSize * 0.35);
         badgePaddingY = Math.round(fontSize * 0.15);
@@ -106,7 +106,7 @@
         return Math.round(
           wSymbol + intraItemGap +
           wPrice  + intraItemGap +
-          (wChange + 2 * badgePaddingX) +
+          wChange +
           interItemGap
         );
       }
@@ -158,22 +158,10 @@
         ctx.fillStyle = COLORS.text;
         ctx.fillText(item.price, Math.round(cursor), y);
         cursor += ctx.measureText(item.price).width + intraItemGap;
-        // Change badge
+        // Change as colored text (no badge): green if up, red if down
         setFont('800');
-        const changeWidth = ctx.measureText(item.change).width;
-        const badgeWidth  = changeWidth + 2 * badgePaddingX;
-        const badgeHeight = fontSize + 2 * badgePaddingY;
-        const badgeColor = item.direction === 'up' ? COLORS.up : COLORS.down;
-        roundedRect(
-          Math.round(cursor),
-          Math.round(y - badgeHeight / 2),
-          Math.round(badgeWidth),
-          Math.round(badgeHeight),
-          badgeRadius,
-          badgeColor
-        );
-        ctx.fillStyle = COLORS.text;
-        ctx.fillText(item.change, Math.round(cursor + badgePaddingX), y);
+        ctx.fillStyle = item.direction === 'up' ? COLORS.up : COLORS.down;
+        ctx.fillText(item.change, Math.round(cursor), y);
       }
 
       let totalWidth = 0;
