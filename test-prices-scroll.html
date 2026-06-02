@@ -12,8 +12,8 @@
 
   <style>
     :root {
-      --scroll-duration: 125s;    /* time to scroll one full set off-screen */
-      --color-bg: #000;
+      --scroll-duration: 160s;    /* time to scroll one full set off-screen */
+      --color-bg: #010101;
       --color-text: #fff;
       --color-up: #22c55e;        /* bright LED-friendly green */
       --color-down: #ef4444;      /* bright LED-friendly red */
@@ -54,11 +54,11 @@
     }
     /* Per-element margin instead of `gap` — Colorlight's webview is older Chromium
        and doesn't honor `gap` on inline-flex. margin-right works everywhere. */
-    .symbol { color: var(--color-text); font-weight: 800; margin-right: 0.9em; }
-    .price  { color: var(--color-text); font-weight: 500; margin-right: 0.6em; }
+    .symbol { color: var(--color-text); font-weight: 900; margin-right: 0.9em; }
+    .price  { color: var(--color-text); font-weight: 600; margin-right: 0.6em; }
     /* Apple-Stocks-style filled chip for % change */
     .change {
-      font-weight: 700;
+      font-weight: 800;
       color: #fff;
       padding: 0.18em 0.6em;
       border-radius: 0.22em;
@@ -67,6 +67,16 @@
     }
     .change.up   { background: var(--color-up); }
     .change.down { background: var(--color-down); }
+
+    /* Brand separator (placeholder text — swap for logo img once file provided) */
+    .separator {
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: #fff;
+      padding: 0 2.5em;
+      opacity: 0.55;
+      font-size: 0.7em;
+    }
 
     @keyframes scroll-left {
       from { transform: translate3d(0, 0, 0); }
@@ -83,20 +93,22 @@
     <div class="ticker-track">
       <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
       <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
-      <div class="item"><span class="symbol">TA-125</span><span class="price">4,242</span><span class="change up">+0.07%</span></div>
-      <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
-      <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
-      <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
-      <div class="item"><span class="symbol">XRP</span><span class="price">$1.30</span><span class="change down">-2.31%</span></div>
-      <div class="item"><span class="symbol">SOL</span><span class="price">$80.97</span><span class="change down">-1.78%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,204</span><span class="change down">-0.84%</span></div>
+      <div class="item"><span class="symbol">BTC</span><span class="price">$69,510</span><span class="change down">-4.32%</span></div>
+      <div class="item"><span class="symbol">ETH</span><span class="price">$1,980</span><span class="change down">-0.13%</span></div>
+      <div class="item"><span class="symbol">BNB</span><span class="price">$678.62</span><span class="change down">-3.62%</span></div>
+      <div class="item"><span class="symbol">XRP</span><span class="price">$1.26</span><span class="change down">-3.09%</span></div>
+      <div class="item"><span class="symbol">SOL</span><span class="price">$79.27</span><span class="change down">-2.15%</span></div>
+      <div class="item separator">FIREBLOCKS</div>
       <div class="item"><span class="symbol">S&P 500</span><span class="price">7,600</span><span class="change up">+0.48%</span></div>
       <div class="item"><span class="symbol">NASDAQ</span><span class="price">30,514</span><span class="change up">+0.96%</span></div>
-      <div class="item"><span class="symbol">TA-125</span><span class="price">4,242</span><span class="change up">+0.07%</span></div>
-      <div class="item"><span class="symbol">BTC</span><span class="price">$72,655</span><span class="change down">-1.43%</span></div>
-      <div class="item"><span class="symbol">ETH</span><span class="price">$1,983</span><span class="change down">-1.59%</span></div>
-      <div class="item"><span class="symbol">BNB</span><span class="price">$698.44</span><span class="change down">-2.95%</span></div>
-      <div class="item"><span class="symbol">XRP</span><span class="price">$1.30</span><span class="change down">-2.31%</span></div>
-      <div class="item"><span class="symbol">SOL</span><span class="price">$80.97</span><span class="change down">-1.78%</span></div>
+      <div class="item"><span class="symbol">TA-125</span><span class="price">4,204</span><span class="change down">-0.84%</span></div>
+      <div class="item"><span class="symbol">BTC</span><span class="price">$69,510</span><span class="change down">-4.32%</span></div>
+      <div class="item"><span class="symbol">ETH</span><span class="price">$1,980</span><span class="change down">-0.13%</span></div>
+      <div class="item"><span class="symbol">BNB</span><span class="price">$678.62</span><span class="change down">-3.62%</span></div>
+      <div class="item"><span class="symbol">XRP</span><span class="price">$1.26</span><span class="change down">-3.09%</span></div>
+      <div class="item"><span class="symbol">SOL</span><span class="price">$79.27</span><span class="change down">-2.15%</span></div>
+      <div class="item separator">FIREBLOCKS</div>
     </div>
   </div>
 </body>

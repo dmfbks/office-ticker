@@ -10,8 +10,8 @@
 
   <style>
     :root {
-      --scroll-duration: 225s;    /* news has more text per item, slower scroll */
-      --color-bg: #000;
+      --scroll-duration: 280s;    /* news has more text per item, slower scroll */
+      --color-bg: #010101;
       --color-text: #fff;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,7 +40,7 @@
       /* `reverse` makes the same keyframe play backwards — content scrolls
          left-to-right instead of right-to-left (opposite of prices ticker). */
       animation: scroll-left var(--scroll-duration) linear infinite reverse;
-      font-size: clamp(28px, 9vh, 96px);
+      font-size: clamp(36px, 11vh, 112px);
       letter-spacing: 0.01em;
       will-change: transform;
     }
@@ -49,7 +49,17 @@
       align-items: center;
       padding: 0 1.7em;
       white-space: nowrap;
-      font-weight: 500;
+      font-weight: 600;
+    }
+
+    /* Brand separator (placeholder text — swap for logo img once file provided) */
+    .separator {
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: #fff;
+      padding: 0 2.5em;
+      opacity: 0.55;
+      font-size: 0.7em;
     }
 
     @keyframes scroll-left {
@@ -61,26 +71,30 @@
 <body>
   <div class="ticker-wrap">
     <div class="ticker-track">
-      <div class="item">Aave overhauls token listing standards after $230M rsETH exploit highlights bridge contract risks across DeFi</div>
-      <div class="item">Bitcoin extends slide as spot ETF outflows hit record while equities rally on AI sector strength</div>
-      <div class="item">Coinbase launches rupee-denominated bank rails in India after FIU regulatory approval</div>
-      <div class="item">Citi research projects tokenized securities market to reach $5.5T by 2030</div>
-      <div class="item">NYDIG: $1.3B IBIT outflow was a single whale exiting a directional bitcoin trade, not broad selling</div>
-      <div class="item">Sui Foundation ships major upgrade fixing bugs behind three recent mainnet outages</div>
-      <div class="item">Crypto exploit losses fell 90% month-over-month to $68M in May, per CertiK</div>
-      <div class="item">Cardano Foundation cancels annual conference following failed community funding vote</div>
-      <div class="item">Whitehat developer unlocks $2M trapped in a 2016 Ethereum ICO contract after nine years</div>
-      <div class="item">Bitcoin and ether open June in the red as XLM and HYPE post gains amid mixed crypto market</div>
-      <div class="item">Aave overhauls token listing standards after $230M rsETH exploit highlights bridge contract risks across DeFi</div>
-      <div class="item">Bitcoin extends slide as spot ETF outflows hit record while equities rally on AI sector strength</div>
-      <div class="item">Coinbase launches rupee-denominated bank rails in India after FIU regulatory approval</div>
-      <div class="item">Citi research projects tokenized securities market to reach $5.5T by 2030</div>
-      <div class="item">NYDIG: $1.3B IBIT outflow was a single whale exiting a directional bitcoin trade, not broad selling</div>
-      <div class="item">Sui Foundation ships major upgrade fixing bugs behind three recent mainnet outages</div>
-      <div class="item">Crypto exploit losses fell 90% month-over-month to $68M in May, per CertiK</div>
-      <div class="item">Cardano Foundation cancels annual conference following failed community funding vote</div>
-      <div class="item">Whitehat developer unlocks $2M trapped in a 2016 Ethereum ICO contract after nine years</div>
-      <div class="item">Bitcoin and ether open June in the red as XLM and HYPE post gains amid mixed crypto market</div>
+      <div class="item">Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Grayscale files updated HYPE ETF prospectus with competitive fee structure</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000</div>
+      <div class="item separator">FIREBLOCKS</div>
+      <div class="item">Grayscale files updated HYPE ETF prospectus with competitive fee structure</div>
+      <div class="item separator">FIREBLOCKS</div>
     </div>
   </div>
 </body>
