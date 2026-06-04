@@ -39,7 +39,7 @@
       display: inline-flex;
       flex-shrink: 0;
       align-items: baseline;
-      font-size: clamp(36px, 11vh, 112px);
+      font-size: clamp(32px, 10vh, 104px);
       letter-spacing: 0.01em;
       /* NO CSS animation. Position controlled by JS for integer pixels. */
     }
@@ -96,7 +96,7 @@
     // offset — the LED panel can render each frame crisply.
     (function () {
       const track = document.getElementById('track');
-      const SPEED_PX_PER_SEC = 60;  // tune for desired scroll speed
+      const SPEED_PX_PER_SEC = 30;  // tune for desired scroll speed
 
       let halfWidth = 0;
       let startTime = null;
@@ -109,10 +109,9 @@
       function tick(now) {
         if (startTime === null) startTime = now;
         const elapsed = (now - startTime) / 1000;
-        // Continuous offset, then modulo by halfWidth (one set) for seamless loop.
-        const rawX = -((elapsed * SPEED_PX_PER_SEC) % halfWidth);
-        // Round to whole pixel — this is the key step for LED crispness.
-        const x = Math.round(rawX);
+        // Right-scroll: starts at -halfWidth (items off-screen left), grows to 0.
+        const phase = (elapsed * SPEED_PX_PER_SEC) % halfWidth;
+        const x = Math.round(-halfWidth + phase);
         track.style.transform = 'translateX(' + x + 'px)';
         requestAnimationFrame(tick);
       }

@@ -45,7 +45,7 @@
         "Bitmine plans dividend-paying preferred share issuance, echoing MicroStrategy's BTC treasury playbook",
       ];
 
-      const SPEED_PX_PER_SEC = 60;
+      const SPEED_PX_PER_SEC = 30;
       let fontSize = 0;
       let itemPaddingX = 0;
       let separatorGap = 0;
@@ -108,9 +108,8 @@
         if (startTime === null) startTime = now;
         const elapsed = (now - startTime) / 1000;
 
-        // For LEFT-to-RIGHT scroll (news), offset wraps 0 → totalWidth
-        // Items drawn at (cursor + offset - totalWidth) so they start off-screen left.
-        const offset = Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+        // For RIGHT-to-LEFT scroll (news now scrolls like a traditional ticker).
+        const offset = -Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
 
         ctx.fillStyle = COLORS.bg;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -119,7 +118,7 @@
         const y = Math.round(canvas.height / 2);
 
         // Draw two copies of the sequence offset by totalWidth so loop is seamless.
-        let cursor = offset - totalWidth;
+        let cursor = offset;
         for (let copy = 0; copy < 2; copy++) {
           for (let i = 0; i < sequence.length; i++) {
             if (cursor + widths[i] > 0 && cursor < canvas.width) {

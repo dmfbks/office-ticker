@@ -58,7 +58,7 @@
       const SEPARATOR = { kind: 'separator' };
 
       // Tunables
-      const SPEED_PX_PER_SEC = 60;
+      const SPEED_PX_PER_SEC = 30;
       let fontSize = 0;          // computed from canvas height
       let badgeRadius = 0;
       let badgePaddingX = 0;
@@ -78,7 +78,7 @@
         // Match the HTML scrolling version: clamp(36, 11vh, 112)  (same as news)
         // BUG FIX: previous version used 0.55 (55% of height) — way too big on
         // a tall-ish viewport, made everything "fat". Should be 0.09 (= 9vh).
-        fontSize = Math.round(Math.max(36, Math.min(112, h * 0.11)));
+        fontSize = Math.round(Math.max(32, Math.min(104, h * 0.10)));
         badgeRadius = Math.round(fontSize * 0.18);
         badgePaddingX = Math.round(fontSize * 0.35);
         badgePaddingY = Math.round(fontSize * 0.15);
@@ -184,7 +184,8 @@
         if (startTime === null) startTime = now;
         const elapsed = (now - startTime) / 1000;
         // Scroll: leftward (negative offset), modulo totalWidth for seamless loop
-        const scrollOffset = -Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+        const _t = Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+        const scrollOffset = _t - totalWidth;  // right-scroll: starts off-screen left, slides right
 
         // Clear background
         ctx.fillStyle = COLORS.bg;

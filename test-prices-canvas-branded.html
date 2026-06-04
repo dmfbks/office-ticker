@@ -98,14 +98,14 @@
       }
 
       // Sizing
-      const SPEED_PX_PER_SEC = 60;
+      const SPEED_PX_PER_SEC = 30;
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
       let brandingBulletGap = 0;
 
       function resize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        fontSize = Math.round(Math.max(36, Math.min(112, canvas.height * 0.11)));
+        fontSize = Math.round(Math.max(32, Math.min(104, canvas.height * 0.10)));
         intraItemGap = Math.round(fontSize * 0.5);
         interItemGap = Math.round(fontSize * 1.4);
         brandingBulletGap = Math.round(fontSize * 0.6);
@@ -132,7 +132,7 @@
       // accommodates whatever the longest displayed string is for today)
       function brandingWidth() {
         const logoSize = Math.round(fontSize * 0.85);
-        const sections = ['WELCOME TO FIREBLOCKS', todayGreeting(), currentTime()];
+        const sections = [currentTime()];
         setFont('700');
         let textWidth = 0;
         sections.forEach(function (s, idx) {
@@ -182,7 +182,7 @@
         // Three text sections separated by bullets
         ctx.textBaseline = 'middle';
         setFont('700');
-        const sections = ['WELCOME TO FIREBLOCKS', todayGreeting(), currentTime()];
+        const sections = [currentTime()];
         sections.forEach(function (s, idx) {
           ctx.fillStyle = COLORS.text;
           ctx.fillText(s, Math.round(cursor), y);
@@ -214,7 +214,8 @@
         const brandW = brandingWidth();
         const totalWidth = itemW.reduce(function (a, b) { return a + b; }, 0) + brandW;
 
-        const scrollOffset = -Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+        const _t = Math.round((elapsed * SPEED_PX_PER_SEC) % totalWidth);
+        const scrollOffset = _t - totalWidth;  // right-scroll: starts off-screen left, slides right
 
         ctx.fillStyle = COLORS.bg;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
