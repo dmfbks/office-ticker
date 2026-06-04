@@ -66,12 +66,11 @@
       };
       // Date ranges (start—end inclusive) where every day matches the same greeting
       const HOLIDAY_RANGES = [
+        { start: '06-01', end: '06-07', greeting: 'Happy Pride Month' },
         { start: '12-04', end: '12-12', greeting: 'Chag Hanukkah Sameach' },
       ];
-      // Month-wide observances
-      const HOLIDAY_MONTHS = {
-        '06': 'Happy Pride Month',
-      };
+      // (Month-wide observances removed — Pride moved into HOLIDAY_RANGES as first week of June)
+      const HOLIDAY_MONTHS = {};
 
       function pad2(n) { return n < 10 ? '0' + n : String(n); }
 
@@ -99,7 +98,7 @@
       }
 
       // Sizing
-      const SPEED_PX_PER_SEC = 30;
+      const SPEED_PX_PER_SEC = 60;
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
       let brandingBulletGap = 0;
 
