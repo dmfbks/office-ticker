@@ -98,11 +98,18 @@
       }
 
       // Speed configurable via URL: ?speed=NN (px/sec). Default 30.
+      // FPS cap: ?fps=NN. Default 0 = uncapped (= 60 default via rAF).
+      const URL_PARAMS = new URLSearchParams(window.location.search);
       const SPEED_PX_PER_SEC = (function () {
-        const params = new URLSearchParams(window.location.search);
-        const v = parseInt(params.get('speed'), 10);
+        const v = parseInt(URL_PARAMS.get('speed'), 10);
         return (isFinite(v) && v > 0 && v <= 500) ? v : 30;
       })();
+      const FPS_CAP = (function () {
+        const v = parseInt(URL_PARAMS.get('fps'), 10);
+        return (isFinite(v) && v > 0 && v <= 120) ? v : 0;
+      })();
+      const FRAME_MS = FPS_CAP > 0 ? (1000 / FPS_CAP) : 0;
+      let lastFrameTime = 0;
 
       // Sizing
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
@@ -211,6 +218,11 @@
       let startTime = null;
 
       function draw(now) {
+        if (FPS_CAP > 0 && (now - lastFrameTime) < FRAME_MS) {
+          requestAnimationFrame(draw);
+          return;
+        }
+        lastFrameTime = now;
         if (startTime === null) startTime = now;
         const elapsed = (now - startTime) / 1000;
 
