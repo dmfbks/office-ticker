@@ -8,34 +8,33 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Mt. Gox trustee moves 10,422 BTC ($739M) from cold wallets ahead of creditor repayment deadline</title>
-      <guid isPermaLink="false">news-mtgox-cold-739m</guid>
+      <title>       CFTC drops 'no-deny' settlement policy, following SEC's recent reversal on enforcement approach</title>
+      <guid isPermaLink="false">news-01</guid>
     </item>
 
     <item>
-      <title>       Spot bitcoin ETFs record $3.4B outflow day as bitcoin falls below $70K</title>
-      <guid isPermaLink="false">news-btc-etf-outflow-3p4b</guid>
+      <title>       Bitcoin, ether, SOL and XRP ETFs see combined $4.4B in outflows over 13 sessions; only HYPE products in the green</title>
+      <guid isPermaLink="false">news-02</guid>
     </item>
 
     <item>
-      <title>       MoneyGram launches stablecoin on Stellar network, joining the cross-border digital dollar push</title>
-      <guid isPermaLink="false">news-moneygram-stellar-stable</guid>
+      <title>       Coinbase freezes $3M in assets linked to Southeast Asia crypto fraud networks following law enforcement coordination</title>
+      <guid isPermaLink="false">news-03</guid>
     </item>
 
     <item>
-      <title>       Robinhood enters Canadian market via $180M acquisition of crypto platform WonderFi</title>
-      <guid isPermaLink="false">news-robinhood-wonderfi-canada</guid>
+      <title>       Apyx's STRC collateralized stablecoin briefly depegs; protocol calls the movement a design feature, not a bug</title>
+      <guid isPermaLink="false">news-04</guid>
     </item>
 
     <item>
-      <title>       MicroStrategy reports bitcoin sale amid broader selloff that pushed BTC below $70,000</title>
-      <guid isPermaLink="false">news-mstr-btc-sale-selloff</guid>
+      <title>       Bitcoin briefly drops below $62K as $1.5B in long positions are liquidated during broader crypto selloff</title>
+      <guid isPermaLink="false">news-05</guid>
     </item>
 
     <item>
-      <title>       Grayscale files updated HYPE ETF prospectus with competitive fee structure</title>
-      <guid isPermaLink="false">news-grayscale-hype-etf-fee</guid>
+      <title>       Bitmine plans dividend-paying preferred share issuance, echoing MicroStrategy's BTC treasury playbook</title>
+      <guid isPermaLink="false">news-06</guid>
     </item>
-
   </channel>
 </rss>
