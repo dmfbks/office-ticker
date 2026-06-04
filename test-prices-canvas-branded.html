@@ -135,9 +135,9 @@
 
       // Width of one price item
       function priceItemWidth(it) {
-        setFont('800'); const wSym = ctx.measureText(it.symbol).width;
-        setFont('500'); const wPri = ctx.measureText(it.price).width;
-        setFont('700'); const wCh  = ctx.measureText(it.change).width;
+        setFont('600'); const wSym = ctx.measureText(it.symbol).width;
+        setFont('600'); const wPri = ctx.measureText(it.price).width;
+        setFont('600'); const wCh  = ctx.measureText(it.change).width;
         return Math.round(wSym + intraItemGap + wPri + intraItemGap + wCh + interItemGap);
       }
 
@@ -146,7 +146,7 @@
       function brandingWidth() {
         const logoSize = Math.round(fontSize * 0.85);
         const sections = [currentTime()];
-        setFont('700');
+        setFont('600');
         let textWidth = 0;
         sections.forEach(function (s, idx) {
           textWidth += ctx.measureText(s).width;
@@ -164,17 +164,17 @@
       function drawPriceItem(it, x, y) {
         let cursor = x;
         ctx.textBaseline = 'middle';
-        setFont('800');
+        setFont('600');
         ctx.fillStyle = COLORS.text;
         ctx.fillText(it.symbol, Math.round(cursor), y);
         cursor += ctx.measureText(it.symbol).width + intraItemGap;
 
-        setFont('500');
+        setFont('600');
         ctx.fillStyle = COLORS.text;
         ctx.fillText(it.price, Math.round(cursor), y);
         cursor += ctx.measureText(it.price).width + intraItemGap;
 
-        setFont('700');
+        setFont('600');
         ctx.fillStyle = it.direction === 'up' ? COLORS.up : COLORS.down;
         ctx.fillText(it.change, Math.round(cursor), y);
       }
@@ -194,7 +194,7 @@
 
         // Three text sections separated by bullets
         ctx.textBaseline = 'middle';
-        setFont('700');
+        setFont('600');
         const sections = [currentTime()];
         sections.forEach(function (s, idx) {
           ctx.fillStyle = COLORS.text;
@@ -227,7 +227,7 @@
         const elapsed = (now - startTime) / 1000;
 
         // Compute widths fresh each frame so time/greeting changes don't desync layout
-        setFont('700');
+        setFont('600');
         const itemW = priceWidths();
         const brandW = brandingWidth();
         const totalWidth = itemW.reduce(function (a, b) { return a + b; }, 0) + brandW;
