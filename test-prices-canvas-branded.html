@@ -97,8 +97,14 @@
         return tz;
       }
 
+      // Speed configurable via URL: ?speed=NN (px/sec). Default 30.
+      const SPEED_PX_PER_SEC = (function () {
+        const params = new URLSearchParams(window.location.search);
+        const v = parseInt(params.get('speed'), 10);
+        return (isFinite(v) && v > 0 && v <= 500) ? v : 30;
+      })();
+
       // Sizing
-      const SPEED_PX_PER_SEC = 30;
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
       let brandingBulletGap = 0;
 
