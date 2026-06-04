@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Ticker — News (Canvas pixel blit)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #010101;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="ticker"></canvas>
+
+  <script>
+    // Pixel-blit news ticker. Same architecture as prices-blit:
+    //  - Wide off-screen buffer with two copies of all headlines
+    //  - Static visible canvas (never transformed/moved in DOM)
+    //  - Each frame: drawImage at integer offset, source-and-dest same size
+    //  - Scroll direction: LEFT-to-RIGHT (text appears from left, exits right)
+    //    — opposite of prices, per the established design.
+    (function () {
+      const canvas = document.getElementById('ticker');
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+
+      const URL_PARAMS = new URLSearchParams(window.location.search);
+      const SPEED_PX_PER_SEC = (function () {
+        const v = parseInt(URL_PARAMS.get('speed'), 10);
+        return (isFinite(v) && v > 0 && v <= 500) ? v : 30;
+      })();
+      const FPS_CAP = (function () {
+        const v = parseInt(URL_PARAMS.get('fps'), 10);
+        return (isFinite(v) && v > 0 && v <= 120) ? v : 0;
+      })();
+      const FRAME_MS = FPS_CAP > 0 ? (1000 / FPS_CAP) : 0;
+
+      const COLORS = { bg: '#010101', text: '#ffffff' };
+
+      const HEADLINES = [
+        "CFTC drops 'no-deny' settlement policy, following SEC's recent reversal on enforcement approach",
+        "Bitcoin, ether, SOL and XRP ETFs see combined $4.4B in outflows over 13 sessions; only HYPE products in the green",
+        "Coinbase freezes $3M in assets linked to Southeast Asia crypto fraud networks following law enforcement coordination",
+        "Apyx's STRC collateralized stablecoin briefly depegs; protocol calls the movement a design feature, not a bug",
+        "Bitcoin briefly drops below $62K as $1.5B in long positions are liquidated during broader crypto selloff",
+        "Bitmine plans dividend-paying preferred share issuance, echoing MicroStrategy's BTC treasury playbook",
+      ];
+
+      const buffer = document.createElement('canvas');
+      const bctx = buffer.getContext('2d');
+      bctx.imageSmoothingEnabled = false;
+
+      let fontSize = 0, itemPaddingX = 0;
+      let setWidth = 0;
+
+      function setFont() {
+        bctx.font = '600 ' + fontSize + 'px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      }
+
+      function itemWidth(text) {
+        setFont();
+        return Math.round(bctx.measureText(text).width + 2 * itemPaddingX);
+      }
+
+      function drawItem(text, x, y) {
+        bctx.textBaseline = 'middle';
+        setFont();
+        bctx.fillStyle = COLORS.text;
+        bctx.fillText(text, Math.round(x + itemPaddingX), y);
+      }
+
+      function buildBuffer() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        fontSize = Math.round(Math.max(32, Math.min(104, canvas.height * 0.10)));
+        itemPaddingX = Math.round(fontSize * 1.7);
+
+        const widths = HEADLINES.map(itemWidth);
+        setWidth = widths.reduce(function (a, b) { return a + b; }, 0);
+
+        buffer.width = setWidth * 2;
+        buffer.height = canvas.height;
+        bctx.imageSmoothingEnabled = false;
+
+        bctx.fillStyle = COLORS.bg;
+        bctx.fillRect(0, 0, buffer.width, buffer.height);
+
+        const y = Math.round(buffer.height / 2);
+        let cursor = 0;
+        for (let copy = 0; copy < 2; copy++) {
+          for (let i = 0; i < HEADLINES.length; i++) {
+            drawItem(HEADLINES[i], cursor, y);
+            cursor += widths[i];
+          }
+        }
+      }
+
+      let position = 0;
+      let lastTimeMs = 0;
+      let lastFrameMs = 0;
+
+      function tick(now) {
+        if (FPS_CAP > 0 && (now - lastFrameMs) < FRAME_MS) {
+          requestAnimationFrame(tick);
+          return;
+        }
+        lastFrameMs = now;
+        if (lastTimeMs === 0) lastTimeMs = now;
+        const dt = (now - lastTimeMs) / 1000;
+        lastTimeMs = now;
+
+        // LEFT-to-RIGHT scroll: position DECREASES over time so the buffer
+        // window shows EARLIER content (= text appears to move rightward).
+        position = position - SPEED_PX_PER_SEC * dt;
+        if (position < 0) position += setWidth;
+        const intPos = Math.floor(position);
+
+        ctx.drawImage(
+          buffer,
+          intPos, 0, canvas.width, canvas.height,
+          0, 0, canvas.width, canvas.height
+        );
+
+        requestAnimationFrame(tick);
+      }
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function () {
+          setTimeout(function () {
+            buildBuffer();
+            requestAnimationFrame(tick);
+          }, 100);
+        });
+      } else {
+        setTimeout(function () {
+          buildBuffer();
+          requestAnimationFrame(tick);
+        }, 800);
+      }
+
+      window.addEventListener('resize', buildBuffer);
+    })();
+  </script>
+</body>
+</html>
