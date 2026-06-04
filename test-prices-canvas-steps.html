@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Office Ticker — Prices (Canvas + CSS steps)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #010101;
+      overflow: hidden;
+    }
+    .container {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    #ticker {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      /* image-rendering: pixelated forbids browser smoothing when scaling.
+         Combined with steps() timing, every frame shows the canvas at exact
+         integer pixel positions — no sub-pixel resampling at any moment. */
+      image-rendering: pixelated;
+      will-change: transform;
+      animation-name: scroll;
+      animation-iteration-count: infinite;
+      /* duration + timing-function (steps) set by JS based on ?speed= and content width */
+    }
+    @keyframes scroll {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-50%, 0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <canvas id="ticker"></canvas>
+  </div>
+
+  <script>
+    // Canvas + CSS steps() hybrid.
+    //  - Canvas paints content ONCE (crisp text)
+    //  - CSS animation has steps(N) timing where N = exact pixel width of one set
+    //  - Each step advances the transform by exactly 1 integer pixel
+    //  - Browser handles VSYNC + GPU compositing
+    //  - No sub-pixel offsets EVER → no smudge
+    (function () {
+      const canvas = document.getElementById('ticker');
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+
+      const URL_PARAMS = new URLSearchParams(window.location.search);
+      const SPEED_PX_PER_SEC = (function () {
+        const v = parseInt(URL_PARAMS.get('speed'), 10);
+        return (isFinite(v) && v > 0 && v <= 500) ? v : 30;
+      })();
+
+      const COLORS = {
+        bg: '#010101', text: '#ffffff',
+        up: '#22c55e', down: '#ef4444',
+      };
+
+      const ITEMS = [
+        { symbol: 'S&P 500', price: '7,554',    change: '-0.61%', direction: 'down' },
+        { symbol: 'NASDAQ',  price: '30,571',   change: '+0.19%', direction: 'up'   },
+        { symbol: 'TA-125',  price: '4,188',    change: '-0.90%', direction: 'down' },
+        { symbol: 'BTC',     price: '$63,869',  change: '-4.93%', direction: 'down' },
+        { symbol: 'ETH',     price: '$1,783',   change: '-4.98%', direction: 'down' },
+        { symbol: 'BNB',     price: '$602.55',  change: '-6.27%', direction: 'down' },
+        { symbol: 'XRP',     price: '$1.18',    change: '-5.49%', direction: 'down' },
+        { symbol: 'SOL',     price: '$69.76',   change: '-7.30%', direction: 'down' },
+      ];
+
+      let fontSize = 0, intraItemGap = 0, interItemGap = 0;
+
+      function setFont(weight) {
+        ctx.font = weight + ' ' + fontSize + 'px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      }
+
+      function currentTime() {
+        const d = new Date();
+        return new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false
+        }).format(d);
+      }
+
+      function priceItemWidth(it) {
+        setFont('600');
+        const w = ctx.measureText(it.symbol).width + intraItemGap +
+                  ctx.measureText(it.price).width + intraItemGap +
+                  ctx.measureText(it.change).width + interItemGap;
+        return Math.round(w);
+      }
+
+      function brandingWidth() {
+        const logoSize = Math.round(fontSize * 0.85);
+        const logoPad = Math.round(fontSize * 0.5);
+        setFont('600');
+        return Math.round(logoSize + logoPad + ctx.measureText(currentTime()).width + interItemGap);
+      }
+
+      function drawPriceItem(it, x, y) {
+        let cursor = x;
+        ctx.textBaseline = 'middle';
+        setFont('600');
+        ctx.fillStyle = COLORS.text;
+        ctx.fillText(it.symbol, Math.round(cursor), y);
+        cursor += ctx.measureText(it.symbol).width + intraItemGap;
+        ctx.fillText(it.price, Math.round(cursor), y);
+        cursor += ctx.measureText(it.price).width + intraItemGap;
+        ctx.fillStyle = it.direction === 'up' ? COLORS.up : COLORS.down;
+        ctx.fillText(it.change, Math.round(cursor), y);
+      }
+
+      function drawBranding(logo, x, y) {
+        const logoSize = Math.round(fontSize * 0.85);
+        const logoPad = Math.round(fontSize * 0.5);
+        ctx.globalAlpha = 0.9;
+        ctx.drawImage(logo, Math.round(x), Math.round(y - logoSize / 2), logoSize, logoSize);
+        ctx.globalAlpha = 1.0;
+        setFont('600');
+        ctx.fillStyle = COLORS.text;
+        ctx.fillText(currentTime(), Math.round(x + logoSize + logoPad), y);
+      }
+
+      function buildCanvas(logo) {
+        const viewportH = window.innerHeight;
+        fontSize = Math.round(Math.max(32, Math.min(104, viewportH * 0.10)));
+        intraItemGap = Math.round(fontSize * 0.5);
+        interItemGap = Math.round(fontSize * 1.4);
+
+        const widths = ITEMS.map(priceItemWidth);
+        const brandW = brandingWidth();
+        const setWidth = widths.reduce(function (a, b) { return a + b; }, 0) + brandW;
+
+        canvas.width = setWidth * 2;
+        canvas.height = viewportH;
+        ctx.imageSmoothingEnabled = false;
+
+        const y = Math.round(viewportH / 2);
+        ctx.fillStyle = COLORS.bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        let cursor = 0;
+        for (let copy = 0; copy < 2; copy++) {
+          for (let i = 0; i < ITEMS.length; i++) {
+            drawPriceItem(ITEMS[i], cursor, y);
+            cursor += widths[i];
+          }
+          drawBranding(logo, cursor, y);
+          cursor += brandW;
+        }
+
+        // The animation moves the canvas from translateX(0) to translateX(-50%),
+        // i.e. by setWidth pixels. We want the browser to advance in setWidth
+        // discrete integer-pixel steps — one step per pixel.
+        const duration = setWidth / SPEED_PX_PER_SEC;
+        canvas.style.animationDuration = duration + 's';
+        canvas.style.animationTimingFunction = 'steps(' + setWidth + ', end)';
+      }
+
+      const logo = new Image();
+      logo.onload = function () {
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(function () { buildCanvas(logo); }, 100); });
+        } else {
+          setTimeout(function () { buildCanvas(logo); }, 800);
+        }
+      };
+      logo.onerror = function () {
+        const blank = new Image();
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () { setTimeout(function () { buildCanvas(blank); }, 100); });
+        } else {
+          setTimeout(function () { buildCanvas(blank); }, 800);
+        }
+      };
+      logo.src = 'logo.svg';
+
+      // Rebuild every 60s for live time. CSS animation continues across rebuilds.
+      setInterval(function () { buildCanvas(logo); }, 60 * 1000);
+      window.addEventListener('resize', function () { buildCanvas(logo); });
+    })();
+  </script>
+</body>
+</html>
