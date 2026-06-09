@@ -1,0 +1,72 @@
+name: Refresh indices
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'   # every 10 minutes
+  workflow_dispatch:          # allow manual triggers from the Actions UI
+  push:
+    branches: [main]
+    paths:
+      - 'fetch-indices.py'
+      - '.github/workflows/refresh-indices.yml'
+
+permissions:
+  contents: write
+
+# Don't run multiple instances of this workflow at once (avoids race on the feed branch)
+concurrency:
+  group: refresh-indices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main (where the fetch script lives)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Run fetch script
+        run: python3 fetch-indices.py
+
+      - name: Stash output outside the workspace
+        run: cp indices.json /tmp/indices.json
+
+      - name: Checkout feed branch (where the file gets published)
+        uses: actions/checkout@v4
+        with:
+          ref: feed
+
+      - name: Place indices.json into the feed worktree
+        run: mv /tmp/indices.json indices.json
+
+      - name: Commit & push if content changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add indices.json
+          # Ignore the _updated_at-only changes so we don't push a commit every 10 min
+          # when nothing else moved. We diff WITHOUT _updated_at to decide.
+          if python3 -c "
+          import json, sys
+          new = json.load(open('indices.json'))
+          new.pop('_updated_at', None)
+          try:
+              old_blob = __import__('subprocess').check_output(
+                  ['git', 'show', 'HEAD:indices.json'], stderr=__import__('subprocess').DEVNULL
+              ).decode()
+              old = json.loads(old_blob)
+              old.pop('_updated_at', None)
+              if old == new:
+                  sys.exit(1)  # unchanged
+          except Exception:
+              pass  # no prior file, treat as changed
+          sys.exit(0)  # changed
+          "; then
+            git commit -m "Refresh indices [bot]"
+            git push origin feed
+            echo "Pushed update."
+          else
+            echo "No price changes; skipping commit."
+          fi
