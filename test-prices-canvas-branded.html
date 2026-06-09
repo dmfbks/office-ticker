@@ -40,15 +40,19 @@
         dim:  'rgba(255,255,255,0.7)',  // for the bullet separators in branding
       };
 
+      // Initial placeholder values — overwritten within seconds by:
+      //   - fetchIndices() reading indices.json (server-rendered every 10 min)
+      //   - fetchPrices()  hitting CoinGecko directly (every 30s)
       const ITEMS = [
-        { symbol: "S&P 500", price: "7,406", change: "-2.35%", direction: "down" },
-        { symbol: "NASDAQ", price: "29,414", change: "-3.27%", direction: "down" },
-        { symbol: "TA-125", price: "4,232", change: "+0.01%", direction: "up" },
-        { symbol: "BTC", price: "$63,103", change: "+0.91%", direction: "up" },
-        { symbol: "ETH", price: "$1,681", change: "+1.70%", direction: "up" },
-        { symbol: "BNB", price: "$601.04", change: "+1.16%", direction: "up" },
-        { symbol: "XRP", price: "$1.16", change: "+2.33%", direction: "up" },
-        { symbol: "SOL", price: "$66.91", change: "+2.40%", direction: "up" },
+        { symbol: "S&P 500", price: "—", change: "—", direction: "up" },
+        { symbol: "NASDAQ",  price: "—", change: "—", direction: "up" },
+        { symbol: "TA-35",   price: "—", change: "—", direction: "up" },
+        { symbol: "USD",     price: "—", change: "—", direction: "up" },
+        { symbol: "BTC",     price: "—", change: "—", direction: "up" },
+        { symbol: "ETH",     price: "—", change: "—", direction: "up" },
+        { symbol: "BNB",     price: "—", change: "—", direction: "up" },
+        { symbol: "XRP",     price: "—", change: "—", direction: "up" },
+        { symbol: "SOL",     price: "—", change: "—", direction: "up" },
       ];
       const BRANDING = { kind: 'branding' };
 
