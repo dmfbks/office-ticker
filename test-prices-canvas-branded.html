@@ -199,8 +199,10 @@
             const d = data[tdSym] || (data.symbol === tdSym ? data : null);
             if (!d || d.status === 'error') return;
             const close = parseFloat(d.close);
-            const pct = parseFloat(d.percent_change);
-            if (!isFinite(close) || !isFinite(pct)) return;
+            const prev  = parseFloat(d.previous_close);
+            if (!isFinite(close) || !isFinite(prev) || prev === 0) return;
+            // Compute % ourselves — Twelve Data's percent_change can be off.
+            const pct = ((close - prev) / prev) * 100;
             item.price = fmtIndexPrice(close);
             item.change = fmtChange(pct);
             item.direction = pct >= 0 ? 'up' : 'down';
