@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <title>Office Ticker — Prices (Canvas half-res + 2x scale)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 3840px;
+      height: 86px;
+      background: #010101;
+      overflow: hidden;
+    }
+    /* Render canvas at 1920×43, scale 2x via CSS transform.
+       Reduces per-frame canvas work by 4x (1/4 the pixels).
+       `image-rendering: pixelated` forces nearest-neighbor upscale —
+       crisp edges, no blur. Visual will be chunky (each "pixel" is 2×2
+       LED pixels). Trade-off: half the rendering work, double-size pixels. */
+    canvas {
+      width: 1920px;
+      height: 43px;
+      transform: scale(2);
+      transform-origin: top left;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      display: block;
+    }
+    #debug {
+      position: fixed; top: 2px; left: 2px;
+      font: 10px monospace;
+      color: rgba(255,255,255,0.35);
+      pointer-events: none;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="ticker" width="1920" height="43"></canvas>
+  <div id="debug"></div>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('ticker');
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+
+      const dbg = document.getElementById('debug');
+
+      const URL_PARAMS = new URLSearchParams(window.location.search);
+      const SPEED_PX_PER_SEC = (function () {
+        const v = parseInt(URL_PARAMS.get('speed'), 10);
+        return (isFinite(v) && v > 0 && v <= 500) ? v : 15;  // 15 in canvas-pixels = 30 in screen-pixels
+      })();
+      const FPS_CAP = (function () {
+        const v = parseInt(URL_PARAMS.get('fps'), 10);
+        return (isFinite(v) && v > 0 && v <= 120) ? v : 0;
+      })();
+      const FRAME_MS = FPS_CAP > 0 ? (1000 / FPS_CAP) : 0;
+
+      const COLORS = {
+        bg: '#010101', text: '#ffffff',
+        up: '#22c55e', down: '#ef4444',
+      };
+
+      const ITEMS = [
+        { symbol: 'S&P 500', price: '7,406',    change: '-2.35%', direction: 'down' },
+        { symbol: 'NASDAQ',  price: '29,414',   change: '-3.27%', direction: 'down' },
+        { symbol: 'TA-125',  price: '4,232',    change: '+0.01%', direction: 'up'   },
+        { symbol: 'BTC',     price: '$63,103',  change: '+0.91%', direction: 'up'   },
+        { symbol: 'ETH',     price: '$1,681',   change: '+1.70%', direction: 'up'   },
+        { symbol: 'BNB',     price: '$601.04',  change: '+1.16%', direction: 'up'   },
+        { symbol: 'XRP',     price: '$1.16',    change: '+2.33%', direction: 'up'   },
+        { symbol: 'SOL',     price: '$66.91',   change: '+2.40%', direction: 'up'   },
+      ];
+
+      // All sizes are in HALF-resolution canvas pixels (1920×43)
+      const FONT_SIZE = 32;   // 32 canvas-px → 64 screen-px after 2x scale
+      const INTRA_GAP = 14;
+      const INTER_GAP = 35;
+      const LOGO_SIZE = 28;
+
+      function setFont() {
+        ctx.font = '600 ' + FONT_SIZE + 'px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      }
+      function currentTime() {
+        const d = new Date();
+        return new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false
+        }).format(d);
+      }
+      function priceItemWidth(it) {
+        setFont();
+        return Math.round(
+          ctx.measureText(it.symbol).width + INTRA_GAP +
+          ctx.measureText(it.price).width + INTRA_GAP +
+          ctx.measureText(it.change).width + INTER_GAP
+        );
+      }
+      function brandingWidth() {
+        setFont();
+        return Math.round(LOGO_SIZE + 12 + ctx.measureText(currentTime()).width + INTER_GAP);
+      }
+      function drawPriceItem(it, x, y) {
+        let cursor = x;
+        ctx.textBaseline = 'middle';
+        setFont();
+        ctx.fillStyle = COLORS.text;
+        ctx.fillText(it.symbol, Math.round(cursor), y);
+        cursor += ctx.measureText(it.symbol).width + INTRA_GAP;
+        ctx.fillText(it.price, Math.round(cursor), y);
+        cursor += ctx.measureText(it.price).width + INTRA_GAP;
+        ctx.fillStyle = it.direction === 'up' ? COLORS.up : COLORS.down;
+        ctx.fillText(it.change, Math.round(cursor), y);
+      }
+      function drawBranding(logo, x, y) {
+        ctx.globalAlpha = 0.9;
+        ctx.drawImage(logo, Math.round(x), Math.round(y - LOGO_SIZE / 2), LOGO_SIZE, LOGO_SIZE);
+        ctx.globalAlpha = 1.0;
+        setFont();
+        ctx.fillStyle = COLORS.text;
+        ctx.fillText(currentTime(), Math.round(x + LOGO_SIZE + 12), y);
+      }
+
+      let widths = [];
+      let setWidth = 0;
+      let position = 0;
+      let lastTimeMs = 0;
+      let lastFrameMs = 0;
+
+      function measure() {
+        widths = ITEMS.map(priceItemWidth);
+        setWidth = widths.reduce(function (a, b) { return a + b; }, 0) + brandingWidth();
+      }
+
+      function tick(now) {
+        if (FPS_CAP > 0 && (now - lastFrameMs) < FRAME_MS) {
+          requestAnimationFrame(tick);
+          return;
+        }
+        lastFrameMs = now;
+        if (lastTimeMs === 0) lastTimeMs = now;
+        const dt = (now - lastTimeMs) / 1000;
+        lastTimeMs = now;
+
+        position = position + SPEED_PX_PER_SEC * dt;
+        if (position >= setWidth) position -= setWidth;
+
+        ctx.fillStyle = COLORS.bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        const y = Math.round(canvas.height / 2);
+        // Draw two copies for seamless loop
+        let cursor = -Math.floor(position);
+        for (let copy = 0; copy < 2; copy++) {
+          for (let i = 0; i < ITEMS.length; i++) {
+            if (cursor + widths[i] > 0 && cursor < canvas.width) {
+              drawPriceItem(ITEMS[i], cursor, y);
+            }
+            cursor += widths[i];
+          }
+          drawBranding(logo, cursor, y);
+          cursor += brandingWidth();
+        }
+
+        dbg.textContent =
+          'canvas=' + canvas.width + '×' + canvas.height +
+          ' scaled=' + (canvas.width * 2) + '×' + (canvas.height * 2) +
+          ' inner=' + window.innerWidth + '×' + window.innerHeight;
+
+        requestAnimationFrame(tick);
+      }
+
+      const logo = new Image();
+      logo.onload = function () {
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            setTimeout(function () { measure(); requestAnimationFrame(tick); }, 100);
+          });
+        } else {
+          setTimeout(function () { measure(); requestAnimationFrame(tick); }, 800);
+        }
+      };
+      logo.onerror = function () { logo.complete = true; setTimeout(function () { measure(); requestAnimationFrame(tick); }, 500); };
+      logo.src = 'logo.svg';
+    })();
+  </script>
+</body>
+</html>

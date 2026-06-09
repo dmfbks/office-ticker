@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <title>Office Ticker — Prices (marquee)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 3840px;
+      height: 86px;
+      background: #010101;
+      color: #fff;
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      overflow: hidden;
+    }
+    marquee {
+      width: 100%;
+      height: 100%;
+      font-size: 64px;
+      line-height: 86px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .symbol { font-weight: 600; }
+    .price { font-weight: 600; margin-left: 0.5em; margin-right: 0.5em; }
+    .change { font-weight: 600; margin-right: 2em; }
+    .up   { color: #22c55e; }
+    .down { color: #ef4444; }
+    .sep { margin-right: 2em; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <!--
+    The <marquee> element is deprecated HTML but Chromium still ships it.
+    Some embedded webviews give it a hardware-optimized scrolling path —
+    same engine that handles other native scrolling.
+    `scrollamount`: pixels per step; `scrolldelay`: ms between steps.
+    scrollamount=2, scrolldelay=30 → ~67 px/sec (smoothest at 60Hz).
+    Adjustable via URL: ?amount=N&delay=M
+  -->
+  <marquee id="m" behavior="scroll" direction="left"
+           scrollamount="2" scrolldelay="30">
+    <span class="symbol">S&P 500</span><span class="price">7,406</span><span class="change down">-2.35%</span>
+    <span class="symbol">NASDAQ</span><span class="price">29,414</span><span class="change down">-3.27%</span>
+    <span class="symbol">TA-125</span><span class="price">4,232</span><span class="change up">+0.01%</span>
+    <span class="symbol">BTC</span><span class="price">$63,103</span><span class="change up">+0.91%</span>
+    <span class="symbol">ETH</span><span class="price">$1,681</span><span class="change up">+1.70%</span>
+    <span class="symbol">BNB</span><span class="price">$601.04</span><span class="change up">+1.16%</span>
+    <span class="symbol">XRP</span><span class="price">$1.16</span><span class="change up">+2.33%</span>
+    <span class="symbol">SOL</span><span class="price">$66.91</span><span class="change up">+2.40%</span>
+    <span class="sep">•</span>
+  </marquee>
+  <script>
+    // Speed control via URL: ?amount= (pixels per step) & ?delay= (ms between steps)
+    const p = new URLSearchParams(window.location.search);
+    const m = document.getElementById('m');
+    const amount = parseInt(p.get('amount'), 10);
+    const delay = parseInt(p.get('delay'), 10);
+    if (isFinite(amount) && amount > 0) m.setAttribute('scrollamount', amount);
+    if (isFinite(delay) && delay > 0) m.setAttribute('scrolldelay', delay);
+  </script>
+</body>
+</html>
