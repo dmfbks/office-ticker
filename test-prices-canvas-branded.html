@@ -168,7 +168,7 @@
       const TD_SYMBOLS = {
         'S&P 500': 'SPX',
         'NASDAQ':  'NDX',
-        'TA-35':   'TA35',    // Twelve Data has TA-35 (not TA-125) on free tier
+        'USD':     'USD/ILS', // forex pair on Twelve Data; if free tier doesn't cover, value stays hardcoded
       };
       function fmtIndexPrice(p) {
         return Math.round(p).toLocaleString('en-US');
@@ -196,20 +196,21 @@
           ITEMS.forEach(function (item) {
             const tdSym = TD_SYMBOLS[item.symbol];
             if (!tdSym) return;
+            // Multi-symbol responses key by symbol; for forex pairs ("USD/ILS") the key is the same string.
             const d = data[tdSym] || (data.symbol === tdSym ? data : null);
             if (!d || d.status === 'error') return;
-            let close = parseFloat(d.close);
-            let prev  = parseFloat(d.previous_close);
+            const close = parseFloat(d.close);
+            const prev  = parseFloat(d.previous_close);
             if (!isFinite(close) || !isFinite(prev) || prev === 0) return;
-            // TA-35 sanity: if reported in agorot (ILA) the value is ~200,000.
-            // Real TA-35 in shekels is ~2,000. Divide by 100 if we detect agorot.
-            if (item.symbol === 'TA-35' && close > 50000) {
-              close = close / 100;
-              prev  = prev  / 100;
-            }
             // Compute % ourselves — Twelve Data's percent_change can be off.
             const pct = ((close - prev) / prev) * 100;
-            item.price = fmtIndexPrice(close);
+            // Format based on what kind of item this is
+            if (item.symbol === 'USD') {
+              // USD/ILS forex: ₪3.70 style (shekel prefix, 2 decimals)
+              item.price = '₪' + close.toFixed(2);
+            } else {
+              item.price = fmtIndexPrice(close);
+            }
             item.change = fmtChange(pct);
             item.direction = pct >= 0 ? 'up' : 'down';
           });
