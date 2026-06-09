@@ -1,19 +1,19 @@
 {
   "S&P 500": {
-    "price": 7288.43,
+    "price": 7342.46,
     "previous_close": 7383.74
   },
   "NASDAQ": {
-    "price": 28539.684,
+    "price": 28806.258,
     "previous_close": 28957.6
   },
-  "TA-125": {
-    "price": 4191.13,
-    "previous_close": 4232.14
+  "TA-35": {
+    "price": 4232.42,
+    "previous_close": 4281.85
   },
   "USD": {
-    "price": 2.9691,
+    "price": 2.9632,
     "previous_close": 2.9292
   },
-  "_updated_at": "2026-06-09T17:11:21.187113+00:00"
+  "_updated_at": "2026-06-09T18:16:41.420774+00:00"
 }
