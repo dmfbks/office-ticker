@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 # Maps the display label (used in the page's ITEMS array) to the Yahoo symbol
 SYMBOLS = {
     'S&P 500': '^GSPC',
-    'NASDAQ':  '^NDX',
+    'NASDAQ':  '^IXIC',  # Composite, not the NASDAQ-100
     'TA-35':   'TA35.TA',
     'USD':     'USDILS=X',     # USD/ILS forex rate; page formats this as "₪X.XX"
 }
