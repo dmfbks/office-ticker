@@ -161,6 +161,56 @@
       // Kick off initial fetch (subsequent calls scheduled in finally)
       fetchPrices();
 
+      // ===== Live Twelve Data fetch for stock indices =====
+      // Requires ?tdkey=YOUR_API_KEY on the URL. If missing, indices stay hardcoded.
+      const TD_KEY = URL_PARAMS.get('tdkey') || '';
+      // Twelve Data symbol mapping
+      const TD_SYMBOLS = {
+        'S&P 500': 'SPX',
+        'NASDAQ':  'NDX',
+        'TA-125':  'TA125',   // TASE indices use "TA125" on Twelve Data
+      };
+      function fmtIndexPrice(p) {
+        return Math.round(p).toLocaleString('en-US');
+      }
+      let tdPollMs = 5 * 60 * 1000;          // 5 min (indices don't tick fast)
+      const TD_POLL_MAX_MS = 30 * 60 * 1000; // 30 min ceiling on backoff
+      async function fetchIndices() {
+        if (!TD_KEY) return;  // disabled if no key
+        try {
+          const syms = Object.values(TD_SYMBOLS).join(',');
+          const url = 'https://api.twelvedata.com/quote'
+            + '?symbol=' + encodeURIComponent(syms)
+            + '&apikey=' + encodeURIComponent(TD_KEY);
+          const res = await fetch(url);
+          if (res.status === 429 || res.status === 401) {
+            // Rate-limited or invalid key — back off
+            tdPollMs = Math.min(tdPollMs * 2, TD_POLL_MAX_MS);
+            return;
+          }
+          if (!res.ok) return;
+          tdPollMs = 5 * 60 * 1000;
+          const data = await res.json();
+          // Multi-symbol response: { 'SPX': {...}, 'NDX': {...}, 'TA125': {...} }
+          // Single-symbol response: direct fields
+          ITEMS.forEach(function (item) {
+            const tdSym = TD_SYMBOLS[item.symbol];
+            if (!tdSym) return;
+            const d = data[tdSym] || (data.symbol === tdSym ? data : null);
+            if (!d || d.status === 'error') return;
+            const close = parseFloat(d.close);
+            const pct = parseFloat(d.percent_change);
+            if (!isFinite(close) || !isFinite(pct)) return;
+            item.price = fmtIndexPrice(close);
+            item.change = fmtChange(pct);
+            item.direction = pct >= 0 ? 'up' : 'down';
+          });
+        } catch (e) { /* swallow */ }
+        finally { setTimeout(fetchIndices, tdPollMs); }
+      }
+      fetchIndices();
+
+
       // Sizing
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
       let brandingBulletGap = 0;
