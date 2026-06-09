@@ -32,22 +32,23 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 16px;
-      font-size: 56px;
+      padding: 0 12px;
+      /* 32px font matches the canvas-branded version at 86px panel height */
+      font-size: 32px;
     }
     /* Branding corner: logo + time */
     .brand {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-right: 32px;
-      padding-right: 32px;
-      border-right: 2px solid rgba(255,255,255,0.18);
+      gap: 16px;          /* matches branded: fontSize * 0.5 */
+      margin-right: 24px;
+      padding-right: 24px;
+      border-right: 1px solid rgba(255,255,255,0.18);
       flex-shrink: 0;
     }
     .brand img {
-      height: 56px;
-      width: 56px;
+      height: 28px;       /* matches branded: fontSize * 0.85 */
+      width: 28px;
       opacity: 0.9;
     }
     .brand .time {
@@ -66,9 +67,9 @@
     .item {
       display: inline-flex;
       align-items: baseline;
-      gap: 14px;
-      padding: 8px 18px;
-      border-radius: 8px;
+      gap: 16px;          /* matches branded: fontSize * 0.5 — between symbol/price/change */
+      padding: 6px 14px;
+      border-radius: 6px;
       white-space: nowrap;
       transition: background-color 200ms ease-out;
     }
@@ -112,7 +113,8 @@
       { id: 'ripple',       symbol: 'XRP'  },
       { id: 'solana',       symbol: 'SOL'  },
     ];
-    const POLL_INTERVAL_MS = 30 * 1000;  // 30s — well under CoinGecko free-tier rate limits
+    let pollIntervalMs = 10 * 1000;      // 10s default. Backoff doubles this on 429 rate-limit.
+    const POLL_MAX_MS = 60 * 1000;       // ceiling for backoff
     const CG_URL =
       'https://api.coingecko.com/api/v3/simple/price'
       + '?ids=' + COINS.map(function (c) { return c.id; }).join(',')
@@ -155,10 +157,24 @@
     }
 
     // ----- Price fetch & update -----
+    let pollTimer = null;
+    function schedulePoll() {
+      if (pollTimer) clearTimeout(pollTimer);
+      pollTimer = setTimeout(fetchAndUpdate, pollIntervalMs);
+    }
     async function fetchAndUpdate() {
       try {
         const res = await fetch(CG_URL);
-        if (!res.ok) return;
+        if (res.status === 429) {
+          // Rate-limited — back off (double the interval up to the ceiling)
+          pollIntervalMs = Math.min(pollIntervalMs * 2, POLL_MAX_MS);
+          console.warn('Rate-limited; backing off to', pollIntervalMs, 'ms');
+          schedulePoll();
+          return;
+        }
+        if (!res.ok) { schedulePoll(); return; }
+        // Successful response — reset interval back to 10s if it had backed off
+        pollIntervalMs = 10 * 1000;
         const data = await res.json();
         COINS.forEach(function (c) {
           const d = data[c.id];
@@ -185,6 +201,8 @@
         });
       } catch (e) {
         console.error('Fetch failed:', e);
+      } finally {
+        schedulePoll();
       }
     }
 
@@ -200,8 +218,7 @@
     // ----- Boot -----
     updateTime();
     setInterval(updateTime, 30 * 1000);
-    fetchAndUpdate();
-    setInterval(fetchAndUpdate, POLL_INTERVAL_MS);
+    fetchAndUpdate();  // initial fetch; subsequent ones scheduled by schedulePoll() in finally
   </script>
 </body>
 </html>
