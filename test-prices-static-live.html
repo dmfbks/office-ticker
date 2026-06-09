@@ -15,7 +15,6 @@
       --text: #fff;
       --up: #22c55e;
       --down: #ef4444;
-      --flash-duration: 800ms;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -33,30 +32,29 @@
       display: flex;
       align-items: center;
       padding: 0 12px;
-      /* 32px font matches the canvas-branded version at 86px panel height */
-      font-size: 32px;
+      font-size: 32px;  /* matches canvas-branded at 86px panel height */
     }
     /* Branding corner: logo + time */
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;          /* matches branded: fontSize * 0.5 */
-      margin-right: 24px;
-      padding-right: 24px;
+      margin-right: 20px;
+      padding-right: 20px;
       border-right: 1px solid rgba(255,255,255,0.18);
       flex-shrink: 0;
     }
     .brand img {
-      height: 28px;       /* matches branded: fontSize * 0.85 */
+      height: 28px;
       width: 28px;
       opacity: 0.9;
+      margin-right: 16px;
     }
     .brand .time {
       color: var(--text);
       font-weight: 600;
       letter-spacing: 0.02em;
     }
-    /* Items list — distributed evenly across remaining horizontal space */
+    /* Items distributed evenly across remaining horizontal space */
     .items {
       flex: 1;
       display: flex;
@@ -67,29 +65,17 @@
     .item {
       display: inline-flex;
       align-items: baseline;
-      gap: 16px;          /* matches branded: fontSize * 0.5 — between symbol/price/change */
       padding: 6px 14px;
       border-radius: 6px;
       white-space: nowrap;
-      transition: background-color 200ms ease-out;
+      /* No CSS animation — flash is a step change handled via JS */
     }
-    .symbol { color: var(--text); font-weight: 600; }
-    .price  { color: var(--text); font-weight: 600; }
+    /* Per-element margin (Colorlight webview doesn't honor `gap` on inline-flex) */
+    .symbol { color: var(--text); font-weight: 600; margin-right: 16px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 16px; }
     .change { font-weight: 600; }
     .change.up   { color: var(--up); }
     .change.down { color: var(--down); }
-
-    /* Flash animations triggered when price updates */
-    .item.flash-up   { animation: flash-up   var(--flash-duration) ease-out; }
-    .item.flash-down { animation: flash-down var(--flash-duration) ease-out; }
-    @keyframes flash-up {
-      0%   { background-color: rgba(34, 197, 94, 0.55); }
-      100% { background-color: transparent; }
-    }
-    @keyframes flash-down {
-      0%   { background-color: rgba(239, 68, 68, 0.55); }
-      100% { background-color: transparent; }
-    }
   </style>
 </head>
 <body>
@@ -98,46 +84,39 @@
       <img src="logo.svg" alt="Fireblocks" />
       <span class="time" id="time">--:--</span>
     </div>
-    <div class="items" id="items">
-      <!-- Items rendered by JS -->
-    </div>
+    <div class="items" id="items"></div>
   </div>
 
   <script>
-    // ----- Configuration -----
-    // CoinGecko IDs → display symbols (order = display order)
-    const COINS = [
-      { id: 'bitcoin',      symbol: 'BTC'  },
-      { id: 'ethereum',     symbol: 'ETH'  },
-      { id: 'binancecoin',  symbol: 'BNB'  },
-      { id: 'ripple',       symbol: 'XRP'  },
-      { id: 'solana',       symbol: 'SOL'  },
-    ];
-    let pollIntervalMs = 10 * 1000;      // 10s default. Backoff doubles this on 429 rate-limit.
-    const POLL_MAX_MS = 60 * 1000;       // ceiling for backoff
-    const CG_URL =
-      'https://api.coingecko.com/api/v3/simple/price'
-      + '?ids=' + COINS.map(function (c) { return c.id; }).join(',')
-      + '&vs_currencies=usd'
-      + '&include_24hr_change=true';
+    // ===== Configuration =====
+    const TOP_N = 8;                     // how many non-stable crypto to show
+    let pollIntervalMs = 10 * 1000;      // 10s default, doubles on 429 up to 60s
+    const POLL_MAX_MS = 60 * 1000;
+    const FLASH_DURATION_MS = 300;       // step-change flash visible duration
 
-    // ----- DOM setup -----
+    // Stablecoin + pegged-token exclusion list (same as production rules)
+    const STABLES = new Set([
+      'USDT','USDC','USDS','USD1','USDE','DAI','PYUSD',
+      'USYC','XAUT','USDG','BUIDL','USDY','PAXG','FIGR_HELOC',
+    ]);
+    function isStable(coin) {
+      const sym = coin.symbol.toUpperCase();
+      if (STABLES.has(sym)) return true;
+      // Heuristic: any USD-named token trading at ~$1
+      if (sym.includes('USD') && coin.current_price >= 0.95 && coin.current_price <= 1.05) return true;
+      return false;
+    }
+
+    const MARKETS_URL =
+      'https://api.coingecko.com/api/v3/coins/markets'
+      + '?vs_currency=usd&order=market_cap_desc&per_page=25&page=1'
+      + '&sparkline=false&price_change_percentage=24h';
+
+    // ===== DOM helpers =====
     const itemsRoot = document.getElementById('items');
-    const itemNodes = {};
-    COINS.forEach(function (c) {
-      const el = document.createElement('div');
-      el.className = 'item';
-      el.dataset.symbol = c.symbol;
-      el.dataset.coinId = c.id;
-      el.innerHTML =
-        '<span class="symbol">' + c.symbol + '</span>' +
-        '<span class="price">—</span>' +
-        '<span class="change">—</span>';
-      itemsRoot.appendChild(el);
-      itemNodes[c.id] = el;
-    });
+    const itemNodes = {};   // coinId → <div class="item">
+    let tracked = [];       // [{id, symbol}, ...] — set at init, then refreshed every poll
 
-    // ----- Formatting helpers -----
     function fmtPrice(p) {
       if (p >= 1000) return '$' + Math.round(p).toLocaleString('en-US');
       return '$' + p.toFixed(2);
@@ -147,66 +126,108 @@
       return sign + c.toFixed(2) + '%';
     }
 
-    // ----- Flash animation trigger -----
+    function buildItem(coin) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.coinId = coin.id;
+      el.dataset.symbol = coin.symbol.toUpperCase();
+      el.innerHTML =
+        '<span class="symbol">' + coin.symbol.toUpperCase() + '</span>' +
+        '<span class="price">—</span>' +
+        '<span class="change">—</span>';
+      return el;
+    }
+
+    function applyPrice(el, price, change) {
+      el.querySelector('.price').textContent = fmtPrice(price);
+      const changeEl = el.querySelector('.change');
+      changeEl.textContent = fmtChange(change);
+      changeEl.className = 'change ' + (change >= 0 ? 'up' : 'down');
+    }
+
+    // Step-change flash: solid color on instantly, off after FLASH_DURATION_MS.
+    // No CSS transition / animation — alpha-blended fades render poorly on LED.
     function flashItem(el, direction) {
-      // Remove any in-flight animation class, force reflow, then re-add to restart
-      el.classList.remove('flash-up', 'flash-down');
-      // eslint-disable-next-line no-unused-expressions
-      void el.offsetWidth;
-      el.classList.add(direction === 'up' ? 'flash-up' : 'flash-down');
+      el.style.backgroundColor = direction === 'up' ? '#22c55e' : '#ef4444';
+      setTimeout(function () { el.style.backgroundColor = ''; }, FLASH_DURATION_MS);
     }
 
-    // ----- Price fetch & update -----
-    let pollTimer = null;
-    function schedulePoll() {
-      if (pollTimer) clearTimeout(pollTimer);
-      pollTimer = setTimeout(fetchAndUpdate, pollIntervalMs);
-    }
-    async function fetchAndUpdate() {
+    // ===== Initial load: fetch markets, filter, render items =====
+    async function loadInitial() {
       try {
-        const res = await fetch(CG_URL);
-        if (res.status === 429) {
-          // Rate-limited — back off (double the interval up to the ceiling)
-          pollIntervalMs = Math.min(pollIntervalMs * 2, POLL_MAX_MS);
-          console.warn('Rate-limited; backing off to', pollIntervalMs, 'ms');
-          schedulePoll();
-          return;
-        }
-        if (!res.ok) { schedulePoll(); return; }
-        // Successful response — reset interval back to 10s if it had backed off
-        pollIntervalMs = 10 * 1000;
+        const res = await fetch(MARKETS_URL);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
-        COINS.forEach(function (c) {
-          const d = data[c.id];
-          if (!d) return;
-          const el = itemNodes[c.id];
-          const newPrice = d.usd;
-          const newChange = d.usd_24h_change || 0;
+        const top = data.filter(function (c) { return !isStable(c); }).slice(0, TOP_N);
+        tracked = top.map(function (c) { return { id: c.id, symbol: c.symbol.toUpperCase() }; });
 
-          // Compare with previous price for flash trigger
-          const prevPrice = parseFloat(el.dataset.price);
-          if (isFinite(prevPrice)) {
-            if (newPrice > prevPrice)      flashItem(el, 'up');
-            else if (newPrice < prevPrice) flashItem(el, 'down');
-          }
-
-          // Update displayed values
-          el.querySelector('.price').textContent = fmtPrice(newPrice);
-          const changeEl = el.querySelector('.change');
-          changeEl.textContent = fmtChange(newChange);
-          changeEl.className = 'change ' + (newChange >= 0 ? 'up' : 'down');
-
-          // Store for next comparison
-          el.dataset.price = newPrice;
+        // Render the items
+        itemsRoot.innerHTML = '';
+        top.forEach(function (c) {
+          const el = buildItem(c);
+          itemsRoot.appendChild(el);
+          itemNodes[c.id] = el;
+          applyPrice(el, c.current_price, c.price_change_percentage_24h || 0);
+          el.dataset.price = c.current_price;
         });
       } catch (e) {
-        console.error('Fetch failed:', e);
+        console.error('Initial load failed:', e);
       } finally {
         schedulePoll();
       }
     }
 
-    // ----- Time updater -----
+    // ===== Periodic price update (cheap call to /simple/price) =====
+    let pollTimer = null;
+    function schedulePoll() {
+      if (pollTimer) clearTimeout(pollTimer);
+      pollTimer = setTimeout(updatePrices, pollIntervalMs);
+    }
+
+    async function updatePrices() {
+      if (tracked.length === 0) { schedulePoll(); return; }
+      const url = 'https://api.coingecko.com/api/v3/simple/price'
+        + '?ids=' + tracked.map(function (t) { return t.id; }).join(',')
+        + '&vs_currencies=usd&include_24hr_change=true';
+      try {
+        const res = await fetch(url);
+        if (res.status === 429) {
+          // Rate-limited — back off (doubles up to POLL_MAX_MS)
+          pollIntervalMs = Math.min(pollIntervalMs * 2, POLL_MAX_MS);
+          console.warn('Rate-limited; backing off to', pollIntervalMs, 'ms');
+          return;
+        }
+        if (!res.ok) return;
+        // Success — reset poll interval back to 10s
+        pollIntervalMs = 10 * 1000;
+
+        const data = await res.json();
+        tracked.forEach(function (t) {
+          const d = data[t.id];
+          if (!d) return;
+          const el = itemNodes[t.id];
+          if (!el) return;
+          const newPrice = d.usd;
+          const newChange = d.usd_24h_change || 0;
+
+          // Compare with stored price for flash
+          const prev = parseFloat(el.dataset.price);
+          if (isFinite(prev)) {
+            if (newPrice > prev)      flashItem(el, 'up');
+            else if (newPrice < prev) flashItem(el, 'down');
+          }
+
+          applyPrice(el, newPrice, newChange);
+          el.dataset.price = newPrice;
+        });
+      } catch (e) {
+        console.error('Update failed:', e);
+      } finally {
+        schedulePoll();
+      }
+    }
+
+    // ===== Time =====
     function updateTime() {
       const d = new Date();
       const t = new Intl.DateTimeFormat('en-GB', {
@@ -215,10 +236,10 @@
       document.getElementById('time').textContent = t;
     }
 
-    // ----- Boot -----
+    // ===== Boot =====
     updateTime();
     setInterval(updateTime, 30 * 1000);
-    fetchAndUpdate();  // initial fetch; subsequent ones scheduled by schedulePoll() in finally
+    loadInitial();
   </script>
 </body>
 </html>
