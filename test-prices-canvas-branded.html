@@ -111,6 +111,56 @@
       const FRAME_MS = FPS_CAP > 0 ? (1000 / FPS_CAP) : 0;
       let lastFrameTime = 0;
 
+      // ===== Live CoinGecko fetch for crypto items =====
+      // Indices remain hardcoded (waiting on Twelve Data API key);
+      // crypto prices update every 30 seconds from the public CoinGecko API.
+      const COIN_IDS = {
+        'BTC': 'bitcoin',
+        'ETH': 'ethereum',
+        'BNB': 'binancecoin',
+        'XRP': 'ripple',
+        'SOL': 'solana',
+      };
+      const CG_URL =
+        'https://api.coingecko.com/api/v3/simple/price'
+        + '?ids=' + Object.values(COIN_IDS).join(',')
+        + '&vs_currencies=usd&include_24hr_change=true';
+      function fmtPrice(p) {
+        if (p >= 1000) return '$' + Math.round(p).toLocaleString('en-US');
+        return '$' + p.toFixed(2);
+      }
+      function fmtChange(c) {
+        const sign = c >= 0 ? '+' : '';
+        return sign + c.toFixed(2) + '%';
+      }
+      let pollMs = 30 * 1000;
+      const POLL_MAX_MS = 120 * 1000;
+      async function fetchPrices() {
+        try {
+          const res = await fetch(CG_URL);
+          if (res.status === 429) {
+            pollMs = Math.min(pollMs * 2, POLL_MAX_MS);
+            return;
+          }
+          if (!res.ok) return;
+          pollMs = 30 * 1000;
+          const data = await res.json();
+          ITEMS.forEach(function (item) {
+            const id = COIN_IDS[item.symbol];
+            if (!id) return;  // skip indices
+            const d = data[id];
+            if (!d) return;
+            item.price = fmtPrice(d.usd);
+            const ch = d.usd_24h_change || 0;
+            item.change = fmtChange(ch);
+            item.direction = ch >= 0 ? 'up' : 'down';
+          });
+        } catch (e) { /* swallow */ }
+        finally { setTimeout(fetchPrices, pollMs); }
+      }
+      // Kick off initial fetch (subsequent calls scheduled in finally)
+      fetchPrices();
+
       // Sizing
       let fontSize = 0, badgeRadius = 0, intraItemGap = 0, interItemGap = 0;
       let brandingBulletGap = 0;
