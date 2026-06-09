@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <title>Office Ticker — Prices (Static + Live + Flash)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #010101;
+      --text: #fff;
+      --up: #22c55e;
+      --down: #ef4444;
+      --flash-duration: 800ms;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 3840px;
+      height: 86px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 56px;
+    }
+    /* Branding corner: logo + time */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-right: 32px;
+      padding-right: 32px;
+      border-right: 2px solid rgba(255,255,255,0.18);
+      flex-shrink: 0;
+    }
+    .brand img {
+      height: 56px;
+      width: 56px;
+      opacity: 0.9;
+    }
+    .brand .time {
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    /* Items list — distributed evenly across remaining horizontal space */
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+    }
+    .item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      white-space: nowrap;
+      transition: background-color 200ms ease-out;
+    }
+    .symbol { color: var(--text); font-weight: 600; }
+    .price  { color: var(--text); font-weight: 600; }
+    .change { font-weight: 600; }
+    .change.up   { color: var(--up); }
+    .change.down { color: var(--down); }
+
+    /* Flash animations triggered when price updates */
+    .item.flash-up   { animation: flash-up   var(--flash-duration) ease-out; }
+    .item.flash-down { animation: flash-down var(--flash-duration) ease-out; }
+    @keyframes flash-up {
+      0%   { background-color: rgba(34, 197, 94, 0.55); }
+      100% { background-color: transparent; }
+    }
+    @keyframes flash-down {
+      0%   { background-color: rgba(239, 68, 68, 0.55); }
+      100% { background-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker">
+    <div class="brand">
+      <img src="logo.svg" alt="Fireblocks" />
+      <span class="time" id="time">--:--</span>
+    </div>
+    <div class="items" id="items">
+      <!-- Items rendered by JS -->
+    </div>
+  </div>
+
+  <script>
+    // ----- Configuration -----
+    // CoinGecko IDs → display symbols (order = display order)
+    const COINS = [
+      { id: 'bitcoin',      symbol: 'BTC'  },
+      { id: 'ethereum',     symbol: 'ETH'  },
+      { id: 'binancecoin',  symbol: 'BNB'  },
+      { id: 'ripple',       symbol: 'XRP'  },
+      { id: 'solana',       symbol: 'SOL'  },
+    ];
+    const POLL_INTERVAL_MS = 30 * 1000;  // 30s — well under CoinGecko free-tier rate limits
+    const CG_URL =
+      'https://api.coingecko.com/api/v3/simple/price'
+      + '?ids=' + COINS.map(function (c) { return c.id; }).join(',')
+      + '&vs_currencies=usd'
+      + '&include_24hr_change=true';
+
+    // ----- DOM setup -----
+    const itemsRoot = document.getElementById('items');
+    const itemNodes = {};
+    COINS.forEach(function (c) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.symbol = c.symbol;
+      el.dataset.coinId = c.id;
+      el.innerHTML =
+        '<span class="symbol">' + c.symbol + '</span>' +
+        '<span class="price">—</span>' +
+        '<span class="change">—</span>';
+      itemsRoot.appendChild(el);
+      itemNodes[c.id] = el;
+    });
+
+    // ----- Formatting helpers -----
+    function fmtPrice(p) {
+      if (p >= 1000) return '$' + Math.round(p).toLocaleString('en-US');
+      return '$' + p.toFixed(2);
+    }
+    function fmtChange(c) {
+      const sign = c >= 0 ? '+' : '';
+      return sign + c.toFixed(2) + '%';
+    }
+
+    // ----- Flash animation trigger -----
+    function flashItem(el, direction) {
+      // Remove any in-flight animation class, force reflow, then re-add to restart
+      el.classList.remove('flash-up', 'flash-down');
+      // eslint-disable-next-line no-unused-expressions
+      void el.offsetWidth;
+      el.classList.add(direction === 'up' ? 'flash-up' : 'flash-down');
+    }
+
+    // ----- Price fetch & update -----
+    async function fetchAndUpdate() {
+      try {
+        const res = await fetch(CG_URL);
+        if (!res.ok) return;
+        const data = await res.json();
+        COINS.forEach(function (c) {
+          const d = data[c.id];
+          if (!d) return;
+          const el = itemNodes[c.id];
+          const newPrice = d.usd;
+          const newChange = d.usd_24h_change || 0;
+
+          // Compare with previous price for flash trigger
+          const prevPrice = parseFloat(el.dataset.price);
+          if (isFinite(prevPrice)) {
+            if (newPrice > prevPrice)      flashItem(el, 'up');
+            else if (newPrice < prevPrice) flashItem(el, 'down');
+          }
+
+          // Update displayed values
+          el.querySelector('.price').textContent = fmtPrice(newPrice);
+          const changeEl = el.querySelector('.change');
+          changeEl.textContent = fmtChange(newChange);
+          changeEl.className = 'change ' + (newChange >= 0 ? 'up' : 'down');
+
+          // Store for next comparison
+          el.dataset.price = newPrice;
+        });
+      } catch (e) {
+        console.error('Fetch failed:', e);
+      }
+    }
+
+    // ----- Time updater -----
+    function updateTime() {
+      const d = new Date();
+      const t = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false
+      }).format(d);
+      document.getElementById('time').textContent = t;
+    }
+
+    // ----- Boot -----
+    updateTime();
+    setInterval(updateTime, 30 * 1000);
+    fetchAndUpdate();
+    setInterval(fetchAndUpdate, POLL_INTERVAL_MS);
+  </script>
+</body>
+</html>
