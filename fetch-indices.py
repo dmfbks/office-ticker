@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 SYMBOLS = {
     'S&P 500': '^GSPC',
     'NASDAQ':  '^NDX',
-    'TA-125':  '^TA125.TA',
+    'TA-35':   'TA35.TA',
     'USD':     'USDILS=X',     # USD/ILS forex rate; page formats this as "₪X.XX"
 }
 
