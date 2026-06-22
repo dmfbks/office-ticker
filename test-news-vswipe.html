@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <title>Office Ticker — News (Vertical Swipe)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:   #010101;
+      --text: #ffffff;
+      --frame-h: 86px;
+      --anim-ms: 600ms;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 3840px;
+      height: var(--frame-h);
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    /* Container clips everything except the current row */
+    .frame {
+      width: 100%;
+      height: var(--frame-h);
+      overflow: hidden;
+      position: relative;
+    }
+    /* Stack holds two rows: the incoming (top) and the current (bottom).
+       Initial position has the stack shifted up by one frame so only the
+       current row is visible. To rotate we translate the stack down by one
+       frame — both rows move down together; current goes off-screen bottom,
+       next slides into visible position. */
+    .stack {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(calc(-1 * var(--frame-h)));
+      will-change: transform;
+    }
+    .stack.animating {
+      transition: transform var(--anim-ms) ease-in-out;
+    }
+    .row {
+      width: 100%;
+      height: var(--frame-h);
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stack" id="stack">
+      <!-- Two rows live here: [0] = next headline (above viewport), [1] = current (visible) -->
+      <div class="row" id="row-next">—</div>
+      <div class="row" id="row-current">Loading…</div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Configuration =====
+    const ROTATION_INTERVAL_MS = 8000;       // how long each headline is on-screen
+    const ANIMATION_MS = 600;                 // must match CSS --anim-ms
+    const FEED_URL = 'news.xml';              // same Pages directory
+    const FEED_RELOAD_MS = 5 * 60 * 1000;     // re-fetch news.xml every 5 min
+
+    // ===== State =====
+    let headlines = ['Loading news…'];
+    let currentIdx = 0;
+    let rotationTimer = null;
+
+    const stack = document.getElementById('stack');
+    const rowNext = document.getElementById('row-next');
+    const rowCurrent = document.getElementById('row-current');
+
+    // ===== news.xml loader =====
+    async function loadHeadlines() {
+      try {
+        const res = await fetch(FEED_URL + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const text = await res.text();
+        const doc = new DOMParser().parseFromString(text, 'application/xml');
+        const titles = Array.from(doc.querySelectorAll('item > title'))
+          .map(function (t) { return (t.textContent || '').trim(); })
+          .filter(function (t) { return t.length > 0; });
+        if (titles.length === 0) return;
+        // If the feed changed and we're now past the end, wrap.
+        headlines = titles;
+        if (currentIdx >= headlines.length) currentIdx = 0;
+        // Update the visible row to the current headline immediately on first load,
+        // so the user doesn't see "Loading…" longer than necessary.
+        if (rowCurrent.textContent === 'Loading…') {
+          rowCurrent.textContent = headlines[currentIdx];
+          rowNext.textContent = headlines[(currentIdx + 1) % headlines.length];
+        }
+      } catch (e) { /* swallow */ }
+    }
+
+    // ===== Render the two rows around currentIdx =====
+    function syncRows() {
+      // After each rotation we re-render so:
+      //   row-next (top, hidden above viewport) = headlines[currentIdx + 1]
+      //   row-current (bottom, visible)         = headlines[currentIdx]
+      rowNext.textContent = headlines[(currentIdx + 1) % headlines.length];
+      rowCurrent.textContent = headlines[currentIdx];
+    }
+
+    // ===== One rotation step =====
+    function rotate() {
+      if (headlines.length <= 1) {
+        // Only one item — no need to animate, just reschedule
+        rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
+        return;
+      }
+      // Trigger the downward slide. Both rows shift down by one frame height.
+      // - row-current goes off-screen bottom
+      // - row-next becomes visible
+      stack.classList.add('animating');
+      stack.style.transform = 'translateY(0)';
+
+      setTimeout(function () {
+        // Animation done — advance index and reset stack position WITHOUT animation
+        currentIdx = (currentIdx + 1) % headlines.length;
+        stack.classList.remove('animating');
+        stack.style.transform = 'translateY(calc(-' + (86) + 'px))';
+        // Re-render rows so the next rotation cycle has the right "next" headline preloaded
+        syncRows();
+        rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
+      }, ANIMATION_MS);
+    }
+
+    // ===== Boot =====
+    (async function () {
+      await loadHeadlines();
+      syncRows();
+      // Start the rotation loop after the first interval
+      rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
+      // Keep the feed fresh
+      setInterval(loadHeadlines, FEED_RELOAD_MS);
+    })();
+  </script>
+</body>
+</html>

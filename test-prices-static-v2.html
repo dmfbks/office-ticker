@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <title>Office Ticker — Prices (Static + Flash + Greeting)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:   #010101;
+      --text: #ffffff;
+      --up:   #22c55e;
+      --down: #ef4444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 3840px;
+      height: 86px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 32px;
+    }
+    /* Brand corner: logo + greeting + time */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-right: 24px;
+      padding-right: 24px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+      flex-shrink: 0;
+    }
+    .brand img {
+      height: 28px;
+      width: 28px;
+      opacity: 0.9;
+    }
+    .brand .sep { opacity: 0.4; }
+    .greeting { color: var(--text); }
+    .time { color: var(--text); }
+    /* Items distributed evenly across remaining width */
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      overflow: hidden;
+    }
+    .item {
+      display: inline-flex;
+      align-items: baseline;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      /* Smooth fade for the flash; CSS handles the off-ramp automatically */
+      transition: background-color 0.4s ease-out;
+    }
+    .symbol { color: var(--text); font-weight: 600; margin-right: 12px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 12px; }
+    .change { font-weight: 600; }
+    .change.up   { color: var(--up); }
+    .change.down { color: var(--down); }
+    /* Flash classes — applied for ~300ms after a price update */
+    .item.flash-up   { background-color: rgba(34, 197, 94, 0.45); }
+    .item.flash-down { background-color: rgba(239, 68, 68, 0.45); }
+  </style>
+</head>
+<body>
+  <div class="ticker">
+    <div class="brand">
+      <img src="logo.svg" alt="Fireblocks" />
+      <span class="greeting" id="greeting">—</span>
+      <span class="sep">·</span>
+      <span class="time" id="time">—</span>
+    </div>
+    <div class="items" id="items"></div>
+  </div>
+
+  <script>
+    // ===== Configuration =====
+    const ITEM_ORDER = ['S&P 500', 'NASDAQ', 'TA-35', 'USD', 'BTC', 'ETH', 'BNB', 'XRP', 'SOL'];
+    const COIN_IDS = {
+      'BTC': 'bitcoin',
+      'ETH': 'ethereum',
+      'BNB': 'binancecoin',
+      'XRP': 'ripple',
+      'SOL': 'solana',
+    };
+    const CG_URL =
+      'https://api.coingecko.com/api/v3/simple/price'
+      + '?ids=' + Object.values(COIN_IDS).join(',')
+      + '&vs_currencies=usd&include_24hr_change=true';
+    const INDICES_URL = 'indices.json';
+    const CRYPTO_POLL_MS  = 30 * 1000;   // CoinGecko every 30s
+    const INDICES_POLL_MS = 60 * 1000;   // indices.json every 60s
+    const FLASH_DURATION_MS = 800;       // how long the green/red flash persists
+
+    // ===== Holiday calendar (only matches after 11am — morning greeting takes precedence) =====
+    const HOLIDAYS = {
+      '01-01': 'Happy New Year!',
+      '02-14': 'Happy Valentine\'s Day',
+      '03-08': 'International Women\'s Day',
+      '04-23': 'Yom HaAtzmaut Sameach',
+      '09-12': 'Shanah Tovah',
+      '09-21': 'Tzom Kal',
+      '10-31': 'Happy Halloween',
+      '12-25': 'Merry Christmas',
+      '12-31': 'Happy New Year\'s Eve',
+    };
+    const HOLIDAY_RANGES = [
+      { start: '06-01', end: '06-07', greeting: 'Happy Pride Month' },
+      { start: '12-04', end: '12-12', greeting: 'Chag Hanukkah Sameach' },
+    ];
+
+    function pad2(n) { return n < 10 ? '0' + n : String(n); }
+    function israelHour() {
+      // Hour 0-23 in Asia/Jerusalem timezone
+      return parseInt(new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Jerusalem', hour: '2-digit', hour12: false
+      }).format(new Date()), 10);
+    }
+    function israelTimeHHMM() {
+      return new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false
+      }).format(new Date());
+    }
+    function todayGreeting() {
+      const d = new Date();
+      // Morning override (before 11am Israel time) — beats every other greeting
+      if (israelHour() < 11) return 'Good morning Fireblocks!';
+      // Then check holidays
+      const m = pad2(d.getMonth() + 1);
+      const day = pad2(d.getDate());
+      const key = m + '-' + day;
+      if (HOLIDAYS[key]) return HOLIDAYS[key];
+      for (const r of HOLIDAY_RANGES) {
+        if (key >= r.start && key <= r.end) return r.greeting;
+      }
+      // Default: weekday in English
+      const wd = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()];
+      return 'Happy ' + wd + '!';
+    }
+    function updateClock() {
+      document.getElementById('greeting').textContent = todayGreeting();
+      document.getElementById('time').textContent = israelTimeHHMM();
+    }
+
+    // ===== Build initial item DOM =====
+    const itemsRoot = document.getElementById('items');
+    const itemNodes = {};   // symbol → element
+    const itemState = {};   // symbol → {prevPrice, prevChange}
+    ITEM_ORDER.forEach(function (sym) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.symbol = sym;
+      el.innerHTML =
+        '<span class="symbol">' + sym + '</span>' +
+        '<span class="price">—</span>' +
+        '<span class="change">—</span>';
+      itemsRoot.appendChild(el);
+      itemNodes[sym] = el;
+      itemState[sym] = { prevPrice: null };
+    });
+
+    // ===== Formatting helpers =====
+    function fmtCryptoPrice(p) {
+      if (p >= 1000) return '$' + Math.round(p).toLocaleString('en-US');
+      return '$' + p.toFixed(2);
+    }
+    function fmtIndexPrice(p) {
+      return Math.round(p).toLocaleString('en-US');
+    }
+    function fmtUsdIls(p) {
+      return '₪' + p.toFixed(2);  // ₪
+    }
+    function fmtChange(c) {
+      return (c >= 0 ? '+' : '') + c.toFixed(2) + '%';
+    }
+
+    function flashItem(el, direction) {
+      el.classList.remove('flash-up', 'flash-down');
+      // Force reflow so the same flash can re-trigger if same direction
+      void el.offsetWidth;
+      el.classList.add(direction === 'up' ? 'flash-up' : 'flash-down');
+      setTimeout(function () {
+        el.classList.remove('flash-up', 'flash-down');
+      }, FLASH_DURATION_MS);
+    }
+
+    function applyUpdate(sym, newPrice, newChange, priceStr) {
+      const el = itemNodes[sym];
+      if (!el) return;
+      const state = itemState[sym];
+
+      // Flash if price moved relative to last fetch
+      if (state.prevPrice !== null && newPrice !== state.prevPrice) {
+        flashItem(el, newPrice > state.prevPrice ? 'up' : 'down');
+      }
+      state.prevPrice = newPrice;
+
+      el.querySelector('.price').textContent = priceStr;
+      const changeEl = el.querySelector('.change');
+      changeEl.textContent = fmtChange(newChange);
+      changeEl.className = 'change ' + (newChange >= 0 ? 'up' : 'down');
+    }
+
+    // ===== Overflow logic =====
+    // If the items row would overflow, hide trailing items until it fits.
+    // We always operate on the full ITEM_ORDER so visible-set can grow back
+    // (e.g., if greeting text shortens between morning → afternoon).
+    function fitItems() {
+      const arr = ITEM_ORDER.map(function (s) { return itemNodes[s]; });
+      // First make everything visible
+      arr.forEach(function (el) { el.style.display = ''; });
+      // Then hide from the tail while overflowing
+      let i = arr.length - 1;
+      while (itemsRoot.scrollWidth > itemsRoot.clientWidth && i >= 0) {
+        arr[i].style.display = 'none';
+        i--;
+      }
+    }
+
+    // ===== Crypto fetch =====
+    let cryptoPollMs = CRYPTO_POLL_MS;
+    async function fetchCrypto() {
+      try {
+        const res = await fetch(CG_URL);
+        if (res.status === 429) {
+          cryptoPollMs = Math.min(cryptoPollMs * 2, 5 * 60 * 1000);
+          return;
+        }
+        if (!res.ok) return;
+        cryptoPollMs = CRYPTO_POLL_MS;
+        const data = await res.json();
+        Object.keys(COIN_IDS).forEach(function (sym) {
+          const d = data[COIN_IDS[sym]];
+          if (!d) return;
+          applyUpdate(sym, d.usd, d.usd_24h_change || 0, fmtCryptoPrice(d.usd));
+        });
+        fitItems();
+      } catch (e) { /* swallow */ }
+      finally { setTimeout(fetchCrypto, cryptoPollMs); }
+    }
+
+    // ===== Indices + USD/ILS fetch =====
+    async function fetchIndices() {
+      try {
+        const res = await fetch(INDICES_URL + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const data = await res.json();
+        ['S&P 500', 'NASDAQ', 'TA-35', 'USD'].forEach(function (sym) {
+          const d = data[sym];
+          if (!d || typeof d.price !== 'number' || typeof d.previous_close !== 'number') return;
+          const close = d.price;
+          const prev  = d.previous_close;
+          if (prev === 0) return;
+          const pct = ((close - prev) / prev) * 100;
+          const priceStr = sym === 'USD' ? fmtUsdIls(close) : fmtIndexPrice(close);
+          applyUpdate(sym, close, pct, priceStr);
+        });
+        fitItems();
+      } catch (e) { /* swallow */ }
+      finally { setTimeout(fetchIndices, INDICES_POLL_MS); }
+    }
+
+    // ===== Boot =====
+    updateClock();
+    setInterval(updateClock, 30 * 1000);
+    fetchCrypto();
+    fetchIndices();
+    // Re-evaluate fit on window resize (and once after first frame so initial widths are measured)
+    window.addEventListener('resize', fitItems);
+    setTimeout(fitItems, 200);
+  </script>
+</body>
+</html>
