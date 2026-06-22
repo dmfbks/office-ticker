@@ -308,26 +308,24 @@
     }
 
     // ===== Fetchers (only the ones we need for this part) =====
-    let cryptoPollMs = CRYPTO_POLL_MS;
+    // Server-side GitHub Action fetches CoinGecko every 2 min and writes
+    // crypto.json to this same Pages site. All panels read the same JSON —
+    // no per-panel rate-limit risk.
+    const CRYPTO_URL = 'crypto.json';
     async function fetchCrypto() {
       if (!CRYPTO_SYMBOLS.some(function (s) { return itemNodes[s]; })) return;
       try {
-        const res = await fetch(CG_URL);
-        if (res.status === 429) {
-          cryptoPollMs = Math.min(cryptoPollMs * 2, 5 * 60 * 1000);
-          return;
-        }
+        const res = await fetch(CRYPTO_URL + '?t=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) return;
-        cryptoPollMs = CRYPTO_POLL_MS;
         const data = await res.json();
-        Object.keys(COIN_IDS).forEach(function (sym) {
-          const d = data[COIN_IDS[sym]];
-          if (!d) return;
-          applyUpdate(sym, d.usd, d.usd_24h_change || 0, fmtCryptoPrice(d.usd));
+        CRYPTO_SYMBOLS.forEach(function (sym) {
+          const d = data[sym];
+          if (!d || typeof d.price !== 'number') return;
+          applyUpdate(sym, d.price, d.change_24h || 0, fmtCryptoPrice(d.price));
         });
         fitItems();
       } catch (e) { /* swallow */ }
-      finally { setTimeout(fetchCrypto, cryptoPollMs); }
+      finally { setTimeout(fetchCrypto, CRYPTO_POLL_MS); }
     }
 
     async function fetchIndices() {
