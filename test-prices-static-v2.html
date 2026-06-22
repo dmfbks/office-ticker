@@ -69,8 +69,11 @@
       white-space: nowrap;
     }
     .symbol { color: var(--text); font-weight: 600; margin-right: 12px; }
-    .price  { color: var(--text); font-weight: 600; margin-right: 12px; }
-    .change { font-weight: 600; }
+    /* tabular-nums = fixed-width digits → numbers don't 'dance' when they change */
+    .price  { color: var(--text); font-weight: 600; margin-right: 12px;
+              font-variant-numeric: tabular-nums; }
+    .change { font-weight: 600; font-variant-numeric: tabular-nums; }
+    .time   { font-variant-numeric: tabular-nums; }
     .change.up   { color: var(--up); }
     .change.down { color: var(--down); }
     /* Per-digit flash on the .price element. We diff old vs new price strings
@@ -86,6 +89,14 @@
       0%   { color: #ef4444; }
       100% { color: #ffffff; }
     }
+    /* Colon blink — discrete on/off every 500ms, like a digital clock */
+    .colon {
+      animation: colonBlink 1s infinite;
+    }
+    @keyframes colonBlink {
+      0%,     49.9% { opacity: 1; }
+      50%,    100%  { opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -94,7 +105,7 @@
       <img src="logo.svg" alt="Fireblocks" />
       <span class="greeting" id="greeting">—</span>
       <span class="sep">·</span>
-      <span class="time" id="time">—</span>
+      <span class="time"><span id="time-h">—</span><span class="colon">:</span><span id="time-m">—</span></span>
     </div>
     <div class="items" id="items"></div>
   </div>
@@ -165,7 +176,11 @@
     }
     function updateClock() {
       document.getElementById('greeting').textContent = todayGreeting();
-      document.getElementById('time').textContent = israelTimeHHMM();
+      // Update hour/minute separately so the colon's CSS animation keeps running
+      const t = israelTimeHHMM();  // 'HH:MM'
+      const [h, m] = t.split(':');
+      document.getElementById('time-h').textContent = h;
+      document.getElementById('time-m').textContent = m;
     }
 
     // ===== Build initial item DOM =====
@@ -201,16 +216,24 @@
     }
 
     // Build innerHTML that wraps changed chars in a dchg-* span so they flash.
-    // Compares oldStr and newStr position-by-position from the left.
+    // ALSO wraps the character immediately to the right of each change, so the
+    // user can see the magnitude of the change in context (e.g. 64,602 → 64,612
+    // flashes both the new '1' AND the unchanged '2' to its right).
     function diffHighlight(oldStr, newStr, direction) {
-      let html = '';
+      const flash = new Array(newStr.length).fill(false);
       for (let i = 0; i < newStr.length; i++) {
         const oc = i < oldStr.length ? oldStr[i] : '';
-        const nc = newStr[i];
-        if (oc !== nc) {
-          html += '<span class="dchg-' + direction + '">' + nc + '</span>';
+        if (oc !== newStr[i]) {
+          flash[i] = true;
+          if (i + 1 < newStr.length) flash[i + 1] = true;
+        }
+      }
+      let html = '';
+      for (let i = 0; i < newStr.length; i++) {
+        if (flash[i]) {
+          html += '<span class="dchg-' + direction + '">' + newStr[i] + '</span>';
         } else {
-          html += nc;
+          html += newStr[i];
         }
       }
       return html;
