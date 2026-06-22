@@ -1,0 +1,62 @@
+name: Refresh crypto
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'    # every 2 min (CoinGecko free-tier safe)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'fetch-crypto.py'
+      - '.github/workflows/refresh-crypto.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-crypto
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main (where the fetch script lives)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Run fetch script
+        run: python3 fetch-crypto.py
+      - name: Stash output outside the workspace
+        run: cp crypto.json /tmp/crypto.json
+      - name: Checkout feed branch
+        uses: actions/checkout@v4
+        with:
+          ref: feed
+      - name: Place crypto.json into feed
+        run: mv /tmp/crypto.json crypto.json
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add crypto.json
+          # Skip noise commits where only _updated_at changed
+          if python3 -c "
+          import json, sys, subprocess
+          new = json.load(open('crypto.json'))
+          new.pop('_updated_at', None)
+          try:
+              old_blob = subprocess.check_output(
+                  ['git', 'show', 'HEAD:crypto.json'], stderr=subprocess.DEVNULL
+              ).decode()
+              old = json.loads(old_blob)
+              old.pop('_updated_at', None)
+              if old == new:
+                  sys.exit(1)
+          except Exception:
+              pass
+          sys.exit(0)
+          "; then
+            git commit -m "Refresh crypto [bot]"
+            git push origin feed
+          fi
