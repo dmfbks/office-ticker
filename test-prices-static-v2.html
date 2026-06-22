@@ -67,17 +67,25 @@
       padding: 6px 12px;
       border-radius: 6px;
       white-space: nowrap;
-      /* Smooth fade for the flash; CSS handles the off-ramp automatically */
-      transition: background-color 0.4s ease-out;
     }
     .symbol { color: var(--text); font-weight: 600; margin-right: 12px; }
     .price  { color: var(--text); font-weight: 600; margin-right: 12px; }
     .change { font-weight: 600; }
     .change.up   { color: var(--up); }
     .change.down { color: var(--down); }
-    /* Flash classes — applied for ~300ms after a price update */
-    .item.flash-up   { background-color: rgba(34, 197, 94, 0.45); }
-    .item.flash-down { background-color: rgba(239, 68, 68, 0.45); }
+    /* Per-digit flash on the .price element. We diff old vs new price strings
+       and wrap only the chars that changed in a dchg-* span. The keyframe
+       briefly colors the changed digit green/red then fades it back to white. */
+    .dchg-up   { animation: dchg-up   1s ease-out forwards; }
+    .dchg-down { animation: dchg-down 1s ease-out forwards; }
+    @keyframes dchg-up {
+      0%   { color: #22c55e; }
+      100% { color: #ffffff; }
+    }
+    @keyframes dchg-down {
+      0%   { color: #ef4444; }
+      100% { color: #ffffff; }
+    }
   </style>
 </head>
 <body>
@@ -192,28 +200,40 @@
       return (c >= 0 ? '+' : '') + c.toFixed(2) + '%';
     }
 
-    function flashItem(el, direction) {
-      el.classList.remove('flash-up', 'flash-down');
-      // Force reflow so the same flash can re-trigger if same direction
-      void el.offsetWidth;
-      el.classList.add(direction === 'up' ? 'flash-up' : 'flash-down');
-      setTimeout(function () {
-        el.classList.remove('flash-up', 'flash-down');
-      }, FLASH_DURATION_MS);
+    // Build innerHTML that wraps changed chars in a dchg-* span so they flash.
+    // Compares oldStr and newStr position-by-position from the left.
+    function diffHighlight(oldStr, newStr, direction) {
+      let html = '';
+      for (let i = 0; i < newStr.length; i++) {
+        const oc = i < oldStr.length ? oldStr[i] : '';
+        const nc = newStr[i];
+        if (oc !== nc) {
+          html += '<span class="dchg-' + direction + '">' + nc + '</span>';
+        } else {
+          html += nc;
+        }
+      }
+      return html;
     }
 
     function applyUpdate(sym, newPrice, newChange, priceStr) {
       const el = itemNodes[sym];
       if (!el) return;
       const state = itemState[sym];
+      const priceEl = el.querySelector('.price');
+      const oldPriceStr = priceEl.dataset.prev || '';
 
-      // Flash if price moved relative to last fetch
-      if (state.prevPrice !== null && newPrice !== state.prevPrice) {
-        flashItem(el, newPrice > state.prevPrice ? 'up' : 'down');
+      // First-load case: just write text, no flash
+      if (state.prevPrice === null || !oldPriceStr) {
+        priceEl.textContent = priceStr;
+      } else if (oldPriceStr !== priceStr) {
+        // Price string changed — flash only the chars that differ
+        const direction = newPrice > state.prevPrice ? 'up' : 'down';
+        priceEl.innerHTML = diffHighlight(oldPriceStr, priceStr, direction);
       }
+      priceEl.dataset.prev = priceStr;
       state.prevPrice = newPrice;
 
-      el.querySelector('.price').textContent = priceStr;
       const changeEl = el.querySelector('.change');
       changeEl.textContent = fmtChange(newChange);
       changeEl.className = 'change ' + (newChange >= 0 ? 'up' : 'down');
