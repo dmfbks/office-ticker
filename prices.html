@@ -53,7 +53,7 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 16px;
+      padding: 0 16px 0 48px;   /* more breathing room on the left so the logo isn't flush with the panel edge */
       font-size: 32px;
     }
     /* Brand corner: only shown for 'indices' / 'full' parts (left side) */
@@ -133,11 +133,13 @@
 
     // Pick which symbols this page renders + whether to include the brand corner
     let ITEM_ORDER, SHOW_BRAND;
-    if (PART === 'indices') {
-      ITEM_ORDER = INDEX_SYMBOLS.slice();
-      SHOW_BRAND = true;
-    } else if (PART === 'crypto') {
+    if (PART === 'crypto') {
+      // Left side: crypto + brand corner (logo + greeting + time)
       ITEM_ORDER = CRYPTO_SYMBOLS.slice();
+      SHOW_BRAND = true;
+    } else if (PART === 'indices') {
+      // Right side: indices + USD/ILS, no brand corner
+      ITEM_ORDER = INDEX_SYMBOLS.slice();
       SHOW_BRAND = false;
     } else {
       ITEM_ORDER = INDEX_SYMBOLS.concat(CRYPTO_SYMBOLS);
