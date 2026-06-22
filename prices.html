@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport gets overridden by the script below using ?w= URL param -->
+  <meta name="viewport" id="vp" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <script>
+    // Read URL params and set viewport BEFORE anything else loads / lays out.
+    // ?w=NNNN     panel width in pixels (default 3840)
+    // ?part=...   which content to show: 'indices' (brand + indices+forex)
+    //                                    'crypto'  (just crypto, no brand)
+    //                                    'full'    (everything — for testing)
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const w = parseInt(p.get('w'), 10);
+      if (w && w > 0) {
+        document.getElementById('vp').setAttribute(
+          'content', 'width=' + w + ', height=86, initial-scale=1, user-scalable=no'
+        );
+      }
+      // Stash for later
+      window._W = (w && w > 0) ? w : 3840;
+      window._PART = (p.get('part') || 'full').toLowerCase();
+    })();
+  </script>
+
+  <title>Office Ticker — Prices</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:   #010101;
+      --text: #ffffff;
+      --up:   #22c55e;
+      --down: #ef4444;
+      --screen-w: 3840px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: var(--screen-w);
+      height: 86px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 32px;
+    }
+    /* Brand corner: only shown for 'indices' / 'full' parts (left side) */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-right: 32px;
+      flex-shrink: 0;
+    }
+    .brand img {
+      height: 28px;
+      width: 28px;
+      opacity: 0.9;
+      margin-right: 14px;
+    }
+    .brand .sep { opacity: 0.4; }
+    .greeting { color: var(--text); }
+    .time   { font-variant-numeric: tabular-nums; }
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      overflow: hidden;
+    }
+    .item {
+      display: inline-flex;
+      align-items: baseline;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .symbol { color: var(--text); font-weight: 600; margin-right: 12px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 12px;
+              font-variant-numeric: tabular-nums; }
+    .change { font-weight: 600; font-variant-numeric: tabular-nums; }
+    .change.up   { color: var(--up); }
+    .change.down { color: var(--down); }
+    /* Per-digit flash on price */
+    .dchg-up   { animation: dchg-up   1s ease-out forwards; }
+    .dchg-down { animation: dchg-down 1s ease-out forwards; }
+    @keyframes dchg-up   { 0% { color: #22c55e; } 100% { color: #ffffff; } }
+    @keyframes dchg-down { 0% { color: #ef4444; } 100% { color: #ffffff; } }
+    /* Colon blink — discrete on/off every 500ms */
+    .colon { animation: colonBlink 1s infinite; }
+    @keyframes colonBlink {
+      0%, 49.9%   { opacity: 1; }
+      50%, 100%   { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker" id="ticker">
+    <!-- Brand corner inserted by JS only if part=indices or part=full -->
+    <div class="items" id="items"></div>
+  </div>
+
+  <script>
+    // ===== Use the URL params we stashed earlier =====
+    const SCREEN_WIDTH = window._W || 3840;
+    const PART = window._PART || 'full';
+    // Apply width
+    document.documentElement.style.setProperty('--screen-w', SCREEN_WIDTH + 'px');
+
+    // ===== Configuration: which items belong on which 'part' =====
+    const INDEX_SYMBOLS = ['S&P 500', 'NASDAQ', 'TA-35', 'USD'];
+    const CRYPTO_SYMBOLS = ['BTC', 'ETH', 'BNB', 'XRP', 'SOL'];
+    const COIN_IDS = {
+      'BTC': 'bitcoin',
+      'ETH': 'ethereum',
+      'BNB': 'binancecoin',
+      'XRP': 'ripple',
+      'SOL': 'solana',
+    };
+
+    // Pick which symbols this page renders + whether to include the brand corner
+    let ITEM_ORDER, SHOW_BRAND;
+    if (PART === 'indices') {
+      ITEM_ORDER = INDEX_SYMBOLS.slice();
+      SHOW_BRAND = true;
+    } else if (PART === 'crypto') {
+      ITEM_ORDER = CRYPTO_SYMBOLS.slice();
+      SHOW_BRAND = false;
+    } else {
+      ITEM_ORDER = INDEX_SYMBOLS.concat(CRYPTO_SYMBOLS);
+      SHOW_BRAND = true;
+    }
+
+    const CG_URL =
+      'https://api.coingecko.com/api/v3/simple/price'
+      + '?ids=' + Object.values(COIN_IDS).join(',')
+      + '&vs_currencies=usd&include_24hr_change=true';
+    const INDICES_URL = 'indices.json';
+    const CRYPTO_POLL_MS  = 30 * 1000;
+    const INDICES_POLL_MS = 60 * 1000;
+
+    // ===== Holiday calendar =====
+    const HOLIDAYS = {
+      '01-01': 'Happy New Year!',
+      '02-14': 'Happy Valentine\'s Day',
+      '03-08': 'International Women\'s Day',
+      '04-23': 'Yom HaAtzmaut Sameach',
+      '09-12': 'Shanah Tovah',
+      '09-21': 'Tzom Kal',
+      '10-31': 'Happy Halloween',
+      '12-25': 'Merry Christmas',
+      '12-31': 'Happy New Year\'s Eve',
+    };
+    const HOLIDAY_RANGES = [
+      { start: '06-01', end: '06-07', greeting: 'Happy Pride Month' },
+      { start: '12-04', end: '12-12', greeting: 'Chag Hanukkah Sameach' },
+    ];
+
+    function pad2(n) { return n < 10 ? '0' + n : String(n); }
+    function israelHour() {
+      return parseInt(new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Jerusalem', hour: '2-digit', hour12: false
+      }).format(new Date()), 10);
+    }
+    function israelTimeHHMM() {
+      return new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false
+      }).format(new Date());
+    }
+    function todayGreeting() {
+      const d = new Date();
+      if (israelHour() < 11) return 'Good morning Fireblocks!';
+      const m = pad2(d.getMonth() + 1);
+      const day = pad2(d.getDate());
+      const key = m + '-' + day;
+      if (HOLIDAYS[key]) return HOLIDAYS[key];
+      for (const r of HOLIDAY_RANGES) {
+        if (key >= r.start && key <= r.end) return r.greeting;
+      }
+      const wd = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()];
+      return 'Happy ' + wd + '!';
+    }
+
+    // ===== Build brand corner (if needed) =====
+    if (SHOW_BRAND) {
+      const ticker = document.getElementById('ticker');
+      const brand = document.createElement('div');
+      brand.className = 'brand';
+      brand.innerHTML =
+        '<img src="logo.svg" alt="Fireblocks" />' +
+        '<span class="greeting" id="greeting">—</span>' +
+        '<span class="sep">·</span>' +
+        '<span class="time">' +
+          '<span id="time-h">—</span>' +
+          '<span class="colon">:</span>' +
+          '<span id="time-m">—</span>' +
+        '</span>';
+      ticker.insertBefore(brand, document.getElementById('items'));
+    }
+
+    function updateClock() {
+      if (!SHOW_BRAND) return;
+      document.getElementById('greeting').textContent = todayGreeting();
+      const t = israelTimeHHMM();
+      const [h, m] = t.split(':');
+      document.getElementById('time-h').textContent = h;
+      document.getElementById('time-m').textContent = m;
+    }
+
+    // ===== Build initial items DOM =====
+    const itemsRoot = document.getElementById('items');
+    const itemNodes = {};
+    const itemState = {};
+    ITEM_ORDER.forEach(function (sym) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.dataset.symbol = sym;
+      el.innerHTML =
+        '<span class="symbol">' + sym + '</span>' +
+        '<span class="price">—</span>' +
+        '<span class="change">—</span>';
+      itemsRoot.appendChild(el);
+      itemNodes[sym] = el;
+      itemState[sym] = { prevPrice: null };
+    });
+
+    // ===== Formatting =====
+    function fmtCryptoPrice(p) {
+      if (p >= 1000) return '$' + Math.round(p).toLocaleString('en-US');
+      return '$' + p.toFixed(2);
+    }
+    function fmtIndexPrice(p) {
+      return Math.round(p).toLocaleString('en-US');
+    }
+    function fmtUsdIls(p) {
+      return '₪' + p.toFixed(2);
+    }
+    function fmtChange(c) {
+      return (c >= 0 ? '+' : '') + c.toFixed(2) + '%';
+    }
+
+    // ===== Per-digit diff highlight =====
+    function diffHighlight(oldStr, newStr, direction) {
+      const flash = new Array(newStr.length).fill(false);
+      for (let i = 0; i < newStr.length; i++) {
+        const oc = i < oldStr.length ? oldStr[i] : '';
+        if (oc !== newStr[i]) {
+          flash[i] = true;
+          if (i + 1 < newStr.length) flash[i + 1] = true;
+        }
+      }
+      let html = '';
+      for (let i = 0; i < newStr.length; i++) {
+        if (flash[i]) {
+          html += '<span class="dchg-' + direction + '">' + newStr[i] + '</span>';
+        } else {
+          html += newStr[i];
+        }
+      }
+      return html;
+    }
+
+    function applyUpdate(sym, newPrice, newChange, priceStr) {
+      const el = itemNodes[sym];
+      if (!el) return;  // not displayed on this part — skip
+      const state = itemState[sym];
+      const priceEl = el.querySelector('.price');
+      const oldPriceStr = priceEl.dataset.prev || '';
+
+      if (state.prevPrice === null || !oldPriceStr) {
+        priceEl.textContent = priceStr;
+      } else if (oldPriceStr !== priceStr) {
+        const direction = newPrice > state.prevPrice ? 'up' : 'down';
+        priceEl.innerHTML = diffHighlight(oldPriceStr, priceStr, direction);
+      }
+      priceEl.dataset.prev = priceStr;
+      state.prevPrice = newPrice;
+
+      const changeEl = el.querySelector('.change');
+      changeEl.textContent = fmtChange(newChange);
+      changeEl.className = 'change ' + (newChange >= 0 ? 'up' : 'down');
+    }
+
+    // ===== Overflow protection =====
+    function fitItems() {
+      const arr = ITEM_ORDER.map(function (s) { return itemNodes[s]; });
+      arr.forEach(function (el) { el.style.display = ''; });
+      let i = arr.length - 1;
+      while (itemsRoot.scrollWidth > itemsRoot.clientWidth && i >= 0) {
+        arr[i].style.display = 'none';
+        i--;
+      }
+    }
+
+    // ===== Fetchers (only the ones we need for this part) =====
+    let cryptoPollMs = CRYPTO_POLL_MS;
+    async function fetchCrypto() {
+      if (!CRYPTO_SYMBOLS.some(function (s) { return itemNodes[s]; })) return;
+      try {
+        const res = await fetch(CG_URL);
+        if (res.status === 429) {
+          cryptoPollMs = Math.min(cryptoPollMs * 2, 5 * 60 * 1000);
+          return;
+        }
+        if (!res.ok) return;
+        cryptoPollMs = CRYPTO_POLL_MS;
+        const data = await res.json();
+        Object.keys(COIN_IDS).forEach(function (sym) {
+          const d = data[COIN_IDS[sym]];
+          if (!d) return;
+          applyUpdate(sym, d.usd, d.usd_24h_change || 0, fmtCryptoPrice(d.usd));
+        });
+        fitItems();
+      } catch (e) { /* swallow */ }
+      finally { setTimeout(fetchCrypto, cryptoPollMs); }
+    }
+
+    async function fetchIndices() {
+      if (!INDEX_SYMBOLS.some(function (s) { return itemNodes[s]; })) return;
+      try {
+        const res = await fetch(INDICES_URL + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const data = await res.json();
+        INDEX_SYMBOLS.forEach(function (sym) {
+          const d = data[sym];
+          if (!d || typeof d.price !== 'number' || typeof d.previous_close !== 'number') return;
+          const close = d.price;
+          const prev  = d.previous_close;
+          if (prev === 0) return;
+          const pct = ((close - prev) / prev) * 100;
+          const priceStr = sym === 'USD' ? fmtUsdIls(close) : fmtIndexPrice(close);
+          applyUpdate(sym, close, pct, priceStr);
+        });
+        fitItems();
+      } catch (e) { /* swallow */ }
+      finally { setTimeout(fetchIndices, INDICES_POLL_MS); }
+    }
+
+    // ===== Boot =====
+    updateClock();
+    setInterval(updateClock, 30 * 1000);
+    fetchCrypto();
+    fetchIndices();
+    window.addEventListener('resize', fitItems);
+    setTimeout(fitItems, 200);
+  </script>
+</body>
+</html>

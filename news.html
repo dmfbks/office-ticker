@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="vp" content="width=3840, height=86, initial-scale=1, user-scalable=no">
+  <script>
+    // ?w=NNNN    panel width in pixels (default 3840)
+    // ?offset=N  starting headline index (default 0) — use different values on
+    //            left vs right sides so the two halves show different headlines
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const w = parseInt(p.get('w'), 10);
+      if (w && w > 0) {
+        document.getElementById('vp').setAttribute(
+          'content', 'width=' + w + ', height=86, initial-scale=1, user-scalable=no'
+        );
+      }
+      window._W = (w && w > 0) ? w : 3840;
+      window._OFFSET = parseInt(p.get('offset'), 10) || 0;
+    })();
+  </script>
+
+  <title>Office Ticker — News</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #010101;
+      --text: #ffffff;
+      --frame-h: 86px;
+      --anim-ms: 600ms;
+      --screen-w: 3840px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: var(--screen-w);
+      height: var(--frame-h);
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .frame {
+      width: 100%;
+      height: var(--frame-h);
+      overflow: hidden;
+      position: relative;
+    }
+    .stack {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(calc(-1 * var(--frame-h)));
+      will-change: transform;
+    }
+    .stack.animating { transition: transform var(--anim-ms) ease-in-out; }
+    .row {
+      width: 100%;
+      height: var(--frame-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 32px;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      overflow: hidden;
+    }
+    .headline {
+      padding: 0 24px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stack" id="stack">
+      <div class="row" id="row-next">—</div>
+      <div class="row" id="row-current">Loading…</div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Apply width from URL =====
+    document.documentElement.style.setProperty('--screen-w', window._W + 'px');
+
+    // ===== Configuration =====
+    const ROTATION_INTERVAL_MS = 10 * 1000;
+    const ANIMATION_MS = 600;
+    const FEED_URL = 'news.xml';
+    const FEED_RELOAD_MS = 5 * 60 * 1000;
+    const SIDE_PADDING_PX = 32 * 2;
+    const ITEM_PADDING_PX = 24 * 2;
+
+    // ===== State =====
+    let headlines = ['Loading news…'];
+    let currentIdx = window._OFFSET || 0;  // start at the configured offset
+    const stack = document.getElementById('stack');
+    const rowNext = document.getElementById('row-next');
+    const rowCurrent = document.getElementById('row-current');
+
+    const measureCtx = document.createElement('canvas').getContext('2d');
+    function measureHeadlineWidth(text) {
+      measureCtx.font = '600 32px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      return measureCtx.measureText(text).width + ITEM_PADDING_PX;
+    }
+
+    function buildPage(startIdx) {
+      const containerWidth = document.querySelector('.frame').clientWidth - SIDE_PADDING_PX;
+      const items = [];
+      let total = 0;
+      for (let i = 0; i < headlines.length; i++) {
+        const idx = ((startIdx + i) % headlines.length + headlines.length) % headlines.length;
+        const w = measureHeadlineWidth(headlines[idx]);
+        if (items.length === 0 || total + w <= containerWidth) {
+          items.push(headlines[idx]);
+          total += w;
+        } else {
+          break;
+        }
+      }
+      return { items: items, endIdx: (startIdx + items.length) % headlines.length };
+    }
+
+    function renderRow(rowEl, items) {
+      rowEl.innerHTML = '';
+      items.forEach(function (text) {
+        const el = document.createElement('div');
+        el.className = 'headline';
+        el.textContent = text;
+        rowEl.appendChild(el);
+      });
+    }
+
+    async function loadHeadlines() {
+      try {
+        const res = await fetch(FEED_URL + '?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const text = await res.text();
+        const doc = new DOMParser().parseFromString(text, 'application/xml');
+        const titles = Array.from(doc.querySelectorAll('item > title'))
+          .map(function (t) { return (t.textContent || '').trim(); })
+          .filter(function (t) { return t.length > 0; });
+        if (titles.length === 0) return;
+        headlines = titles;
+        // Clamp offset to valid range (in case feed shrank)
+        if (currentIdx >= headlines.length) currentIdx = currentIdx % headlines.length;
+        const initial = buildPage(currentIdx);
+        renderRow(rowCurrent, initial.items);
+        const next = buildPage(initial.endIdx);
+        renderRow(rowNext, next.items);
+      } catch (e) { /* swallow */ }
+    }
+
+    function rotate() {
+      const currentPage = buildPage(currentIdx);
+      if (currentPage.endIdx === currentIdx) {
+        // single-fill case — nothing to rotate
+        setTimeout(rotate, ROTATION_INTERVAL_MS);
+        return;
+      }
+      const nextPage = buildPage(currentPage.endIdx);
+      renderRow(rowNext, nextPage.items);
+
+      stack.classList.add('animating');
+      stack.style.transform = 'translateY(0)';
+
+      setTimeout(function () {
+        stack.classList.remove('animating');
+        stack.style.transform = 'translateY(calc(-1 * var(--frame-h)))';
+        currentIdx = currentPage.endIdx;
+        renderRow(rowCurrent, nextPage.items);
+        const afterNext = buildPage(nextPage.endIdx);
+        renderRow(rowNext, afterNext.items);
+        setTimeout(rotate, ROTATION_INTERVAL_MS);
+      }, ANIMATION_MS);
+    }
+
+    (async function () {
+      await loadHeadlines();
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+        const initial = buildPage(currentIdx);
+        renderRow(rowCurrent, initial.items);
+        const next = buildPage(initial.endIdx);
+        renderRow(rowNext, next.items);
+      }
+      setTimeout(rotate, ROTATION_INTERVAL_MS);
+      setInterval(loadHeadlines, FEED_RELOAD_MS);
+    })();
+  </script>
+</body>
+</html>
