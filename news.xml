@@ -8,38 +8,73 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Circle launches cirBTC on Ethereum, entering the wrapped bitcoin market in direct competition with Coinbase</title>
+      <title>       Baillie Gifford launches tokenized Solana and Ethereum fund with BNY Mellon as TradFi expands into onchain assets</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
 
     <item>
-      <title>       Coinbase and Cardless launch credit card with stablecoin-backed rewards program</title>
+      <title>       Bank of England eases stablecoin issuance rules with a 40B pound cap, signaling regulatory thaw</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
 
     <item>
-      <title>       OKX expands X-Perps in Europe to include Magnificent 7 tech stocks, gold, and oil futures</title>
+      <title>       Morgan Stanley amends Ethereum and Solana ETF filings with record-low management fees to drive adoption</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
 
     <item>
-      <title>       Humanity Protocol loses $36M after multisig wallet private keys compromised via laptop breach; token down 73%</title>
+      <title>       Charles Schwab partners with Cboe to launch prediction markets, taking aim at Polymarket and Kalshi</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
 
     <item>
-      <title>       Over 200 crypto firms petition US Senate to advance CLARITY Act on digital asset regulation</title>
+      <title>       Taiko halts Ethereum L2 network after bridge exploit; protocol token drops sharply</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
 
     <item>
-      <title>       Japan's SBI Shinsei Bank links retail deposits to crypto rewards program</title>
+      <title>       Q2 2026 sets crypto hack record with 83 incidents reported, exceeding any prior quarter</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
 
     <item>
-      <title>       MicroStrategy resumes Bitcoin accumulation, adding to corporate treasury amid selloff</title>
+      <title>       South Korea expands FATF Travel Rule to cover smaller crypto transfers</title>
       <guid isPermaLink="false">news-07</guid>
+    </item>
+
+    <item>
+      <title>       Microsoft warns of CryptoBandits malware that uses USB drives to access cryptocurrency wallets</title>
+      <guid isPermaLink="false">news-08</guid>
+    </item>
+
+    <item>
+      <title>       Strategy buys an additional 520 bitcoin, expanding corporate reserves to $1.4 billion</title>
+      <guid isPermaLink="false">news-09</guid>
+    </item>
+
+    <item>
+      <title>       Kraken lists 2,500 unapproved Solana tokens via on-chain access; says risk remains on chain</title>
+      <guid isPermaLink="false">news-10</guid>
+    </item>
+
+    <item>
+      <title>       Bitwise rolls out crypto model portfolios on retail platforms, broadening institutional access</title>
+      <guid isPermaLink="false">news-11</guid>
+    </item>
+
+    <item>
+      <title>       Ethereum proposal would cut staker rewards to fund ongoing protocol development</title>
+      <guid isPermaLink="false">news-12</guid>
+    </item>
+
+    <item>
+      <title>       WSJ: $1.9M in fake bets drove Polymarket's recent activity hype, raising prediction market integrity questions</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+
+    <item>
+      <title>       Sweden launches krona-denominated stablecoin; analysts caution dollar liquidity gap remains wide</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
