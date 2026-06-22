@@ -1,79 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Fireblocks Office Ticker — Crypto News</title>
+    <title>Fireblocks Office Ticker - Crypto News</title>
     <link>https://dmfbks.github.io/office-ticker/news.xml</link>
     <description>Curated crypto news headlines</description>
     <language>en-us</language>
     <ttl>30</ttl>
 
     <item>
-      <title>       Baillie Gifford launches tokenized Solana and Ethereum fund with BNY Mellon as TradFi expands into onchain assets</title>
+      <title>       Taiko halts its Ethereum layer-2 network after an attacker exploited the bridge to steal $1.7M via forged cross-chain proofs.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
-
     <item>
-      <title>       Bank of England eases stablecoin issuance rules with a 40B pound cap, signaling regulatory thaw</title>
+      <title>       Humanity Protocol lost $32M after an attacker used private keys stored on one employee laptop to drain its Ethereum and BNB bridges.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
-
     <item>
-      <title>       Morgan Stanley amends Ethereum and Solana ETF filings with record-low management fees to drive adoption</title>
+      <title>       North Korea-linked actors accounted for 76% of global crypto hack losses through the first four months of 2026, up from 64% in 2025.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
-
     <item>
-      <title>       Charles Schwab partners with Cboe to launch prediction markets, taking aim at Polymarket and Kalshi</title>
+      <title>       JPMorgan is exploring institutional loans collateralized by Bitcoin and Ethereum holdings, per a Financial Times report.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
-
     <item>
-      <title>       Taiko halts Ethereum L2 network after bridge exploit; protocol token drops sharply</title>
+      <title>       BlackRock has amended its Coinbase custody agreement to require 12-hour withdrawal notice windows for its crypto fund assets.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
-
     <item>
-      <title>       Q2 2026 sets crypto hack record with 83 incidents reported, exceeding any prior quarter</title>
+      <title>       CME Group filed suit against the CFTC challenging the regulator's approval of Kalshi's Bitcoin perpetual futures contracts.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
-
     <item>
-      <title>       South Korea expands FATF Travel Rule to cover smaller crypto transfers</title>
+      <title>       The SEC's draft five-year strategic plan designates digital assets and blockchain as a standalone regulatory priority for the first time.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
-
     <item>
-      <title>       Microsoft warns of CryptoBandits malware that uses USB drives to access cryptocurrency wallets</title>
+      <title>       CFTC names Donald Battle, formerly of the SEC's crypto task force, as chief data innovation officer focused on blockchain forensics.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
-
     <item>
-      <title>       Strategy buys an additional 520 bitcoin, expanding corporate reserves to $1.4 billion</title>
+      <title>       Malta's financial regulator proposes bringing centralized elements of DeFi protocols under the EU's MiCA regulatory framework.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
-
     <item>
-      <title>       Kraken lists 2,500 unapproved Solana tokens via on-chain access; says risk remains on chain</title>
+      <title>       BIS warns that crypto exchanges offering lending and yield products are functioning as lightly regulated shadow banks.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
-
     <item>
-      <title>       Bitwise rolls out crypto model portfolios on retail platforms, broadening institutional access</title>
+      <title>       Morgan Stanley and Charles Schwab are both moving to launch direct cryptocurrency trading services for their client bases.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
-
     <item>
-      <title>       Ethereum proposal would cut staker rewards to fund ongoing protocol development</title>
+      <title>       US Bancorp has resumed institutional Bitcoin custody services, extending coverage to support spot Bitcoin ETF operations.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-
     <item>
-      <title>       WSJ: $1.9M in fake bets drove Polymarket's recent activity hype, raising prediction market integrity questions</title>
+      <title>       Microsoft identified a USB-spread worm that intercepts wallet shortcut files to harvest private keys from cryptocurrency wallets.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
     <item>
-      <title>       Sweden launches krona-denominated stablecoin; analysts caution dollar liquidity gap remains wide</title>
+      <title>       BlackRock's IBIT and Fidelity's FBTC have captured the dominant share of net inflows among all U.S. spot Bitcoin ETFs in 2026.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
 
