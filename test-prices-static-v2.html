@@ -34,20 +34,19 @@
       padding: 0 16px;
       font-size: 32px;
     }
-    /* Brand corner: logo + greeting + time */
+    /* Brand corner: logo + greeting + time. No divider — just whitespace separation. */
     .brand {
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-right: 24px;
-      padding-right: 24px;
-      border-right: 1px solid rgba(255,255,255,0.18);
+      margin-right: 32px;
       flex-shrink: 0;
     }
     .brand img {
       height: 28px;
       width: 28px;
       opacity: 0.9;
+      margin-right: 14px;  /* extra breathing room between the logomark and the greeting */
     }
     .brand .sep { opacity: 0.4; }
     .greeting { color: var(--text); }
