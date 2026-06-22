@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=3840, height=86, initial-scale=1, user-scalable=no">
-  <title>Office Ticker — News (Vertical Swipe)</title>
+  <title>Office Ticker — News (Vertical Swipe, Multi)</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,18 +26,15 @@
       font-weight: 600;
       overflow: hidden;
     }
-    /* Container clips everything except the current row */
     .frame {
       width: 100%;
       height: var(--frame-h);
       overflow: hidden;
       position: relative;
     }
-    /* Stack holds two rows: the incoming (top) and the current (bottom).
-       Initial position has the stack shifted up by one frame so only the
-       current row is visible. To rotate we translate the stack down by one
-       frame — both rows move down together; current goes off-screen bottom,
-       next slides into visible position. */
+    /* Two stacked rows: next on top (initially hidden above viewport), current below.
+       Stack starts shifted up by one frame so current is visible.
+       Animating translate down by one frame slides current off-bottom and next into view. */
     .stack {
       position: absolute;
       top: 0;
@@ -49,25 +46,29 @@
     .stack.animating {
       transition: transform var(--anim-ms) ease-in-out;
     }
+    /* Each row is one frame high; contains multiple headline items in a flex row */
     .row {
       width: 100%;
       height: var(--frame-h);
       display: flex;
       align-items: center;
+      justify-content: space-around;
       padding: 0 32px;
       font-size: 32px;
       line-height: 1;
       letter-spacing: 0.01em;
-      white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+    }
+    .headline {
+      padding: 0 24px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
   </style>
 </head>
 <body>
   <div class="frame">
     <div class="stack" id="stack">
-      <!-- Two rows live here: [0] = next headline (above viewport), [1] = current (visible) -->
       <div class="row" id="row-next">—</div>
       <div class="row" id="row-current">Loading…</div>
     </div>
@@ -75,19 +76,60 @@
 
   <script>
     // ===== Configuration =====
-    const ROTATION_INTERVAL_MS = 8000;       // how long each headline is on-screen
-    const ANIMATION_MS = 600;                 // must match CSS --anim-ms
-    const FEED_URL = 'news.xml';              // same Pages directory
-    const FEED_RELOAD_MS = 5 * 60 * 1000;     // re-fetch news.xml every 5 min
+    const ROTATION_INTERVAL_MS = 25 * 1000;     // 25s between page swaps
+    const ANIMATION_MS = 600;                    // must match CSS --anim-ms
+    const FEED_URL = 'news.xml';
+    const FEED_RELOAD_MS = 5 * 60 * 1000;
+    const SIDE_PADDING_PX = 32 * 2;              // .row left + right padding
+    const ITEM_PADDING_PX = 24 * 2;              // .headline left + right padding
 
     // ===== State =====
     let headlines = ['Loading news…'];
     let currentIdx = 0;
-    let rotationTimer = null;
-
     const stack = document.getElementById('stack');
     const rowNext = document.getElementById('row-next');
     const rowCurrent = document.getElementById('row-current');
+
+    // Off-DOM canvas for fast width measurement (no layout/reflow cost)
+    const measureCtx = document.createElement('canvas').getContext('2d');
+    function measureHeadlineWidth(text) {
+      measureCtx.font = '600 32px "Figtree", "Helvetica Neue", Arial, sans-serif';
+      return measureCtx.measureText(text).width + ITEM_PADDING_PX;
+    }
+
+    // ===== Page builder =====
+    // Given a starting index, greedily picks consecutive headlines (wrapping
+    // around the array if needed) until the next one wouldn't fit. Returns
+    // { items: string[], endIdx: number } where endIdx is the index for the
+    // next page to start at.
+    function buildPage(startIdx) {
+      const containerWidth = document.querySelector('.frame').clientWidth - SIDE_PADDING_PX;
+      const items = [];
+      let total = 0;
+      for (let i = 0; i < headlines.length; i++) {
+        const idx = (startIdx + i) % headlines.length;
+        const w = measureHeadlineWidth(headlines[idx]);
+        // First headline is always included (even if it overflows — better than blank)
+        if (items.length === 0 || total + w <= containerWidth) {
+          items.push(headlines[idx]);
+          total += w;
+        } else {
+          break;
+        }
+      }
+      return { items: items, endIdx: (startIdx + items.length) % headlines.length };
+    }
+
+    // ===== Render a row =====
+    function renderRow(rowEl, items) {
+      rowEl.innerHTML = '';
+      items.forEach(function (text) {
+        const el = document.createElement('div');
+        el.className = 'headline';
+        el.textContent = text;
+        rowEl.appendChild(el);
+      });
+    }
 
     // ===== news.xml loader =====
     async function loadHeadlines() {
@@ -100,58 +142,59 @@
           .map(function (t) { return (t.textContent || '').trim(); })
           .filter(function (t) { return t.length > 0; });
         if (titles.length === 0) return;
-        // If the feed changed and we're now past the end, wrap.
         headlines = titles;
         if (currentIdx >= headlines.length) currentIdx = 0;
-        // Update the visible row to the current headline immediately on first load,
-        // so the user doesn't see "Loading…" longer than necessary.
-        if (rowCurrent.textContent === 'Loading…') {
-          rowCurrent.textContent = headlines[currentIdx];
-          rowNext.textContent = headlines[(currentIdx + 1) % headlines.length];
-        }
+        // On first load, redraw current row immediately
+        const initial = buildPage(currentIdx);
+        renderRow(rowCurrent, initial.items);
+        // Pre-render the next row above
+        const next = buildPage(initial.endIdx);
+        renderRow(rowNext, next.items);
       } catch (e) { /* swallow */ }
     }
 
-    // ===== Render the two rows around currentIdx =====
-    function syncRows() {
-      // After each rotation we re-render so:
-      //   row-next (top, hidden above viewport) = headlines[currentIdx + 1]
-      //   row-current (bottom, visible)         = headlines[currentIdx]
-      rowNext.textContent = headlines[(currentIdx + 1) % headlines.length];
-      rowCurrent.textContent = headlines[currentIdx];
-    }
-
-    // ===== One rotation step =====
+    // ===== Rotation =====
     function rotate() {
-      if (headlines.length <= 1) {
-        // Only one item — no need to animate, just reschedule
-        rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
+      const currentPage = buildPage(currentIdx);
+      if (currentPage.endIdx === currentIdx) {
+        // Edge case: only one headline that fills the whole row — no rotation needed
+        setTimeout(rotate, ROTATION_INTERVAL_MS);
         return;
       }
-      // Trigger the downward slide. Both rows shift down by one frame height.
-      // - row-current goes off-screen bottom
-      // - row-next becomes visible
+      // Render the next-row content (the page that will become visible)
+      const nextPage = buildPage(currentPage.endIdx);
+      renderRow(rowNext, nextPage.items);
+
+      // Animate downward: current off bottom, next into visible position
       stack.classList.add('animating');
       stack.style.transform = 'translateY(0)';
 
       setTimeout(function () {
-        // Animation done — advance index and reset stack position WITHOUT animation
-        currentIdx = (currentIdx + 1) % headlines.length;
+        // Animation done — instantly reset stack + swap content
         stack.classList.remove('animating');
-        stack.style.transform = 'translateY(calc(-' + (86) + 'px))';
-        // Re-render rows so the next rotation cycle has the right "next" headline preloaded
-        syncRows();
-        rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
+        stack.style.transform = 'translateY(calc(-1 * var(--frame-h)))';
+        currentIdx = currentPage.endIdx;
+        // What was "next" is now "current"; pre-build the row above it for the next cycle
+        renderRow(rowCurrent, nextPage.items);
+        const afterNext = buildPage(nextPage.endIdx);
+        renderRow(rowNext, afterNext.items);
+        setTimeout(rotate, ROTATION_INTERVAL_MS);
       }, ANIMATION_MS);
     }
 
     // ===== Boot =====
     (async function () {
       await loadHeadlines();
-      syncRows();
-      // Start the rotation loop after the first interval
-      rotationTimer = setTimeout(rotate, ROTATION_INTERVAL_MS);
-      // Keep the feed fresh
+      // Allow fonts to settle before measuring (otherwise first measurement uses fallback metrics)
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+        // Re-measure / re-render once Figtree has loaded
+        const initial = buildPage(currentIdx);
+        renderRow(rowCurrent, initial.items);
+        const next = buildPage(initial.endIdx);
+        renderRow(rowNext, next.items);
+      }
+      setTimeout(rotate, ROTATION_INTERVAL_MS);
       setInterval(loadHeadlines, FEED_RELOAD_MS);
     })();
   </script>
