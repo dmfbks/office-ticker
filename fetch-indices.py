@@ -45,15 +45,31 @@ def main() -> None:
                 print(f"FAIL {display_name} ({yahoo_sym}): empty result", file=sys.stderr)
                 fail_count += 1
                 continue
-            meta = results[0].get('meta', {})
-            price = meta.get('regularMarketPrice')
-            prev = meta.get('chartPreviousClose')
-            if price is None or prev is None:
-                print(f"FAIL {display_name} ({yahoo_sym}): null price/prev", file=sys.stderr)
-                fail_count += 1
-                continue
-            result[display_name] = {'price': float(price), 'previous_close': float(prev)}
-            print(f"OK   {display_name}: {price} (prev {prev})", file=sys.stderr)
+            r = results[0]
+            meta = r.get('meta', {})
+            # Prefer the chart's close[] array — meta.regularMarketPrice lags
+            # for some international indices (notably TASE TA-35). If we have
+            # a valid close array with at least 2 entries, use close[-1] as the
+            # current price and close[-2] as the previous close.
+            closes = r.get('indicators', {}).get('quote', [{}])[0].get('close') or []
+            closes = [c for c in closes if c is not None]
+            if len(closes) >= 2:
+                price = float(closes[-1])
+                prev = float(closes[-2])
+                source = 'chart'
+            else:
+                # Fallback to meta if chart array is unavailable
+                price = meta.get('regularMarketPrice')
+                prev = meta.get('chartPreviousClose')
+                if price is None or prev is None:
+                    print(f"FAIL {display_name} ({yahoo_sym}): no usable data", file=sys.stderr)
+                    fail_count += 1
+                    continue
+                price = float(price)
+                prev = float(prev)
+                source = 'meta'
+            result[display_name] = {'price': price, 'previous_close': prev}
+            print(f"OK   {display_name}: {price} (prev {prev}) [{source}]", file=sys.stderr)
         except Exception as e:
             print(f"FAIL {display_name} ({yahoo_sym}): {e}", file=sys.stderr)
             fail_count += 1
