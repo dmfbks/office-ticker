@@ -31,7 +31,7 @@
       --down: #ef4444;
       --screen-w: 3840px;
       --screen-h: 172px;
-      --cycle: 20s;   /* full draw → hold → fade cycle */
+      --cycle: 25s;   /* full draw → hold → fade cycle */
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -112,37 +112,65 @@
     .spark.up   .spark-line { stroke: var(--up); }
     .spark.down .spark-line { stroke: var(--down); }
 
-    /* Looping draw + hold + fade cycle (every 20s by default).
-       Phases inside the 20s cycle:
-         0    -  3%  : invisible, hidden by dashoffset (~0.6s)
-         3    -  6%  : fade in (~0.6s)
-         6    - 22%  : draw out (~3.2s — the user-requested 3-4s draw time)
-         22   - 87%  : hold drawn (~13s)
-         87   - 95%  : fade out (~1.6s)
-         95   - 100% : invisible reset (~1s before next cycle starts) */
+    /* Looping draw + hold + fade cycle (every 25s by default).
+       Phases inside the 25s cycle:
+         0    -  2%  : invisible, hidden by dashoffset (~0.5s)
+         2    -  5%  : opacity fade in (~0.75s, line still hidden by dashoffset)
+         5    - 25%  : draw out (5.0s — the user-requested slower draw)
+         25   - 87%  : hold drawn (~15.5s)
+         87   - 95%  : fade out (~2s)
+         95   - 100% : invisible reset (~1.25s before next cycle starts) */
     .spark-line {
       animation: spark-cycle var(--cycle) ease-out infinite;
     }
     @keyframes spark-cycle {
       0%   { stroke-dashoffset: 800; opacity: 0; }
-      3%   { stroke-dashoffset: 800; opacity: 0; }
-      6%   { stroke-dashoffset: 800; opacity: 1; }
-      22%  { stroke-dashoffset: 0;   opacity: 1; }
+      2%   { stroke-dashoffset: 800; opacity: 0; }
+      5%   { stroke-dashoffset: 800; opacity: 1; }
+      25%  { stroke-dashoffset: 0;   opacity: 1; }
       87%  { stroke-dashoffset: 0;   opacity: 1; }
       95%  { stroke-dashoffset: 0;   opacity: 0; }
       100% { stroke-dashoffset: 800; opacity: 0; }
     }
 
-    /* Cascade start: items draw in sequence, so the whole row looks like a wave */
-    .item:nth-child(1) .spark-line { animation-delay: 0.0s; }
-    .item:nth-child(2) .spark-line { animation-delay: 0.15s; }
-    .item:nth-child(3) .spark-line { animation-delay: 0.30s; }
-    .item:nth-child(4) .spark-line { animation-delay: 0.45s; }
-    .item:nth-child(5) .spark-line { animation-delay: 0.60s; }
-    .item:nth-child(6) .spark-line { animation-delay: 0.75s; }
-    .item:nth-child(7) .spark-line { animation-delay: 0.90s; }
-    .item:nth-child(8) .spark-line { animation-delay: 1.05s; }
-    .item:nth-child(9) .spark-line { animation-delay: 1.20s; }
+    /* Pulsing dot at the end of the line.
+       Two animations:
+         - dot-cycle:  visibility synced with the line cycle (appears when line finishes drawing,
+                       fades out when line fades out)
+         - dot-pulse:  steady radius pulse, runs on a global clock so all dots pulse in unison */
+    .spark-dot {
+      fill: #fff;  /* fallback; per-direction colors below */
+    }
+    .spark.up   .spark-dot { fill: var(--up); }
+    .spark.down .spark-dot { fill: var(--down); }
+    .spark-dot {
+      animation:
+        dot-cycle var(--cycle) ease-out infinite,
+        dot-pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes dot-cycle {
+      0%, 23%   { opacity: 0; }
+      26%, 87%  { opacity: 1; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes dot-pulse {
+      0%, 100% { r: 4; }
+      50%      { r: 7; }
+    }
+
+    /* Cascade start: items draw in sequence, so the whole row looks like a wave.
+       --d is the per-item delay; line + dot-cycle both use it, dot-pulse stays on the global clock. */
+    .item:nth-child(1) { --d: 0.00s; }
+    .item:nth-child(2) { --d: 0.15s; }
+    .item:nth-child(3) { --d: 0.30s; }
+    .item:nth-child(4) { --d: 0.45s; }
+    .item:nth-child(5) { --d: 0.60s; }
+    .item:nth-child(6) { --d: 0.75s; }
+    .item:nth-child(7) { --d: 0.90s; }
+    .item:nth-child(8) { --d: 1.05s; }
+    .item:nth-child(9) { --d: 1.20s; }
+    .spark-line { animation-delay: var(--d, 0s); }
+    .spark-dot  { animation-delay: var(--d, 0s), 0s; }
 
     /* Colon blink */
     .colon { animation: colonBlink 1s infinite; }
@@ -210,13 +238,28 @@
       return padY + (1 - (values[0] - min) / range) * inner;
     }
 
+    function lastPoint(values, width, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      const lastV = values[values.length - 1];
+      return {
+        x: width,
+        y: padY + (1 - (lastV - min) / range) * inner,
+      };
+    }
+
     function sparklineSVG(values, direction) {
       const W = 140, H = 80;
       const points = sparklinePoints(values, W, H);
       const by = baselineY(values, H);
+      const lp = lastPoint(values, W, H);
       return '<svg class="spark ' + direction + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">' +
         '<line class="spark-baseline" x1="0" y1="' + by.toFixed(1) + '" x2="' + W + '" y2="' + by.toFixed(1) + '"/>' +
         '<polyline class="spark-line" points="' + points + '"/>' +
+        '<circle class="spark-dot" cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="4"/>' +
         '</svg>';
     }
 
