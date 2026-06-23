@@ -8,60 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU's MiCA transitional period expires July 1, requiring all crypto-asset service providers to hold a full EU license or cease operations.</title>
+      <title>       U.S. Senate passes housing bill carrying a four-year ban on Federal Reserve issuance of a central bank digital currency.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Six U.S. agencies face a July 18 deadline to finalize GENIUS Act stablecoin rules; all major comment periods closed June 9.</title>
+      <title>       EU MiCA transitional period ends July 1; only 194 of 3,000+ registered crypto firms have secured licenses across the bloc.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       FDIC and OCC propose stablecoin prudential rules under the GENIUS Act, including mandatory par-value redemption within two business days.</title>
+      <title>       Greece's regulator expected to deny Binance's EU MiCA license application ahead of the June 30 deadline, per Reuters.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       FinCEN and OFAC propose AML and sanctions compliance rules for payment stablecoin issuers, treating them as financial institutions.</title>
+      <title>       Franklin Templeton finalizes acquisition of digital asset manager 250 Digital, forming a new business unit called Franklin Crypto.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC and CFTC jointly classify crypto assets into five categories: digital commodities, collectibles, tools, stablecoins, and securities.</title>
+      <title>       Q2 2026 becomes the most-hacked quarter on record with 83 exploits and $755 million stolen, led by bridge vulnerabilities.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Bank of England drops retail stablecoin holding limits and sets a GBP 40 billion aggregate issuance cap ahead of a 2027 market launch.</title>
+      <title>       EBA updates Travel Rule guidelines to extend anti-money-laundering requirements to crypto-asset service providers under MiCA.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Kelp DAO's LayerZero bridge loses $292 million after North Korea's Lazarus Group compromises off-chain RPC infrastructure nodes.</title>
+      <title>       Taiko halts its Ethereum layer-2 network after an attacker exploited a bridge vulnerability to steal $1.7 million.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Drift Protocol loses $285 million after North Korean hackers use a six-month social engineering campaign to gain admin key access.</title>
+      <title>       Kraken obtains MiCA license through Ireland's Central Bank, securing continued EU market access after the July 1 deadline.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       North Korean hackers account for an estimated 76% of 2026 crypto losses; total DeFi theft exceeds $840 million through April.</title>
+      <title>       JPMorgan moves to accept crypto assets as loan collateral following enactment of the GENIUS Act stablecoin legislation.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       OKX and NYSE form a joint venture to connect OKX's 120 million global users to ICE futures markets and tokenized NYSE equities.</title>
+      <title>       JPMorgan, Mastercard, and Ripple complete cross-border tokenized Treasury settlement using XRP Ledger infrastructure.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       BlackRock's IBIT Bitcoin ETF holds $70 billion in assets, representing approximately 59% of all U.S. spot Bitcoin ETF market share.</title>
+      <title>       Citigroup plans institutional bitcoin custody launch in 2026, integrating digital assets into unified safekeeping and reporting.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       BlackRock files an updated S-1 for an iShares Bitcoin Premium Income ETF, expanding its digital asset product suite.</title>
+      <title>       MoneyGram joins Solana as a proof-of-stake validator, expanding the payments firm's stablecoin settlement infrastructure.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       MoneyGram becomes a Solana network validator as it expands stablecoin-based international money transfer operations.</title>
+      <title>       Morgan Stanley's partnership with Galaxy Digital enables bitcoin as collateral for institutional lending portfolios.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       U.S. Congress considers the CLARITY Act, which would assign the CFTC primary jurisdiction over digital commodity spot markets.</title>
+      <title>       Citi research puts global tokenized assets at $17 billion today, with a 2030 bull-case projection of $8.2 trillion.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
+
   </channel>
 </rss>
