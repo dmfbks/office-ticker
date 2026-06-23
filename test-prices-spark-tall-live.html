@@ -14,6 +14,12 @@
       }
       window._W = (w && w > 0) ? w : 3840;
       window._PART = (p.get('part') || 'full').toLowerCase();
+      // ?tz=Asia/Jerusalem  — override the timezone used by the brand-corner clock.
+      // Default Asia/Jerusalem because the device clock can't be trusted.
+      window._TZ = p.get('tz') || 'Asia/Jerusalem';
+      // ?reload=N — automatically reload the page every N minutes (cache-busted).
+      // Useful as a defense-in-depth against stuck displays.
+      window._RELOAD_MIN = Math.max(0, parseInt(p.get('reload'), 10) || 0);
     })();
   </script>
 
@@ -265,19 +271,42 @@
     }
 
     function buildBrand() {
-      const now = new Date();
-      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      const dayName = days[now.getDay()];
-      const hh = String(now.getHours()).padStart(2, '0');
-      const mm = String(now.getMinutes()).padStart(2, '0');
       const brand = document.createElement('div');
       brand.className = 'brand';
       brand.innerHTML =
         '<img src="logo.svg" alt="Fireblocks" />' +
-        '<span class="greeting">Happy ' + dayName + '!</span>' +
+        '<span class="greeting" id="greeting"></span>' +
         '<span class="sep">·</span>' +
-        '<span class="time">' + hh + '<span class="colon">:</span>' + mm + '</span>';
+        '<span class="time"><span id="time-h"></span><span class="colon">:</span><span id="time-m"></span></span>';
       return brand;
+    }
+
+    // Compute the time + weekday in the configured timezone (default Asia/Jerusalem)
+    // so the display doesn't depend on the rendering device's system clock.
+    function updateClock() {
+      const greetingEl = document.getElementById('greeting');
+      if (!greetingEl) return;
+      const tz = window._TZ;
+      const now = new Date();
+      try {
+        const dayFmt  = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'long' });
+        const timeFmt = new Intl.DateTimeFormat('en-US', {
+          timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false,
+        });
+        const dayName = dayFmt.format(now);
+        const parts = timeFmt.formatToParts(now);
+        const hh = (parts.find(function (p) { return p.type === 'hour';   }) || {}).value || '00';
+        const mm = (parts.find(function (p) { return p.type === 'minute'; }) || {}).value || '00';
+        greetingEl.textContent = 'Happy ' + dayName + '!';
+        document.getElementById('time-h').textContent = (hh === '24') ? '00' : hh;
+        document.getElementById('time-m').textContent = mm;
+      } catch (e) {
+        // Fall back to device-local time if Intl chokes on the timezone string
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        greetingEl.textContent = 'Happy ' + days[now.getDay()] + '!';
+        document.getElementById('time-h').textContent = String(now.getHours()).padStart(2, '0');
+        document.getElementById('time-m').textContent = String(now.getMinutes()).padStart(2, '0');
+      }
     }
 
     function cryptoItem(symbol, data) {
@@ -329,31 +358,80 @@
       fresh.forEach(function (sym, i) { delayCache[sym] = slots[i]; });
     }
 
-    let lastPayloadKey = null;
+    // Cache of DOM nodes per symbol so we can update text + SVG points in place
+    // rather than wiping innerHTML on every data refresh. Full innerHTML rebuild
+    // restarts every CSS animation, which caused the visible flicker the user
+    // saw when indices.json updated every ~10 min.
+    const itemRefs = {};
+
+    function symbolsKey(items) {
+      return items.map(function (it) { return it.symbol; }).join(',');
+    }
+
+    function buildItem(it) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      const d = delayCache[it.symbol] || 0;
+      el.style.setProperty('--d', d.toFixed(2) + 's');
+      el.innerHTML =
+        '<span class="symbol">' + it.symbol + '</span>' +
+        sparklineSVG(it.spark, it.direction) +
+        '<span class="price">' + it.price + '</span>' +
+        '<span class="change ' + it.direction + '">' + it.change + '</span>';
+      return el;
+    }
+
+    function updateItem(el, it) {
+      // Price + change text
+      el.querySelector('.price').textContent = it.price;
+      const changeEl = el.querySelector('.change');
+      changeEl.className = 'change ' + it.direction;
+      changeEl.textContent = it.change;
+
+      // Sparkline: update geometry without touching CSS animation properties
+      const svg = el.querySelector('.spark');
+      svg.classList.remove('up', 'down');
+      svg.classList.add(it.direction);
+      const vb = svg.viewBox.baseVal;
+      const W = vb.width  || 140;
+      const H = vb.height || 80;
+      const values = (it.spark && it.spark.length >= 2) ? it.spark : [1, 1];
+      const points = sparklinePoints(values, W, H);
+      const by = baselineY(values, H);
+      const lp = lastPoint(values, W, H);
+      svg.querySelector('.spark-line').setAttribute('points', points);
+      const baseline = svg.querySelector('.spark-baseline');
+      baseline.setAttribute('y1', by.toFixed(1));
+      baseline.setAttribute('y2', by.toFixed(1));
+      const dot  = svg.querySelector('.spark-dot');
+      const ring = svg.querySelector('.spark-ring');
+      const cx = lp.x.toFixed(1), cy = lp.y.toFixed(1);
+      dot.setAttribute('cx',  cx); dot.setAttribute('cy',  cy);
+      ring.setAttribute('cx', cx); ring.setAttribute('cy', cy);
+    }
+
+    let lastSymbolsKey = null;
     function renderItems(items) {
-      // Skip the DOM thrash if the visible content hasn't changed — keeps the
-      // animation running smoothly across the 2-min data refresh.
-      const key = items.map(function (it) {
-        return it.symbol + '|' + it.price + '|' + it.change + '|' + (it.spark || []).join(',');
-      }).join('||');
-      if (key === lastPayloadKey) return;
-      lastPayloadKey = key;
-
-      ensureDelays(items.map(function (it) { return it.symbol; }));
-
       const root = document.getElementById('items');
-      root.innerHTML = '';
+      const skey = symbolsKey(items);
+      // If the SET of symbols changed (first render, item added/removed),
+      // rebuild from scratch. Otherwise update in place.
+      if (skey !== lastSymbolsKey) {
+        Object.keys(itemRefs).forEach(function (k) { delete itemRefs[k]; });
+        root.innerHTML = '';
+        ensureDelays(items.map(function (it) { return it.symbol; }));
+        items.forEach(function (it) {
+          const el = buildItem(it);
+          root.appendChild(el);
+          itemRefs[it.symbol] = el;
+        });
+        lastSymbolsKey = skey;
+        return;
+      }
+      // In-place update — preserves CSS animation state, no flicker
       items.forEach(function (it) {
-        const el = document.createElement('div');
-        el.className = 'item';
-        const d = delayCache[it.symbol] || 0;
-        el.style.setProperty('--d', d.toFixed(2) + 's');
-        el.innerHTML =
-          '<span class="symbol">' + it.symbol + '</span>' +
-          sparklineSVG(it.spark, it.direction) +
-          '<span class="price">' + it.price + '</span>' +
-          '<span class="change ' + it.direction + '">' + it.change + '</span>';
-        root.appendChild(el);
+        const el = itemRefs[it.symbol];
+        if (el) updateItem(el, it);
       });
     }
 
@@ -400,11 +478,25 @@
     if (PART !== 'indices') {
       const ticker = document.getElementById('ticker');
       ticker.insertBefore(buildBrand(), document.getElementById('items'));
+      updateClock();
+      // Tick the clock once per minute so the display doesn't freeze at page-load time
+      setInterval(updateClock, 60 * 1000);
     }
 
     load();
-    // Refresh every 2 minutes — same cadence as the crypto workflow
+    // Refresh data every 2 minutes — same cadence as the crypto workflow
     setInterval(load, 120 * 1000);
+
+    // ?reload=N  — periodic full-page reload (cache-busted). Off by default.
+    // Bump any URL param value in the Colorlight config (e.g. add ?v=2) for a
+    // one-shot manual hard refresh.
+    if (window._RELOAD_MIN > 0) {
+      setTimeout(function () {
+        const url = new URL(location.href);
+        url.searchParams.set('_', Date.now());
+        location.href = url.toString();
+      }, window._RELOAD_MIN * 60 * 1000);
+    }
   </script>
 </body>
 </html>
