@@ -31,7 +31,7 @@
       --down: #ef4444;
       --screen-w: 3840px;
       --screen-h: 172px;
-      --cycle: 30s;   /* full draw → hold → fade cycle */
+      --cycle: 25s;   /* full draw → hold → fade cycle */
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -85,11 +85,12 @@
     .change.up   { color: var(--up); }
     .change.down { color: var(--down); }
 
-    /* Sparkline — bigger for the tall layout */
+    /* Sparkline — bigger for the tall layout.
+       margin-right is generous so the radar ping (max r=28) doesn't crowd the price text. */
     .spark {
       width: 140px;
       height: 80px;
-      margin-right: 18px;
+      margin-right: 32px;
       flex-shrink: 0;
       overflow: visible;
     }
@@ -112,16 +113,16 @@
     .spark.up   .spark-line { stroke: var(--up); }
     .spark.down .spark-line { stroke: var(--down); }
 
-    /* Looping draw + hold + fade cycle (every 30s by default).
-       Phases inside the 30s cycle:
-         0    -  2%  : invisible, hidden by dashoffset (~0.6s)
-         2    -  5%  : opacity fade in (~0.9s, line still hidden by dashoffset)
-         5    - 38%  : draw out (10s — user requested slower draw with slight acceleration)
-         38   - 87%  : hold drawn (~14.7s)
-         87   - 95%  : fade out (~2.4s)
-         95   - 100% : invisible reset (~1.5s before next cycle starts)
+    /* Looping draw + hold + fade cycle (every 25s by default).
+       Phases inside the 25s cycle:
+         0    -  2%  : invisible, hidden by dashoffset (~0.5s)
+         2    -  5%  : opacity fade in (~0.75s, line still hidden by dashoffset)
+         5    - 25%  : draw out (5s, with slight acceleration)
+         25   - 87%  : hold drawn (~15.5s)
+         87   - 95%  : fade out (~2s)
+         95   - 100% : invisible reset (~1.25s before next cycle starts)
 
-       Acceleration: the 5% → 38% segment uses a mild ease-in curve so the draw
+       Acceleration: the 5% → 25% segment uses a mild ease-in curve so the draw
        starts slow and gathers speed (cubic-bezier 0.4, 0.05, 0.7, 0.55).
        Other segments keep the default ease-out. */
     .spark-line {
@@ -131,7 +132,7 @@
       0%   { stroke-dashoffset: 800; opacity: 0; }
       2%   { stroke-dashoffset: 800; opacity: 0; }
       5%   { stroke-dashoffset: 800; opacity: 1; animation-timing-function: cubic-bezier(0.4, 0.05, 0.7, 0.55); }
-      38%  { stroke-dashoffset: 0;   opacity: 1; animation-timing-function: linear; }
+      25%  { stroke-dashoffset: 0;   opacity: 1; animation-timing-function: linear; }
       87%  { stroke-dashoffset: 0;   opacity: 1; }
       95%  { stroke-dashoffset: 0;   opacity: 0; }
       100% { stroke-dashoffset: 800; opacity: 0; }
@@ -153,16 +154,16 @@
     .spark-dot {
       animation:
         dot-cycle var(--cycle) ease-out infinite,
-        dot-pulse 2.4s ease-in-out infinite;
+        dot-pulse 3s ease-in-out infinite;
     }
     .spark-ring {
       animation:
         dot-cycle  var(--cycle) ease-out infinite,
-        ring-ping  2.4s ease-out infinite;
+        ring-ping  3s ease-out infinite;
     }
     @keyframes dot-cycle {
-      0%, 35%   { opacity: 0; }
-      38%, 87%  { opacity: 1; }
+      0%, 22%   { opacity: 0; }
+      25%, 87%  { opacity: 1; }
       95%, 100% { opacity: 0; }
     }
     @keyframes dot-pulse {
@@ -170,11 +171,12 @@
       50%      { r: 4.8; }
     }
     @keyframes ring-ping {
-      /* Wave starts as a tight ring around the dot, expands outward,
-         stroke thins + fades to mimic a radar pulse dissipating. */
-      0%   { r: 4;  stroke-opacity: 0.85; stroke-width: 2.5; }
-      80%  { stroke-opacity: 0.05; }
-      100% { r: 18; stroke-opacity: 0;    stroke-width: 0.6; }
+      /* Wave starts as a tight ring around the dot, expands outward, stroke
+         fades to mimic a radar pulse dissipating. Bigger + thicker than v3
+         so it reads on the LED panel. */
+      0%   { r: 4;  stroke-opacity: 0.95; stroke-width: 3.5; }
+      70%  { stroke-opacity: 0.4;  stroke-width: 1.8; }
+      100% { r: 28; stroke-opacity: 0;    stroke-width: 1; }
     }
 
     /* Cascade start: items draw in sequence, so the whole row looks like a wave.
