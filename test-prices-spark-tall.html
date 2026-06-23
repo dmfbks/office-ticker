@@ -31,7 +31,7 @@
       --down: #ef4444;
       --screen-w: 3840px;
       --screen-h: 172px;
-      --cycle: 25s;   /* full draw → hold → fade cycle */
+      --cycle: 30s;   /* full draw → hold → fade cycle */
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -112,54 +112,75 @@
     .spark.up   .spark-line { stroke: var(--up); }
     .spark.down .spark-line { stroke: var(--down); }
 
-    /* Looping draw + hold + fade cycle (every 25s by default).
-       Phases inside the 25s cycle:
-         0    -  2%  : invisible, hidden by dashoffset (~0.5s)
-         2    -  5%  : opacity fade in (~0.75s, line still hidden by dashoffset)
-         5    - 25%  : draw out (5.0s — the user-requested slower draw)
-         25   - 87%  : hold drawn (~15.5s)
-         87   - 95%  : fade out (~2s)
-         95   - 100% : invisible reset (~1.25s before next cycle starts) */
+    /* Looping draw + hold + fade cycle (every 30s by default).
+       Phases inside the 30s cycle:
+         0    -  2%  : invisible, hidden by dashoffset (~0.6s)
+         2    -  5%  : opacity fade in (~0.9s, line still hidden by dashoffset)
+         5    - 38%  : draw out (10s — user requested slower draw with slight acceleration)
+         38   - 87%  : hold drawn (~14.7s)
+         87   - 95%  : fade out (~2.4s)
+         95   - 100% : invisible reset (~1.5s before next cycle starts)
+
+       Acceleration: the 5% → 38% segment uses a mild ease-in curve so the draw
+       starts slow and gathers speed (cubic-bezier 0.4, 0.05, 0.7, 0.55).
+       Other segments keep the default ease-out. */
     .spark-line {
       animation: spark-cycle var(--cycle) ease-out infinite;
     }
     @keyframes spark-cycle {
       0%   { stroke-dashoffset: 800; opacity: 0; }
       2%   { stroke-dashoffset: 800; opacity: 0; }
-      5%   { stroke-dashoffset: 800; opacity: 1; }
-      25%  { stroke-dashoffset: 0;   opacity: 1; }
+      5%   { stroke-dashoffset: 800; opacity: 1; animation-timing-function: cubic-bezier(0.4, 0.05, 0.7, 0.55); }
+      38%  { stroke-dashoffset: 0;   opacity: 1; animation-timing-function: linear; }
       87%  { stroke-dashoffset: 0;   opacity: 1; }
       95%  { stroke-dashoffset: 0;   opacity: 0; }
       100% { stroke-dashoffset: 800; opacity: 0; }
     }
 
-    /* Pulsing dot at the end of the line.
-       Two animations:
-         - dot-cycle:  visibility synced with the line cycle (appears when line finishes drawing,
-                       fades out when line fades out)
-         - dot-pulse:  steady radius pulse, runs on a global clock so all dots pulse in unison */
-    .spark-dot {
-      fill: #fff;  /* fallback; per-direction colors below */
-    }
-    .spark.up   .spark-dot { fill: var(--up); }
-    .spark.down .spark-dot { fill: var(--down); }
+    /* Radar-style end-of-line indicator.
+       Two SVG circles drawn at the line's last point (ring underneath, solid dot on top):
+         .spark-ring → hollow stroked circle that emanates outward and fades (the "ping")
+         .spark-dot  → solid filled circle that pulses gently (the "contact")
+       Both share the visibility cycle (dot-cycle) so they appear when the line completes
+       and fade out when the line fades out. Their inner animations (pulse / ping) run on
+       the global clock so the radar effect is synced across every item. */
+    .spark-ring, .spark-dot { pointer-events: none; }
+    .spark.up   .spark-dot  { fill: var(--up); }
+    .spark.down .spark-dot  { fill: var(--down); }
+    .spark.up   .spark-ring { fill: none; stroke: var(--up); }
+    .spark.down .spark-ring { fill: none; stroke: var(--down); }
+
     .spark-dot {
       animation:
         dot-cycle var(--cycle) ease-out infinite,
-        dot-pulse 1.6s ease-in-out infinite;
+        dot-pulse 2.4s ease-in-out infinite;
+    }
+    .spark-ring {
+      animation:
+        dot-cycle  var(--cycle) ease-out infinite,
+        ring-ping  2.4s ease-out infinite;
     }
     @keyframes dot-cycle {
-      0%, 23%   { opacity: 0; }
-      26%, 87%  { opacity: 1; }
+      0%, 35%   { opacity: 0; }
+      38%, 87%  { opacity: 1; }
       95%, 100% { opacity: 0; }
     }
     @keyframes dot-pulse {
-      0%, 100% { r: 4; }
-      50%      { r: 7; }
+      0%, 100% { r: 3.5; }
+      50%      { r: 4.8; }
+    }
+    @keyframes ring-ping {
+      /* Wave starts as a tight ring around the dot, expands outward,
+         stroke thins + fades to mimic a radar pulse dissipating. */
+      0%   { r: 4;  stroke-opacity: 0.85; stroke-width: 2.5; }
+      80%  { stroke-opacity: 0.05; }
+      100% { r: 18; stroke-opacity: 0;    stroke-width: 0.6; }
     }
 
     /* Cascade start: items draw in sequence, so the whole row looks like a wave.
-       --d is the per-item delay; line + dot-cycle both use it, dot-pulse stays on the global clock. */
+       --d is the per-item delay. The line and the visibility cycle (dot-cycle) use it,
+       but the dot pulse and radar ping run on the global clock so every contact pulses
+       and every ring expands in unison. */
     .item:nth-child(1) { --d: 0.00s; }
     .item:nth-child(2) { --d: 0.15s; }
     .item:nth-child(3) { --d: 0.30s; }
@@ -171,6 +192,7 @@
     .item:nth-child(9) { --d: 1.20s; }
     .spark-line { animation-delay: var(--d, 0s); }
     .spark-dot  { animation-delay: var(--d, 0s), 0s; }
+    .spark-ring { animation-delay: var(--d, 0s), 0s; }
 
     /* Colon blink */
     .colon { animation: colonBlink 1s infinite; }
@@ -259,7 +281,8 @@
       return '<svg class="spark ' + direction + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">' +
         '<line class="spark-baseline" x1="0" y1="' + by.toFixed(1) + '" x2="' + W + '" y2="' + by.toFixed(1) + '"/>' +
         '<polyline class="spark-line" points="' + points + '"/>' +
-        '<circle class="spark-dot" cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="4"/>' +
+        '<circle class="spark-ring" cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="4"/>' +
+        '<circle class="spark-dot"  cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="3.5"/>' +
         '</svg>';
     }
 
