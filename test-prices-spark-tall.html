@@ -86,11 +86,12 @@
     .change.down { color: var(--down); }
 
     /* Sparkline — bigger for the tall layout.
-       margin-right is generous so the radar ping (max r=28) doesn't crowd the price text. */
+       margin-right matches the original spacing; the ring's outer expansion (r > 20)
+       is below ~10% stroke-opacity by then, so any bleed past the SVG is barely visible. */
     .spark {
       width: 140px;
       height: 80px;
-      margin-right: 32px;
+      margin-right: 18px;
       flex-shrink: 0;
       overflow: visible;
     }
