@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="vp" content="width=3840, height=172, initial-scale=1, user-scalable=no">
+  <script>
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const w = parseInt(p.get('w'), 10);
+      if (w && w > 0) {
+        document.getElementById('vp').setAttribute(
+          'content', 'width=' + w + ', height=172, initial-scale=1, user-scalable=no'
+        );
+      }
+      window._W = (w && w > 0) ? w : 3840;
+      window._PART = (p.get('part') || 'full').toLowerCase();
+    })();
+  </script>
+
+  <title>Office Ticker — Prices (Tall + Live Sparkline)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:   #010101;
+      --text: #ffffff;
+      --up:   #22c55e;
+      --down: #ef4444;
+      --screen-w: 3840px;
+      --screen-h: 172px;
+      --cycle: 25s;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: var(--screen-w);
+      height: var(--screen-h);
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 24px 0 56px;
+      font-size: 56px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-right: 40px;
+      flex-shrink: 0;
+    }
+    .brand img { height: 56px; width: 56px; opacity: 0.9; margin-right: 18px; }
+    .brand .sep { opacity: 0.4; margin: 0 14px; }
+    .greeting { color: var(--text); }
+    .time { font-variant-numeric: tabular-nums; }
+
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      overflow: hidden;
+    }
+    .item {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    .symbol { color: var(--text); font-weight: 600; margin-right: 18px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 14px;
+              font-variant-numeric: tabular-nums; }
+    .change { font-weight: 600; font-variant-numeric: tabular-nums; }
+    .change.up   { color: var(--up); }
+    .change.down { color: var(--down); }
+
+    .spark {
+      width: 140px;
+      height: 80px;
+      margin-right: 18px;
+      flex-shrink: 0;
+      overflow: visible;
+    }
+    .spark-baseline {
+      stroke: rgba(255, 255, 255, 0.45);
+      stroke-width: 2;
+      stroke-dasharray: 5 4;
+      fill: none;
+    }
+    .spark-line {
+      fill: none;
+      stroke-width: 3.2;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+    }
+    .spark.up   .spark-line { stroke: var(--up); }
+    .spark.down .spark-line { stroke: var(--down); }
+
+    .spark-line {
+      animation: spark-cycle var(--cycle) ease-out infinite;
+    }
+    @keyframes spark-cycle {
+      0%   { stroke-dashoffset: 800; opacity: 0; }
+      2%   { stroke-dashoffset: 800; opacity: 0; }
+      5%   { stroke-dashoffset: 800; opacity: 1; animation-timing-function: cubic-bezier(0.4, 0.05, 0.7, 0.55); }
+      25%  { stroke-dashoffset: 0;   opacity: 1; animation-timing-function: linear; }
+      87%  { stroke-dashoffset: 0;   opacity: 1; }
+      95%  { stroke-dashoffset: 0;   opacity: 0; }
+      100% { stroke-dashoffset: 800; opacity: 0; }
+    }
+
+    .spark-ring, .spark-dot { pointer-events: none; }
+    .spark.up   .spark-dot  { fill: var(--up); }
+    .spark.down .spark-dot  { fill: var(--down); }
+    .spark.up   .spark-ring { fill: none; stroke: var(--up); }
+    .spark.down .spark-ring { fill: none; stroke: var(--down); }
+
+    .spark-dot {
+      animation:
+        dot-cycle var(--cycle) ease-out infinite,
+        dot-pulse 3s ease-in-out infinite;
+    }
+    .spark-ring {
+      animation:
+        dot-cycle  var(--cycle) ease-out infinite,
+        ring-ping  3s ease-out infinite;
+    }
+    @keyframes dot-cycle {
+      0%, 22%   { opacity: 0; }
+      25%, 87%  { opacity: 1; }
+      95%, 100% { opacity: 0; }
+    }
+    @keyframes dot-pulse {
+      0%, 100% { r: 3.5; }
+      50%      { r: 4.8; }
+    }
+    @keyframes ring-ping {
+      0%   { r: 4;  stroke-opacity: 0.95; stroke-width: 3.5; }
+      70%  { stroke-opacity: 0.4;  stroke-width: 1.8; }
+      100% { r: 28; stroke-opacity: 0;    stroke-width: 1; }
+    }
+
+    .item:nth-child(1) { --d: 0.00s; }
+    .item:nth-child(2) { --d: 0.15s; }
+    .item:nth-child(3) { --d: 0.30s; }
+    .item:nth-child(4) { --d: 0.45s; }
+    .item:nth-child(5) { --d: 0.60s; }
+    .item:nth-child(6) { --d: 0.75s; }
+    .item:nth-child(7) { --d: 0.90s; }
+    .item:nth-child(8) { --d: 1.05s; }
+    .item:nth-child(9) { --d: 1.20s; }
+    .spark-line { animation-delay: var(--d, 0s); }
+    .spark-dot  { animation-delay: var(--d, 0s), 0s; }
+    .spark-ring { animation-delay: var(--d, 0s), 0s; }
+
+    .colon { animation: colonBlink 1s infinite; }
+    @keyframes colonBlink {
+      0%, 49.9% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .empty {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.5;
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker" id="ticker">
+    <div class="items" id="items"><div class="empty">Loading…</div></div>
+  </div>
+
+  <script>
+    const SCREEN_WIDTH = window._W || 3840;
+    const PART = window._PART || 'full';
+    document.documentElement.style.setProperty('--screen-w', SCREEN_WIDTH + 'px');
+
+    const CRYPTO_ORDER = ['BTC', 'ETH', 'BNB', 'XRP', 'SOL'];
+    const INDEX_ORDER  = ['S&P 500', 'NASDAQ', 'TA-35', 'USD'];
+
+    function formatCryptoPrice(p) {
+      if (p >= 100)  return '$' + Math.round(p).toLocaleString('en-US');
+      if (p >= 1)    return '$' + p.toFixed(2);
+      return '$' + p.toFixed(4);
+    }
+    function formatIndexPrice(name, p) {
+      if (name === 'USD') return '₪' + p.toFixed(3);
+      return Math.round(p).toLocaleString('en-US');
+    }
+    function formatChange(c) {
+      const sign = c >= 0 ? '+' : '';
+      return sign + c.toFixed(2) + '%';
+    }
+
+    function sparklinePoints(values, width, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      return values.map(function (v, i) {
+        const x = (i / Math.max(values.length - 1, 1)) * width;
+        const y = padY + (1 - (v - min) / range) * inner;
+        return x.toFixed(1) + ',' + y.toFixed(1);
+      }).join(' ');
+    }
+    function baselineY(values, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      return padY + (1 - (values[0] - min) / range) * inner;
+    }
+    function lastPoint(values, width, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      const lastV = values[values.length - 1];
+      return { x: width, y: padY + (1 - (lastV - min) / range) * inner };
+    }
+    function sparklineSVG(values, direction) {
+      const W = 140, H = 80;
+      // Defensive: if we got a single point or empty, render a flat midline
+      if (!values || values.length < 2) {
+        values = [1, 1];
+      }
+      const points = sparklinePoints(values, W, H);
+      const by = baselineY(values, H);
+      const lp = lastPoint(values, W, H);
+      return '<svg class="spark ' + direction + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">' +
+        '<line class="spark-baseline" x1="0" y1="' + by.toFixed(1) + '" x2="' + W + '" y2="' + by.toFixed(1) + '"/>' +
+        '<polyline class="spark-line" points="' + points + '"/>' +
+        '<circle class="spark-ring" cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="4"/>' +
+        '<circle class="spark-dot"  cx="' + lp.x.toFixed(1) + '" cy="' + lp.y.toFixed(1) + '" r="3.5"/>' +
+        '</svg>';
+    }
+
+    function buildBrand() {
+      const now = new Date();
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const dayName = days[now.getDay()];
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      const brand = document.createElement('div');
+      brand.className = 'brand';
+      brand.innerHTML =
+        '<img src="logo.svg" alt="Fireblocks" />' +
+        '<span class="greeting">Happy ' + dayName + '!</span>' +
+        '<span class="sep">·</span>' +
+        '<span class="time">' + hh + '<span class="colon">:</span>' + mm + '</span>';
+      return brand;
+    }
+
+    function cryptoItem(symbol, data) {
+      const change = data.change_24h || 0;
+      const direction = change >= 0 ? 'up' : 'down';
+      return {
+        symbol: symbol,
+        price: formatCryptoPrice(data.price),
+        change: formatChange(change),
+        direction: direction,
+        spark: data.spark || [],
+      };
+    }
+    function indexItem(name, data) {
+      const prev = data.previous_close;
+      const change = ((data.price - prev) / prev) * 100;
+      const direction = change >= 0 ? 'up' : 'down';
+      return {
+        symbol: name,
+        price: formatIndexPrice(name, data.price),
+        change: formatChange(change),
+        direction: direction,
+        spark: data.spark || [],
+      };
+    }
+
+    function renderItems(items) {
+      const root = document.getElementById('items');
+      root.innerHTML = '';
+      items.forEach(function (it) {
+        const el = document.createElement('div');
+        el.className = 'item';
+        el.innerHTML =
+          '<span class="symbol">' + it.symbol + '</span>' +
+          sparklineSVG(it.spark, it.direction) +
+          '<span class="price">' + it.price + '</span>' +
+          '<span class="change ' + it.direction + '">' + it.change + '</span>';
+        root.appendChild(el);
+      });
+    }
+
+    function renderError(msg) {
+      const root = document.getElementById('items');
+      root.innerHTML = '<div class="empty">' + msg + '</div>';
+    }
+
+    async function load() {
+      try {
+        const cacheBust = '?t=' + Date.now();
+        const wantCrypto  = PART !== 'indices';
+        const wantIndices = PART !== 'crypto';
+        const promises = [];
+        if (wantCrypto)  promises.push(fetch('crypto.json'  + cacheBust).then(function (r) { return r.json(); }));
+        if (wantIndices) promises.push(fetch('indices.json' + cacheBust).then(function (r) { return r.json(); }));
+        const results = await Promise.all(promises);
+        const cryptoData  = wantCrypto  ? results[0] : null;
+        const indicesData = wantIndices ? results[wantCrypto ? 1 : 0] : null;
+
+        const items = [];
+        if (cryptoData) {
+          CRYPTO_ORDER.forEach(function (sym) {
+            if (cryptoData[sym]) items.push(cryptoItem(sym, cryptoData[sym]));
+          });
+        }
+        if (indicesData) {
+          INDEX_ORDER.forEach(function (name) {
+            if (indicesData[name]) items.push(indexItem(name, indicesData[name]));
+          });
+        }
+        if (items.length === 0) {
+          renderError('No data');
+        } else {
+          renderItems(items);
+        }
+      } catch (e) {
+        console.error(e);
+        renderError('Fetch error: ' + e.message);
+      }
+    }
+
+    // Brand corner (left + full only)
+    if (PART !== 'indices') {
+      const ticker = document.getElementById('ticker');
+      ticker.insertBefore(buildBrand(), document.getElementById('items'));
+    }
+
+    load();
+    // Refresh every 2 minutes — same cadence as the crypto workflow
+    setInterval(load, 120 * 1000);
+  </script>
+</body>
+</html>
