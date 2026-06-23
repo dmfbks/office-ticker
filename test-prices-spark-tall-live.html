@@ -37,7 +37,6 @@
       --down: #ef4444;
       --screen-w: 3840px;
       --screen-h: 172px;
-      --cycle: 25s;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
@@ -54,18 +53,18 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 20px 0 40px;
-      font-size: 40px;
+      padding: 0 20px 0 36px;
+      font-size: 34px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-right: 28px;
+      gap: 12px;
+      margin-right: 24px;
       flex-shrink: 0;
     }
-    .brand img { height: 40px; width: 40px; opacity: 0.9; margin-right: 14px; }
-    .brand .sep { opacity: 0.4; margin: 0 12px; }
+    .brand img { height: 34px; width: 34px; opacity: 0.9; margin-right: 12px; }
+    .brand .sep { opacity: 0.4; margin: 0 10px; }
     .greeting { color: var(--text); }
     .time { font-variant-numeric: tabular-nums; }
 
@@ -102,13 +101,13 @@
     /* Narrow panels (right side @1376px) can't fit 4 sparkline items at the
        default size — auto-compact: smaller font, smaller spark, tighter margins. */
     @media (max-width: 2000px) {
-      .ticker { font-size: 30px; padding: 0 12px; }
-      .brand img { height: 30px; width: 30px; margin-right: 10px; }
-      .brand { gap: 10px; margin-right: 18px; }
-      .item { padding: 6px 8px; }
-      .symbol { margin-right: 10px; }
-      .price  { margin-right: 10px; }
-      .spark  { width: 70px; height: 48px; margin-right: 10px; }
+      .ticker { font-size: 26px; padding: 0 10px; }
+      .brand img { height: 26px; width: 26px; margin-right: 10px; }
+      .brand { gap: 8px; margin-right: 14px; }
+      .item { padding: 4px 6px; }
+      .symbol { margin-right: 8px; }
+      .price  { margin-right: 8px; }
+      .spark  { width: 70px; height: 48px; margin-right: 8px; }
       .spark-line { stroke-width: 2.4; }
       .spark-baseline { stroke-width: 1.4; stroke-dasharray: 4 3; }
     }
@@ -118,68 +117,49 @@
       stroke-dasharray: 5 4;
       fill: none;
     }
+    /* Line is fully drawn by default. The redraw animation only runs when JS
+       adds the .redraw class — which happens on first paint and again whenever
+       the underlying data actually changes. No looping cycle means no
+       every-few-seconds fade-out flicker. */
     .spark-line {
       fill: none;
       stroke-width: 3.2;
       stroke-linejoin: round;
       stroke-linecap: round;
-      stroke-dasharray: 800;
-      stroke-dashoffset: 800;
     }
     .spark.up   .spark-line { stroke: var(--up); }
     .spark.down .spark-line { stroke: var(--down); }
-
-    .spark-line {
-      animation: spark-cycle var(--cycle) ease-out infinite;
+    .spark-line.redraw {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      opacity: 0;
+      animation: spark-redraw 5s cubic-bezier(0.4, 0.05, 0.7, 0.55) forwards;
     }
-    @keyframes spark-cycle {
+    @keyframes spark-redraw {
       0%   { stroke-dashoffset: 800; opacity: 0; }
-      2%   { stroke-dashoffset: 800; opacity: 0; }
-      5%   { stroke-dashoffset: 800; opacity: 1; animation-timing-function: cubic-bezier(0.4, 0.05, 0.7, 0.55); }
-      25%  { stroke-dashoffset: 0;   opacity: 1; animation-timing-function: linear; }
-      87%  { stroke-dashoffset: 0;   opacity: 1; }
-      95%  { stroke-dashoffset: 0;   opacity: 0; }
-      100% { stroke-dashoffset: 800; opacity: 0; }
+      8%   { stroke-dashoffset: 800; opacity: 1; }
+      100% { stroke-dashoffset: 0;   opacity: 1; }
     }
 
+    /* Dot + radar ring are always visible & always animating — they don't tie
+       to the line's redraw cycle, so they keep the chart looking "alive"
+       without any periodic fade-to-black. */
     .spark-ring, .spark-dot { pointer-events: none; }
     .spark.up   .spark-dot  { fill: var(--up); }
     .spark.down .spark-dot  { fill: var(--down); }
     .spark.up   .spark-ring { fill: none; stroke: var(--up); }
     .spark.down .spark-ring { fill: none; stroke: var(--down); }
-
-    .spark-dot {
-      animation:
-        dot-cycle var(--cycle) ease-out infinite,
-        dot-pulse 3s ease-in-out infinite;
-    }
-    .spark-ring {
-      animation:
-        dot-cycle  var(--cycle) ease-out infinite,
-        ring-ping  3s ease-out infinite;
-    }
-    @keyframes dot-cycle {
-      0%, 22%   { opacity: 0; }
-      25%, 87%  { opacity: 1; }
-      95%, 100% { opacity: 0; }
-    }
+    .spark-dot  { animation: dot-pulse 3s ease-in-out infinite; }
+    .spark-ring { animation: ring-ping 5s ease-out infinite; }
     @keyframes dot-pulse {
       0%, 100% { r: 3.5; }
       50%      { r: 4.8; }
     }
     @keyframes ring-ping {
-      0%   { r: 4;  stroke-opacity: 0.95; stroke-width: 3.5; }
-      70%  { stroke-opacity: 0.4;  stroke-width: 1.8; }
-      100% { r: 28; stroke-opacity: 0;    stroke-width: 1; }
+      0%   { r: 4;  stroke-opacity: 0.9; stroke-width: 3; }
+      70%  { stroke-opacity: 0.3; stroke-width: 1.5; }
+      100% { r: 22; stroke-opacity: 0;   stroke-width: 0.8; }
     }
-
-    /* Per-item --d is set by JS — each item gets a random negative phase offset
-       spread across the cycle, so they refresh in randomized order rather than
-       cascading left-to-right. Delays are cached per symbol so the 2-min data
-       refresh doesn't re-shuffle and cause a visible reset. */
-    .spark-line { animation-delay: var(--d, 0s); }
-    .spark-dot  { animation-delay: var(--d, 0s), 0s; }
-    .spark-ring { animation-delay: var(--d, 0s), 0s; }
 
     .colon { animation: colonBlink 1s infinite; }
     @keyframes colonBlink {
@@ -333,29 +313,28 @@
       };
     }
 
-    // Animation phase offset (negative delay) per symbol. Generated once on first
-    // render so subsequent re-renders don't reshuffle and reset the animation.
-    const CYCLE_SEC = 25;
-    const delayCache = {};
-    function ensureDelays(symbols) {
-      const fresh = symbols.filter(function (s) { return !(s in delayCache); });
-      if (fresh.length === 0) return;
-      // Distribute fresh symbols evenly across the cycle, then shuffle so they
-      // get assigned in random order. Negative delays place each item at a
-      // different phase of its cycle at t=0.
-      const n = symbols.length;
-      const slots = [];
-      for (let i = 0; i < fresh.length; i++) {
-        // Offset slots so newly-added symbols don't collide with cached ones
-        const existing = Object.keys(delayCache).length;
-        slots.push(-((existing + i) * CYCLE_SEC / n));
-      }
-      // Fisher-Yates shuffle
-      for (let i = slots.length - 1; i > 0; i--) {
+    // Track the last spark array per symbol so we only fire the one-shot redraw
+    // animation for items whose data actually moved between fetches.
+    const lastSpark = {};
+    const REDRAW_MS = 5000;          // matches the .spark-line.redraw animation duration
+    const STAGGER_MS = 200;          // gap between item redraws when refreshing
+
+    function shuffleInPlace(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        const tmp = slots[i]; slots[i] = slots[j]; slots[j] = tmp;
+        const tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
       }
-      fresh.forEach(function (sym, i) { delayCache[sym] = slots[i]; });
+      return arr;
+    }
+
+    function triggerRedraw(el) {
+      const line = el.querySelector('.spark-line');
+      if (!line) return;
+      // Remove → force reflow → re-add so the animation restarts cleanly even
+      // mid-flight from a prior trigger.
+      line.classList.remove('redraw');
+      void line.offsetWidth;
+      line.classList.add('redraw');
     }
 
     // Cache of DOM nodes per symbol so we can update text + SVG points in place
@@ -371,8 +350,6 @@
     function buildItem(it) {
       const el = document.createElement('div');
       el.className = 'item';
-      const d = delayCache[it.symbol] || 0;
-      el.style.setProperty('--d', d.toFixed(2) + 's');
       el.innerHTML =
         '<span class="symbol">' + it.symbol + '</span>' +
         sparklineSVG(it.spark, it.direction) +
@@ -410,29 +387,50 @@
       ring.setAttribute('cx', cx); ring.setAttribute('cy', cy);
     }
 
+    function scheduleStaggeredRedraws(elements) {
+      // Random order, ~200ms apart between items. Total cascade < 1s for 5 items.
+      const order = elements.map(function (_, i) { return i; });
+      shuffleInPlace(order);
+      elements.forEach(function (el, idx) {
+        setTimeout(function () { triggerRedraw(el); }, order[idx] * STAGGER_MS);
+      });
+    }
+
     let lastSymbolsKey = null;
     function renderItems(items) {
       const root = document.getElementById('items');
       const skey = symbolsKey(items);
-      // If the SET of symbols changed (first render, item added/removed),
-      // rebuild from scratch. Otherwise update in place.
+      // First render or symbol set changed → rebuild + redraw every item.
       if (skey !== lastSymbolsKey) {
         Object.keys(itemRefs).forEach(function (k) { delete itemRefs[k]; });
         root.innerHTML = '';
-        ensureDelays(items.map(function (it) { return it.symbol; }));
+        const fresh = [];
         items.forEach(function (it) {
           const el = buildItem(it);
           root.appendChild(el);
           itemRefs[it.symbol] = el;
+          lastSpark[it.symbol] = (it.spark || []).join(',');
+          fresh.push(el);
         });
         lastSymbolsKey = skey;
+        scheduleStaggeredRedraws(fresh);
         return;
       }
-      // In-place update — preserves CSS animation state, no flicker
+      // In-place update. Only items whose spark array actually changed get a
+      // fresh redraw animation — quiet items stay quiet.
+      const changed = [];
       items.forEach(function (it) {
         const el = itemRefs[it.symbol];
-        if (el) updateItem(el, it);
+        if (!el) return;
+        const sparkKey = (it.spark || []).join(',');
+        const sparkChanged = sparkKey !== lastSpark[it.symbol];
+        updateItem(el, it);
+        if (sparkChanged) {
+          lastSpark[it.symbol] = sparkKey;
+          changed.push(el);
+        }
       });
+      if (changed.length) scheduleStaggeredRedraws(changed);
     }
 
     function renderError(msg) {
