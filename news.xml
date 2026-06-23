@@ -8,8 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       TICKER ALERT: Hourly news refresh failed - RSS feeds blocked by network egress policy. Manual intervention required.</title>
+      <title>       EU's MiCA transitional period expires July 1, requiring all crypto-asset service providers to hold a full EU license or cease operations.</title>
       <guid isPermaLink="false">news-01</guid>
+    </item>
+    <item>
+      <title>       Six U.S. agencies face a July 18 deadline to finalize GENIUS Act stablecoin rules; all major comment periods closed June 9.</title>
+      <guid isPermaLink="false">news-02</guid>
+    </item>
+    <item>
+      <title>       FDIC and OCC propose stablecoin prudential rules under the GENIUS Act, including mandatory par-value redemption within two business days.</title>
+      <guid isPermaLink="false">news-03</guid>
+    </item>
+    <item>
+      <title>       FinCEN and OFAC propose AML and sanctions compliance rules for payment stablecoin issuers, treating them as financial institutions.</title>
+      <guid isPermaLink="false">news-04</guid>
+    </item>
+    <item>
+      <title>       SEC and CFTC jointly classify crypto assets into five categories: digital commodities, collectibles, tools, stablecoins, and securities.</title>
+      <guid isPermaLink="false">news-05</guid>
+    </item>
+    <item>
+      <title>       Bank of England drops retail stablecoin holding limits and sets a GBP 40 billion aggregate issuance cap ahead of a 2027 market launch.</title>
+      <guid isPermaLink="false">news-06</guid>
+    </item>
+    <item>
+      <title>       Kelp DAO's LayerZero bridge loses $292 million after North Korea's Lazarus Group compromises off-chain RPC infrastructure nodes.</title>
+      <guid isPermaLink="false">news-07</guid>
+    </item>
+    <item>
+      <title>       Drift Protocol loses $285 million after North Korean hackers use a six-month social engineering campaign to gain admin key access.</title>
+      <guid isPermaLink="false">news-08</guid>
+    </item>
+    <item>
+      <title>       North Korean hackers account for an estimated 76% of 2026 crypto losses; total DeFi theft exceeds $840 million through April.</title>
+      <guid isPermaLink="false">news-09</guid>
+    </item>
+    <item>
+      <title>       OKX and NYSE form a joint venture to connect OKX's 120 million global users to ICE futures markets and tokenized NYSE equities.</title>
+      <guid isPermaLink="false">news-10</guid>
+    </item>
+    <item>
+      <title>       BlackRock's IBIT Bitcoin ETF holds $70 billion in assets, representing approximately 59% of all U.S. spot Bitcoin ETF market share.</title>
+      <guid isPermaLink="false">news-11</guid>
+    </item>
+    <item>
+      <title>       BlackRock files an updated S-1 for an iShares Bitcoin Premium Income ETF, expanding its digital asset product suite.</title>
+      <guid isPermaLink="false">news-12</guid>
+    </item>
+    <item>
+      <title>       MoneyGram becomes a Solana network validator as it expands stablecoin-based international money transfer operations.</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       U.S. Congress considers the CLARITY Act, which would assign the CFTC primary jurisdiction over digital commodity spot markets.</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
   </channel>
 </rss>
