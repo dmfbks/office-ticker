@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="vp" content="width=3840, height=172, initial-scale=1, user-scalable=no">
+  <script>
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const w = parseInt(p.get('w'), 10);
+      if (w && w > 0) {
+        document.getElementById('vp').setAttribute(
+          'content', 'width=' + w + ', height=172, initial-scale=1, user-scalable=no'
+        );
+      }
+      window._W = (w && w > 0) ? w : 3840;
+      window._PART = (p.get('part') || 'full').toLowerCase();
+    })();
+  </script>
+
+  <title>Office Ticker — Prices (Tall + Looping Sparkline)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:   #010101;
+      --text: #ffffff;
+      --up:   #22c55e;
+      --down: #ef4444;
+      --screen-w: 3840px;
+      --screen-h: 172px;
+      --cycle: 20s;   /* full draw → hold → fade cycle */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: var(--screen-w);
+      height: var(--screen-h);
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+    }
+    .ticker {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 24px 0 56px;
+      font-size: 56px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-right: 40px;
+      flex-shrink: 0;
+    }
+    .brand img { height: 56px; width: 56px; opacity: 0.9; margin-right: 18px; }
+    .brand .sep { opacity: 0.4; margin: 0 14px; }
+    .greeting { color: var(--text); }
+    .time { font-variant-numeric: tabular-nums; }
+
+    .items {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      overflow: hidden;
+    }
+    .item {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    .symbol { color: var(--text); font-weight: 600; margin-right: 18px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 14px;
+              font-variant-numeric: tabular-nums; }
+    .change { font-weight: 600; font-variant-numeric: tabular-nums; }
+    .change.up   { color: var(--up); }
+    .change.down { color: var(--down); }
+
+    /* Sparkline — bigger for the tall layout */
+    .spark {
+      width: 140px;
+      height: 80px;
+      margin-right: 18px;
+      flex-shrink: 0;
+      overflow: visible;
+    }
+    /* Reference baseline at the opening price — more visible than v1 */
+    .spark-baseline {
+      stroke: rgba(255, 255, 255, 0.45);
+      stroke-width: 2;
+      stroke-dasharray: 5 4;
+      fill: none;
+    }
+    /* Thicker price line for readability on the LED panel */
+    .spark-line {
+      fill: none;
+      stroke-width: 3.2;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+    }
+    .spark.up   .spark-line { stroke: var(--up); }
+    .spark.down .spark-line { stroke: var(--down); }
+
+    /* Looping draw + hold + fade cycle (every 20s by default).
+       Phases inside the 20s cycle:
+         0    -  3%  : invisible, hidden by dashoffset (~0.6s)
+         3    -  6%  : fade in (~0.6s)
+         6    - 22%  : draw out (~3.2s — the user-requested 3-4s draw time)
+         22   - 87%  : hold drawn (~13s)
+         87   - 95%  : fade out (~1.6s)
+         95   - 100% : invisible reset (~1s before next cycle starts) */
+    .spark-line {
+      animation: spark-cycle var(--cycle) ease-out infinite;
+    }
+    @keyframes spark-cycle {
+      0%   { stroke-dashoffset: 800; opacity: 0; }
+      3%   { stroke-dashoffset: 800; opacity: 0; }
+      6%   { stroke-dashoffset: 800; opacity: 1; }
+      22%  { stroke-dashoffset: 0;   opacity: 1; }
+      87%  { stroke-dashoffset: 0;   opacity: 1; }
+      95%  { stroke-dashoffset: 0;   opacity: 0; }
+      100% { stroke-dashoffset: 800; opacity: 0; }
+    }
+
+    /* Cascade start: items draw in sequence, so the whole row looks like a wave */
+    .item:nth-child(1) .spark-line { animation-delay: 0.0s; }
+    .item:nth-child(2) .spark-line { animation-delay: 0.15s; }
+    .item:nth-child(3) .spark-line { animation-delay: 0.30s; }
+    .item:nth-child(4) .spark-line { animation-delay: 0.45s; }
+    .item:nth-child(5) .spark-line { animation-delay: 0.60s; }
+    .item:nth-child(6) .spark-line { animation-delay: 0.75s; }
+    .item:nth-child(7) .spark-line { animation-delay: 0.90s; }
+    .item:nth-child(8) .spark-line { animation-delay: 1.05s; }
+    .item:nth-child(9) .spark-line { animation-delay: 1.20s; }
+
+    /* Colon blink */
+    .colon { animation: colonBlink 1s infinite; }
+    @keyframes colonBlink {
+      0%, 49.9% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ticker" id="ticker">
+    <div class="items" id="items"></div>
+  </div>
+
+  <script>
+    const SCREEN_WIDTH = window._W || 3840;
+    const PART = window._PART || 'full';
+    document.documentElement.style.setProperty('--screen-w', SCREEN_WIDTH + 'px');
+
+    // Sample sparklines (12 intraday points each, realistic-looking)
+    const SAMPLE_ITEMS = {
+      crypto: [
+        { symbol: 'BTC',     price: '$64,857', change: '+1.44%', direction: 'up',
+          spark: [63900, 64100, 64050, 63950, 64200, 64350, 64400, 64500, 64700, 64600, 64800, 64857] },
+        { symbol: 'ETH',     price: '$1,766',  change: '+2.83%', direction: 'up',
+          spark: [1720, 1735, 1730, 1745, 1750, 1740, 1755, 1760, 1758, 1762, 1764, 1766] },
+        { symbol: 'BNB',     price: '$598.49', change: '+2.16%', direction: 'up',
+          spark: [586, 588, 587, 590, 592, 591, 594, 595, 596, 597, 598, 598.49] },
+        { symbol: 'XRP',     price: '$1.15',   change: '+0.58%', direction: 'up',
+          spark: [1.143, 1.145, 1.147, 1.146, 1.148, 1.150, 1.149, 1.151, 1.150, 1.152, 1.151, 1.15] },
+        { symbol: 'SOL',     price: '$74.04',  change: '+1.53%', direction: 'up',
+          spark: [72.9, 73.1, 73.0, 73.2, 73.5, 73.8, 73.7, 73.9, 74.0, 74.1, 74.0, 74.04] },
+      ],
+      indices: [
+        { symbol: 'S&P 500', price: '7,472',   change: '-0.37%', direction: 'down',
+          spark: [7500, 7495, 7510, 7505, 7498, 7490, 7485, 7480, 7475, 7470, 7468, 7472] },
+        { symbol: 'NASDAQ',  price: '30,347',  change: '-0.19%', direction: 'down',
+          spark: [30400, 30410, 30420, 30400, 30390, 30380, 30360, 30350, 30340, 30330, 30340, 30347] },
+        { symbol: 'TA-35',   price: '4,010',   change: '-1.39%', direction: 'down',
+          spark: [4070, 4060, 4050, 4055, 4045, 4035, 4025, 4030, 4020, 4015, 4012, 4010] },
+        { symbol: 'USD',     price: '₪2.994',  change: '+0.91%', direction: 'up',
+          spark: [2.965, 2.968, 2.972, 2.970, 2.978, 2.982, 2.984, 2.988, 2.990, 2.992, 2.993, 2.994] },
+      ],
+    };
+
+    function sparklinePoints(values, width, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      return values.map(function (v, i) {
+        const x = (i / (values.length - 1)) * width;
+        const y = padY + (1 - (v - min) / range) * inner;
+        return x.toFixed(1) + ',' + y.toFixed(1);
+      }).join(' ');
+    }
+
+    function baselineY(values, height, padY) {
+      padY = padY || 6;
+      const min = Math.min.apply(null, values);
+      const max = Math.max.apply(null, values);
+      const range = max - min || 1;
+      const inner = height - 2 * padY;
+      return padY + (1 - (values[0] - min) / range) * inner;
+    }
+
+    function sparklineSVG(values, direction) {
+      const W = 140, H = 80;
+      const points = sparklinePoints(values, W, H);
+      const by = baselineY(values, H);
+      return '<svg class="spark ' + direction + '" viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none">' +
+        '<line class="spark-baseline" x1="0" y1="' + by.toFixed(1) + '" x2="' + W + '" y2="' + by.toFixed(1) + '"/>' +
+        '<polyline class="spark-line" points="' + points + '"/>' +
+        '</svg>';
+    }
+
+    function buildBrand() {
+      const brand = document.createElement('div');
+      brand.className = 'brand';
+      brand.innerHTML =
+        '<img src="logo.svg" alt="Fireblocks" />' +
+        '<span class="greeting">Happy Tuesday!</span>' +
+        '<span class="sep">·</span>' +
+        '<span class="time"><span id="time-h">14</span><span class="colon">:</span><span id="time-m">32</span></span>';
+      return brand;
+    }
+
+    let renderItems;
+    if (PART === 'crypto')       renderItems = SAMPLE_ITEMS.crypto;
+    else if (PART === 'indices') renderItems = SAMPLE_ITEMS.indices;
+    else                          renderItems = SAMPLE_ITEMS.crypto.concat(SAMPLE_ITEMS.indices);
+
+    const showBrand = PART !== 'indices';
+    const ticker = document.getElementById('ticker');
+    if (showBrand) ticker.insertBefore(buildBrand(), document.getElementById('items'));
+
+    const itemsRoot = document.getElementById('items');
+    renderItems.forEach(function (it) {
+      const el = document.createElement('div');
+      el.className = 'item';
+      el.innerHTML =
+        '<span class="symbol">' + it.symbol + '</span>' +
+        sparklineSVG(it.spark, it.direction) +
+        '<span class="price">' + it.price + '</span>' +
+        '<span class="change ' + it.direction + '">' + it.change + '</span>';
+      itemsRoot.appendChild(el);
+    });
+  </script>
+</body>
+</html>
