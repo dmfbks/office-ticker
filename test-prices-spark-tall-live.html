@@ -48,18 +48,18 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 24px 0 56px;
-      font-size: 56px;
+      padding: 0 20px 0 40px;
+      font-size: 40px;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-right: 40px;
+      gap: 14px;
+      margin-right: 28px;
       flex-shrink: 0;
     }
-    .brand img { height: 56px; width: 56px; opacity: 0.9; margin-right: 18px; }
-    .brand .sep { opacity: 0.4; margin: 0 14px; }
+    .brand img { height: 40px; width: 40px; opacity: 0.9; margin-right: 14px; }
+    .brand .sep { opacity: 0.4; margin: 0 12px; }
     .greeting { color: var(--text); }
     .time { font-variant-numeric: tabular-nums; }
 
@@ -74,23 +74,37 @@
     .item {
       display: inline-flex;
       align-items: center;
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
       white-space: nowrap;
     }
-    .symbol { color: var(--text); font-weight: 600; margin-right: 18px; }
-    .price  { color: var(--text); font-weight: 600; margin-right: 14px;
+    .symbol { color: var(--text); font-weight: 600; margin-right: 14px; }
+    .price  { color: var(--text); font-weight: 600; margin-right: 12px;
               font-variant-numeric: tabular-nums; }
     .change { font-weight: 600; font-variant-numeric: tabular-nums; }
     .change.up   { color: var(--up); }
     .change.down { color: var(--down); }
 
     .spark {
-      width: 140px;
-      height: 80px;
-      margin-right: 18px;
+      width: 110px;
+      height: 64px;
+      margin-right: 14px;
       flex-shrink: 0;
       overflow: visible;
+    }
+
+    /* Narrow panels (right side @1376px) can't fit 4 sparkline items at the
+       default size — auto-compact: smaller font, smaller spark, tighter margins. */
+    @media (max-width: 2000px) {
+      .ticker { font-size: 30px; padding: 0 12px; }
+      .brand img { height: 30px; width: 30px; margin-right: 10px; }
+      .brand { gap: 10px; margin-right: 18px; }
+      .item { padding: 6px 8px; }
+      .symbol { margin-right: 10px; }
+      .price  { margin-right: 10px; }
+      .spark  { width: 70px; height: 48px; margin-right: 10px; }
+      .spark-line { stroke-width: 2.4; }
+      .spark-baseline { stroke-width: 1.4; stroke-dasharray: 4 3; }
     }
     .spark-baseline {
       stroke: rgba(255, 255, 255, 0.45);
@@ -153,15 +167,10 @@
       100% { r: 28; stroke-opacity: 0;    stroke-width: 1; }
     }
 
-    .item:nth-child(1) { --d: 0.00s; }
-    .item:nth-child(2) { --d: 0.15s; }
-    .item:nth-child(3) { --d: 0.30s; }
-    .item:nth-child(4) { --d: 0.45s; }
-    .item:nth-child(5) { --d: 0.60s; }
-    .item:nth-child(6) { --d: 0.75s; }
-    .item:nth-child(7) { --d: 0.90s; }
-    .item:nth-child(8) { --d: 1.05s; }
-    .item:nth-child(9) { --d: 1.20s; }
+    /* Per-item --d is set by JS — each item gets a random negative phase offset
+       spread across the cycle, so they refresh in randomized order rather than
+       cascading left-to-right. Delays are cached per symbol so the 2-min data
+       refresh doesn't re-shuffle and cause a visible reset. */
     .spark-line { animation-delay: var(--d, 0s); }
     .spark-dot  { animation-delay: var(--d, 0s), 0s; }
     .spark-ring { animation-delay: var(--d, 0s), 0s; }
@@ -295,12 +304,50 @@
       };
     }
 
+    // Animation phase offset (negative delay) per symbol. Generated once on first
+    // render so subsequent re-renders don't reshuffle and reset the animation.
+    const CYCLE_SEC = 25;
+    const delayCache = {};
+    function ensureDelays(symbols) {
+      const fresh = symbols.filter(function (s) { return !(s in delayCache); });
+      if (fresh.length === 0) return;
+      // Distribute fresh symbols evenly across the cycle, then shuffle so they
+      // get assigned in random order. Negative delays place each item at a
+      // different phase of its cycle at t=0.
+      const n = symbols.length;
+      const slots = [];
+      for (let i = 0; i < fresh.length; i++) {
+        // Offset slots so newly-added symbols don't collide with cached ones
+        const existing = Object.keys(delayCache).length;
+        slots.push(-((existing + i) * CYCLE_SEC / n));
+      }
+      // Fisher-Yates shuffle
+      for (let i = slots.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = slots[i]; slots[i] = slots[j]; slots[j] = tmp;
+      }
+      fresh.forEach(function (sym, i) { delayCache[sym] = slots[i]; });
+    }
+
+    let lastPayloadKey = null;
     function renderItems(items) {
+      // Skip the DOM thrash if the visible content hasn't changed — keeps the
+      // animation running smoothly across the 2-min data refresh.
+      const key = items.map(function (it) {
+        return it.symbol + '|' + it.price + '|' + it.change + '|' + (it.spark || []).join(',');
+      }).join('||');
+      if (key === lastPayloadKey) return;
+      lastPayloadKey = key;
+
+      ensureDelays(items.map(function (it) { return it.symbol; }));
+
       const root = document.getElementById('items');
       root.innerHTML = '';
       items.forEach(function (it) {
         const el = document.createElement('div');
         el.className = 'item';
+        const d = delayCache[it.symbol] || 0;
+        el.style.setProperty('--d', d.toFixed(2) + 's');
         el.innerHTML =
           '<span class="symbol">' + it.symbol + '</span>' +
           sparklineSVG(it.spark, it.direction) +
