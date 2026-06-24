@@ -13,12 +13,15 @@
         );
       }
       window._W = (w && w > 0) ? w : 3840;
-      window._PART = (p.get('part') || 'full').toLowerCase();
+      // Wall-distribution params:
+      //   ?offset=N  — where this panel starts in the global wall (px). Default 0.
+      //   ?total=N   — total wall width (px). Default = w (standalone panel).
+      // For floor 8: left ?w=3440&offset=0&total=6192 ; right ?w=2752&offset=3440&total=6192
+      window._OFFSET = Math.max(0, parseInt(p.get('offset'), 10) || 0);
+      window._TOTAL  = Math.max(window._W, parseInt(p.get('total'), 10) || window._W);
       // ?tz=Asia/Jerusalem  — override the timezone used by the brand-corner clock.
-      // Default Asia/Jerusalem because the device clock can't be trusted.
       window._TZ = p.get('tz') || 'Asia/Jerusalem';
       // ?reload=N — automatically reload the page every N minutes (cache-busted).
-      // Useful as a defense-in-depth against stuck displays.
       window._RELOAD_MIN = Math.max(0, parseInt(p.get('reload'), 10) || 0);
     })();
   </script>
@@ -53,18 +56,9 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 20px 0 36px;
+      padding: 0 16px;
       font-size: 34px;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-right: 24px;
-      flex-shrink: 0;
-    }
-    .brand img { height: 34px; width: 34px; opacity: 0.9; margin-right: 12px; }
-    .brand .sep { opacity: 0.4; margin: 0 10px; }
     .greeting { color: var(--text); }
     .time { font-variant-numeric: tabular-nums; }
 
@@ -83,6 +77,11 @@
       border-radius: 6px;
       white-space: nowrap;
     }
+    /* Brand corner is just another .item — it appears first in the wall so it
+       naturally lives on the leftmost panel. Same vertical alignment, no spark. */
+    .item.brand { gap: 4px; }
+    .item.brand img { height: 34px; width: 34px; opacity: 0.9; margin-right: 12px; }
+    .item.brand .sep { opacity: 0.4; margin: 0 10px; }
     .symbol { color: var(--text); font-weight: 600; margin-right: 14px; }
     .price  { color: var(--text); font-weight: 600; margin-right: 12px;
               font-variant-numeric: tabular-nums; }
@@ -102,8 +101,8 @@
        default size — auto-compact: smaller font, smaller spark, tighter margins. */
     @media (max-width: 2000px) {
       .ticker { font-size: 26px; padding: 0 10px; }
-      .brand img { height: 26px; width: 26px; margin-right: 10px; }
-      .brand { gap: 8px; margin-right: 14px; }
+      .item.brand img { height: 26px; width: 26px; margin-right: 10px; }
+      .item.brand { gap: 6px; }
       .item { padding: 4px 6px; }
       .symbol { margin-right: 8px; }
       .price  { margin-right: 8px; }
@@ -184,11 +183,39 @@
 
   <script>
     const SCREEN_WIDTH = window._W || 3840;
-    const PART = window._PART || 'full';
+    const OFFSET = window._OFFSET || 0;
+    const TOTAL  = window._TOTAL  || SCREEN_WIDTH;
     document.documentElement.style.setProperty('--screen-w', SCREEN_WIDTH + 'px');
 
     const CRYPTO_ORDER = ['BTC', 'ETH', 'BNB', 'XRP', 'SOL'];
     const INDEX_ORDER  = ['S&P 500', 'NASDAQ', 'TA-35', 'USD'];
+
+    // Sentinel symbol used for the brand corner so it's treated as a regular item
+    // in the wall slice math.
+    const BRAND_SYMBOL = '__BRAND__';
+
+    // Build the global wall ordering: brand first (anchored at wall position 0),
+    // then crypto + indices interleaved so the panels look mixed instead of
+    // "crypto on the left, indices on the right".
+    function buildWall(cryptoItems, indexItems) {
+      const wall = [{ symbol: BRAND_SYMBOL, brand: true }];
+      const maxLen = Math.max(cryptoItems.length, indexItems.length);
+      for (let i = 0; i < maxLen; i++) {
+        if (i < cryptoItems.length) wall.push(cryptoItems[i]);
+        if (i < indexItems.length)  wall.push(indexItems[i]);
+      }
+      return wall;
+    }
+
+    // Decide which slice of the wall this panel owns, based on (offset, w, total).
+    // Round to the nearest boundary so the wall is partitioned cleanly with no
+    // item appearing twice or being dropped.
+    function panelSlice(wall) {
+      const n = wall.length;
+      const startIdx = Math.round((OFFSET / TOTAL) * n);
+      const endIdx   = Math.round(((OFFSET + SCREEN_WIDTH) / TOTAL) * n);
+      return wall.slice(startIdx, Math.max(endIdx, startIdx + 1));
+    }
 
     function formatCryptoPrice(p) {
       if (p >= 100)  return '$' + Math.round(p).toLocaleString('en-US');
@@ -250,9 +277,9 @@
         '</svg>';
     }
 
-    function buildBrand() {
+    function buildBrandItem() {
       const brand = document.createElement('div');
-      brand.className = 'brand';
+      brand.className = 'item brand';
       brand.innerHTML =
         '<img src="logo.svg" alt="Fireblocks" />' +
         '<span class="greeting" id="greeting"></span>' +
@@ -348,6 +375,7 @@
     }
 
     function buildItem(it) {
+      if (it.brand) return buildBrandItem();
       const el = document.createElement('div');
       el.className = 'item';
       el.innerHTML =
@@ -359,6 +387,7 @@
     }
 
     function updateItem(el, it) {
+      if (it.brand) return;  // brand has no dynamic price/spark — clock ticks separately
       // Price + change text
       el.querySelector('.price').textContent = it.price;
       const changeEl = el.querySelector('.change');
@@ -388,10 +417,15 @@
     }
 
     function scheduleStaggeredRedraws(elements) {
-      // Random order, ~200ms apart between items. Total cascade < 1s for 5 items.
-      const order = elements.map(function (_, i) { return i; });
+      // Random order, ~200ms apart between items. Brand item has no .spark-line
+      // so triggerRedraw is a no-op on it — filter it out so it doesn't burn a
+      // stagger slot.
+      const animatable = elements.filter(function (el) {
+        return el && el.querySelector('.spark-line');
+      });
+      const order = animatable.map(function (_, i) { return i; });
       shuffleInPlace(order);
-      elements.forEach(function (el, idx) {
+      animatable.forEach(function (el, idx) {
         setTimeout(function () { triggerRedraw(el); }, order[idx] * STAGGER_MS);
       });
     }
@@ -441,30 +475,31 @@
     async function load() {
       try {
         const cacheBust = '?t=' + Date.now();
-        const wantCrypto  = PART !== 'indices';
-        const wantIndices = PART !== 'crypto';
-        const promises = [];
-        if (wantCrypto)  promises.push(fetch('crypto.json'  + cacheBust).then(function (r) { return r.json(); }));
-        if (wantIndices) promises.push(fetch('indices.json' + cacheBust).then(function (r) { return r.json(); }));
-        const results = await Promise.all(promises);
-        const cryptoData  = wantCrypto  ? results[0] : null;
-        const indicesData = wantIndices ? results[wantCrypto ? 1 : 0] : null;
+        const [cryptoData, indicesData] = await Promise.all([
+          fetch('crypto.json'  + cacheBust).then(function (r) { return r.json(); }),
+          fetch('indices.json' + cacheBust).then(function (r) { return r.json(); }),
+        ]);
 
-        const items = [];
-        if (cryptoData) {
-          CRYPTO_ORDER.forEach(function (sym) {
-            if (cryptoData[sym]) items.push(cryptoItem(sym, cryptoData[sym]));
-          });
-        }
-        if (indicesData) {
-          INDEX_ORDER.forEach(function (name) {
-            if (indicesData[name]) items.push(indexItem(name, indicesData[name]));
-          });
-        }
-        if (items.length === 0) {
+        const cryptoItems = [];
+        CRYPTO_ORDER.forEach(function (sym) {
+          if (cryptoData && cryptoData[sym]) cryptoItems.push(cryptoItem(sym, cryptoData[sym]));
+        });
+        const indexItems = [];
+        INDEX_ORDER.forEach(function (name) {
+          if (indicesData && indicesData[name]) indexItems.push(indexItem(name, indicesData[name]));
+        });
+
+        const wall = buildWall(cryptoItems, indexItems);
+        const myItems = panelSlice(wall);
+        if (myItems.length === 0) {
           renderError('No data');
         } else {
-          renderItems(items);
+          renderItems(myItems);
+          // Brand may have just landed in the DOM — start/refresh its clock
+          if (document.getElementById('greeting')) {
+            updateClock();
+            ensureClockTicker();
+          }
         }
       } catch (e) {
         console.error(e);
@@ -472,12 +507,13 @@
       }
     }
 
-    // Brand corner (left + full only)
-    if (PART !== 'indices') {
-      const ticker = document.getElementById('ticker');
-      ticker.insertBefore(buildBrand(), document.getElementById('items'));
-      updateClock();
-      // Tick the clock once per minute so the display doesn't freeze at page-load time
+    // Make sure setInterval for the clock is wired exactly once, even though
+    // the brand item is only inserted into the DOM after the first successful
+    // fetch (its presence depends on this panel's slice of the wall).
+    let _clockTickerStarted = false;
+    function ensureClockTicker() {
+      if (_clockTickerStarted) return;
+      _clockTickerStarted = true;
       setInterval(updateClock, 60 * 1000);
     }
 
