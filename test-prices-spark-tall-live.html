@@ -132,11 +132,11 @@
       stroke-dasharray: 800;
       stroke-dashoffset: 800;
       opacity: 0;
-      animation: spark-redraw 5s cubic-bezier(0.4, 0.05, 0.7, 0.55) forwards;
+      animation: spark-redraw 6s cubic-bezier(0.4, 0.05, 0.7, 0.55) forwards;
     }
     @keyframes spark-redraw {
       0%   { stroke-dashoffset: 800; opacity: 0; }
-      8%   { stroke-dashoffset: 800; opacity: 1; }
+      6%   { stroke-dashoffset: 800; opacity: 1; }
       100% { stroke-dashoffset: 0;   opacity: 1; }
     }
 
@@ -148,8 +148,13 @@
     .spark.down .spark-dot  { fill: var(--down); }
     .spark.up   .spark-ring { fill: none; stroke: var(--up); }
     .spark.down .spark-ring { fill: none; stroke: var(--down); }
-    .spark-dot  { animation: dot-pulse 3s ease-in-out infinite; }
-    .spark-ring { animation: ring-ping 5s ease-out infinite; }
+    .spark-dot  { animation: dot-pulse 3s ease-in-out infinite; transition: opacity 0.4s ease-in; }
+    .spark-ring { animation: ring-ping 5s ease-out infinite;     transition: opacity 0.4s ease-in; }
+    /* Hide the contact + radar while the line is being redrawn — they should
+       only reappear once the line has finished drawing. JS adds .redrawing
+       to the .spark SVG for the duration of the redraw animation. */
+    .spark.redrawing .spark-dot,
+    .spark.redrawing .spark-ring { opacity: 0; }
     @keyframes dot-pulse {
       0%, 100% { r: 3.5; }
       50%      { r: 4.8; }
@@ -337,7 +342,7 @@
     // Track the last spark array per symbol so we only fire the one-shot redraw
     // animation for items whose data actually moved between fetches.
     const lastSpark = {};
-    const REDRAW_MS = 5000;          // matches the .spark-line.redraw animation duration
+    const REDRAW_MS = 6000;          // matches the .spark-line.redraw animation duration
     const STAGGER_MS = 200;          // gap between item redraws on the load cascade
     const ROLLING_BUFFER_MS = 2000;  // quiet gap between one chart finishing and the next starting
 
@@ -351,7 +356,11 @@
 
     function triggerRedraw(el) {
       const line = el.querySelector('.spark-line');
+      const svg  = el.querySelector('.spark');
       if (!line) return;
+      // Hide the contact dot + radar ring while the line is drawing. They get
+      // un-hidden after the redraw animation finishes (via the timeout below).
+      if (svg) svg.classList.add('redrawing');
       // Explicitly cancel any animation that's still in flight, then separate
       // the class remove + re-add across two animation frames. The single-frame
       // reflow trick (void offsetWidth) is unreliable on Chromium-based
@@ -365,6 +374,10 @@
           line.classList.add('redraw');
         });
       });
+      // Reveal dot + ring once the line has finished drawing
+      setTimeout(function () {
+        if (svg) svg.classList.remove('redrawing');
+      }, REDRAW_MS);
     }
 
     // Cache of DOM nodes per symbol so we can update text + SVG points in place
@@ -386,6 +399,10 @@
         sparklineSVG(it.spark, it.direction) +
         '<span class="price">' + it.price + '</span>' +
         '<span class="change ' + it.direction + '">' + it.change + '</span>';
+      // Start with the dot/ring hidden — they reveal once the first redraw
+      // animation (triggered by the staggered initial cascade) finishes.
+      const svg = el.querySelector('.spark');
+      if (svg) svg.classList.add('redrawing');
       return el;
     }
 
