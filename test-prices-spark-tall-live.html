@@ -352,11 +352,19 @@
     function triggerRedraw(el) {
       const line = el.querySelector('.spark-line');
       if (!line) return;
-      // Remove → force reflow → re-add so the animation restarts cleanly even
-      // mid-flight from a prior trigger.
+      // Explicitly cancel any animation that's still in flight, then separate
+      // the class remove + re-add across two animation frames. The single-frame
+      // reflow trick (void offsetWidth) is unreliable on Chromium-based
+      // webviews when the prior animation used animation-fill-mode: forwards.
+      if (typeof line.getAnimations === 'function') {
+        line.getAnimations().forEach(function (a) { try { a.cancel(); } catch (e) {} });
+      }
       line.classList.remove('redraw');
-      void line.offsetWidth;
-      line.classList.add('redraw');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          line.classList.add('redraw');
+        });
+      });
     }
 
     // Cache of DOM nodes per symbol so we can update text + SVG points in place
