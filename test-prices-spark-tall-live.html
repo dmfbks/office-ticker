@@ -194,17 +194,11 @@
     // in the wall slice math.
     const BRAND_SYMBOL = '__BRAND__';
 
-    // Build the global wall ordering: brand first (anchored at wall position 0),
-    // then crypto + indices interleaved so the panels look mixed instead of
-    // "crypto on the left, indices on the right".
+    // Build the global wall ordering: brand → all crypto (in CRYPTO_ORDER) →
+    // all indices (in INDEX_ORDER). Brand is anchored at wall position 0 so it
+    // naturally lives on the leftmost panel.
     function buildWall(cryptoItems, indexItems) {
-      const wall = [{ symbol: BRAND_SYMBOL, brand: true }];
-      const maxLen = Math.max(cryptoItems.length, indexItems.length);
-      for (let i = 0; i < maxLen; i++) {
-        if (i < cryptoItems.length) wall.push(cryptoItems[i]);
-        if (i < indexItems.length)  wall.push(indexItems[i]);
-      }
-      return wall;
+      return [{ symbol: BRAND_SYMBOL, brand: true }].concat(cryptoItems, indexItems);
     }
 
     // Decide which slice of the wall this panel owns, based on (offset, w, total).
