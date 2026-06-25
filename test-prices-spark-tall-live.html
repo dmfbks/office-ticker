@@ -338,7 +338,8 @@
     // animation for items whose data actually moved between fetches.
     const lastSpark = {};
     const REDRAW_MS = 5000;          // matches the .spark-line.redraw animation duration
-    const STAGGER_MS = 200;          // gap between item redraws when refreshing
+    const STAGGER_MS = 200;          // gap between item redraws on the load cascade
+    const ROLLING_BUFFER_MS = 2000;  // quiet gap between one chart finishing and the next starting
 
     function shuffleInPlace(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
@@ -424,6 +425,37 @@
       });
     }
 
+    // Rolling cosmetic redraw: at any time exactly one chart is animating its
+    // line. After it finishes (REDRAW_MS), a short buffer, then the next item
+    // in the shuffled queue takes its turn. When the queue empties we reshuffle
+    // so the order changes each cycle (avoids the predictable left-to-right wave).
+    let rollingQueue = [];
+    let rollingTimer = null;
+    function rollingTick() {
+      const animatable = Array.from(document.querySelectorAll('#items .item'))
+        .filter(function (el) { return el.querySelector('.spark-line'); });
+      // Drop queued items that are no longer in the DOM (e.g. after a rebuild)
+      rollingQueue = rollingQueue.filter(function (el) { return animatable.indexOf(el) !== -1; });
+      if (rollingQueue.length === 0) {
+        rollingQueue = animatable.slice();
+        shuffleInPlace(rollingQueue);
+      }
+      if (rollingQueue.length === 0) {
+        // No chartable items yet (e.g. fetch error). Re-check shortly.
+        rollingTimer = setTimeout(rollingTick, 2000);
+        return;
+      }
+      const next = rollingQueue.shift();
+      triggerRedraw(next);
+      rollingTimer = setTimeout(rollingTick, REDRAW_MS + ROLLING_BUFFER_MS);
+    }
+    function startRollingLoop() {
+      if (rollingTimer !== null) return;        // already running
+      // Wait long enough for the initial cascade (scheduleStaggeredRedraws on
+      // first render) to finish, then take over.
+      rollingTimer = setTimeout(rollingTick, REDRAW_MS + 500);
+    }
+
     let lastSymbolsKey = null;
     function renderItems(items) {
       const root = document.getElementById('items');
@@ -494,6 +526,8 @@
             updateClock();
             ensureClockTicker();
           }
+          // Kick off the rolling cosmetic redraw loop once items are on screen
+          startRollingLoop();
         }
       } catch (e) {
         console.error(e);
