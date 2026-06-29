@@ -132,3 +132,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
+# last-nudged: 2026-06-29T06:18:00Z (cron-revival)
