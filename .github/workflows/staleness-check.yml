@@ -1,0 +1,112 @@
+name: Staleness check
+
+# Runs hourly. Reads the `_updated_at` timestamps on crypto.json + indices.json
+# from the feed branch. If either is stale beyond its threshold, pushes a no-op
+# comment-only change to fetch-crypto.py + fetch-indices.py on main — that push
+# matches the path filter on refresh-crypto.yml and refresh-indices.yml, which
+# revives them.
+#
+# Why this exists: GitHub Actions free-tier scheduled workflows are silently
+# skipped during high-load windows on github.com. The 2-min crypto cron and
+# 10-min indices cron can both go quiet for hours. This watchdog gives us a
+# self-healing pulse.
+
+on:
+  schedule:
+    - cron: '7 * * * *'   # every hour at HH:07 (offset from the 2-min/10-min jobs)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: staleness-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feed (has the data files)
+        uses: actions/checkout@v4
+        with:
+          ref: feed
+
+      - name: Inspect staleness
+        id: inspect
+        run: |
+          python3 <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+
+          THRESHOLDS = {
+              'crypto.json':  15,   # 2-min cron — 15 min ≈ 7 missed ticks
+              'indices.json': 25,   # 10-min cron — 25 min ≈ 2.5 missed ticks
+          }
+
+          now = datetime.now(timezone.utc)
+          needs_nudge = False
+          report = []
+          for filename, threshold_min in THRESHOLDS.items():
+              try:
+                  with open(filename) as f:
+                      data = json.load(f)
+              except Exception as e:
+                  report.append(f"{filename}: READ FAILED ({e}) — treating as stale")
+                  needs_nudge = True
+                  continue
+              updated = data.get('_updated_at')
+              if not updated:
+                  report.append(f"{filename}: no _updated_at field — treating as stale")
+                  needs_nudge = True
+                  continue
+              ts = datetime.fromisoformat(updated.replace('Z', '+00:00'))
+              age_min = (now - ts).total_seconds() / 60
+              if age_min > threshold_min:
+                  report.append(f"{filename} STALE: {age_min:.1f}min old > {threshold_min}min threshold")
+                  needs_nudge = True
+              else:
+                  report.append(f"{filename} fresh: {age_min:.1f}min old")
+          print("\n".join(report))
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f"needs_nudge={'true' if needs_nudge else 'false'}\n")
+          PY
+
+      - name: Checkout main (only if a nudge is needed)
+        if: steps.inspect.outputs.needs_nudge == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main_checkout
+
+      - name: Nudge main to revive refresh workflows
+        if: steps.inspect.outputs.needs_nudge == 'true'
+        working-directory: main_checkout
+        run: |
+          # Pass the timestamp via env var so the python heredoc can be quoted
+          # ('PY') — safer pattern (no shell expansion inside the heredoc) even
+          # though this workflow has no untrusted inputs.
+          export NUDGE_TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          python3 <<'PY'
+          import os, re
+          ts = os.environ['NUDGE_TS']
+          line = f"# last-nudged: {ts} (staleness-watchdog)\n"
+          for f in ('fetch-crypto.py', 'fetch-indices.py'):
+              with open(f) as fp: s = fp.read()
+              if '# last-nudged:' in s:
+                  s = re.sub(r'# last-nudged: .*\n', line, s)
+              else:
+                  s = s.rstrip() + '\n\n' + line
+              with open(f, 'w') as fp: fp.write(s)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fetch-crypto.py fetch-indices.py
+          if git diff --staged --quiet; then
+            echo "Nothing to commit (files already at current timestamp). Stale data may indicate a deeper issue."
+          else
+            git commit -m "Auto-nudge: revive stale refresh workflows [watchdog]"
+            git push origin main
+            echo "Pushed nudge to main — path filter should now retrigger refresh-crypto + refresh-indices."
+          fi
