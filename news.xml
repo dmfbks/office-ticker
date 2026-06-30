@@ -8,61 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. Senate passes housing bill carrying a four-year ban on Federal Reserve issuance of a central bank digital currency.</title>
+      <title>       U.S. Senate passes GENIUS Act, establishing a federal regulatory framework for payment stablecoins with reserve and compliance requirements</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period ends July 1; only 194 of 3,000+ registered crypto firms have secured licenses across the bloc.</title>
+      <title>       BNY launches institutional USDC minting, redemption and custody via its digital asset platform, with Circle as its first stablecoin partner</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Greece's regulator expected to deny Binance's EU MiCA license application ahead of the June 30 deadline, per Reuters.</title>
+      <title>       BIS 2026 Annual Report finds stablecoin reserve flows now shift three-month Treasury bill yields, flagging systemic risk for central banks</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Franklin Templeton finalizes acquisition of digital asset manager 250 Digital, forming a new business unit called Franklin Crypto.</title>
+      <title>       Crypto industry intensifies lobbying for a Senate vote on the CLARITY Act before August recess; passage probability stands at 60%</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Q2 2026 becomes the most-hacked quarter on record with 83 exploits and $755 million stolen, led by bridge vulnerabilities.</title>
+      <title>       SBI Holdings acquires Bitbank for $289 million, creating Japan's largest crypto exchange by assets under custody at $6.8 billion</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EBA updates Travel Rule guidelines to extend anti-money-laundering requirements to crypto-asset service providers under MiCA.</title>
+      <title>       U.S. Congress passes legislation barring the Federal Reserve from issuing a CBDC for the next four years</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Taiko halts its Ethereum layer-2 network after an attacker exploited a bridge vulnerability to steal $1.7 million.</title>
+      <title>       Moody's assigns Aaa-mf ratings to Fidelity and BlackRock tokenized money market funds, the first for blockchain-based fund vehicles</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Kraken obtains MiCA license through Ireland's Central Bank, securing continued EU market access after the July 1 deadline.</title>
+      <title>       Crypto suffered 83 exploits in Q2 2026, making it the most-hacked quarter on record with cumulative industry losses at $16.7 billion</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan moves to accept crypto assets as loan collateral following enactment of the GENIUS Act stablecoin legislation.</title>
+      <title>       Private key theft drove 40% of crypto's $16 billion in hack losses, now the leading attack vector over smart contract exploits</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan, Mastercard, and Ripple complete cross-border tokenized Treasury settlement using XRP Ledger infrastructure.</title>
+      <title>       Humanity Protocol lost $32 million to a private-key theft; investigators found the project's multisig wallet resided on a single laptop</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Citigroup plans institutional bitcoin custody launch in 2026, integrating digital assets into unified safekeeping and reporting.</title>
+      <title>       A third-party vendor compromise injected malicious code into Polymarket's frontend, enabling attackers to drain $3.1 million in user funds</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       MoneyGram joins Solana as a proof-of-stake validator, expanding the payments firm's stablecoin settlement infrastructure.</title>
+      <title>       SecondFi lost $2.4 million to a wallet-generation software exploit, with total user exposure estimated at up to $20 million</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Morgan Stanley's partnership with Galaxy Digital enables bitcoin as collateral for institutional lending portfolios.</title>
+      <title>       BlackRock's IBIT Bitcoin ETF surpassed $55 billion in AUM, with BlackRock and Fidelity dominating spot Bitcoin ETF inflows in 2026</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Citi research puts global tokenized assets at $17 billion today, with a 2030 bull-case projection of $8.2 trillion.</title>
+      <title>       SEC's 2026-2030 Strategic Plan names digital assets a standalone oversight objective alongside investor protection for the first time</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
   </channel>
 </rss>
