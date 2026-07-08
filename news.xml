@@ -8,61 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC plans July release of "Regulation Crypto" proposal offering safe harbors from securities registration for crypto asset issuers</title>
+      <title>       SEC and CFTC issue joint crypto asset interpretation, clarifying securities and commodities jurisdiction under Project Crypto</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US Senate CLARITY Act vote approaches with seven Democratic votes still outstanding; Galaxy Digital puts passage odds at 50%</title>
+      <title>       EU MiCA grandfathering expires July 1, requiring full CASP authorization for all 30 EEA crypto service providers or exit</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       EU MiCA fully in force as of July 1; roughly 230 firms hold valid EU crypto licenses as transitional arrangements expire</title>
+      <title>       OCC proposes GENIUS Act implementation rules covering national banks, federal stablecoin issuers, and revised capital standards</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       UK Financial Conduct Authority publishes final crypto framework covering trading, custody, and market abuse rules</title>
+      <title>       Treasury and FinCEN propose joint AML and sanctions compliance rules for GENIUS Act payment stablecoin issuers</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       JPMorgan to allow institutional clients to pledge Bitcoin and Ether as loan collateral, potentially unlocking $20B in liquidity</title>
+      <title>       North Korea-linked groups stole $577M in H1 2026 via two attacks, accounting for 76% of all crypto hack losses</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Coinbase receives UK FCA authorization to offer equities and perpetual futures to retail and institutional clients</title>
+      <title>       KelpDAO bridge loses $292M after attackers compromise internal RPC nodes and force bridge verifier to poisoned infrastructure</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin rulemaking begins July 18; issuers above $10B face 360-day transition to federal oversight</title>
+      <title>       Drift Protocol loses $285M after social engineering leads security council members to pre-sign malicious Solana transactions</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Vanguard opens search for head of digital assets to oversee tokenization, stablecoin, custody, and blockchain strategy</title>
+      <title>       Crypto hacks reach record 207 incidents in H1 2026; total losses amount to $972M across all incident types</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       US Bancorp studying stablecoin issuance as institutional crypto custody arm revives under post-GENIUS Act environment</title>
+      <title>       Ethereum Institutional launches July 1 as nonprofit to guide banks on tokenization, stablecoins, and onchain financial infrastructure</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Kraken applies for full banking license in Lithuania to expand institutional services across Europe</title>
+      <title>       US spot Bitcoin ETFs attract $221.7M in a single session, ending a 10-day consecutive outflow streak</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Australia Travel Rule takes effect July 1 with no minimum threshold; all virtual asset transfers now require identity-linked data</title>
+      <title>       Fidelity, State Street, and Invesco each launch GENIUS Act stablecoin reserve funds in June 2026</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Supreme Court ruling creates channel for expanded White House influence over SEC and CFTC crypto oversight</title>
+      <title>       Aptos blockchain vulnerability patched after ethical hackers demonstrate $70B systemic exposure risk using a $3,000 server</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Security researchers disclose and patch Aptos blockchain flaw that could have exposed $70B in digital assets to systemic attack</title>
+      <title>       GENIUS Act and MiCA impose conflicting reserve requirements, fragmenting global stablecoin compliance frameworks for issuers</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       JPMorgan warns rushed CLARITY Act provisions risk creating regulatory gaps at the SEC-CFTC jurisdiction boundary</title>
+      <title>       BlackRock BUIDL reaches $2.5B AUM as 35 institutions including JPMorgan and Fidelity launch Ethereum-based financial products</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
   </channel>
 </rss>
