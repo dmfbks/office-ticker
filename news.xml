@@ -8,60 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. Senate passes GENIUS Act, establishing a federal regulatory framework for payment stablecoins with reserve and compliance requirements</title>
+      <title>       U.S. Senate crypto market structure bill misses July 4 deadline, passage odds fall to 40-50% with August 7 recess as final window</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       BNY launches institutional USDC minting, redemption and custody via its digital asset platform, with Circle as its first stablecoin partner</title>
+      <title>       SEC and CFTC jointly classified 18 major cryptocurrencies as digital commodities in March 2026 interpretation establishing token taxonomy</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       BIS 2026 Annual Report finds stablecoin reserve flows now shift three-month Treasury bill yields, flagging systemic risk for central banks</title>
+      <title>       EU MiCA transitional period ended July 1, mandating all crypto service providers hold full CASP authorization or cease EU operations</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Crypto industry intensifies lobbying for a Senate vote on the CLARITY Act before August recess; passage probability stands at 60%</title>
+      <title>       U.S. GENIUS Act stablecoin rules deadline is July 18, requiring permitted issuers to maintain 1:1 liquid reserves and public attestations</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SBI Holdings acquires Bitbank for $289 million, creating Japan's largest crypto exchange by assets under custody at $6.8 billion</title>
+      <title>       Ripple obtained full MiCA CASP authorization from Luxembourg's CSSF on July 6, enabling regulated crypto payments in all 30 EEA countries</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. Congress passes legislation barring the Federal Reserve from issuing a CBDC for the next four years</title>
+      <title>       Coinbase secured UK MiFID authorization on July 7, adding equities and derivatives to its regulated product suite for UK customers</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Moody's assigns Aaa-mf ratings to Fidelity and BlackRock tokenized money market funds, the first for blockchain-based fund vehicles</title>
+      <title>       An attacker spent $4M in BONK tokens on July 6 to pass a malicious governance proposal, draining $20M from BonkDAO's treasury</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Crypto suffered 83 exploits in Q2 2026, making it the most-hacked quarter on record with cumulative industry losses at $16.7 billion</title>
+      <title>       BlackRock-backed tokenization firm Securitize listed on NYSE in early July via SPAC merger with Cantor Equity Partners II, raising $400M</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Private key theft drove 40% of crypto's $16 billion in hack losses, now the leading attack vector over smart contract exploits</title>
+      <title>       CFTC approved cash-settled Bitcoin perpetual futures contracts in May 2026, permitting registered U.S. exchanges to list them</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Humanity Protocol lost $32 million to a private-key theft; investigators found the project's multisig wallet resided on a single laptop</title>
+      <title>       Bank of America authorized 15,000 financial advisors to recommend spot Bitcoin ETFs and advise 1-4% crypto allocations to clients</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       A third-party vendor compromise injected malicious code into Polymarket's frontend, enabling attackers to drain $3.1 million in user funds</title>
+      <title>       JPMorgan filed to launch JLTXX, a tokenized U.S. Treasury fund on Ethereum targeting GENIUS Act stablecoin issuers as compliant reserves</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SecondFi lost $2.4 million to a wallet-generation software exploit, with total user exposure estimated at up to $20 million</title>
+      <title>       Fidelity launched a GENIUS Act-compliant stablecoin reserve fund investing in short-term U.S. Treasuries with a 0.18% expense ratio</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       BlackRock's IBIT Bitcoin ETF surpassed $55 billion in AUM, with BlackRock and Fidelity dominating spot Bitcoin ETF inflows in 2026</title>
+      <title>       SEC cleared the Depository Trust Company via no-action letter to tokenize Russell 1000 stocks, U.S. equity ETFs, and Treasury securities</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       SEC's 2026-2030 Strategic Plan names digital assets a standalone oversight objective alongside investor protection for the first time</title>
+      <title>       280 firms secured full EU MiCA CASP authorization by July 3, including 15 of the top 100 crypto exchanges by trading volume</title>
       <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       BlackRock and JPMorgan joined 33 others in an Ethereum adoption nonprofit launched July 4 to target integration by traditional finance firms</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
