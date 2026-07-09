@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU MiCA full enforcement in effect as of July 1; crypto-asset service providers without authorization must cease EU operations</title>
+      <title>       MiCA enforcement now live in EU; up to 80% of crypto-asset service providers face loss of registration status</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. CLARITY Act stalls in Senate with three unresolved disputes; floor vote window narrows as chamber returns July 13</title>
+      <title>       CLARITY Act misses July Senate floor vote; August 7 recess sets final deadline for crypto market structure bill</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       CoinDCX confirms $44M stolen from operational wallet via employee social-engineering attack; customer funds unaffected</title>
+      <title>       SEC plans to propose crypto safe harbor rule in July, covering token sales and on-chain financial activities</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       July crypto hack outflows top $140M across CoinDCX, GMX, BigONE, and WOO X, per PeckShield data</title>
+      <title>       EU begins reviewing MiCA stablecoin provisions including interest ban, reserve requirements, and redemption rights</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       GMX protocol lost $42M in July exploit; majority of stolen assets subsequently recovered</title>
+      <title>       SEC drafts tokenized stock exemption to allow U.S. equities to settle on blockchain rails</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs recorded $224M net inflow on July 2, ending a 10-session consecutive outflow streak</title>
+      <title>       Global stablecoin market cap fell to $312B in June, the largest monthly drop since the TerraUSD collapse</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC issued guidance clarifying federal securities law application to crypto assets, elevating digital assets to a top agency priority</title>
+      <title>       Tokenized equity trading volumes rose 145% to a record $3.86B in the first half of 2026</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC and CFTC signed a memorandum of understanding March 11 establishing a joint framework for crypto regulatory coordination</title>
+      <title>       Kraken applies for full banking license in Lithuania to operate as a regulated EU credit institution</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       OCC issued a 350-page GENIUS Act notice of proposed rulemaking on Feb. 25 setting standards for payment stablecoin issuers</title>
+      <title>       Kraken receives FCA electronic money license, expanding its regulated footprint in the United Kingdom</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Treasury's FinCEN and OFAC proposed joint AML and sanctions compliance rules for stablecoin issuers under the GENIUS Act</title>
+      <title>       U.S. agencies evaluating whether strategic Bitcoin reserve falls under Treasury or Commerce Department authority</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       FDIC proposed GENIUS Act compliance requirements for supervised depository institutions issuing or holding payment stablecoins</title>
+      <title>       H1 2026 crypto hacks totaled $972M across 207 incidents, down 58% from $2.3B in H1 2025</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       BlackRock launched a Bitcoin Income ETF, expanding its digital asset product lineup on U.S. exchanges</title>
+      <title>       Researchers disclose protocol flaw that could have exposed an estimated $70B in crypto assets to theft</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       JPMorgan filed to launch a new tokenized fund on Ethereum as Wall Street tokenization activity accelerates</title>
+      <title>       SummerFi DeFi protocol exploited through AI automation layer, demonstrating risk above smart contract code</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       U.S. spot Bitcoin ETFs recorded $4.5B in net outflows in June, their worst month since the January 2024 launch</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
