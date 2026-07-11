@@ -8,61 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU MiCA fully enforced from July 1, banning unlicensed crypto firms; roughly 80% of European CASPs expected to lose registration</title>
+      <title>       Swift launches blockchain ledger; 17 banks from six continents to pilot tokenized deposit payments for 24/7 cross-border settlement</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC set to propose crypto safe harbor rule in July covering token offerings and certain on-chain financial activities</title>
+      <title>       ESMA opens first coordinated MiCA custody review; national regulators to audit 280 authorized crypto-asset service providers across EU</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       CLARITY Act misses July Senate target; August 7 becomes critical deadline for US digital asset market structure legislation</title>
+      <title>       MiCA full enforcement took effect July 1; roughly 80% of previously registered crypto firms in EU lack required authorization</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Circle wins final OCC approval for national trust bank, enabling federally regulated digital asset custody services</title>
+      <title>       U.S. stablecoin regulators face July 18 GENIUS Act deadline to finalize implementing rules governing payment stablecoin issuers</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       DTCC begins July pilot of tokenized securities trading with BlackRock, JPMorgan and Goldman Sachs among 50-plus participants</title>
+      <title>       SEC added three crypto rulemaking items to July 2026 agenda targeting token offerings, broker-dealer custody, and market structure</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       ESMA launches supervisory review of crypto custody operations across EU-licensed CASPs under MiCA framework</title>
+      <title>       Revised CLARITY Act draft expected mid-July as Senate negotiators resolve outstanding disputes before targeted floor vote</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       UK FCA sets stablecoin capital buffer at 1% of coins in circulation, diverging from EU MiCA requirements</title>
+      <title>       KelpDAO rsETH bridge exploited for approximately $293 million after attackers minted counterfeit collateral on lending markets</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan prepares to accept Bitcoin and Ethereum as collateral for institutional cash loans held by approved custodians</title>
+      <title>       Drift Protocol lost $285 million after North Korean operatives social-engineered staff to bypass multi-signature controls</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin implementation rules due July 18 as federal and state regulators begin notice-and-comment rulemaking</title>
+      <title>       H1 2026 crypto hacks totaled $972 million across 207 incidents; North Korean-linked groups accounted for roughly $643 million</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       EU legislators review MiCA overhaul including potential repeal of ban on stablecoin interest payments</title>
+      <title>       U.S. spot Bitcoin ETFs recorded $510 million in net inflows over three sessions, ending a 10-day $2.73 billion outflow streak</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC packages three July crypto proposals covering token issuance, broker-dealer custody rules, and trading venue requirements</title>
+      <title>       Deutsche Bank set to launch regulated crypto custody service in 2026 for institutional clients using Taurus SA technology</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       BlackRock amends Coinbase custody agreement to require 12-hour withdrawal window for digital assets</title>
+      <title>       Franklin Templeton, JPMorgan, and Apollo expand tokenized asset offerings as NYSE explores dedicated on-chain trading venues</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Securitize targets $400 million in acquisitions following public listing as tokenization market consolidates</title>
+      <title>       JPMorgan backs U.S. CLARITY Act but warns rushed crypto rulemaking could create market loopholes as Senate races toward July vote</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Security researchers disclose cryptographic flaw that put an estimated $70 billion in crypto assets at risk; vulnerability now patched</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-
   </channel>
 </rss>
