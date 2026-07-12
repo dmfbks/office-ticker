@@ -8,56 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Swift launches blockchain ledger; 17 banks from six continents to pilot tokenized deposit payments for 24/7 cross-border settlement</title>
+      <title>       Circle receives OCC approval to open a federally chartered national trust bank for digital asset custody</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       ESMA opens first coordinated MiCA custody review; national regulators to audit 280 authorized crypto-asset service providers across EU</title>
+      <title>       SEC plans to propose crypto safe harbor rule this month, exempting select token activities from securities registration</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       MiCA full enforcement took effect July 1; roughly 80% of previously registered crypto firms in EU lack required authorization</title>
+      <title>       U.S. GENIUS Act rulemaking deadline falls on July 18, determining which stablecoin issuers can operate domestically</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. stablecoin regulators face July 18 GENIUS Act deadline to finalize implementing rules governing payment stablecoin issuers</title>
+      <title>       House Financial Services Committee schedules July 17 CLARITY Act field hearing in New York; Senate floor vote unset</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC added three crypto rulemaking items to July 2026 agenda targeting token offerings, broker-dealer custody, and market structure</title>
+      <title>       MiCA took full effect July 1 with only 194 of 3,000-plus crypto firms holding EU authorization</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Revised CLARITY Act draft expected mid-July as Senate negotiators resolve outstanding disputes before targeted floor vote</title>
+      <title>       BONK DAO lost $20M in treasury tokens after an attacker spent $4.4M on governance tokens to force a malicious vote</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       KelpDAO rsETH bridge exploited for approximately $293 million after attackers minted counterfeit collateral on lending markets</title>
+      <title>       Summer.fi suspended Lazy Summer vaults after a $6M flash loan exploit drained USDC yield pools</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Drift Protocol lost $285 million after North Korean operatives social-engineered staff to bypass multi-signature controls</title>
+      <title>       EDX Markets raised $76M in Series C funding led by SBI Holdings to expand its institutional crypto trading platform</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       H1 2026 crypto hacks totaled $972 million across 207 incidents; North Korean-linked groups accounted for roughly $643 million</title>
+      <title>       Ethical hackers patched an Aptos flaw that could have exposed $70B in assets to a validator attack costing $3,000</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs recorded $510 million in net inflows over three sessions, ending a 10-day $2.73 billion outflow streak</title>
+      <title>       BIS study finds stablecoin flows now move T-bill markets, with a $3.5B inflow shifting three-month Treasury yields</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Deutsche Bank set to launch regulated crypto custody service in 2026 for institutional clients using Taurus SA technology</title>
+      <title>       JPMorgan disclosed a 64% increase in BlackRock IBIT holdings to 5.3M shares worth $343M in its Q1 2026 filing</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Franklin Templeton, JPMorgan, and Apollo expand tokenized asset offerings as NYSE explores dedicated on-chain trading venues</title>
+      <title>       Taiko cross-chain bridge restored 10 days after a $1.7M exploit that allowed attackers to forge withdrawal proofs</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       JPMorgan backs U.S. CLARITY Act but warns rushed crypto rulemaking could create market loopholes as Senate races toward July vote</title>
+      <title>       Ethereum Institutional nonprofit launched to give banks and asset managers a neutral point of contact on blockchain</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       UK traders risk losing crypto platform access as MiCA's EU licensing deadline leaves most exchanges unlicensed</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Sberbank plans a state-controlled crypto wallet to serve as Russia's primary regulated retail on-ramp</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
