@@ -8,64 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Circle receives OCC approval to open a federally chartered national trust bank for digital asset custody</title>
+      <title>       DTCC begins July pilot to tokenize Russell 1000 stocks, ETFs, and U.S. Treasuries with BlackRock, Goldman Sachs, and JPMorgan</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC plans to propose crypto safe harbor rule this month, exempting select token activities from securities registration</title>
+      <title>       EU MiCA transitional period ended July 1; unlicensed crypto-asset service providers must cease EU operations</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. GENIUS Act rulemaking deadline falls on July 18, determining which stablecoin issuers can operate domestically</title>
+      <title>       SEC places three crypto rules on July 2026 agenda: broker-dealer capital, digital asset offerings, and market structure</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       House Financial Services Committee schedules July 17 CLARITY Act field hearing in New York; Senate floor vote unset</title>
+      <title>       Open USD Stablecoin (OUSD) launches backed by 140-firm coalition including Stripe, Visa, Mastercard, BNY Mellon, and Coinbase</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       MiCA took full effect July 1 with only 194 of 3,000-plus crypto firms holding EU authorization</title>
+      <title>       Crypto industry loses $955M to 207 hacking incidents in H1 2026, a record number of attacks in a six-month span</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BONK DAO lost $20M in treasury tokens after an attacker spent $4.4M on governance tokens to force a malicious vote</title>
+      <title>       Crypto protocols lose $35M in one week as BonkDAO, Bonzo Lend, and Summer.fi suffer exploits</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Summer.fi suspended Lazy Summer vaults after a $6M flash loan exploit drained USDC yield pools</title>
+      <title>       BonkDAO attacker drains $20M DAO treasury through governance token accumulation without exploiting smart contract code</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EDX Markets raised $76M in Series C funding led by SBI Holdings to expand its institutional crypto trading platform</title>
+      <title>       Security researchers identify vulnerability that could have exposed $70B in crypto assets to theft</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ethical hackers patched an Aptos flaw that could have exposed $70B in assets to a validator attack costing $3,000</title>
+      <title>       Ill Bloom wallet vulnerability exploited, draining more than $5M in cryptocurrency</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BIS study finds stablecoin flows now move T-bill markets, with a $3.5B inflow shifting three-month Treasury yields</title>
+      <title>       Bank of America authorizes 15,000 financial advisors to recommend spot Bitcoin ETFs to clients</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       JPMorgan disclosed a 64% increase in BlackRock IBIT holdings to 5.3M shares worth $343M in its Q1 2026 filing</title>
+      <title>       BlackRock expands institutional digital asset suite with launch of Bitcoin Income ETF</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Taiko cross-chain bridge restored 10 days after a $1.7M exploit that allowed attackers to forge withdrawal proofs</title>
+      <title>       JPMorgan deepens crypto integration with new Bitcoin-backed securities product</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Ethereum Institutional nonprofit launched to give banks and asset managers a neutral point of contact on blockchain</title>
+      <title>       Stablecoin issuers become significant buyers of U.S. Treasuries as Genius Act regulatory framework takes hold</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       UK traders risk losing crypto platform access as MiCA's EU licensing deadline leaves most exchanges unlicensed</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       Sberbank plans a state-controlled crypto wallet to serve as Russia's primary regulated retail on-ramp</title>
-      <guid isPermaLink="false">news-15</guid>
-    </item>
+
   </channel>
 </rss>
