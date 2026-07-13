@@ -8,57 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC begins July pilot to tokenize Russell 1000 stocks, ETFs, and U.S. Treasuries with BlackRock, Goldman Sachs, and JPMorgan</title>
+      <title>       U.S. Senate returns July 13 with CLARITY Act facing a final three-week window before August adjournment</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period ended July 1; unlicensed crypto-asset service providers must cease EU operations</title>
+      <title>       Six U.S. agencies must finalize GENIUS Act stablecoin rules by July 18 statutory deadline</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC places three crypto rules on July 2026 agenda: broker-dealer capital, digital asset offerings, and market structure</title>
+      <title>       SEC adds three crypto rules to July 2026 regulatory agenda covering offerings, broker-dealers, and market structure</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Open USD Stablecoin (OUSD) launches backed by 140-firm coalition including Stripe, Visa, Mastercard, BNY Mellon, and Coinbase</title>
+      <title>       Circle receives OCC approval for national trust bank charter to custody USDC reserves under federal supervision</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Crypto industry loses $955M to 207 hacking incidents in H1 2026, a record number of attacks in a six-month span</title>
+      <title>       SEC and CFTC jointly classify 16 crypto assets as digital commodities in landmark interpretive release</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Crypto protocols lose $35M in one week as BonkDAO, Bonzo Lend, and Summer.fi suffer exploits</title>
+      <title>       EU unlicensed crypto firms face shutdown as MiCA transition period expires, industry warns of market consolidation</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       BonkDAO attacker drains $20M DAO treasury through governance token accumulation without exploiting smart contract code</title>
+      <title>       UK FCA finalizes comprehensive crypto regime enabling global trading with full compliance requirements</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Security researchers identify vulnerability that could have exposed $70B in crypto assets to theft</title>
+      <title>       U.S. spot Bitcoin ETFs record $221.7M daily inflow, ending a 10-day consecutive outflow streak</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ill Bloom wallet vulnerability exploited, draining more than $5M in cryptocurrency</title>
+      <title>       Nasdaq files proposed rule change to enable in-kind Bitcoin redemptions for BlackRock's $45B IBIT ETF</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Bank of America authorizes 15,000 financial advisors to recommend spot Bitcoin ETFs to clients</title>
+      <title>       Coinbase launches U.S. institutional crypto lending platform structured under Regulation D exemption</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       BlackRock expands institutional digital asset suite with launch of Bitcoin Income ETF</title>
+      <title>       SEC's Regulation Crypto proposal would allow crypto startups to raise up to $75M under a temporary safe harbor</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       JPMorgan deepens crypto integration with new Bitcoin-backed securities product</title>
+      <title>       FDIC confirms stablecoin token holders are ineligible for deposit insurance under GENIUS Act framework</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Stablecoin issuers become significant buyers of U.S. Treasuries as Genius Act regulatory framework takes hold</title>
+      <title>       Hyundai becomes first major South Korean conglomerate to implement internal stablecoin transfers</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       White-hat researchers disclosed Aptos blockchain flaw placing up to $70B in digital assets at systemic risk</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
   </channel>
 </rss>
