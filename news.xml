@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       UK government launches tokenization taskforce including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley across 54 firms.</title>
+      <title>       U.S. regulators face July 18 deadline to finalize GENIUS Act stablecoin rules governing which issuers may operate domestically.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC plans to propose "Regulation Crypto" in July, creating temporary registration exemptions for crypto token issuers.</title>
+      <title>       SEC plans to propose crypto safe-harbor rule in July 2026, exempting certain digital-asset offerings from securities registration.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       GENIUS Act implementation rules due July 18 will determine which stablecoin issuers qualify to operate in the US market.</title>
+      <title>       European Commission opens MiCA review after July 1 transitional deadline, examining stablecoin interest ban and reserve requirements.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       GENIUS Act and EU MiCA divergence creates separate US and EU stablecoin liquidity pools, fragmenting the global market.</title>
+      <title>       DTCC launches tokenized-securities pilot in July with BlackRock, Goldman Sachs and JPMorgan among 50+ participating firms.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Swift activated a shared blockchain ledger with 17 global banks to enable round-the-clock cross-border settlement.</title>
+      <title>       Circle receives U.S. trust bank charter enabling affiliate custody; deposits, loans, and USDC reserve management remain excluded.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Stripe, Coinbase, Mastercard, Visa and BlackRock launched Open Standard, a digital dollar network backed by 140-plus businesses.</title>
+      <title>       U.S. Digital Asset Market Clarity Act misses July Senate vote target; August 7 now the critical deadline for CFTC-SEC jurisdiction bill.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       US spot Bitcoin ETFs recorded a $221.7M net inflow on July 13, ending a 10-session outflow streak.</title>
+      <title>       JPMorgan files to launch OnChain Liquidity-Token Money Market Fund on Ethereum, joining Wall Street's tokenized-fund race.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       TRM Labs recorded 207 crypto hacks in H1 2026, a six-month record, while total losses fell to $972M from $2.3B a year prior.</title>
+      <title>       JPMorgan will offer clients Bitcoin purchasing access despite CEO Jamie Dimon's continued personal skepticism about the asset.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       BonkDAO lost an estimated $20M after a governance exploit allowed a single vote to drain the memecoin treasury.</title>
+      <title>       Interpol global fraud sweep arrests 5,811 individuals; one wallet linked to a 20-year-old suspect processed $122.5M in illicit funds.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Security researchers disclosed a flaw in widely used cryptographic tooling that could have put $70B in digital assets at risk.</title>
+      <title>       Ethical hackers discover Aptos blockchain flaw that could have put $70B in assets at systemic risk; bug patched before exploitation.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Phantom filed a CFTC petition arguing non-custodial wallets should not be classified as broker-dealers under derivatives rules.</title>
+      <title>       Attacker drains $20M from memecoin DAO treasury by spending $4.4M on tokens to pass a malicious governance proposal.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ethereum Institutional launched with backing from 500 Tier 1 bank and asset manager relationships representing $250T in AUM.</title>
+      <title>       Blockaid detects $6M exploit on Summer.fi DeFi platform, pausing Lazy Summer vaults and exposing risks in AI-automated yield strategies.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       European regulators are revising MiCA three years after enactment as cross-border compliance gaps widen between the US and EU.</title>
+      <title>       OCC publishes GENIUS Act compliance framework for stablecoin issuers, covering reserves, customer-ID requirements, and monthly disclosures.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       U.S. Congress passes legislation blocking issuance of any central bank digital currency for the next four years.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Stablecoin supply rises $4B following GENIUS Act enactment as banks and asset managers enter the U.S. market.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
