@@ -8,60 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       GENIUS Act stablecoin rulemaking deadline arrives July 18 as OCC, FDIC, and Treasury finalize rules</title>
+      <title>       UK government launches tokenization taskforce including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley across 54 firms.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC adds three crypto rules to July 2026 agenda: token offerings, broker-dealer custody, and market structure</title>
+      <title>       SEC plans to propose "Regulation Crypto" in July, creating temporary registration exemptions for crypto token issuers.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       EU MiCA now fully in force; crypto firms serving EU customers without a MiCA license must halt operations</title>
+      <title>       GENIUS Act implementation rules due July 18 will determine which stablecoin issuers qualify to operate in the US market.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Senate expected to take up CLARITY Act crypto market-structure bill during week of July 20 or July 27</title>
+      <title>       GENIUS Act and EU MiCA divergence creates separate US and EU stablecoin liquidity pools, fragmenting the global market.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       UK FCA publishes crypto regulatory framework emphasizing international interoperability for trading firms</title>
+      <title>       Swift activated a shared blockchain ledger with 17 global banks to enable round-the-clock cross-border settlement.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       DTCC tokenization platform enters live production in July with BlackRock, JPMorgan, Goldman Sachs, and Circle</title>
+      <title>       Stripe, Coinbase, Mastercard, Visa and BlackRock launched Open Standard, a digital dollar network backed by 140-plus businesses.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Morgan Stanley files for Ethereum and Solana staking ETFs; both under active SEC review</title>
+      <title>       US spot Bitcoin ETFs recorded a $221.7M net inflow on July 13, ending a 10-session outflow streak.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       H1 2026 crypto losses reach $972M across 207 incidents; North Korea-linked actors took 66% of stolen funds</title>
+      <title>       TRM Labs recorded 207 crypto hacks in H1 2026, a six-month record, while total losses fell to $972M from $2.3B a year prior.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       BONK DAO governance exploit drains $20M from Solana meme-coin treasury on July 6</title>
+      <title>       BonkDAO lost an estimated $20M after a governance exploit allowed a single vote to drain the memecoin treasury.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Crypto wallet flaw Ill Bloom causes $5M in losses via weak key-generation randomness in affected wallets</title>
+      <title>       Security researchers disclosed a flaw in widely used cryptographic tooling that could have put $70B in digital assets at risk.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       White-hat researchers discover Aptos flaw that could have exposed $70B; patch deployed, no funds lost</title>
+      <title>       Phantom filed a CFTC petition arguing non-custodial wallets should not be classified as broker-dealers under derivatives rules.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC opens 60-day comment period on novel ETF products including staking-yield funds and altcoin baskets</title>
+      <title>       Ethereum Institutional launched with backing from 500 Tier 1 bank and asset manager relationships representing $250T in AUM.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       FATF Travel Rule now enforced in more than 70 jurisdictions after 73% of assessed countries pass legislation</title>
+      <title>       European regulators are revising MiCA three years after enactment as cross-border compliance gaps widen between the US and EU.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Bitcoin spot ETFs record their largest quarterly outflow since launch in Q2 2026</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
