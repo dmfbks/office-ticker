@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU MiCA fully in force as of July 1; only ~210 of 1,200+ prior VASP-registered firms secured CASP authorization.</title>
+      <title>       DTCC, JPMorgan, BlackRock and Goldman complete first live tokenized stock and Treasury production trades in 40-firm RWA pilot.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       DTCC began tokenized stock, ETF and Treasury production trades July 14 with 50+ firms; full platform launch set for October.</title>
+      <title>       GENIUS Act stablecoin rulemaking deadline arrives July 18 as OCC, FDIC, Treasury and FinCEN must finalize implementing rules.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC added three crypto rulemaking proposals to its July 2026 agenda: token offerings, broker-dealer capital rules, and market structure.</title>
+      <title>       Japan reclassifies crypto as financial instruments under investment law, opening path to spot Bitcoin ETF approvals and higher penalties.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Standard Chartered became the first G-SIB to enable institutional USDC minting and redemption via Circle, launching in Dubai.</title>
+      <title>       White House holds high-level meeting on CLARITY Act ethics provisions as Senate targets floor vote for the week of July 20.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       CFTC approved cash-settled Bitcoin perpetual futures for listing on registered derivatives exchanges, with initial regulatory guidance.</title>
+      <title>       US-UK Transatlantic Taskforce aligns GENIUS Act stablecoin reserve standards with UK rules in 10-point framework; 54 firms committed.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BIS Annual Report concluded stablecoins structurally resemble ETFs rather than genuine money, as the market reached $320 billion.</title>
+      <title>       CFTC chair announces partnership with SEC on Project Crypto to advance joint regulatory clarity for digital assets.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       FATF reports 85 of 117 jurisdictions have enacted Travel Rule legislation for virtual assets, with EU's TFR now at zero threshold.</title>
+      <title>       SEC adds Regulation Crypto to its July rulemaking agenda, proposing token offering exemptions and safe harbors for on-chain capital raises.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC published guidance clarifying how federal securities laws apply to crypto assets across issuance, trading and custody.</title>
+      <title>       Trump presses Senate leadership on crypto market-structure and stablecoin bills ahead of August 7 congressional recess deadline.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan filed to launch a tokenized fund as Wall Street institutions accelerate programs to place assets on blockchain rails.</title>
+      <title>       Ostium liquidity vault on Arbitrum loses $18M in USDC after attacker exploits oracle infrastructure to manufacture profitable trades.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       DeFi protocol Summer.fi lost approximately $6 million to a July exploit targeting its LazyVault USDC vault.</title>
+      <title>       Goldman Sachs files for Bitcoin Premium Income ETF that sells covered call options to generate monthly income for investors.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Chainalysis links 76% of 2026 crypto hack losses to North Korea-linked actors; total DeFi exploits exceeded $840 million through May.</title>
+      <title>       CFTC approves KalshiEX to list BTCPERP, the first regulated Bitcoin perpetual futures contract referencing spot price in the US.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       A Bitcoin banking adoption index covering 25 major institutions placed sector-wide adoption at 32%, with Fidelity scoring highest at 71%.</title>
+      <title>       US spot Bitcoin ETFs record $197M weekly net inflows, snapping eight consecutive weeks of outflows; BlackRock IBIT led.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       A new nonprofit launched on July 1 focused on accelerating institutional and Wall Street adoption of Ethereum.</title>
+      <title>       TRM Labs reports 207 crypto hacks in H1 2026, a record six-month total; losses fell to $972M from $2.3B in H1 2025.</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Circle Arc testnet connects BlackRock, HSBC, Visa, Goldman Sachs and AWS to on-chain institutional financial workflow infrastructure.</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
   </channel>
 </rss>
