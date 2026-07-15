@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. and UK release 10-point roadmap to align oversight of tokenized assets, stablecoins, and cross-border digital finance.</title>
+      <title>       EU's MiCA regulation entered full force July 1, requiring all crypto firms serving EU customers to hold a MiCA license.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       MiCA ends EU transition; only 230 of 3,000+ crypto firms hold licenses, leaving 10 million users seeking new platforms.</title>
+      <title>       U.S. regulators face July 18 deadline to finalize implementation rules under the GENIUS Act stablecoin framework.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin rulebook deadline is July 18; regulators must finalize bank-grade AML and identity verification requirements.</title>
+      <title>       U.S. crypto market structure bill targets Senate floor vote the week of July 20 or 27, pending support from 7 Senate Democrats.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC plans to propose its first major crypto rule in July to ease token fundraising and clarify custody of tokenized securities.</title>
+      <title>       SEC plans to propose Regulation Crypto this month, creating temporary registration exemptions for digital asset offerings.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       CLARITY Act updated draft expected for Senate floor vote week of July 20; bill needs 60 votes as ethics provisions remain unresolved.</title>
+      <title>       SEC and CFTC launched joint Project Crypto initiative to establish a shared asset taxonomy and eliminate duplicate compliance requirements.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       DTCC targets first tokenized asset trades in July ahead of October full launch; platform supported by BlackRock, Goldman Sachs, JPMorgan.</title>
+      <title>       UK's FCA unveiled a comprehensive crypto regulatory framework, winning early praise for its internationally connected approach.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       OCC grants Circle a federal trust bank charter, allowing federally supervised digital-asset custody operations.</title>
+      <title>       SEC approved Grayscale's multi-asset ETP covering Bitcoin, Ether, XRP, Solana, and Cardano, its first multi-crypto U.S. product.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Security researchers patch Aptos blockchain flaw that could have exposed $70 billion in assets to systemic attack for under $3,000.</title>
+      <title>       Grayscale activated in-kind staking on its U.S.-listed Ethereum and Solana ETPs, the first U.S. spot crypto products to offer staking.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       BonkDAO loses $20 million in governance exploit; attacker spent $4.4 million to pass malicious treasury-drain proposal.</title>
+      <title>       Vanguard posted its first Head of Digital Assets role, signaling a shift by the $11T asset manager toward tokenization and crypto custody.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Interpol arrests 5,811 suspects and seizes $293 million in illicit crypto assets in 97-country coordinated operation.</title>
+      <title>       Stripe's stablecoin unit applied for a U.S. national bank trust charter to manage reserves and offer custody services.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       EU Commission launches MiCA framework review; stablecoin interest prohibition and reserve requirements under reassessment.</title>
+      <title>       Taiwan enacted crypto legislation giving licensed banks a regulatory first-mover advantage in stablecoin issuance and custody.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Wall Street transfer agents urge SEC to regulate blockchain-based stock tokens, warning of risks to market integrity.</title>
+      <title>       A coordinated attack drained 180,900 SOL (~$14.2M) from a single Solana-based wallet, one of the largest single-wallet exploits of 2026.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Summer.fi DeFi platform loses approximately $6 million in exploit detected July 6 by blockchain security firm Blockaid.</title>
+      <title>       The Ill Bloom wallet seed-generation flaw was exploited for over $5M across 431 wallets in coordinated sweeps.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       A vulnerability in the Aptos blockchain that could have put $70B in assets at systemic risk was quietly patched without losses.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Crypto exploits hit a record 70 incidents in Q2 2026 alone; total H1 2026 losses fell below $1 billion.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
