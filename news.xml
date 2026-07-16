@@ -8,57 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Japan reclassifies crypto as financial assets, enabling spot Bitcoin ETFs and imposing stricter disclosure rules from 2027</title>
+      <title>       US and UK release 10-point roadmap to align stablecoin and tokenized-asset oversight across the world's two largest financial markets</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       White House plans high-level meeting with senators to resolve remaining CLARITY Act ethics provisions</title>
+      <title>       US OCC publishes stablecoin framework under GENIUS Act ahead of July 18 implementation deadline</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M in oracle attack after manipulated price-feed timestamps triggered erroneous USDC payouts from protocol vault</title>
+      <title>       SEC plans to propose Regulation Crypto this month, creating exemptions from securities rules for certain digital asset activities</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin rulebook deadline set for July 18, determining which issuers meet U.S. operating requirements</title>
+      <title>       US Treasury sanctions four Iran central bank crypto wallets; Tether freezes $131M in TRON-based USDT</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC plans to propose crypto rulemaking this month granting regulatory exemptions for tokenized securities and digital fundraising</title>
+      <title>       White House schedules senior-level meeting to resolve CLARITY Act stalemate ahead of planned Senate vote</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Circle receives OCC approval for national trust bank to offer federally supervised digital asset custody</title>
+      <title>       Ostium loses $18M in oracle attack as manipulated price data triggers USDC payout from DeFi vault</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Morgan Stanley receives conditional OCC approval to establish a national trust bank for digital asset custody and staking</title>
+      <title>       Morgan Stanley completes spot crypto rollout on E*Trade, giving 8.6 million customers access to BTC, ETH, and SOL</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Swift runs live blockchain tests with 17 banks including Citi, HSBC and UBS for 24/7 tokenized deposit settlements</title>
+      <title>       Australia's AML/CTF Travel Rule, live July 1, mandates identity and wallet verification for all regulated crypto transfers</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       MiCA enforcement begins: approximately 80% of EU crypto firms lack valid authorization as transition period closes</title>
+      <title>       US spot Ether ETFs attract $96M in three days, with BlackRock's fund capturing the large majority of inflows</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan Q1 2026 filings show Bitcoin ETF holdings expanded up to 900% across Fidelity and Bitwise funds</title>
+      <title>       JPMorgan increased its Bitcoin ETF stake 64% to $343M in Q1 2026, per a new SEC filing</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       U.S. agencies propose bank-grade customer identification requirements for stablecoin issuers under GENIUS Act</title>
+      <title>       Stablecoin supply surged $4B after GENIUS Act enactment as banks and asset managers begin issuing dollar tokens</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       U.S. and UK regulators outline joint framework to align stablecoin reserve and tokenization standards</title>
+      <title>       SEC moves to modernize 20-year-old ATS rules to allow blockchain-based securities trading by Wall Street firms</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Security researchers disclose patched Aptos blockchain flaw that could have put $70B in digital assets at systemic risk</title>
+      <title>       Basel Committee's 1,250% risk weight for unbacked crypto assets is now active across member jurisdictions as of January 2026</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Galaxy Digital cuts odds of CLARITY Act passing in 2026 to 50%, citing shrinking Senate calendar and unresolved policy disputes</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
   </channel>
 </rss>
