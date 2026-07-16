@@ -8,52 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC processes first live tokenized U.S. stock, ETF and Treasury trades with BlackRock, Goldman Sachs, JPMorgan and 40 partner firms</title>
+      <title>       U.S. and UK release 10-point roadmap to harmonize stablecoin, tokenized asset, and digital securities rules across both markets.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Japan's parliament approves bill reclassifying crypto as financial instruments and cutting the top tax rate from 55% to 20%</title>
+      <title>       GENIUS Act July 18 deadline sets the final rulebook determining which stablecoin issuers can operate in the U.S. market.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       CLARITY Act faces make-or-break Senate floor vote before August recess; House holds New York field hearing July 17</title>
+      <title>       SEC plans to propose rules on crypto token offerings, broker-dealer custody, and trading venues in July 2026.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC adds three crypto rulemaking proposals covering token offerings, broker-dealer custody and exchange market structure</title>
+      <title>       Circle receives OCC approval to establish a federally supervised national trust bank for digital asset custody.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       MiCA transition closed July 1; under 210 of 1,200-plus EU crypto-asset service providers hold full CASP authorization</title>
+      <title>       Morgan Stanley receives preliminary OCC approval to establish a national digital asset trust bank for custody and staking.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. spot bitcoin ETFs drew $181M in net inflows Tuesday; Ether ETFs added $58M as softer CPI data boosted market sentiment</title>
+      <title>       EU MiCA transition period ended July 1; unlicensed exchanges serving EU users must now comply or exit the bloc.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       California Digital Financial Assets Law took effect July 1, requiring a state license for crypto firms serving California residents</title>
+      <title>       U.S. Senate CLARITY Act advances, proposing to split digital asset market oversight between the SEC and CFTC.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan to accept bitcoin and ether as collateral for institutional client lending</title>
+      <title>       Australia activates Travel Rule for all regulated crypto exchange transfers from July 1, covering both domestic and international flows.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       DeFi protocols lost $35M across three exploits in the week of July 5-11, including a $9M breach at Hedera lender Bonzo Lend</title>
+      <title>       JPMorgan will accept crypto ETFs as collateral for loans, extending institutional financing to digital asset holdings.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Chainalysis attributes 76% of global crypto hack losses in 2026 to Lazarus Group-linked state actors</title>
+      <title>       DTCC launches July pilot of tokenized securities platform backed by BlackRock, Goldman Sachs, JPMorgan, and over 50 firms.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       DeFi sector lost more than $840M to hacks across 50-plus incidents in H1 2026, a 70% year-on-year increase</title>
+      <title>       Ostium perpetuals exchange loses $18 million in oracle manipulation attack, continuing a wave of DeFi oracle exploits.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Japan's FIEA crypto reform paves the way for regulators to accept spot bitcoin ETF applications</title>
+      <title>       SEC targets decades-old rules to allow Wall Street firms to trade blockchain-based securities on regulated venues.</title>
       <guid isPermaLink="false">news-12</guid>
+    </item>
+    <item>
+      <title>       Aptos blockchain patches critical vulnerability that researchers estimated put $70 billion in digital assets at systemic risk.</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Stablecoin market supply rises $4 billion following GENIUS Act signing as banks and asset managers begin issuing.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Summer.fi DeFi protocol loses approximately $6 million in exploit detected July 6 via AI-assisted automation attack.</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
