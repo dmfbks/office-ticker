@@ -8,64 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. and UK release 10-point roadmap to harmonize stablecoin, tokenized asset, and digital securities rules across both markets.</title>
+      <title>       Japan reclassifies crypto as financial assets, enabling spot Bitcoin ETFs and imposing stricter disclosure rules from 2027</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       GENIUS Act July 18 deadline sets the final rulebook determining which stablecoin issuers can operate in the U.S. market.</title>
+      <title>       White House plans high-level meeting with senators to resolve remaining CLARITY Act ethics provisions</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC plans to propose rules on crypto token offerings, broker-dealer custody, and trading venues in July 2026.</title>
+      <title>       Ostium loses $18M in oracle attack after manipulated price-feed timestamps triggered erroneous USDC payouts from protocol vault</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Circle receives OCC approval to establish a federally supervised national trust bank for digital asset custody.</title>
+      <title>       GENIUS Act stablecoin rulebook deadline set for July 18, determining which issuers meet U.S. operating requirements</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Morgan Stanley receives preliminary OCC approval to establish a national digital asset trust bank for custody and staking.</title>
+      <title>       SEC plans to propose crypto rulemaking this month granting regulatory exemptions for tokenized securities and digital fundraising</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EU MiCA transition period ended July 1; unlicensed exchanges serving EU users must now comply or exit the bloc.</title>
+      <title>       Circle receives OCC approval for national trust bank to offer federally supervised digital asset custody</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       U.S. Senate CLARITY Act advances, proposing to split digital asset market oversight between the SEC and CFTC.</title>
+      <title>       Morgan Stanley receives conditional OCC approval to establish a national trust bank for digital asset custody and staking</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Australia activates Travel Rule for all regulated crypto exchange transfers from July 1, covering both domestic and international flows.</title>
+      <title>       Swift runs live blockchain tests with 17 banks including Citi, HSBC and UBS for 24/7 tokenized deposit settlements</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan will accept crypto ETFs as collateral for loans, extending institutional financing to digital asset holdings.</title>
+      <title>       MiCA enforcement begins: approximately 80% of EU crypto firms lack valid authorization as transition period closes</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       DTCC launches July pilot of tokenized securities platform backed by BlackRock, Goldman Sachs, JPMorgan, and over 50 firms.</title>
+      <title>       JPMorgan Q1 2026 filings show Bitcoin ETF holdings expanded up to 900% across Fidelity and Bitwise funds</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Ostium perpetuals exchange loses $18 million in oracle manipulation attack, continuing a wave of DeFi oracle exploits.</title>
+      <title>       U.S. agencies propose bank-grade customer identification requirements for stablecoin issuers under GENIUS Act</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC targets decades-old rules to allow Wall Street firms to trade blockchain-based securities on regulated venues.</title>
+      <title>       U.S. and UK regulators outline joint framework to align stablecoin reserve and tokenization standards</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Aptos blockchain patches critical vulnerability that researchers estimated put $70 billion in digital assets at systemic risk.</title>
+      <title>       Security researchers disclose patched Aptos blockchain flaw that could have put $70B in digital assets at systemic risk</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Stablecoin market supply rises $4 billion following GENIUS Act signing as banks and asset managers begin issuing.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       Summer.fi DeFi protocol loses approximately $6 million in exploit detected July 6 via AI-assisted automation attack.</title>
-      <guid isPermaLink="false">news-15</guid>
-    </item>
+
   </channel>
 </rss>
