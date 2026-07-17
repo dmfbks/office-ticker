@@ -8,65 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Six U.S. federal agencies face a July 18 deadline to finalize GENIUS Act stablecoin rules on capital, reserves, and AML compliance.</title>
+      <title>       GENIUS Act stablecoin compliance deadline reaches July 18 as OCC, FDIC, and FinCEN finalize rulebooks</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC placed three crypto rulemaking items on its July agenda covering digital asset sales, broker-dealer custody, and market structure.</title>
+      <title>       Senate CLARITY Act hearing convenes July 17 to advance SEC-CFTC digital-asset jurisdiction framework</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Visa, Mastercard, BlackRock, Coinbase, and Stripe joined 140 firms to back Open USD (OUSD), a new stablecoin launching natively on Solana.</title>
+      <title>       SEC prepares July proposal to exempt certain crypto activities from securities registration requirements</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. Senate crypto market structure bill faces floor vote delay as Democrats demand conflict-of-interest provisions before August recess.</title>
+      <title>       Morgan Stanley receives preliminary OCC approval for digital-asset trust bank covering custody and staking</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU MiCA framework entered full enforcement July 1; crypto firms without CASP authorization must halt operations across EU member states.</title>
+      <title>       UK FCA finalizes stablecoin capital requirement at 1% of issuance, below EU MiCA's 2% threshold</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Trump said Bitcoin used as payment should not be subject to capital gains tax, aligning with U.S. pro-crypto legislation.</title>
+      <title>       Bank of England sets GBP 40 billion cap on systemic sterling stablecoins, drops individual holding limit</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC plans to propose a rule in July 2026 exempting certain crypto activities from securities registration requirements.</title>
+      <title>       US and UK regulators publish joint recommendations to harmonize stablecoin and tokenized-asset rules</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs recorded $197M in net inflows for the week ending July 10, snapping an eight-week, $2B+ outflow streak.</title>
+      <title>       EU MiCA transitional period ended July 1 as European Commission opens review of framework updates</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs shed approximately $430M on July 13, with Fidelity FBTC losing $246M and BlackRock IBIT shedding $186M.</title>
+      <title>       Ostium perpetuals protocol loses $18M in oracle-manipulation attack exploiting price-feed automation</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Circle shares fell approximately 8% after Stripe, Coinbase, and BlackRock backed Open USD (OUSD), positioning it as a rival to USDC.</title>
+      <title>       JPMorgan begins accepting Bitcoin ETFs as loan collateral following GENIUS Act enactment</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       FDIC confirmed stablecoin token holders will not receive federal deposit insurance under the GENIUS Act framework.</title>
+      <title>       US regulators propose bank-equivalent AML identity verification requirements for stablecoin issuers</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       EU MiCA Transfer of Funds Regulation requires crypto service providers to collect full originator and beneficiary data on every transfer.</title>
+      <title>       Dinari and tZERO launch integrated tokenized US equities platform targeting broker-dealers</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       SEC is preparing a public comment process on new spot crypto ETF categories including prediction markets and leveraged crypto products.</title>
+      <title>       JPMorgan submits comment warning CLARITY Act timeline risks creating digital-asset market loopholes</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Polychain and Variant-backed perpetuals platform Cascade lost $1.34M in USDC on July 16 in an exploit on its pre-launch CLS vault.</title>
+      <title>       Aptos blockchain vulnerability patched after researchers found flaw risking $70B in network assets</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
     <item>
-      <title>       Security researchers disclosed a patched Aptos blockchain flaw that could have exposed $70B in assets, exploitable using a $3,000 server.</title>
+      <title>       JPMorgan raises IBIT stake to 8.3 million shares in Q1 2026 and expands Solana ETF exposure</title>
       <guid isPermaLink="false">news-15</guid>
     </item>
-
   </channel>
 </rss>
