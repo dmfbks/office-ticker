@@ -8,60 +8,65 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       US and UK release 10-point roadmap to align stablecoin and tokenized-asset oversight across the world's two largest financial markets</title>
+      <title>       Six U.S. federal agencies face a July 18 deadline to finalize GENIUS Act stablecoin rules on capital, reserves, and AML compliance.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US OCC publishes stablecoin framework under GENIUS Act ahead of July 18 implementation deadline</title>
+      <title>       SEC placed three crypto rulemaking items on its July agenda covering digital asset sales, broker-dealer custody, and market structure.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC plans to propose Regulation Crypto this month, creating exemptions from securities rules for certain digital asset activities</title>
+      <title>       Visa, Mastercard, BlackRock, Coinbase, and Stripe joined 140 firms to back Open USD (OUSD), a new stablecoin launching natively on Solana.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       US Treasury sanctions four Iran central bank crypto wallets; Tether freezes $131M in TRON-based USDT</title>
+      <title>       U.S. Senate crypto market structure bill faces floor vote delay as Democrats demand conflict-of-interest provisions before August recess.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       White House schedules senior-level meeting to resolve CLARITY Act stalemate ahead of planned Senate vote</title>
+      <title>       EU MiCA framework entered full enforcement July 1; crypto firms without CASP authorization must halt operations across EU member states.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M in oracle attack as manipulated price data triggers USDC payout from DeFi vault</title>
+      <title>       Trump said Bitcoin used as payment should not be subject to capital gains tax, aligning with U.S. pro-crypto legislation.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Morgan Stanley completes spot crypto rollout on E*Trade, giving 8.6 million customers access to BTC, ETH, and SOL</title>
+      <title>       SEC plans to propose a rule in July 2026 exempting certain crypto activities from securities registration requirements.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Australia's AML/CTF Travel Rule, live July 1, mandates identity and wallet verification for all regulated crypto transfers</title>
+      <title>       U.S. spot Bitcoin ETFs recorded $197M in net inflows for the week ending July 10, snapping an eight-week, $2B+ outflow streak.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       US spot Ether ETFs attract $96M in three days, with BlackRock's fund capturing the large majority of inflows</title>
+      <title>       U.S. spot Bitcoin ETFs shed approximately $430M on July 13, with Fidelity FBTC losing $246M and BlackRock IBIT shedding $186M.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan increased its Bitcoin ETF stake 64% to $343M in Q1 2026, per a new SEC filing</title>
+      <title>       Circle shares fell approximately 8% after Stripe, Coinbase, and BlackRock backed Open USD (OUSD), positioning it as a rival to USDC.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Stablecoin supply surged $4B after GENIUS Act enactment as banks and asset managers begin issuing dollar tokens</title>
+      <title>       FDIC confirmed stablecoin token holders will not receive federal deposit insurance under the GENIUS Act framework.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC moves to modernize 20-year-old ATS rules to allow blockchain-based securities trading by Wall Street firms</title>
+      <title>       EU MiCA Transfer of Funds Regulation requires crypto service providers to collect full originator and beneficiary data on every transfer.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Basel Committee's 1,250% risk weight for unbacked crypto assets is now active across member jurisdictions as of January 2026</title>
+      <title>       SEC is preparing a public comment process on new spot crypto ETF categories including prediction markets and leveraged crypto products.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Galaxy Digital cuts odds of CLARITY Act passing in 2026 to 50%, citing shrinking Senate calendar and unresolved policy disputes</title>
+      <title>       Polychain and Variant-backed perpetuals platform Cascade lost $1.34M in USDC on July 16 in an exploit on its pre-launch CLS vault.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
+    <item>
+      <title>       Security researchers disclosed a patched Aptos blockchain flaw that could have exposed $70B in assets, exploitable using a $3,000 server.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
+
   </channel>
 </rss>
