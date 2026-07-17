@@ -8,52 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC starts live tokenized securities trades with BlackRock, Goldman Sachs, JPMorgan, and 50+ firms; full launch set for October 2026</title>
+      <title>       US regulators face July 18 deadline to finalize GENIUS Act rules determining which stablecoin issuers may operate in the US market.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Circle receives OCC approval to establish a national digital-currency trust bank, clearing path for institutional stablecoin custody</title>
+      <title>       Senate CLARITY Act floor vote targeted for week of July 20; bill needs 60 votes and at least seven additional Democratic senators.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Six US agencies face July 18 deadline to finalize GENIUS Act stablecoin rules; no agency has published a completed framework</title>
+      <title>       US and UK published a 10-point roadmap on July 14 to align oversight of tokenized assets, stablecoins, and digital finance across both markets.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Visa launches stablecoin payment platform with 140+ participating institutions, enabling onchain settlement without custom infrastructure</title>
+      <title>       SEC plans to propose a rule in July that would exempt certain crypto activities from securities registration, easing compliance for startups.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC places three crypto rules on July 2026 agenda covering token offerings, broker-dealer custody, and alternative trading system standards</title>
+      <title>       Ostium lost an estimated $18-24 million on July 15 after an attacker manipulated oracle price feeds to trigger fraudulent DeFi payouts.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       CLARITY Act Senate vote remains uncertain after three Democrats oppose merged draft that omits demanded ethics provision</title>
+      <title>       Circle secured final OCC approval on July 10 to charter Circle National Trust, a federally regulated bank for USDC reserve management.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Ostium loses $18 million to oracle manipulation exploit as attacker submits future-dated price reports to trigger USDC payouts</title>
+      <title>       Morgan Stanley won preliminary OCC approval for a digital-asset trust bank to bring crypto custody, staking, and lending in-house.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Newest CLARITY Act draft expected within days as Senate window before August recess narrows to roughly three weeks</title>
+      <title>       OCC opened a 60-day public comment period on a proposed AML/CFT supervision framework for stablecoin issuers under the GENIUS Act.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       SEC plans rule proposal to ease crypto fundraising for startups, targeting issuance of a notice of proposed rulemaking this month</title>
+      <title>       Adjusted stablecoin transaction volume hit a record $1.79 trillion in June 2026, up 63% from May, according to Visa Onchain Analytics.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Summer.fi halts Lazy Summer vaults after flash loan attack drains $6 million from USDC yield pools</title>
+      <title>       BlackRock launched BITA, a Bitcoin income ETF that generates yield by selling call options on shares of its IBIT spot Bitcoin fund.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       White hat researchers disclose patched Aptos blockchain flaw that could have put $70 billion in digital assets at systemic risk</title>
+      <title>       BlackRock's BUIDL tokenized Treasury fund can now be posted as yield-bearing margin collateral on OKX, with Standard Chartered as custodian.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Sony receives conditional OCC approval for $40 million stablecoin trust bank to support PlayStation and entertainment payments</title>
+      <title>       MiCA's EU transition period ended July 1, requiring crypto asset service providers to hold a full licence or cease EU operations.</title>
       <guid isPermaLink="false">news-12</guid>
+    </item>
+    <item>
+      <title>       Taiwan enacted the Virtual Asset Service Act, creating a licensing and regulatory framework for stablecoin issuers and crypto platforms.</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       A patched Aptos blockchain flaw disclosed in July could have put $70 billion in digital assets at systemic risk; no funds were lost.</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
