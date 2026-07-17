@@ -8,64 +8,53 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       GENIUS Act stablecoin compliance deadline reaches July 18 as OCC, FDIC, and FinCEN finalize rulebooks</title>
+      <title>       DTCC starts live tokenized securities trades with BlackRock, Goldman Sachs, JPMorgan, and 50+ firms; full launch set for October 2026</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Senate CLARITY Act hearing convenes July 17 to advance SEC-CFTC digital-asset jurisdiction framework</title>
+      <title>       Circle receives OCC approval to establish a national digital-currency trust bank, clearing path for institutional stablecoin custody</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC prepares July proposal to exempt certain crypto activities from securities registration requirements</title>
+      <title>       Six US agencies face July 18 deadline to finalize GENIUS Act stablecoin rules; no agency has published a completed framework</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Morgan Stanley receives preliminary OCC approval for digital-asset trust bank covering custody and staking</title>
+      <title>       Visa launches stablecoin payment platform with 140+ participating institutions, enabling onchain settlement without custom infrastructure</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       UK FCA finalizes stablecoin capital requirement at 1% of issuance, below EU MiCA's 2% threshold</title>
+      <title>       SEC places three crypto rules on July 2026 agenda covering token offerings, broker-dealer custody, and alternative trading system standards</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Bank of England sets GBP 40 billion cap on systemic sterling stablecoins, drops individual holding limit</title>
+      <title>       CLARITY Act Senate vote remains uncertain after three Democrats oppose merged draft that omits demanded ethics provision</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       US and UK regulators publish joint recommendations to harmonize stablecoin and tokenized-asset rules</title>
+      <title>       Ostium loses $18 million to oracle manipulation exploit as attacker submits future-dated price reports to trigger USDC payouts</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period ended July 1 as European Commission opens review of framework updates</title>
+      <title>       Newest CLARITY Act draft expected within days as Senate window before August recess narrows to roughly three weeks</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium perpetuals protocol loses $18M in oracle-manipulation attack exploiting price-feed automation</title>
+      <title>       SEC plans rule proposal to ease crypto fundraising for startups, targeting issuance of a notice of proposed rulemaking this month</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan begins accepting Bitcoin ETFs as loan collateral following GENIUS Act enactment</title>
+      <title>       Summer.fi halts Lazy Summer vaults after flash loan attack drains $6 million from USDC yield pools</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       US regulators propose bank-equivalent AML identity verification requirements for stablecoin issuers</title>
+      <title>       White hat researchers disclose patched Aptos blockchain flaw that could have put $70 billion in digital assets at systemic risk</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Dinari and tZERO launch integrated tokenized US equities platform targeting broker-dealers</title>
+      <title>       Sony receives conditional OCC approval for $40 million stablecoin trust bank to support PlayStation and entertainment payments</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-    <item>
-      <title>       JPMorgan submits comment warning CLARITY Act timeline risks creating digital-asset market loopholes</title>
-      <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       Aptos blockchain vulnerability patched after researchers found flaw risking $70B in network assets</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       JPMorgan raises IBIT stake to 8.3 million shares in Q1 2026 and expands Solana ETF exposure</title>
-      <guid isPermaLink="false">news-15</guid>
-    </item>
+
   </channel>
 </rss>
