@@ -8,60 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC begins live trading of tokenized stocks, ETFs, and Treasuries with 50-plus Wall Street firms in July pilot ahead of October launch</title>
+      <title>       Treasury, OCC and FDIC begin GENIUS Act rulemaking setting AML and reserve compliance standards for U.S. stablecoin issuers.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US regulators face July 18 deadline to finalize GENIUS Act rules establishing the federal framework for payment stablecoins</title>
+      <title>       SEC sets July targets for crypto rulemaking covering token offerings, broker-dealer custody and digital asset trading venues.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       BNY Mellon integrates USDC custody and issuance into its digital asset platform, marking the first stablecoin on the $59T custodian</title>
+      <title>       White House schedules high-level meeting with senators to resolve CLARITY Act ethics provisions and advance market-structure bill.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       UK FCA finalizes comprehensive crypto rules for exchanges, custodians, and stablecoin issuers; new regime takes effect October 2027</title>
+      <title>       MiCA enforcement ends EU transitional period, triggering exchange cutoffs for unlicensed crypto firms across European markets.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Standard Chartered becomes first G-SIB to offer institutional clients direct USDC minting and redemption via Circle, starting in Dubai</title>
+      <title>       U.S. and UK publish 10-point joint roadmap to coordinate oversight of stablecoins, tokenized assets and cross-border digital markets.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC approves new generic listing standards for crypto exchange-traded products, cutting approval timelines from 240 days to 75 days</title>
+      <title>       UK government launches 54-firm tokenization taskforce including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Record 207 crypto exploits in H1 2026 totaled $972M stolen; North Korea-linked actors accounted for 66% of losses per TRM Labs</title>
+      <title>       DTCC moves tokenized securities into live trading with major Wall Street banks in blockchain settlement milestone.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Ill Bloom wallet flaw drains over $5M from 2,114 addresses using weak random-number generation in recovery phrase construction</title>
+      <title>       BlackRock, Goldman Sachs and JPMorgan join DTCC pilot to test tokenized stocks on blockchain settlement infrastructure.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       FATF reports 85 of 117 jurisdictions now implementing Travel Rule requirements for virtual assets, up from 65 in 2024</title>
+      <title>       Swift activates 24/7 blockchain payment infrastructure with 17 global banks across six continents.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       SEC and CFTC shift crypto enforcement focus to serious fraud and market manipulation, rolling back no-deny settlement provisions</title>
+      <title>       Morgan Stanley wins preliminary OCC approval for digital-asset trust bank to bring crypto custody and staking in-house.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       BIS annual report finds $320B stablecoin market carries structural risks similar to ETFs, with 99% of supply pegged to the US dollar</title>
+      <title>       Circle wins OCC approval to establish national trust bank for institutional digital asset custody services.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Aptos blockchain patched a critical flaw capable of putting $70B at systemic risk; vulnerability found and disclosed by ethical hackers</title>
+      <title>       Ostium loses $18 million to oracle manipulation attack, draining nearly one-third of the perpetuals exchange's $63 million TVL.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       U.S. Bank resumes crypto custody services for institutional money managers, including assets held for bitcoin ETF clients</title>
+      <title>       BIS finds $3.5 billion stablecoin inflows push down short-term U.S. Treasury yields, raising sovereign funding stability concerns.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Strategy Inc. Bitcoin Banking Adoption Index puts overall institutional bitcoin adoption at 32%; Fidelity leads at 71%, BNY Mellon at 46%</title>
+      <title>       EDX Markets raises $76 million in Series C funding led by SBI Holdings to expand institutional crypto trading operations.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
+
   </channel>
 </rss>
