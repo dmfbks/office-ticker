@@ -8,61 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Treasury, OCC and FDIC begin GENIUS Act rulemaking setting AML and reserve compliance standards for U.S. stablecoin issuers.</title>
+      <title>       GENIUS Act rulemaking deadline takes effect, requiring U.S. stablecoin issuers to meet federal reserve, audit, and AML standards.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC sets July targets for crypto rulemaking covering token offerings, broker-dealer custody and digital asset trading venues.</title>
+      <title>       Circle receives OCC approval to operate as a national trust bank, placing USDC under federal banking supervision.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       White House schedules high-level meeting with senators to resolve CLARITY Act ethics provisions and advance market-structure bill.</title>
+      <title>       U.S. and UK regulators release 10-point roadmap to align oversight of tokenized assets and stablecoins across both markets.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       MiCA enforcement ends EU transitional period, triggering exchange cutoffs for unlicensed crypto firms across European markets.</title>
+      <title>       SEC plans to issue Regulation Crypto rule in July, offering temporary registration exemptions for token developers and fundraising.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       U.S. and UK publish 10-point joint roadmap to coordinate oversight of stablecoins, tokenized assets and cross-border digital markets.</title>
+      <title>       Senate schedules CLARITY Act vote, seeking 60 votes to define SEC and CFTC jurisdictional roles over digital assets.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       UK government launches 54-firm tokenization taskforce including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley.</title>
+      <title>       DTCC launches July pilot of tokenized securities platform with full rollout set for October, backed by major Wall Street firms.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       DTCC moves tokenized securities into live trading with major Wall Street banks in blockchain settlement milestone.</title>
+      <title>       BlackRock's ether ETF captures nearly all U.S. ether ETF inflows for the week as institutional demand returns to the market.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BlackRock, Goldman Sachs and JPMorgan join DTCC pilot to test tokenized stocks on blockchain settlement infrastructure.</title>
+      <title>       JPMorgan files to launch a tokenized investment fund as Wall Street institutions accelerate on-chain asset issuance.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Swift activates 24/7 blockchain payment infrastructure with 17 global banks across six continents.</title>
+      <title>       ESMA MiCA register reaches 294 licensed CASPs, adding Ripple Payments Europe and two state-owned European banks.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Morgan Stanley wins preliminary OCC approval for digital-asset trust bank to bring crypto custody and staking in-house.</title>
+      <title>       France orders ISPs to block Polymarket under National Gambling Authority rules, citing prediction markets as illegal gambling.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Circle wins OCC approval to establish national trust bank for institutional digital asset custody services.</title>
+      <title>       Ostium perpetuals exchange loses $18M after attacker exploits oracle infrastructure to submit falsified price data on Arbitrum.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ostium loses $18 million to oracle manipulation attack, draining nearly one-third of the perpetuals exchange's $63 million TVL.</title>
+      <title>       Ethical hackers disclose patched Aptos vulnerability that could have put $70B in on-chain assets at systemic risk.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       BIS finds $3.5 billion stablecoin inflows push down short-term U.S. Treasury yields, raising sovereign funding stability concerns.</title>
+      <title>       U.S. Bitcoin strategic reserve implementation continues as federal agencies work through custody and policy logistics.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       EDX Markets raises $76 million in Series C funding led by SBI Holdings to expand institutional crypto trading operations.</title>
+      <title>       Kaspersky identifies malware framework targeting crypto investors via trojanized GitHub apps and social engineering tactics.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
   </channel>
 </rss>
