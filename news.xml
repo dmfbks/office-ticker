@@ -8,60 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Citadel Securities invests $400M in Crypto.com, valuing the exchange at $20B in its first institutional funding round.</title>
+      <title>       GENIUS Act takes effect July 18, requiring stablecoin issuers to meet federal reserve, audit, and AML standards</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. GENIUS Act stablecoin implementing rules miss July 18 deadline as core regulations remain in proposal form.</title>
+      <title>       EU MiCA final deadline strips registration from ~80% of crypto firms; only 230 of 3,000+ achieve full licensing</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. CLARITY Act market-structure bill misses July Senate vote; August 7 emerges as next critical deadline.</title>
+      <title>       BlackRock, Goldman Sachs, JPMorgan, and Morgan Stanley join UK government's 54-firm tokenization taskforce</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       White House schedules Senate meeting to resolve CLARITY Act ethics dispute ahead of August recess deadline.</title>
+      <title>       SEC plans three crypto rulemaking proposals in July covering token offerings, custody, and trading venues</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC plans Regulation Crypto proposal for July creating safe harbor exemptions for token fundraising and developers.</title>
+      <title>       Morgan Stanley receives conditional OCC approval to launch national trust bank for digital asset custody and staking</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Visa launches stablecoin platform enabling banks and fintechs to issue, manage and settle digital dollars via its network.</title>
+      <title>       CLARITY Act Senate vote approaches; passage requires seven Democratic crossover votes</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       T. Rowe Price launches the first actively managed multi-token spot crypto ETF offering diversified digital asset exposure.</title>
+      <title>       Australia's Travel Rule takes effect July 1, mandating identity verification on all regulated crypto exchange transfers</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Circle receives OCC national trust bank charter to provide digital asset custody services to institutional clients.</title>
+      <title>       OCC formally authorizes US national banks to provide digital asset custody services</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium DeFi protocol loses $18M after attacker submits manipulated oracle timestamps to trigger false payouts.</title>
+      <title>       JPMorgan prepares crypto collateral lending program following GENIUS Act passage</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       EU MiCA grandfathering ends July 1 forcing unlicensed crypto service providers to halt EU operations; revisions underway.</title>
+      <title>       Ostium loses $18M to oracle exploit on July 15 as attacker submits falsified price data to drain liquidity vault</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Australia's Travel Rule takes effect July 1 with no minimum threshold, requiring identity data on all regulated exchange transfers.</title>
+      <title>       DTCC schedules October 2026 launch for tokenized-securities platform following limited July pilot trades</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       AUSTRAC launches crypto supervision campaigns as Australia's AML/CTF licensing reforms enter full effect.</title>
+      <title>       Summer.fi halts Lazy Summer vaults after $6M flash-loan exploit on July 6</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       BIS warns stablecoin inflows have reached sovereign funding markets with a $3.5B impact on three-month T-bill yields.</title>
+      <title>       Ethical hackers patch Aptos blockchain flaw that could have put $70B in assets at systemic risk</title>
       <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       Summer.fi halts vaults after $6M flash loan exploit manipulates USDC vault accounting in the Lazy Summer Protocol.</title>
-      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
