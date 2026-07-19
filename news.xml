@@ -8,60 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       GENIUS Act rulemaking deadline takes effect, requiring U.S. stablecoin issuers to meet federal reserve, audit, and AML standards.</title>
+      <title>       Six U.S. agencies face July 18 deadline to finalize GENIUS Act stablecoin rules, clearing banks to issue stablecoins</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Circle receives OCC approval to operate as a national trust bank, placing USDC under federal banking supervision.</title>
+      <title>       CLARITY Act Senate floor vote stalls over ethics impasse; prediction market odds fall to 43% as August recess nears</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. and UK regulators release 10-point roadmap to align oversight of tokenized assets and stablecoins across both markets.</title>
+      <title>       White House convenes senior meeting with senators to resolve CLARITY Act ethics dispute ahead of potential floor vote</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC plans to issue Regulation Crypto rule in July, offering temporary registration exemptions for token developers and fundraising.</title>
+      <title>       SEC schedules three crypto rulemakings for July covering token offerings, broker-dealer custody, and trading venues</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Senate schedules CLARITY Act vote, seeking 60 votes to define SEC and CFTC jurisdictional roles over digital assets.</title>
+      <title>       DTCC completes first live tokenized securities trades with BlackRock, JPMorgan, Vanguard, and 37 other institutions</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       DTCC launches July pilot of tokenized securities platform with full rollout set for October, backed by major Wall Street firms.</title>
+      <title>       MiCA fully in force across EU: crypto-asset service providers must hold MiCA license or exit European markets</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       BlackRock's ether ETF captures nearly all U.S. ether ETF inflows for the week as institutional demand returns to the market.</title>
+      <title>       UK FCA publishes comprehensive crypto regulatory framework with internationally connected approach to digital assets</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan files to launch a tokenized investment fund as Wall Street institutions accelerate on-chain asset issuance.</title>
+      <title>       Crypto losses reach $1.3B across 344 incidents in H1 2026; North Korea-linked groups responsible for 66% of stolen funds</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       ESMA MiCA register reaches 294 licensed CASPs, adding Ripple Payments Europe and two state-owned European banks.</title>
+      <title>       Drift Protocol exploited for $286M in suspected DPRK-linked attack using operational and infrastructure flaws</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       France orders ISPs to block Polymarket under National Gambling Authority rules, citing prediction markets as illegal gambling.</title>
+      <title>       OCC confirms national banks may provide digital asset custody and settlement under standard supervisory framework</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Ostium perpetuals exchange loses $18M after attacker exploits oracle infrastructure to submit falsified price data on Arbitrum.</title>
+      <title>       SEC and CFTC jointly classify 16 crypto assets as digital commodities, resolving bitcoin-ether securities jurisdiction debate</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ethical hackers disclose patched Aptos vulnerability that could have put $70B in on-chain assets at systemic risk.</title>
+      <title>       Travel Rule enforcement active in 70+ jurisdictions as 73% of FATF-assessed countries pass digital asset legislation</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       U.S. Bitcoin strategic reserve implementation continues as federal agencies work through custody and policy logistics.</title>
+      <title>       Fidelity, State Street, and Invesco each launch stablecoin reserve funds ahead of GENIUS Act rules deadline</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Kaspersky identifies malware framework targeting crypto investors via trojanized GitHub apps and social engineering tactics.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
