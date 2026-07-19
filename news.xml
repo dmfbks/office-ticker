@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Six U.S. agencies face July 18 deadline to finalize GENIUS Act stablecoin rules, clearing banks to issue stablecoins</title>
+      <title>       Citadel Securities invests $400M in Crypto.com, valuing the exchange at $20B in its first institutional funding round.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       CLARITY Act Senate floor vote stalls over ethics impasse; prediction market odds fall to 43% as August recess nears</title>
+      <title>       U.S. GENIUS Act stablecoin implementing rules miss July 18 deadline as core regulations remain in proposal form.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       White House convenes senior meeting with senators to resolve CLARITY Act ethics dispute ahead of potential floor vote</title>
+      <title>       U.S. CLARITY Act market-structure bill misses July Senate vote; August 7 emerges as next critical deadline.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC schedules three crypto rulemakings for July covering token offerings, broker-dealer custody, and trading venues</title>
+      <title>       White House schedules Senate meeting to resolve CLARITY Act ethics dispute ahead of August recess deadline.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       DTCC completes first live tokenized securities trades with BlackRock, JPMorgan, Vanguard, and 37 other institutions</title>
+      <title>       SEC plans Regulation Crypto proposal for July creating safe harbor exemptions for token fundraising and developers.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       MiCA fully in force across EU: crypto-asset service providers must hold MiCA license or exit European markets</title>
+      <title>       Visa launches stablecoin platform enabling banks and fintechs to issue, manage and settle digital dollars via its network.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       UK FCA publishes comprehensive crypto regulatory framework with internationally connected approach to digital assets</title>
+      <title>       T. Rowe Price launches the first actively managed multi-token spot crypto ETF offering diversified digital asset exposure.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Crypto losses reach $1.3B across 344 incidents in H1 2026; North Korea-linked groups responsible for 66% of stolen funds</title>
+      <title>       Circle receives OCC national trust bank charter to provide digital asset custody services to institutional clients.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Drift Protocol exploited for $286M in suspected DPRK-linked attack using operational and infrastructure flaws</title>
+      <title>       Ostium DeFi protocol loses $18M after attacker submits manipulated oracle timestamps to trigger false payouts.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       OCC confirms national banks may provide digital asset custody and settlement under standard supervisory framework</title>
+      <title>       EU MiCA grandfathering ends July 1 forcing unlicensed crypto service providers to halt EU operations; revisions underway.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC and CFTC jointly classify 16 crypto assets as digital commodities, resolving bitcoin-ether securities jurisdiction debate</title>
+      <title>       Australia's Travel Rule takes effect July 1 with no minimum threshold, requiring identity data on all regulated exchange transfers.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Travel Rule enforcement active in 70+ jurisdictions as 73% of FATF-assessed countries pass digital asset legislation</title>
+      <title>       AUSTRAC launches crypto supervision campaigns as Australia's AML/CTF licensing reforms enter full effect.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Fidelity, State Street, and Invesco each launch stablecoin reserve funds ahead of GENIUS Act rules deadline</title>
+      <title>       BIS warns stablecoin inflows have reached sovereign funding markets with a $3.5B impact on three-month T-bill yields.</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Summer.fi halts vaults after $6M flash loan exploit manipulates USDC vault accounting in the Lazy Summer Protocol.</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
