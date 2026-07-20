@@ -8,60 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC begins live tokenized-securities trading with JPMorgan, BlackRock, Goldman Sachs and 47 other firms in July pilot</title>
+      <title>       DTCC launches tokenized stock pilot with BlackRock, Goldman Sachs, JPMorgan; commercial launch set for October 2026</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       MiCA regulation took full effect July 1, requiring all crypto firms serving EU customers to hold a license or cease operations</title>
+      <title>       UK Treasury forms tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan, Morgan Stanley, and UBS</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC plans to propose Regulation Crypto rule this month, creating safe harbor exemptions for digital asset issuers and developers</title>
+      <title>       Stripe, Coinbase, Mastercard, Visa, and BlackRock launch Open USD stablecoin alongside 140 business partners</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       OCC granted Circle conditional national trust bank charter as GENIUS Act stablecoin rules deadline passed July 18</title>
+      <title>       Six U.S. agencies miss July 18 GENIUS Act deadline for stablecoin rules; compliance window extends to January 2027</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       UK FCA published its final crypto regulatory framework, requiring digital asset firm authorization for UK market access</title>
+      <title>       Circle receives final OCC approval for national trust bank, placing USDC custody under direct federal oversight</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. Senate Clarity Act advances with White House meeting planned to resolve ethics provisions; floor vote expected week of July 20</title>
+      <title>       SEC schedules three July crypto rulemaking proposals covering token offerings, broker-dealer custody, and trading venues</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Crypto hacks totaled $1.3 billion in H1 2026; Q2 recorded 83 incidents, the most in any quarter, with North Korea linked to 66% of losses</title>
+      <title>       EU MiCA now fully in force; crypto firms serving EU customers must hold a MiCA license or cease operations</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC and CFTC signed a joint interpretation and MOU to coordinate crypto asset oversight and reduce duplicative regulatory burden</title>
+      <title>       BNY Mellon expands Circle partnership to enable institutional mint, burn, and custody of USDC on Ethereum and Solana</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       OCC, FDIC and FinCEN published proposed GENIUS Act rules requiring $5M capital floors, 1:1 reserves and two-day redemption for stablecoins</title>
+      <title>       White House convenes senators for Clarity Act talks; ethics clause blocking crypto-official profits remains key holdout</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       FATF Travel Rule activated in EU and Australia July 1; 85 of 117 jurisdictions now implementing VASP identity requirements</title>
+      <title>       U.S. Bitcoin strategic reserve holds 328,000 BTC but custody structure stalls amid Treasury-Commerce dispute</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Visa settled stablecoin payments at a $3.5 billion annualized rate as major card networks expand on-chain crypto payment integration</title>
+      <title>       Ostium loses $18M USDC to oracle-manipulation exploit on Arbitrum via fraudulent future-dated oracle reports</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       U.S. Strategic Bitcoin Reserve remains in progress as federal agencies negotiate custody and asset management frameworks</title>
+      <title>       Crypto hacks totaled $1.3 billion across 344 incidents in H1 2026; wallet compromise now the costliest attack vector</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Security researchers disclosed a vulnerability that put $70 billion in crypto assets at risk; the flaw was patched before any exploitation</title>
+      <title>       Banks race to build stablecoin custody and mint-burn infrastructure ahead of GENIUS Act compliance deadline</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Tether launched USAT, a U.S.-focused stablecoin engineered for GENIUS Act foreign-issuer compliance as Tether seeks Treasury reciprocity</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
