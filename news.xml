@@ -8,48 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       CLARITY Act misses Senate July floor vote; August 7 becomes final window before congressional recess closes crypto bill's path.</title>
+      <title>       SEC proposes Regulation Crypto in July, covering token sale exemptions, broker-dealer custody, and on-chain trading venue rules</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC advances three crypto rule proposals on token offerings, broker-dealer custody, and trading venues for July release.</title>
+      <title>       White House presses Senate to pass CLARITY Act before August 7 recess, dividing crypto oversight between SEC and CFTC</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       UK Treasury unveils tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan, and Morgan Stanley among 50-plus firms.</title>
+      <title>       SEC and CFTC issue joint interpretation classifying crypto tokens as digital commodities, collectibles, securities, or stablecoins</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Morgan Stanley launches spot bitcoin, ether, and solana trading on E*TRADE at 50bps via Zero Hash custody.</title>
+      <title>       Japan reclassifies crypto as a financial asset; tax rate on crypto income to drop from 55% to a flat 20% starting 2028</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       US government moves $288M in seized bitcoin and ether to Coinbase Prime custody.</title>
+      <title>       UK FCA releases full crypto regulatory framework, drawing early praise but leaving significant compliance questions unresolved</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BIS research finds a $3.5B stablecoin inflow cuts 3-month Treasury bill yields by up to 4 basis points within 10 days.</title>
+      <title>       EU MiCA full enforcement active from July 1; Binance exits EU market, USDT delisted from all licensed European exchanges</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Australia mandates Travel Rule identity and wallet checks on all regulated crypto exchange transfers effective July 1.</title>
+      <title>       European Commission opens MiCA revision to expand coverage to tokenized assets and stablecoins; consultation closes September 30</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       DTCC targets October 2026 launch of tokenized securities settlement platform with limited production trades beginning in July.</title>
+      <title>       MiCA Travel Rule enforced at zero-euro threshold across EEA from July 1, requiring identity data on all crypto transfers</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan warns rushed US crypto rules ahead of CLARITY Act Senate vote risk creating unintended market loopholes.</title>
+      <title>       DTCC, BlackRock, JPMorgan and Goldman Sachs complete first live tokenized stock, ETF and Treasury production trades</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Deutsche Bank to launch crypto custody service with Bitpanda in 2026, covering bitcoin and ether, pending BaFin approval.</title>
+      <title>       Goldman Sachs launches first-ever crypto ETF, a Bitcoin covered-call product targeting 15-25% annual yield</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Kraken introduces USD-settled bitcoin and ether options via request-for-quote on Kraken Pro, targeting retail derivatives access.</title>
+      <title>       Visa stablecoin settlement platform reaches $3.5B annualized volume; U.S. bank consortium advances joint stablecoin project</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
+    <item>
+      <title>       Ostium DeFi protocol loses $24M in USDC after oracle manipulation exploit on Arbitrum on July 15</title>
+      <guid isPermaLink="false">news-12</guid>
+    </item>
+    <item>
+      <title>       Wallet flaw dubbed Ill Bloom drains $5.2M from 431 wallets after attackers exploit weak recovery-phrase randomness</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Kraken launches USD-settled Bitcoin and Ethereum options contracts, expanding institutional crypto derivatives access</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+
   </channel>
 </rss>
