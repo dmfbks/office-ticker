@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC launches tokenized stock pilot with BlackRock, Goldman Sachs, JPMorgan; commercial launch set for October 2026</title>
+      <title>       Federal agencies miss GENIUS Act one-year deadline; 10 proposed stablecoin rules issued, final implementation rules still pending</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       UK Treasury forms tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan, Morgan Stanley, and UBS</title>
+      <title>       US Treasury opens second public comment round on GENIUS Act stablecoin rules as $310B market awaits final regulatory framework</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Stripe, Coinbase, Mastercard, Visa, and BlackRock launch Open USD stablecoin alongside 140 business partners</title>
+      <title>       SEC plans July proposal to exempt selected digital-asset activities from securities registration in first major crypto rulemaking</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Six U.S. agencies miss July 18 GENIUS Act deadline for stablecoin rules; compliance window extends to January 2027</title>
+      <title>       DTCC processes first live production trades in tokenized ETFs, equities and US Treasurys alongside JPMorgan and BlackRock</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Circle receives final OCC approval for national trust bank, placing USDC custody under direct federal oversight</title>
+      <title>       US and UK regulators release 10-point roadmap to align stablecoin and tokenized-asset oversight across both major financial markets</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC schedules three July crypto rulemaking proposals covering token offerings, broker-dealer custody, and trading venues</title>
+      <title>       UK FCA publishes final crypto regulatory framework permitting non-UK stablecoins and access to overseas trading venues</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       EU MiCA now fully in force; crypto firms serving EU customers must hold a MiCA license or cease operations</title>
+      <title>       US CLARITY Act Senate floor vote date set; passage depends on seven Democratic votes for digital asset market structure legislation</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BNY Mellon expands Circle partnership to enable institutional mint, burn, and custody of USDC on Ethereum and Solana</title>
+      <title>       Ostium loses $18M after attacker submits falsified future-dated oracle data to drain public liquidity vault</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       White House convenes senators for Clarity Act talks; ethics clause blocking crypto-official profits remains key holdout</title>
+      <title>       Aptos patches critical flaw that ethical hackers found could expose $70B in on-chain assets to systemic validator attack</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       U.S. Bitcoin strategic reserve holds 328,000 BTC but custody structure stalls amid Treasury-Commerce dispute</title>
+      <title>       JPMorgan raises Bitcoin ETF holdings 174% to 8.3M BlackRock IBIT shares in Q1 2026, expanding Fidelity and Bitwise positions</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M USDC to oracle-manipulation exploit on Arbitrum via fraudulent future-dated oracle reports</title>
+      <title>       Wall Street transfer agents lobby SEC warning that third-party tokenized stock tokens pose market integrity and ownership risks</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Crypto hacks totaled $1.3 billion across 344 incidents in H1 2026; wallet compromise now the costliest attack vector</title>
+      <title>       Summer.fi halts yield vaults after $6M flash loan exploit manipulates USDC vault accounting to inflate and redeem assets</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Banks race to build stablecoin custody and mint-burn infrastructure ahead of GENIUS Act compliance deadline</title>
+      <title>       Binance receives VASP license from Bank of Spain, enabling regulated crypto exchange and custody services under AML rules</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Bonzo Lend loses $9M in oracle exploit on Hedera, extending a wave of oracle-targeted DeFi attacks in July 2026</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Deutsche Bank plans to launch crypto custody accounts for institutional clients, joining post-SAB 121 banking expansion</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
