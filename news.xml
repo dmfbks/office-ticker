@@ -8,61 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes Regulation Crypto in July, covering token sale exemptions, broker-dealer custody, and on-chain trading venue rules</title>
+      <title>       DTCC begins live tokenized-securities trading with JPMorgan, BlackRock, Goldman Sachs and 47 other firms in July pilot</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       White House presses Senate to pass CLARITY Act before August 7 recess, dividing crypto oversight between SEC and CFTC</title>
+      <title>       MiCA regulation took full effect July 1, requiring all crypto firms serving EU customers to hold a license or cease operations</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC and CFTC issue joint interpretation classifying crypto tokens as digital commodities, collectibles, securities, or stablecoins</title>
+      <title>       SEC plans to propose Regulation Crypto rule this month, creating safe harbor exemptions for digital asset issuers and developers</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Japan reclassifies crypto as a financial asset; tax rate on crypto income to drop from 55% to a flat 20% starting 2028</title>
+      <title>       OCC granted Circle conditional national trust bank charter as GENIUS Act stablecoin rules deadline passed July 18</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       UK FCA releases full crypto regulatory framework, drawing early praise but leaving significant compliance questions unresolved</title>
+      <title>       UK FCA published its final crypto regulatory framework, requiring digital asset firm authorization for UK market access</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EU MiCA full enforcement active from July 1; Binance exits EU market, USDT delisted from all licensed European exchanges</title>
+      <title>       U.S. Senate Clarity Act advances with White House meeting planned to resolve ethics provisions; floor vote expected week of July 20</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       European Commission opens MiCA revision to expand coverage to tokenized assets and stablecoins; consultation closes September 30</title>
+      <title>       Crypto hacks totaled $1.3 billion in H1 2026; Q2 recorded 83 incidents, the most in any quarter, with North Korea linked to 66% of losses</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       MiCA Travel Rule enforced at zero-euro threshold across EEA from July 1, requiring identity data on all crypto transfers</title>
+      <title>       SEC and CFTC signed a joint interpretation and MOU to coordinate crypto asset oversight and reduce duplicative regulatory burden</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       DTCC, BlackRock, JPMorgan and Goldman Sachs complete first live tokenized stock, ETF and Treasury production trades</title>
+      <title>       OCC, FDIC and FinCEN published proposed GENIUS Act rules requiring $5M capital floors, 1:1 reserves and two-day redemption for stablecoins</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Goldman Sachs launches first-ever crypto ETF, a Bitcoin covered-call product targeting 15-25% annual yield</title>
+      <title>       FATF Travel Rule activated in EU and Australia July 1; 85 of 117 jurisdictions now implementing VASP identity requirements</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Visa stablecoin settlement platform reaches $3.5B annualized volume; U.S. bank consortium advances joint stablecoin project</title>
+      <title>       Visa settled stablecoin payments at a $3.5 billion annualized rate as major card networks expand on-chain crypto payment integration</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ostium DeFi protocol loses $24M in USDC after oracle manipulation exploit on Arbitrum on July 15</title>
+      <title>       U.S. Strategic Bitcoin Reserve remains in progress as federal agencies negotiate custody and asset management frameworks</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Wallet flaw dubbed Ill Bloom drains $5.2M from 431 wallets after attackers exploit weak recovery-phrase randomness</title>
+      <title>       Security researchers disclosed a vulnerability that put $70 billion in crypto assets at risk; the flaw was patched before any exploitation</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Kraken launches USD-settled Bitcoin and Ethereum options contracts, expanding institutional crypto derivatives access</title>
+      <title>       Tether launched USAT, a U.S.-focused stablecoin engineered for GENIUS Act foreign-issuer compliance as Tether seeks Treasury reciprocity</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
   </channel>
 </rss>
