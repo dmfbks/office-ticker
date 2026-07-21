@@ -8,56 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC processed first live tokenized securities trades in production, covering stocks, ETFs and US Treasurys.</title>
+      <title>       US regulators missed the July 18 GENIUS Act deadline; no final stablecoin rules published as the comment period extends to August 21.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SWIFT deployed a blockchain-based shared ledger with 17 global banks across six continents for 24/7 cross-border payments.</title>
+      <title>       MiCA's transition period ended July 1; EU crypto-asset service providers without CASP authorization now face penalties up to 15 million euros.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       UK government launched a 54-firm tokenization taskforce with BlackRock, Goldman Sachs and JPMorgan for live market pilots.</title>
+      <title>       SEC added three Regulation Crypto rulemakings to its July 2026 agenda; final rules are not expected before mid-2027.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       US and UK regulators published a 10-point roadmap to align oversight of tokenized assets, stablecoins and digital securities.</title>
+      <title>       US and UK treasuries issued a 10-point digital asset roadmap July 14, targeting tokenized securities and cross-border stablecoin activity.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       US federal regulators missed the July 18 GENIUS Act deadline for final stablecoin rules, leaving the market under interim proposals.</title>
+      <title>       UK Treasury formed a 54-firm tokenization taskforce on July 13 including BlackRock, Goldman Sachs, JPMorgan, HSBC, Fidelity, and DTCC.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC scheduled three crypto rule proposals for July covering token offerings, broker-dealer custody and digital asset trading venues.</title>
+      <title>       BNY Mellon and State Street launched digital-asset custody platforms following the rescission of SAB 121.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       MiCA's EU transitional period ended July 1, barring unauthorized crypto exchanges from onboarding new clients in the bloc.</title>
+      <title>       BlackRock and JPMorgan filed tokenized Treasury funds as eligible stablecoin reserve assets under the GENIUS Act framework.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Australia's AUSTRAC Travel Rule took effect July 1, requiring identity data on all crypto transfers regardless of amount.</title>
+      <title>       BlackRock is readying the launch of two tokenized money-market funds as demand for on-chain Treasury products grows.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       FATF warned that stablecoin misuse is rising while implementation of global virtual asset oversight standards remains well behind schedule.</title>
+      <title>       Citadel Securities led a $400 million investment in Crypto.com at a $20 billion valuation on July 16.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Ostium, a real-world-asset perpetuals exchange on Arbitrum, lost $18M after an attacker submitted falsified future-dated oracle prices.</title>
+      <title>       Spot Ethereum ETFs drew $9.3 billion in net July inflows, outpacing Bitcoin ETF flows as demand for Ethereum-based settlement increased.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       AZ-COM Maruwa, Amazon Japan's logistics partner, plans JPYC yen stablecoin payments to 2,300 truck drivers and contractors.</title>
+      <title>       US Bitcoin and Ethereum ETFs attracted $281.8 million in combined inflows, ending an eight-week, $8.26 billion outflow streak.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       JCB, Japan's largest credit card network, signed an MOU with Circle to explore stablecoin payment integration at domestic retail stores.</title>
+      <title>       On-chain real-world asset tokenization surpassed $20 billion, with BlackRock's BUIDL fund alone exceeding $2.5 billion.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Summer.fi halted Lazy Summer vaults after a $6M keeper exploit, adding to a string of oracle and automation attacks across DeFi.</title>
+      <title>       Crypto losses totaled $1.315 billion across 344 incidents in H1 2026, with 44% stemming from two infrastructure security breaches.</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       DeFi protocol Ostium paused trading after an $18 million exploit and is investigating the breach.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       The OCC published a GENIUS Act implementing proposal with a $5 million minimum capital floor for new stablecoin issuers.</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
