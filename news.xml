@@ -8,64 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Federal agencies miss GENIUS Act one-year deadline; 10 proposed stablecoin rules issued, final implementation rules still pending</title>
+      <title>       DTCC processed first live tokenized securities trades in production, covering stocks, ETFs and US Treasurys.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US Treasury opens second public comment round on GENIUS Act stablecoin rules as $310B market awaits final regulatory framework</title>
+      <title>       SWIFT deployed a blockchain-based shared ledger with 17 global banks across six continents for 24/7 cross-border payments.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC plans July proposal to exempt selected digital-asset activities from securities registration in first major crypto rulemaking</title>
+      <title>       UK government launched a 54-firm tokenization taskforce with BlackRock, Goldman Sachs and JPMorgan for live market pilots.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       DTCC processes first live production trades in tokenized ETFs, equities and US Treasurys alongside JPMorgan and BlackRock</title>
+      <title>       US and UK regulators published a 10-point roadmap to align oversight of tokenized assets, stablecoins and digital securities.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       US and UK regulators release 10-point roadmap to align stablecoin and tokenized-asset oversight across both major financial markets</title>
+      <title>       US federal regulators missed the July 18 GENIUS Act deadline for final stablecoin rules, leaving the market under interim proposals.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       UK FCA publishes final crypto regulatory framework permitting non-UK stablecoins and access to overseas trading venues</title>
+      <title>       SEC scheduled three crypto rule proposals for July covering token offerings, broker-dealer custody and digital asset trading venues.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       US CLARITY Act Senate floor vote date set; passage depends on seven Democratic votes for digital asset market structure legislation</title>
+      <title>       MiCA's EU transitional period ended July 1, barring unauthorized crypto exchanges from onboarding new clients in the bloc.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M after attacker submits falsified future-dated oracle data to drain public liquidity vault</title>
+      <title>       Australia's AUSTRAC Travel Rule took effect July 1, requiring identity data on all crypto transfers regardless of amount.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Aptos patches critical flaw that ethical hackers found could expose $70B in on-chain assets to systemic validator attack</title>
+      <title>       FATF warned that stablecoin misuse is rising while implementation of global virtual asset oversight standards remains well behind schedule.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan raises Bitcoin ETF holdings 174% to 8.3M BlackRock IBIT shares in Q1 2026, expanding Fidelity and Bitwise positions</title>
+      <title>       Ostium, a real-world-asset perpetuals exchange on Arbitrum, lost $18M after an attacker submitted falsified future-dated oracle prices.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Wall Street transfer agents lobby SEC warning that third-party tokenized stock tokens pose market integrity and ownership risks</title>
+      <title>       AZ-COM Maruwa, Amazon Japan's logistics partner, plans JPYC yen stablecoin payments to 2,300 truck drivers and contractors.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Summer.fi halts yield vaults after $6M flash loan exploit manipulates USDC vault accounting to inflate and redeem assets</title>
+      <title>       JCB, Japan's largest credit card network, signed an MOU with Circle to explore stablecoin payment integration at domestic retail stores.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Binance receives VASP license from Bank of Spain, enabling regulated crypto exchange and custody services under AML rules</title>
+      <title>       Summer.fi halted Lazy Summer vaults after a $6M keeper exploit, adding to a string of oracle and automation attacks across DeFi.</title>
       <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       Bonzo Lend loses $9M in oracle exploit on Hedera, extending a wave of oracle-targeted DeFi attacks in July 2026</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       Deutsche Bank plans to launch crypto custody accounts for institutional clients, joining post-SAB 121 banking expansion</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
