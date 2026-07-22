@@ -8,64 +8,52 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       White House agrees to CLARITY Act ethics wording, improving prospects for US crypto market structure legislation</title>
+      <title>       Revised US Digital Asset Market Clarity Act draft released July 22 with temporary ethics provision; Senate vote date not set</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US regulators miss GENIUS Act's July 18 deadline, issuing 10 proposed stablecoin rules instead of final regulations</title>
+      <title>       DTCC completed first live tokenized trades in Russell 1000 stocks, ETFs, and Treasuries on July 15 with 40+ Wall Street firms</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Tether's USDT faces a two-year compliance deadline under the GENIUS Act to retain access to US crypto platforms</title>
+      <title>       Stripe, Visa, Mastercard, Coinbase, and BlackRock backed Open USD stablecoin network with 140+ founding partners</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU revises MiCA framework after July 1 deadline; fewer than 230 of 3,000+ crypto-asset service providers hold authorization</title>
+      <title>       SEC placed three crypto rulemakings on July agenda covering token issuance, broker-dealer custody, and trading venues</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       DTCC launches pilot tokenized securities trades this month ahead of October platform rollout with 50+ institutional firms</title>
+      <title>       EU MiCA grandfathering period expired July 1; CASPs without authorization are barred from serving EU customers</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Morgan Stanley secures preliminary OCC approval for a digital-asset trust bank to bring crypto custody and staking in-house</title>
+      <title>       FDIC, OCC, and Federal Reserve issued joint risk management guidance for banks conducting crypto-asset safekeeping</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       JPMorgan files to launch a new tokenized fund as Wall Street tokenization competition accelerates</title>
+      <title>       US banking regulators rescinded prior guidance that had discouraged banks from engaging in crypto custody and services</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Q2 2026 recorded 83 crypto security incidents totaling $755 million in losses, the highest quarterly total on record</title>
+      <title>       Wanchain's Cardano-to-BNB Chain bridge lost $10M on July 21 after attacker exploited a signature reuse vulnerability</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium lost $18 million in an oracle manipulation attack that exploited its own price-feed automation system on July 15</title>
+      <title>       Ostium Protocol lost approximately $18M after attacker used a compromised price oracle to manipulate BTC/USD positions</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BIS warns fragmented stablecoin rules risk financial instability after stablecoin inflows moved three-month T-bill yields by $3.5 billion</title>
+      <title>       CFTC filed civil enforcement action against a commodity pool operator for $14M in alleged crypto-related investment fraud</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       US and UK jointly recommend aligned regulatory standards for stablecoins and tokenized assets, calling for private-sector testing</title>
+      <title>       GENIUS Act stablecoin licensing rules remain unfinished one year after the legislation was signed into law</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Australia's travel rule took effect July 1, requiring identity verification on all regulated exchange transfers regardless of amount</title>
+      <title>       DTCC tokenization service was cleared by SEC no-action letter in December 2025 enabling on-chain US equities settlement</title>
       <guid isPermaLink="false">news-12</guid>
-    </item>
-    <item>
-      <title>       EU reviewing potential removal of MiCA's ban on stablecoin interest payments as part of a broader rulebook overhaul</title>
-      <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       SEC signals readiness to begin crypto rulemaking before the Senate votes on the CLARITY Act</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       North Korea-linked actors accounted for 76% of global crypto theft losses through April 2026, up from 64% in 2025</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
