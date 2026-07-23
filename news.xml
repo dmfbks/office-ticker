@@ -8,64 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DeFi protocols lose $35M in coordinated attacks: Verus bridge $7.5M, AFX exchange $24M, B2 Network $3.9M drained within hours</title>
+      <title>       EU MiCA entered full enforcement July 1, barring unlicensed crypto firms from serving clients across all 27 EU member states</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. federal agencies miss GENIUS Act July 18 deadline to finalize stablecoin rules, leaving issuers in regulatory limbo</title>
+      <title>       JPMorgan, BlackRock, and Goldman Sachs launched limited production blockchain trades of tokenized stocks and Treasuries on DTCC's ComposerX</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       DTCC completes first live production trades of tokenized securities, covering Russell 1000 equities, ETFs, and U.S. Treasuries</title>
+      <title>       Visa, Mastercard, Stripe, and BlackRock joined 140+ firms backing Open USD, a new stablecoin that allows members to retain reserve earnings</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC to propose rules this month on token offerings, broker-dealer custody, and crypto trading venues under 2026 regulatory agenda</title>
+      <title>       Circle received OCC approval July 13 to establish a federally chartered national trust bank for USDC and digital asset custody</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU officials move to revise MiCA to extend rules to non-EU stablecoin issuers in response to U.S. GENIUS Act framework</title>
+      <title>       OCC issued a proposed rule implementing the GENIUS Act, setting federal requirements for payment stablecoin issuance by national banks</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Wanchain bridge exploit drains 290M NIGHT tokens, sending price down 43%; Cardano's Hoskinson calls for industry ZK security overhaul</title>
+      <title>       Crypto protocols lost $35M in multiple attacks on July 23, including a $7.54M Ethereum bridge drain and a $3.86M staking contract exploit</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Citadel Securities invests $400M in Crypto.com at $20B valuation; firm to expand into tokenized securities and derivatives</title>
+      <title>       SEC set July 2026 deadlines for crypto rules covering token offerings, broker-dealer custody standards, and trading venue market structure</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       U.S. and UK publish joint recommendations to align stablecoin and tokenization regulatory standards across jurisdictions</title>
+      <title>       Crypto losses from hacks reached $1.3 billion in 2026 across fewer but more targeted attacks; Q2 alone recorded $763M across 207 incidents</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Robinhood Chain mainnet launches publicly, enabling tokenized stock trading across 120-plus countries on its Layer 2 blockchain</title>
+      <title>       Wanchain's Cardano-to-BNB Chain bridge was exploited July 21 for approximately $10M, with 515 million NIGHT tokens drained from the treasury</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M to oracle manipulation attack where an exploiter submitted future-dated price reports to drain protocol vault</title>
+      <title>       Ethereum ETFs drew $9.3 billion in net inflows in July and August, accelerating institutional allocation following GENIUS Act passage</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Dinari and tZERO launch joint turnkey platform for tokenized U.S. equities, bundling issuance, custody, and settlement for broker-dealers</title>
+      <title>       SEC and CFTC signed a coordination MoU in March 2026 and jointly clarified how federal securities laws apply to digital assets</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Securitize tokenizes $295M of its own NYSE-listed stock on Solana and Avalanche on its first day as a public company</title>
+      <title>       CFTC staff guidance allows futures commission merchants and clearing organizations to accept tokenized assets as eligible collateral</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Cardano wallet platform SecondFi shuts down after software exploit drains 16.1M ADA ($2.4M) from 374 wallets</title>
+      <title>       Fidelity launched a Reserves Digital Fund at 0.18% expense ratio with a GENIUS Act mandate and a planned blockchain share class</title>
       <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       Aptos blockchain flaw disclosed by Hexens security firm could have put up to $70B in digital assets at systemic risk</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       U.S. House Financial Services Committee schedules July 17 CLARITY Act field hearing in New York as Senate floor vote remains unscheduled</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
