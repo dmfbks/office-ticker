@@ -8,57 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Circle receives final OCC approval for national trust bank charter, shifting $73B USDC into federal oversight framework</title>
+      <title>       CLARITY Act faces Aug. 10 Senate deadline as three disputes - ethics provisions, stablecoin yield rules, and oversight scope - stall a floor vote.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       OCC public comment window on GENIUS Act AML and sanctions rules for stablecoin issuers closes July 24</title>
+      <title>       Senate released an updated CLARITY Act draft July 22 adding a provision banning federal officials from issuing digital assets.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC set to propose "Regulation Crypto" rule this month creating temporary registration exemptions for select token offerings</title>
+      <title>       MiCA took effect July 1; EU exchanges delisted USDT after Tether did not seek EMT authorization, leaving Circle's USDC as the sole licensed stablecoin.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Ripple secures full MiCA CASP authorization from Luxembourg, gaining EU-wide crypto-payments license across 30 EEA countries</title>
+      <title>       EU regulators launched a MiCA stablecoin framework revision July 9 after reserve requirements concentrated the European market around a single issuer.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       UK government launches tokenization taskforce with 54 firms including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley</title>
+      <title>       GENIUS Act stablecoin law reached its July 18 one-year mark with OCC, FDIC, NCUA, Treasury, FinCEN, and OFAC under deadline to finalize implementing rules.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Tether USDT enters two-year countdown under GENIUS Act to achieve compliance or face removal from U.S. crypto platforms</title>
+      <title>       SEC scheduled three crypto rulemakings for July targeting broker-dealer capital requirements, customer asset protection, and recordkeeping standards.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       CFTC closes public comment July 27 on 24/7 trading and perpetual bitcoin futures, three months after first regulated launch on Kalshi</title>
+      <title>       California's Digital Financial Assets Law took effect July 1, requiring state licensing for all entities conducting crypto business with California residents.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Augustus raises $180M at $1B valuation for OCC-approved stablecoin clearing bank built for AI-era payments</title>
+      <title>       OKX Europe enabled direct USDT-to-USDC conversion for EU customers as exchanges adapt operations to MiCA stablecoin compliance requirements.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       U.S. spot bitcoin ETFs record five consecutive sessions of net inflows totaling more than $600M, reversing eight-week outflow streak</title>
+      <title>       FATF Travel Rule now enacted in 73% of assessed jurisdictions; the EU applies a zero-value threshold for all CASP-to-CASP transfers.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Visa, Mastercard and Ripple back x402 Foundation to standardize stablecoin payments between AI agents over HTTP</title>
+      <title>       BlackRock's IBIT held 734,762 BTC valued at $48 billion as of July 15; over 80% of US spot Bitcoin ETF assets are held through a single custodian.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       JPMorgan Kinexys and Mastercard Multi-Token Network link blockchain cross-border payments; Kinexys reports $2B daily transaction volume</title>
+      <title>       H1 2026 crypto hacks totaled $955 million across 344 incidents; wallet compromises surpassed smart contract exploits as the leading loss vector.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Digital Asset Market Clarity Act passage odds reach 43% on Polymarket after reports Trump accepted crypto ethics provision</title>
+      <title>       North Korean threat actors were linked to $643 million - 66% of all crypto stolen globally in H1 2026, per TRM Labs.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Ostium DeFi protocol loses $18M to oracle attack using manipulated future-timestamp price reports to trigger false vault payouts</title>
+      <title>       Ostium, an RWA perpetuals protocol on Arbitrum, lost $24 million in an oracle manipulation exploit on July 15.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       BonkDAO, Bonzo Lend, and Summer.fi suffered combined losses of $35 million in DeFi exploits during the week of July 7.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
   </channel>
 </rss>
