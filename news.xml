@@ -8,60 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       CLARITY Act faces Aug. 10 Senate deadline as three disputes - ethics provisions, stablecoin yield rules, and oversight scope - stall a floor vote.</title>
+      <title>       DeFi protocols lose $35M in coordinated attacks: Verus bridge $7.5M, AFX exchange $24M, B2 Network $3.9M drained within hours</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Senate released an updated CLARITY Act draft July 22 adding a provision banning federal officials from issuing digital assets.</title>
+      <title>       U.S. federal agencies miss GENIUS Act July 18 deadline to finalize stablecoin rules, leaving issuers in regulatory limbo</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       MiCA took effect July 1; EU exchanges delisted USDT after Tether did not seek EMT authorization, leaving Circle's USDC as the sole licensed stablecoin.</title>
+      <title>       DTCC completes first live production trades of tokenized securities, covering Russell 1000 equities, ETFs, and U.S. Treasuries</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU regulators launched a MiCA stablecoin framework revision July 9 after reserve requirements concentrated the European market around a single issuer.</title>
+      <title>       SEC to propose rules this month on token offerings, broker-dealer custody, and crypto trading venues under 2026 regulatory agenda</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin law reached its July 18 one-year mark with OCC, FDIC, NCUA, Treasury, FinCEN, and OFAC under deadline to finalize implementing rules.</title>
+      <title>       EU officials move to revise MiCA to extend rules to non-EU stablecoin issuers in response to U.S. GENIUS Act framework</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC scheduled three crypto rulemakings for July targeting broker-dealer capital requirements, customer asset protection, and recordkeeping standards.</title>
+      <title>       Wanchain bridge exploit drains 290M NIGHT tokens, sending price down 43%; Cardano's Hoskinson calls for industry ZK security overhaul</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       California's Digital Financial Assets Law took effect July 1, requiring state licensing for all entities conducting crypto business with California residents.</title>
+      <title>       Citadel Securities invests $400M in Crypto.com at $20B valuation; firm to expand into tokenized securities and derivatives</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       OKX Europe enabled direct USDT-to-USDC conversion for EU customers as exchanges adapt operations to MiCA stablecoin compliance requirements.</title>
+      <title>       U.S. and UK publish joint recommendations to align stablecoin and tokenization regulatory standards across jurisdictions</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       FATF Travel Rule now enacted in 73% of assessed jurisdictions; the EU applies a zero-value threshold for all CASP-to-CASP transfers.</title>
+      <title>       Robinhood Chain mainnet launches publicly, enabling tokenized stock trading across 120-plus countries on its Layer 2 blockchain</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BlackRock's IBIT held 734,762 BTC valued at $48 billion as of July 15; over 80% of US spot Bitcoin ETF assets are held through a single custodian.</title>
+      <title>       Ostium loses $18M to oracle manipulation attack where an exploiter submitted future-dated price reports to drain protocol vault</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       H1 2026 crypto hacks totaled $955 million across 344 incidents; wallet compromises surpassed smart contract exploits as the leading loss vector.</title>
+      <title>       Dinari and tZERO launch joint turnkey platform for tokenized U.S. equities, bundling issuance, custody, and settlement for broker-dealers</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       North Korean threat actors were linked to $643 million - 66% of all crypto stolen globally in H1 2026, per TRM Labs.</title>
+      <title>       Securitize tokenizes $295M of its own NYSE-listed stock on Solana and Avalanche on its first day as a public company</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Ostium, an RWA perpetuals protocol on Arbitrum, lost $24 million in an oracle manipulation exploit on July 15.</title>
+      <title>       Cardano wallet platform SecondFi shuts down after software exploit drains 16.1M ADA ($2.4M) from 374 wallets</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       BonkDAO, Bonzo Lend, and Summer.fi suffered combined losses of $35 million in DeFi exploits during the week of July 7.</title>
+      <title>       Aptos blockchain flaw disclosed by Hexens security firm could have put up to $70B in digital assets at systemic risk</title>
       <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       U.S. House Financial Services Committee schedules July 17 CLARITY Act field hearing in New York as Senate floor vote remains unscheduled</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
