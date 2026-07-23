@@ -8,52 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Revised US Digital Asset Market Clarity Act draft released July 22 with temporary ethics provision; Senate vote date not set</title>
+      <title>       Circle receives final OCC approval for national trust bank charter, shifting $73B USDC into federal oversight framework</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       DTCC completed first live tokenized trades in Russell 1000 stocks, ETFs, and Treasuries on July 15 with 40+ Wall Street firms</title>
+      <title>       OCC public comment window on GENIUS Act AML and sanctions rules for stablecoin issuers closes July 24</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Stripe, Visa, Mastercard, Coinbase, and BlackRock backed Open USD stablecoin network with 140+ founding partners</title>
+      <title>       SEC set to propose "Regulation Crypto" rule this month creating temporary registration exemptions for select token offerings</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC placed three crypto rulemakings on July agenda covering token issuance, broker-dealer custody, and trading venues</title>
+      <title>       Ripple secures full MiCA CASP authorization from Luxembourg, gaining EU-wide crypto-payments license across 30 EEA countries</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU MiCA grandfathering period expired July 1; CASPs without authorization are barred from serving EU customers</title>
+      <title>       UK government launches tokenization taskforce with 54 firms including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       FDIC, OCC, and Federal Reserve issued joint risk management guidance for banks conducting crypto-asset safekeeping</title>
+      <title>       Tether USDT enters two-year countdown under GENIUS Act to achieve compliance or face removal from U.S. crypto platforms</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       US banking regulators rescinded prior guidance that had discouraged banks from engaging in crypto custody and services</title>
+      <title>       CFTC closes public comment July 27 on 24/7 trading and perpetual bitcoin futures, three months after first regulated launch on Kalshi</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Wanchain's Cardano-to-BNB Chain bridge lost $10M on July 21 after attacker exploited a signature reuse vulnerability</title>
+      <title>       Augustus raises $180M at $1B valuation for OCC-approved stablecoin clearing bank built for AI-era payments</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium Protocol lost approximately $18M after attacker used a compromised price oracle to manipulate BTC/USD positions</title>
+      <title>       U.S. spot bitcoin ETFs record five consecutive sessions of net inflows totaling more than $600M, reversing eight-week outflow streak</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       CFTC filed civil enforcement action against a commodity pool operator for $14M in alleged crypto-related investment fraud</title>
+      <title>       Visa, Mastercard and Ripple back x402 Foundation to standardize stablecoin payments between AI agents over HTTP</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin licensing rules remain unfinished one year after the legislation was signed into law</title>
+      <title>       JPMorgan Kinexys and Mastercard Multi-Token Network link blockchain cross-border payments; Kinexys reports $2B daily transaction volume</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       DTCC tokenization service was cleared by SEC no-action letter in December 2025 enabling on-chain US equities settlement</title>
+      <title>       Digital Asset Market Clarity Act passage odds reach 43% on Polymarket after reports Trump accepted crypto ethics provision</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
+    <item>
+      <title>       Ostium DeFi protocol loses $18M to oracle attack using manipulated future-timestamp price reports to trigger false vault payouts</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+
   </channel>
 </rss>
