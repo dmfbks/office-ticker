@@ -8,64 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes rules covering crypto token offerings, broker-dealer custody, and digital asset trading venue market structure.</title>
+      <title>       SEC releases notice of proposed rulemaking on token offerings, broker-dealer crypto custody, and digital-asset trading venues.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US regulators missed the GENIUS Act July 18 stablecoin rulemaking deadline; issuers must now plan against a January 2027 enforcement date.</title>
+      <title>       Six US agencies finalize GENIUS Act stablecoin rules ahead of July 18 one-year anniversary deadline.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Five US agencies jointly propose bank-grade KYC requirements for stablecoin issuers under the GENIUS Act, covering USDC and USDT.</title>
+      <title>       MiCA transitional period closed July 1; unlicensed crypto-asset service providers are now in breach of EU law.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Crypto hackers stole $972M across a record 207 incidents in H1 2026, with cross-chain bridges accounting for $351M of losses.</title>
+      <title>       ESMA launches coordinated supervisory review of crypto custodians' digital operational resilience under MiCA and DORA.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       South Korea releases H2 digital asset plan introducing stablecoin regulation, tokenized bond pilots, and a legal basis for spot crypto ETFs.</title>
+      <title>       Bitcoin and Ethereum protocols lose $35M in three separate exploits within hours on July 23.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       AUSTRAC's crypto Travel Rule took effect July 1 in Australia, mandating sender-recipient data on all transfers with no minimum threshold.</title>
+      <title>       Wanchain-Cardano bridge exploit drains 515M NIGHT tokens worth $13M; bridge suspended pending investigation.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum-linked protocols lost $35M across multiple attacks within hours on July 23, 2026.</title>
+      <title>       Crypto hacks total $972M across 207 incidents in H1 2026; Drift Protocol suffers $295M, the largest single event.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Citi plans 2026 launch of an institutional crypto custody platform for asset managers, using a hybrid in-house and third-party model.</title>
+      <title>       Spot Ethereum ETFs attract $196M net inflows in the week to July 21; BlackRock ETHA leads all funds.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Deutsche Bank aims to launch crypto custody in 2026 in partnership with Bitpanda's technology unit and Swiss provider Taurus SA.</title>
+      <title>       Spain's Cecabank launches MiCA-licensed institutional crypto custody; Renta 4 Banco is first client.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Cecabank, a Spanish wholesale custodian, launches MiCA-licensed crypto custody with exchange Bit2Me after securing Spain's CNMV approval.</title>
+      <title>       Citadel- and Fidelity-backed EDX Markets applies for US trust bank charter to add crypto custody and principal trading.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Russia's State Duma adopts crypto exchange and custody licensing law with most provisions taking effect in September 2026.</title>
+      <title>       JPMorgan increases Bitcoin ETF exposure by 174% in Q1 2026, disclosures show.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       California's Digital Financial Assets Law took effect July 1, establishing a dedicated state-level crypto exchange licensing regime.</title>
+      <title>       OCC sets $5M minimum capital for GENIUS Act stablecoin issuers; FDIC confirms no deposit insurance for token holders.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Wanchain's Cardano-to-BNB bridge was exploited July 21 for approximately $10M in NIGHT tokens across four rapid transactions.</title>
+      <title>       California Digital Financial Assets Law adds mandatory crypto licensing regime, effective July 1, 2026.</title>
       <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       Verus Ethereum bridge lost $7.54M in a July 23 repeat exploit using the same contract vulnerability as a May attack.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       BitMEX will close September 23 after a strategic review, ending 11 years as a major crypto derivatives exchange.</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
