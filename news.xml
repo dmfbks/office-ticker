@@ -8,60 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes three crypto rules targeting token offerings, broker-dealer custody, and trading venue market structure</title>
+      <title>       Bitcoin and Ethereum-linked protocols lose $35M in three simultaneous bridge attacks on July 23</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period expires July 1, requiring all crypto-asset service providers to hold full regulatory authorization</title>
+      <title>       U.S. Senate leadership signals CLARITY Act unlikely to pass before August recess; White House disputes the forecast</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       DTCC begins production testing of tokenized stocks, ETFs and US Treasuries with BlackRock, JPMorgan and 50+ firms</title>
+      <title>       Goldman Sachs CEO David Solomon endorses CLARITY Act; JPMorgan's Dimon warns bill could disadvantage traditional banks</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Six U.S. agencies face July 18 statutory deadline to finalize GENIUS Act stablecoin rules, with no agency having done so</title>
+      <title>       Federal regulators miss GENIUS Act deadline for final stablecoin rules; statute effective date defaults to January 2027</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC and CFTC issue joint interpretation defining which crypto assets and transactions fall under federal securities law</title>
+      <title>       Tether's USDT faces 2-year compliance window under GENIUS Act before potential exclusion from U.S. crypto platforms</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       CFTC authorizes bitcoin perpetual futures on U.S.-regulated exchanges, the first formal approval for the contract class</title>
+      <title>       Ostium suffers $18M USDC loss in oracle manipulation exploit as DeFi oracle attacks continue to rise in 2026</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       AFX Trade, Verus Ethereum Bridge and B2 Network lose $35.55M in coordinated protocol attacks on July 23</title>
+      <title>       Circle receives OCC approval to operate as a U.S. national trust bank, initially providing institutional digital asset custody</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M after attacker manipulates oracle price-feed timestamps to trigger unauthorized USDC vault payouts</title>
+      <title>       EDX Markets raises $76M Series C led by SBI Holdings to expand institutional crypto trading and seek a U.S. trust charter</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Crypto hacks total $1.3B across 344 incidents in H1 2026, with wallet compromise the costliest attack vector per TRM Labs</title>
+      <title>       SEC plans to propose Regulation Crypto this month, offering temporary exemptions from securities registration for certain digital assets</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Crypto.com raises $400M from Citadel Securities, reaching a $20B valuation</title>
+      <title>       EU's MiCA regulation is fully in force; crypto firms without licenses are now barred from serving customers across all 27 member states</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs record $818M in net inflows over six consecutive trading days as of July 24</title>
+      <title>       Morgan Stanley receives preliminary OCC approval to establish a national digital asset trust bank covering custody, staking and lending</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       UK parliament opens inquiry into barriers preventing crypto firms from accessing traditional banking services</title>
+      <title>       Ethereum Institutional nonprofit launches to support banks and asset managers evaluating Ethereum for tokenization and stablecoins</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       White House backs CLARITY Act as bill awaits Senate floor vote to formally divide SEC-CFTC crypto jurisdiction</title>
+      <title>       State Street launches government money market fund to capture reserve demand from a fast-growing stablecoin market</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       BitMEX announces it will cease all exchange operations on September 23, 2026</title>
+      <title>       Crypto vault deposits reach $131B as of April 2026, up from $24B three years earlier; SEC flags securities law risk for some structures</title>
       <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       OCC closes public comment period today on GENIUS Act AML and sanctions compliance rules for stablecoin issuers</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
