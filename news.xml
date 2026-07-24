@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU MiCA entered full enforcement July 1, barring unlicensed crypto firms from serving clients across all 27 EU member states</title>
+      <title>       SEC proposes three crypto rules targeting token offerings, broker-dealer custody, and trading venue market structure</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       JPMorgan, BlackRock, and Goldman Sachs launched limited production blockchain trades of tokenized stocks and Treasuries on DTCC's ComposerX</title>
+      <title>       EU MiCA transitional period expires July 1, requiring all crypto-asset service providers to hold full regulatory authorization</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Visa, Mastercard, Stripe, and BlackRock joined 140+ firms backing Open USD, a new stablecoin that allows members to retain reserve earnings</title>
+      <title>       DTCC begins production testing of tokenized stocks, ETFs and US Treasuries with BlackRock, JPMorgan and 50+ firms</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Circle received OCC approval July 13 to establish a federally chartered national trust bank for USDC and digital asset custody</title>
+      <title>       Six U.S. agencies face July 18 statutory deadline to finalize GENIUS Act stablecoin rules, with no agency having done so</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       OCC issued a proposed rule implementing the GENIUS Act, setting federal requirements for payment stablecoin issuance by national banks</title>
+      <title>       SEC and CFTC issue joint interpretation defining which crypto assets and transactions fall under federal securities law</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Crypto protocols lost $35M in multiple attacks on July 23, including a $7.54M Ethereum bridge drain and a $3.86M staking contract exploit</title>
+      <title>       CFTC authorizes bitcoin perpetual futures on U.S.-regulated exchanges, the first formal approval for the contract class</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC set July 2026 deadlines for crypto rules covering token offerings, broker-dealer custody standards, and trading venue market structure</title>
+      <title>       AFX Trade, Verus Ethereum Bridge and B2 Network lose $35.55M in coordinated protocol attacks on July 23</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Crypto losses from hacks reached $1.3 billion in 2026 across fewer but more targeted attacks; Q2 alone recorded $763M across 207 incidents</title>
+      <title>       Ostium loses $18M after attacker manipulates oracle price-feed timestamps to trigger unauthorized USDC vault payouts</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Wanchain's Cardano-to-BNB Chain bridge was exploited July 21 for approximately $10M, with 515 million NIGHT tokens drained from the treasury</title>
+      <title>       Crypto hacks total $1.3B across 344 incidents in H1 2026, with wallet compromise the costliest attack vector per TRM Labs</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Ethereum ETFs drew $9.3 billion in net inflows in July and August, accelerating institutional allocation following GENIUS Act passage</title>
+      <title>       Crypto.com raises $400M from Citadel Securities, reaching a $20B valuation</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC and CFTC signed a coordination MoU in March 2026 and jointly clarified how federal securities laws apply to digital assets</title>
+      <title>       U.S. spot Bitcoin ETFs record $818M in net inflows over six consecutive trading days as of July 24</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       CFTC staff guidance allows futures commission merchants and clearing organizations to accept tokenized assets as eligible collateral</title>
+      <title>       UK parliament opens inquiry into barriers preventing crypto firms from accessing traditional banking services</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Fidelity launched a Reserves Digital Fund at 0.18% expense ratio with a GENIUS Act mandate and a planned blockchain share class</title>
+      <title>       White House backs CLARITY Act as bill awaits Senate floor vote to formally divide SEC-CFTC crypto jurisdiction</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       BitMEX announces it will cease all exchange operations on September 23, 2026</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
   </channel>
 </rss>
