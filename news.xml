@@ -8,56 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC releases notice of proposed rulemaking on token offerings, broker-dealer crypto custody, and digital-asset trading venues.</title>
+      <title>       Six U.S. agencies finalized GENIUS Act stablecoin rules by the July 18 deadline, setting reserve, audit, and supervisory standards.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Six US agencies finalize GENIUS Act stablecoin rules ahead of July 18 one-year anniversary deadline.</title>
+      <title>       U.S. CBDC prohibition took effect July 10, barring the Federal Reserve from issuing a retail digital dollar.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       MiCA transitional period closed July 1; unlicensed crypto-asset service providers are now in breach of EU law.</title>
+      <title>       EU MiCA enforcement is live: CASPs without authorization now face penalties of up to 15 million euros per violation.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       ESMA launches coordinated supervisory review of crypto custodians' digital operational resilience under MiCA and DORA.</title>
+      <title>       SEC placed three crypto rulemakings on its July 2026 agenda, with final rules expected no earlier than mid-2027.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum protocols lose $35M in three separate exploits within hours on July 23.</title>
+      <title>       Senate Republicans unveiled the CLARITY Act to establish a comprehensive U.S. digital asset regulatory framework.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Wanchain-Cardano bridge exploit drains 515M NIGHT tokens worth $13M; bridge suspended pending investigation.</title>
+      <title>       Three DeFi exploits on July 23 totaled $35.55 million in losses; AFX Trade lost $24 million via a cross-chain bridge flaw.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Crypto hacks total $972M across 207 incidents in H1 2026; Drift Protocol suffers $295M, the largest single event.</title>
+      <title>       BlackRock, Coinbase, and Fidelity joined a $15 million Bitcoin Security Consortium on July 23 to fund quantum-resistance research.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Spot Ethereum ETFs attract $196M net inflows in the week to July 21; BlackRock ETHA leads all funds.</title>
+      <title>       BIS warned that USD stablecoins can circumvent capital controls more effectively than foreign-currency bank deposits.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Spain's Cecabank launches MiCA-licensed institutional crypto custody; Renta 4 Banco is first client.</title>
+      <title>       Morgan Stanley filed amended S-1s for spot ether and solana ETFs on July 14, naming Coinbase as custodian at a 0.14% sponsor fee.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Citadel- and Fidelity-backed EDX Markets applies for US trust bank charter to add crypto custody and principal trading.</title>
+      <title>       U.S. spot ether ETFs attracted $196.4 million in net inflows July 14-21, breaking an eight-week withdrawal streak.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       JPMorgan increases Bitcoin ETF exposure by 174% in Q1 2026, disclosures show.</title>
+      <title>       The UK softened draft stablecoin rules but retained single-issuer caps that analysts say may limit market scale.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       OCC sets $5M minimum capital for GENIUS Act stablecoin issuers; FDIC confirms no deposit insurance for token holders.</title>
+      <title>       The SEC agreed July 22 to pay $150,000 and release internal Ethereum communications, settling a FOIA lawsuit.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       California Digital Financial Assets Law adds mandatory crypto licensing regime, effective July 1, 2026.</title>
+      <title>       Crypto hacks reached $1.3 billion in H1 2026 with attackers targeting fewer protocols but extracting larger sums per incident.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
+    <item>
+      <title>       TRON was added to the S&amp;P Pantera Digital Asset Index, expanding institutional benchmarks to additional blockchain networks.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+
   </channel>
 </rss>
