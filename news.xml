@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. Senate Majority Leader Thune signals CLARITY Act market-structure bill unlikely to clear Senate before August recess</title>
+      <title>       Goldman Sachs CEO backs U.S. Clarity Act, breaking with banking trade groups opposing stablecoin yield rules</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC advances three simultaneous crypto rule proposals covering token offerings, broker-dealer custody, and trading venues</title>
+      <title>       SEC prepares Regulation Crypto proposal to create safe harbors for startups and certain DeFi activities</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. spot bitcoin ETFs record $700M in net inflows over five consecutive trading days, longest streak since May</title>
+      <title>       U.S. and UK publish joint recommendations to align stablecoin and tokenization regulatory frameworks</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU MiCA enforcement begins: roughly 75% of previously grandfathered crypto firms lose European operating authorization</title>
+      <title>       HM Treasury launches tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum protocol bridges lose $35M in coordinated multi-attack spanning six hours on July 23</title>
+      <title>       GENIUS Act stablecoin rulebook took effect July 18, requiring issuers to meet federal licensing standards</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       GENIUS Act turns one: U.S. stablecoin market nears $310B as federal agencies finalize implementation rules</title>
+      <title>       Circle receives OCC approval for Circle National Trust, a federally supervised digital asset custody bank</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Circle receives final OCC approval to operate as a federally chartered national trust bank under U.S. supervision</title>
+      <title>       Morgan Stanley receives conditional OCC approval to establish a digital asset trust bank for custody and staking</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Updated CLARITY Act draft includes time-limited ethics clause restricting officials from issuing or holding crypto tokens</title>
+      <title>       DTCC completes first live production trades in tokenized equities, ETFs and U.S. Treasuries on blockchain</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       White House calls on Senate Democrats to accept CLARITY Act compromise on presidential crypto restrictions</title>
+      <title>       BNY targets 2027 launch of 24/7 U.S. Treasury settlement after successful after-hours test with stablecoin issuers</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       JPMorgan accepts BlackRock IBIT bitcoin ETF shares as loan collateral, factors crypto into client net worth assessments</title>
+      <title>       Augustus raises $180M at $1B valuation to build a federally chartered clearing bank for stablecoin-era payments</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       U.S. government transfers $288M in seized bitcoin and ether to Coinbase Prime custody</title>
+      <title>       Open USD stablecoin network launches with Stripe, Coinbase, Mastercard, Visa and BlackRock as founding partners</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC and CFTC open joint consultation on aligning portfolio margin rules across U.S. securities and derivatives markets</title>
+      <title>       Mastercard secures New York BitLicense to expand stablecoin and blockchain payments operations</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Tassat launches stablecoin-issuance platform targeting U.S. community banks ahead of GENIUS Act compliance deadlines</title>
+      <title>       Bitcoin- and Ethereum-linked protocols lose $35M across coordinated bridge and cross-chain attacks</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       AFX Trade loses $24M after attacker compromises bridge validator signing keys on Arbitrum</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Ostium loses $18M after attacker submits manipulated oracle timestamps to drain the protocol's vault</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
