@@ -8,57 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC completes first live tokenized stock and Treasury production trades with JPMorgan, BlackRock and Goldman Sachs.</title>
+      <title>       U.S. regulators missed the July 18 GENIUS Act deadline for final stablecoin rules; the $310B market operates under proposed frameworks.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. Senate leadership says CLARITY Act will not pass before summer recess, delaying federal digital asset market structure law.</title>
+      <title>       Senate Republicans released an updated CLARITY Act on July 22, moving the U.S. digital asset market-structure bill toward a floor vote.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. regulatory agencies miss July 18 GENIUS Act deadline for final stablecoin rules; $310 billion market faces uncertainty.</title>
+      <title>       The SEC is preparing to propose three crypto rules in July covering token-offering exemptions, broker-dealer custody, and trading venues.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU regulators move to ban 14 third-country crypto firms from serving EU clients under expanded MiCA enforcement.</title>
+      <title>       Three DeFi protocols lost a combined $35M in July 23 exploits; AFX Trade on Arbitrum drained of $24M via compromised bridge keys.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       BNY Mellon plans 24/7 blockchain settlement for U.S. Treasuries, targeting 2027 launch following stablecoin issuer test.</title>
+      <title>       Europe's MiCA compliance demands could trigger a crypto M&amp;A wave as compliant banks gain acquisition advantages over smaller players.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Full MiCA compliance costs expected to drive M&amp;A consolidation in Europe, with banks seen as primary acquirers.</title>
+      <title>       BNY plans to test tokenized U.S. Treasury settlement on a private blockchain by year-end, targeting 24/7 settlement operations by 2027.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       U.S. and U.K. regulators publish 10-point roadmap to coordinate rules for tokenized assets and cross-border stablecoins.</title>
+      <title>       Morgan Stanley received preliminary OCC approval for a digital-asset trust bank to provide custody, staking, and collateral services.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC plans to release Regulation Crypto proposal in July to exempt certain digital asset activities from securities law.</title>
+      <title>       Citigroup plans institutional bitcoin custody in 2026, enabling clients to hold bitcoin alongside traditional securities in one account.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Revised CLARITY Act text bans U.S. president, lawmakers and judges from issuing or holding crypto tokens for compensation.</title>
+      <title>       SEC Commissioner Peirce warned that DeFi vaults and onchain lending may fall under U.S. securities laws depending on their structure.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Stablecoin market reaches $310 billion on GENIUS Act first anniversary; Citi projects $4 trillion market by 2030.</title>
+      <title>       Sberbank will launch a crypto trading and custody platform by December 2026, before Russia's new crypto rules take effect in September.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum cross-chain bridges lose $35 million in six simultaneous attacks within hours on July 23.</title>
+      <title>       BlackRock amended its Coinbase custody agreement to require bitcoin withdrawals within 12 hours.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Tokenization is a strategic priority for 84% of financial institutions, according to a Broadridge survey.</title>
+      <title>       The CFTC warned prediction market firms that bulk contract submissions are insufficient and each contract must be individually evaluated.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Crypto projects lost $972 million to hacks in H1 2026 across record 207 incidents; North Korea linked to 76% of losses.</title>
+      <title>       Institutional crypto trading platform LMAX is exploring a sale or IPO with advisors Morgan Stanley and KBW.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Survey: 84% of financial institutions rank tokenization as a strategic priority and expect blockchain to reshape markets within five years.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
   </channel>
 </rss>
