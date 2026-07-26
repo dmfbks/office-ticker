@@ -8,60 +8,53 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU proposes 21st Russia sanctions package targeting a $120B crypto network and a potential ban on third-country crypto service firms.</title>
+      <title>       U.S. Senate CLARITY Act faces collapse before August recess; Galaxy Digital cuts passage odds to 30% with seven Democrats still opposed.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       MiCA EU-wide licensing deadline passed July 1 with fewer than 230 of 3,000+ registered crypto firms holding valid authorizations.</title>
+      <title>       Senate Republicans release CLARITY Act update banning officials from holding crypto tokens; ethics provision set to expire in 2029.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       GENIUS Act marks one year in force as regulators finalize implementation rules for a $310B stablecoin market.</title>
+      <title>       Three cross-chain bridges lose $35.5M in six hours: AFX Arbitrum bridge $24.2M, Verus Ethereum bridge $7.5M, B2 Network $3.9M.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC advances three July rulemakings on crypto token offerings, broker-dealer custody, and trading venue standards.</title>
+      <title>       SEC advancing three July crypto proposals covering token offerings, broker-dealer custody, and digital-asset trading venues.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Bridge protocols lose $35M across coordinated exploits in six hours: $24M drained from AFX Trade, $7.5M from the Verus ETH bridge.</title>
+      <title>       CFTC's window for 24/7 perpetual-style bitcoin futures expires July 27, three months after the first regulated product launched on Kalshi.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BNY completes first after-hours stablecoin-reserve trade and plans 24/7 settlement rails for U.S. Treasuries and tokenized equivalents.</title>
+      <title>       OCC closed its comment period July 24 on proposed GENIUS Act stablecoin reserve and custody standards, advancing the rulemaking timeline.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       UK government forms tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan, and Morgan Stanley to pilot securities settlement.</title>
+      <title>       U.S. spot bitcoin ETFs shed $465M over two sessions, reversing a five-day, $727M inflow streak amid risk-off sentiment.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Tokenization is now a strategic priority for 84% of financial institutions, with 44% of capital markets firms running live deployments.</title>
+      <title>       U.S. spot bitcoin ETFs logged five consecutive net-inflow days totaling $727M in late July, the first such streak since April.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       UK FCA launches Qualifying Cryptoasset Trading Platform regime allowing overseas exchanges to serve UK clients via licensed branches.</title>
+      <title>       One year after the GENIUS Act's enactment, the U.S. stablecoin market reaches $310B as federal stablecoin rules remain unfinished.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Ostium protocol loses $18M after attacker submits oracle reports with future-dated timestamps to trigger fraudulent keeper payouts.</title>
+      <title>       CLARITY Act stablecoin yield rules finalized in latest draft as negotiators seek bipartisan support before Congress's August recess.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       North Korea detains nationals accused of laundering money stolen from a state bank through cryptocurrency networks.</title>
+      <title>       Cardano lending platform SecondFi is shutting down after an exploit drained 16.1M ADA ($2.4M) from 374 customer wallets.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       U.S. CLARITY Act Senate floor vote remains unscheduled; prediction markets lower odds of 2026 passage to 32%.</title>
+      <title>       Balance Coin stablecoin collapsed 99% after an oracle manipulation attack drained $1M from its bitcoin vaults.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-    <item>
-      <title>       Ripple launches institutional RLUSD minting platform and adds the stablecoin to Notabene's Travel Rule compliance network.</title>
-      <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       BitMEX shuts down and faces a proposed class-action lawsuit alleging theft and insider trading.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
