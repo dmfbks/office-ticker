@@ -8,64 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       North Korea arrests hackers accused of laundering crypto proceeds stolen from state-owned bank</title>
+      <title>       EU proposes 21st Russia sanctions package targeting a $120B crypto network and a potential ban on third-country crypto service firms.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Verus bridge and B2 Network among protocols losing a combined $35M in attacks hours apart on July 23</title>
+      <title>       MiCA EU-wide licensing deadline passed July 1 with fewer than 230 of 3,000+ registered crypto firms holding valid authorizations.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       AFX Trade drained of $24M after attacker compromised Arbitrum bridge validator signing keys</title>
+      <title>       GENIUS Act marks one year in force as regulators finalize implementation rules for a $310B stablecoin market.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Wanchain bridge exploit drains 290M NIGHT tokens; Hoskinson calls for zero-knowledge security overhaul</title>
+      <title>       SEC advances three July rulemakings on crypto token offerings, broker-dealer custody, and trading venue standards.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       BNY Mellon targets 2027 for round-the-clock U.S. Treasury settlement using stablecoin reserves</title>
+      <title>       Bridge protocols lose $35M across coordinated exploits in six hours: $24M drained from AFX Trade, $7.5M from the Verus ETH bridge.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Circle secures OCC approval to operate as a federally chartered national trust bank</title>
+      <title>       BNY completes first after-hours stablecoin-reserve trade and plans 24/7 settlement rails for U.S. Treasuries and tokenized equivalents.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       CLARITY Act misses July Senate target; floor vote now contingent on August 7 procedural window</title>
+      <title>       UK government forms tokenization taskforce with BlackRock, Goldman Sachs, JPMorgan, and Morgan Stanley to pilot securities settlement.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC plans crypto capital-formation rulemaking as soon as July, before Senate votes on CLARITY Act</title>
+      <title>       Tokenization is now a strategic priority for 84% of financial institutions, with 44% of capital markets firms running live deployments.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU regulators begin formal review of MiCA stablecoin interest ban and reserve requirements</title>
+      <title>       UK FCA launches Qualifying Cryptoasset Trading Platform regime allowing overseas exchanges to serve UK clients via licensed branches.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       UK FCA publishes final crypto asset regime allowing firms to access overseas trading venues</title>
+      <title>       Ostium protocol loses $18M after attacker submits oracle reports with future-dated timestamps to trigger fraudulent keeper payouts.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       US and UK recommend common standards for tokenized asset settlement finality and stablecoin collateral use</title>
+      <title>       North Korea detains nationals accused of laundering money stolen from a state bank through cryptocurrency networks.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Global stablecoin circulation tops $300B as GENIUS Act rulemaking drives issuer compliance deadlines</title>
+      <title>       U.S. CLARITY Act Senate floor vote remains unscheduled; prediction markets lower odds of 2026 passage to 32%.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       CFTC public comment window on 24/7 crypto trading and bitcoin perpetual futures framework closes July 27</title>
+      <title>       Ripple launches institutional RLUSD minting platform and adds the stablecoin to Notabene's Travel Rule compliance network.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       OCC closes comment period on GENIUS Act rules requiring stablecoin issuers to meet AML and sanctions standards</title>
+      <title>       BitMEX shuts down and faces a proposed class-action lawsuit alleging theft and insider trading.</title>
       <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       Ostium lost $18M after attacker manipulated oracle price feeds using future-dated timestamps</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
