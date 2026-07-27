@@ -8,61 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Mastercard agrees to acquire BVNK, a stablecoin-payments infrastructure firm, for up to $1.8 billion.</title>
+      <title>       SEC advances three crypto rulemakings covering token offerings, broker-dealer custody, and market structure amendments</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Morgan Stanley receives preliminary OCC approval to launch a national trust bank for digital asset custody and staking.</title>
+      <title>       DTCC completes first tokenized-securities production trades with 40 institutions including BlackRock and JPMorgan; full launch October 2026</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       JPMorgan plans to accept Bitcoin as loan collateral following passage of the GENIUS Act.</title>
+      <title>       CFTC issues regulatory guidance approving cryptoasset perpetual futures contracts, enabling new derivatives offerings under existing rules</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. Senate moves toward Clarity Act vote within two weeks; new draft adds restrictions on officials issuing crypto tokens.</title>
+      <title>       SEC and CFTC joint interpretation classifies crypto assets into five categories, marking shift toward harmonized cross-agency oversight</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC schedules three July crypto rule proposals covering token offerings, broker-dealer custody, and digital asset trading venues.</title>
+      <title>       EU MiCA enters full enforcement for stablecoin issuers, adding compliance requirements for all firms serving EU markets as of July 1</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Japan amends financial laws to reclassify cryptocurrencies as investment assets, replacing the prior payments-focused framework.</title>
+      <title>       GENIUS Act stablecoin rules lack mutual recognition with EU MiCA, requiring issuers to seek separate compliance in each major jurisdiction</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Three DeFi bridges and cross-chain protocols lost a combined $35 million in coordinated bridge and oracle attacks on July 23.</title>
+      <title>       California DFAL enforcement live: unlicensed crypto firms face $100,000-per-day fines under new state licensing regime</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Ostium loses $18 million after attacker manipulates the protocol's own oracle infrastructure to generate false trading profits.</title>
+      <title>       AFX Bridge exploit on Arbitrum drains $24.15M in USDC, converted to ETH and consolidated in single attacker wallet</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU regulators begin rewriting MiCA after the July 1 enforcement deadline, with the stablecoin interest-yield ban under review.</title>
+      <title>       Ostium perpetuals exchange loses ~$18M to oracle manipulation exploit after attacker compromises price-oracle private key</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       DTCC opens a July pilot for a tokenized securities settlement platform built with BlackRock, Goldman Sachs, and JPMorgan.</title>
+      <title>       Two cross-chain bridges hacked in combined $31.5M loss on July 23; total July bridge exploit losses approach $100M</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       CFTC's three-month trial period for regulated 24/7 bitcoin perpetual futures ends July 27, closing the initial approval window.</title>
+      <title>       Crypto hack losses in 2026 reach $1.3B year-to-date, with H1 incidents at record count despite average losses declining per event</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ripple's crypto asset service provider license in Luxembourg is upgraded to fully MiCA-compliant status.</title>
+      <title>       BlackRock iShares Bitcoin Trust holds 734,762 BTC worth approximately $48B, the largest spot Bitcoin ETF by assets</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Europe's MiCA compliance costs are pushing smaller crypto firms toward mergers and closer bank partnerships.</title>
+      <title>       Spot Bitcoin ETF inflows total $510M over three sessions in early July, reversing a 10-day $2.73B outflow streak</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       DeFi protocol Summer.fi pauses Lazy Summer yield vaults after a $6 million exploit targeting its smart contracts.</title>
+      <title>       Citi targets 2026 launch for crypto custody service as JPMorgan and Bank of America separately explore stablecoin offerings</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
+    <item>
+      <title>       BitMart crypto exchange to shut down by January 2027, setting August 26 final trading deadline; BMX token falls 58%</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
