@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       EU 21st sanctions package bans 14 crypto platforms, creates first mechanism to bar third-country services used for Russia evasion</title>
+      <title>       Circle receives OCC approval to establish Circle National Trust, the first crypto-native federal trust bank in the U.S.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. regulators miss GENIUS Act's July 18 stablecoin rulemaking deadline; law's Jan. 2027 effective date remains unchanged</title>
+      <title>       Morgan Stanley receives preliminary OCC approval to establish a national trust bank for crypto custody and staking.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Circle wins final OCC approval to open federally supervised national trust bank for digital asset custody</title>
+      <title>       Stripe, Coinbase, BlackRock, Mastercard, and Visa launch Open USD, a new dollar-backed stablecoin network with 140+ partners.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Morgan Stanley receives preliminary OCC approval to establish digital asset trust bank for in-house crypto custody and staking</title>
+      <title>       UK HM Treasury launches tokenization taskforce of 50+ firms including BlackRock, Goldman Sachs, JPMorgan, and Morgan Stanley.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC advances three July rulemaking proposals covering crypto token offerings, broker-dealer custody, and digital asset trading venues</title>
+      <title>       SEC prepares to propose rules on token offerings, broker-dealer crypto custody, and digital asset trading venues this month.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Bitcoin- and Ethereum-linked bridge protocols lose $35M in coordinated attacks occurring within a six-hour window</title>
+      <title>       Galaxy Digital lowers CLARITY Act passage odds to 30% as Senate faces July 30 deadline to secure 60 votes before recess.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Ostium loses $18M after attacker submitted falsified future-dated oracle price data to manufacture DeFi trading profits</title>
+      <title>       Bitcoin and Ethereum-linked protocols lose $35M across multiple bridge attacks within a six-hour window.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU MiCA regulation fully in force from July 1; European Commission begins formal review including potential stablecoin interest rule changes</title>
+      <title>       U.S. federal agencies miss GENIUS Act deadline for final stablecoin rules, one year after the law's enactment.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       SEC rule requires broker-dealers to maintain crypto private keys to satisfy federal customer asset protection obligations</title>
+      <title>       EU's MiCA transitional period ended July 1; European Commission opens public consultation on framework revisions through August 31.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Robinhood Chain tokenized real-world assets surge fivefold to $70M as 12 equities each clear $500K in daily trading volume</title>
+      <title>       DTCC pilots tokenized securities trades in July with full platform launch targeting October 2026, backed by 50+ Wall Street firms.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       North Korea arrests operators accused of laundering funds stolen from a state bank through cryptocurrency networks</title>
+      <title>       Ostium DeFi protocol loses $18M in USDC after oracle manipulation attack drains its Arbitrum liquidity vault.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       New York DFS proposes stablecoin rule aligning with GENIUS Act and adding stricter reserve and liquidity requirements for issuers</title>
+      <title>       Circle faces institutional backlash after $230M in stolen USDC crossed its bridge without being frozen.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Russia's crypto intermediary licensing rules take effect Sept. 1, 2026, with full compliance requirements applying from July 2027</title>
+      <title>       EDX Markets raises $76M Series C led by SBI Holdings to expand institutional crypto trading and pursue a U.S. trust bank charter.</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Europe's MiCA compliance costs are expected to drive a wave of mergers and acquisitions across the crypto industry.</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
 
   </channel>
