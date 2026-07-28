@@ -8,60 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       US federal agencies missed the July 18 GENIUS Act deadline to finalize stablecoin licensing and issuer oversight rules.</title>
+      <title>       EU MiCA enforcement active; up to 80% of Europe's 3,000+ crypto service providers face closure without licenses</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC proposed Regulation Crypto, offering temporary registration exemptions for developers of crypto investment contracts.</title>
+      <title>       US Senate shelves CLARITY Act vote, delaying legislative framework for digital asset market structure</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       WEMIX stablecoin contract breach enabled 5.23 million unauthorized WEMIX$ tokens to be minted; bridges and pools suspended.</title>
+      <title>       Bitcoin and Ethereum-linked DeFi protocols lost $35 million across at least three attacks in a six-hour window</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       JPMorgan began accepting BlackRock iShares Bitcoin Trust shares as collateral for client loans.</title>
+      <title>       Circle receives OCC approval to operate as a federally supervised U.S. national trust bank</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum bridge protocols lost $35 million in multiple coordinated exploits within a six-hour window on July 23.</title>
+      <title>       US and UK regulators publish 10-point framework to align oversight of tokenized assets and cross-border stablecoins</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       AFX Trade lost $24.15 million after attackers compromised validator signing keys for its Arbitrum bridge.</title>
+      <title>       BNY developing 24/7 settlement infrastructure for U.S. Treasuries after successful after-hours test with stablecoin issuers</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       US CLARITY Act digital asset market-structure legislation faces a narrow Senate floor window with seven Democrats undecided.</title>
+      <title>       WEMIX$ contract breach enabled unauthorized minting of 5.23 million stablecoins; network bridges and pools suspended</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Europe MiCA compliance costs may accelerate M&A consolidation as smaller crypto firms struggle to sustain licensing.</title>
+      <title>       SEC plans to propose Regulation Crypto, offering temporary securities registration exemptions for token startups</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       UK FCA finalized crypto asset custody and stablecoin issuance rules; firms have until 2027 to achieve full compliance.</title>
+      <title>       US federal agencies missed the GENIUS Act one-year deadline for issuing final stablecoin regulations</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Australia Travel Rule implementation now requires identity data exchange for all regulated crypto transfers effective July 1.</title>
+      <title>       Securitize Capital registers as SEC-licensed investment adviser, expanding institutional access to tokenized asset strategies</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Taiwan enacted a banking law giving licensed banks first-mover advantage in stablecoin issuance under the new crypto framework.</title>
+      <title>       Visa backs Open USD stablecoin platform, intensifying competition with USDC in institutional payments</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Ostium lost $18 million after an attacker submitted manipulated future-timestamped oracle reports to exploit price-feed automation.</title>
+      <title>       Ostium lost $18 million after an attacker exploited the protocol's own oracle infrastructure with falsified price data</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       BIS research found a $3.5 billion stablecoin inflow shifts three-month US Treasury bill yields by approximately 4 basis points.</title>
+      <title>       Augustus raised $180 million at a $1 billion valuation to build a federally chartered AI-native stablecoin clearing bank</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Security researchers patched an Aptos consensus vulnerability that could have exposed up to $70 billion in cross-chain assets.</title>
+      <title>       Europe's strict MiCA compliance costs may trigger crypto industry M&amp;A, with banks positioned as likely acquirers</title>
       <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       SecondFi will shut down after attackers stole $2.4 million in ADA via a cryptographic flaw in its wallet software</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
