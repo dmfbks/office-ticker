@@ -8,64 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC advances three crypto rulemakings covering token offerings, broker-dealer custody, and market structure amendments</title>
+      <title>       US federal agencies missed the July 18 GENIUS Act deadline to finalize stablecoin licensing and issuer oversight rules.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       DTCC completes first tokenized-securities production trades with 40 institutions including BlackRock and JPMorgan; full launch October 2026</title>
+      <title>       SEC proposed Regulation Crypto, offering temporary registration exemptions for developers of crypto investment contracts.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       CFTC issues regulatory guidance approving cryptoasset perpetual futures contracts, enabling new derivatives offerings under existing rules</title>
+      <title>       WEMIX stablecoin contract breach enabled 5.23 million unauthorized WEMIX$ tokens to be minted; bridges and pools suspended.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC and CFTC joint interpretation classifies crypto assets into five categories, marking shift toward harmonized cross-agency oversight</title>
+      <title>       JPMorgan began accepting BlackRock iShares Bitcoin Trust shares as collateral for client loans.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU MiCA enters full enforcement for stablecoin issuers, adding compliance requirements for all firms serving EU markets as of July 1</title>
+      <title>       Bitcoin and Ethereum bridge protocols lost $35 million in multiple coordinated exploits within a six-hour window on July 23.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin rules lack mutual recognition with EU MiCA, requiring issuers to seek separate compliance in each major jurisdiction</title>
+      <title>       AFX Trade lost $24.15 million after attackers compromised validator signing keys for its Arbitrum bridge.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       California DFAL enforcement live: unlicensed crypto firms face $100,000-per-day fines under new state licensing regime</title>
+      <title>       US CLARITY Act digital asset market-structure legislation faces a narrow Senate floor window with seven Democrats undecided.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       AFX Bridge exploit on Arbitrum drains $24.15M in USDC, converted to ETH and consolidated in single attacker wallet</title>
+      <title>       Europe MiCA compliance costs may accelerate M&A consolidation as smaller crypto firms struggle to sustain licensing.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium perpetuals exchange loses ~$18M to oracle manipulation exploit after attacker compromises price-oracle private key</title>
+      <title>       UK FCA finalized crypto asset custody and stablecoin issuance rules; firms have until 2027 to achieve full compliance.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Two cross-chain bridges hacked in combined $31.5M loss on July 23; total July bridge exploit losses approach $100M</title>
+      <title>       Australia Travel Rule implementation now requires identity data exchange for all regulated crypto transfers effective July 1.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Crypto hack losses in 2026 reach $1.3B year-to-date, with H1 incidents at record count despite average losses declining per event</title>
+      <title>       Taiwan enacted a banking law giving licensed banks first-mover advantage in stablecoin issuance under the new crypto framework.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       BlackRock iShares Bitcoin Trust holds 734,762 BTC worth approximately $48B, the largest spot Bitcoin ETF by assets</title>
+      <title>       Ostium lost $18 million after an attacker submitted manipulated future-timestamped oracle reports to exploit price-feed automation.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Spot Bitcoin ETF inflows total $510M over three sessions in early July, reversing a 10-day $2.73B outflow streak</title>
+      <title>       BIS research found a $3.5 billion stablecoin inflow shifts three-month US Treasury bill yields by approximately 4 basis points.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Citi targets 2026 launch for crypto custody service as JPMorgan and Bank of America separately explore stablecoin offerings</title>
+      <title>       Security researchers patched an Aptos consensus vulnerability that could have exposed up to $70 billion in cross-chain assets.</title>
       <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       BitMart crypto exchange to shut down by January 2027, setting August 26 final trading deadline; BMX token falls 58%</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
