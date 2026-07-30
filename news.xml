@@ -8,56 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       US President signs GENIUS Act into law, establishing first federal stablecoin framework with reserve requirements and audit standards.</title>
+      <title>       KelpDAO cross-chain exploit drains $292M; North Korean hackers attributed to two-thirds of H1 2026 losses</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       EU MiCA grandfathering window closes July 1; only 244 crypto firms hold full CASP authorization across EU and EEA.</title>
+      <title>       Crypto hacks set H1 2026 record: 212 exploits drain $1.1B, Blockaid reports</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC sets July targets for three crypto rule proposals: token offerings, broker-dealer custody, and digital-asset market structure.</title>
+      <title>       Morgan Stanley launches spot Ethereum and Solana ETPs with staking rewards passed to investors</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       DTCC completes tokenized-securities pilot with 30+ firms including BlackRock, Goldman and JPMorgan; full platform launch set for October.</title>
+      <title>       UK plans first G7 government bond issued on distributed-ledger infrastructure by Q1 2027</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       North Korea-linked Lazarus Group steals $643M in crypto during H1 2026, accounting for 55% of all funds lost to hacks.</title>
+      <title>       US Clarity Act unlikely to clear Senate before August recess, Majority Leader signals</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Crypto industry loses $1.3B to hacks in H1 2026, on pace to surpass prior annual records, according to Chainalysis data.</title>
+      <title>       US spot Bitcoin ETFs record $526M in outflows across four consecutive sessions</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       AFX Bridge on Arbitrum drained of $24.15M in USDC on July 22; combined July DeFi bridge losses approach $100M.</title>
+      <title>       Binance exits EU market after MiCA July 1 deadline bars unlicensed crypto services</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       More than 2,000 institutions now hold spot Bitcoin ETF positions, reflecting continued TradFi onboarding 18 months after US approval.</title>
+      <title>       AFX Trade Arbitrum perpetual DEX drained for $24.15M in July 22 exploit</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Spot Bitcoin ETFs record $510M in net inflows over three days in early July, led by BlackRock IBIT at $209M.</title>
+      <title>       Bitkub exchange concealed $50M hack for five months with undisclosed founder bailout</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       FATF finds 83% of jurisdictions have enacted Travel Rule legislation but only 40% enforce it; July sweep nets 5,811 arrests.</title>
+      <title>       SEC warns crypto yield vault operators face securities exposure under DeFi enforcement</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Mastercard pilots stablecoin card settlement with Rain; Visa expands stablecoin pre-funding on Visa Direct for cross-border payouts.</title>
+      <title>       Core Scientific Q2 revenue doubles to $164.2M as AI colocation surpasses crypto mining</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Germany BaFin blocks six offshore crypto exchange domains targeting German users without MiCA authorization.</title>
+      <title>       Circle acquires 1,000 IBM patents to strengthen USDC position in global banking rails</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Survey finds 90% of financial institutions have active stablecoin initiatives following enactment of the US GENIUS Act.</title>
+      <title>       Lido proposes Ethereum upgrade that would reduce network validator count by one-third</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Global CEX spot volumes reach $1.11T in June, first monthly gain in five months</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       HKMA directs banks to achieve quantum-computing resilience by 2030</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
