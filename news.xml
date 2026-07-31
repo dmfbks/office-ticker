@@ -8,64 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard hardware wallet flaw let attacker drain 594 BTC (~$38M) from about 500 wallets in under 30 minutes on July 31.</title>
+      <title>       CLARITY Act Senate vote postponed past August recess; no floor date scheduled as lawmakers turn to nominations and sanctions</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Crypto exploits have totaled roughly $972M so far in 2026, per year-to-date industry tracking data.</title>
+      <title>       SEC places three crypto rulemakings on July agenda covering token offerings, broker-dealer custody, and digital trading venues</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Bitcoin and Ethereum-linked protocols lost $35M across multiple attacks occurring within hours on July 23.</title>
+      <title>       DTCC completes first live trades of tokenized equities, ETFs, and Treasuries with 50+ firms; full launch set for October 2026</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Arbitrum-based AFX Trade lost $24M in USDC after attackers used compromised hot-validator signatures to approve a withdrawal.</title>
+      <title>       Morgan Stanley opens E*TRADE spot crypto trading to U.S. clients, offering BTC, ETH, and SOL at 0.50% fee via Zero Hash custody</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       DeFi protocol Ostium lost $18M in USDC after an oracle attack manipulated price-feed timestamps to trigger fraudulent payouts.</title>
+      <title>       EU MiCA full compliance deadline passed July 1; crypto firms without authorization required to wind down European operations</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. federal agencies missed the July 18 GENIUS Act deadline to finalize stablecoin rules, with no binding regulations issued.</title>
+      <title>       Six U.S. agencies enter simultaneous final-rule drafting under GENIUS Act stablecoin framework with five-week reconciliation window</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC plans to propose three crypto rules in July covering token offerings, broker-dealer custody, and digital-asset trading venues.</title>
+      <title>       SEC and CFTC advance joint proposed framework to extend crypto trading venue hours to 24 hours per day</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       The Digital Asset Market CLARITY Act faces a Senate make-or-break vote before August; failure likely kills the bill for this year.</title>
+      <title>       Senate Republicans release 616-page updated Digital Asset Market Clarity Act merging committee drafts and adding ethics provisions</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       MiCA's transitional period ended July 1, forcing EU crypto-asset service providers without full licenses to halt operations.</title>
+      <title>       Bank of America confirms development of a stablecoin for institutional payment settlement, joining a growing cohort of bank-issued tokens</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Tether's USDT has a two-year countdown to gain GENIUS Act compliance before U.S. platforms must remove non-compliant stablecoins.</title>
+      <title>       July 2026 crypto exploits total $110M; AFX Trade loses $24.15M in validator key compromise, Ostium loses $23.75M in oracle attack</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       BNY Mellon's European unit joined the EU's MiCA licensed CASP register in the third post-deadline update, expanding licensed coverage.</title>
+      <title>       First-half 2026 crypto hacks reach $1.32B across 224 incidents as access-control and oracle exploits displace code vulnerabilities</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       The EU is rewriting core parts of MiCA one year after its July 1 full-compliance deadline as the framework undergoes review.</title>
+      <title>       Two cross-chain bridges hacked in a single day on July 22, resulting in combined losses of $31.5M</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Morgan Stanley received preliminary OCC approval in June to establish a national trust bank for digital-asset custody and staking.</title>
+      <title>       MiCA compliance costs pressure smaller European crypto firms; compliant banks positioned to acquire or partner with non-licensees</title>
       <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       JPMorgan began accepting Bitcoin ETF shares, including BlackRock's IBIT, as collateral for loans following GENIUS Act enactment.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       High MiCA compliance costs are expected to drive M&amp;A consolidation in the European crypto sector, benefiting licensed banks.</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
