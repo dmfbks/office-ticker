@@ -8,60 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       CLARITY Act needs Senate floor vote by Aug 10 as three disputes block the 60-vote cloture threshold required for passage.</title>
+      <title>       Coldcard Mk3 firmware flaw lets attacker sweep 594 BTC ($38M) from ~500 single-sig wallets in 25 min; Coinkite advises seed migration</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC targets July 2026 for three crypto rulemaking proposals on token offerings, broker-dealer custody, and trading venue market structure.</title>
+      <title>       SEC adds three proposed rules to 2026 agenda covering digital asset offerings, broker-dealer capital requirements, and market structure</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       OCC proposes $5 million capital floor for payment stablecoin issuers in GENIUS Act implementing rules due by July 18.</title>
+      <title>       U.S. Senate targets CLARITY Act floor vote before August recess as negotiators work to resolve stablecoin yield and DeFi disputes</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Crypto security losses hit $1.1 billion across 212 incidents in H1 2026, the highest total recorded for any six-month period.</title>
+      <title>       MiCA fully in force from July 1; CASPs serving EU clients without authorisation face administrative penalties up to EUR 15M</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Drift Protocol lost approximately $295 million in H1 2026's largest single crypto exploit.</title>
+      <title>       FTX bankruptcy estate distributes $900M to creditors in fifth payout round, covering claimants across 45 jurisdictions</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       KelpDAO suffered a $292 million loss from a cross-chain vulnerability, the second-largest single exploit of H1 2026.</title>
+      <title>       Australia's crypto Travel Rule takes effect July 1 with no minimum threshold; all regulated exchange transfers require counterparty identity data</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Morgan Stanley launched low-cost Ethereum and Solana ETFs on July 28, adding institutional equity-market access to both assets.</title>
+      <title>       South Korea confirms 22% tax on crypto gains above ~$1,740 annually effective January 2027, ending four rounds of legislative delays</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BlackRock, Coinbase, and Fidelity co-founded the Bitcoin Security Consortium with $15 million pledged for network resilience research.</title>
+      <title>       Lido begins migrating $16.5B in staked ETH to new validator architecture projected to cut Ethereum's validator count by 29%</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Stripe, Coinbase, BlackRock, Mastercard, and Visa launched Open Standard, a digital dollar stablecoin network backed by 140 firms.</title>
+      <title>       Core Scientific Q2 2026 revenue doubles to $164M as AI and HPC colocation grows to 77% of total revenue, surpassing Bitcoin mining</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       FATF's Seventh Update found 83% of surveyed jurisdictions enacted Travel Rule laws but only 40% have begun enforcement actions.</title>
+      <title>       Tether USDT handled $95B in identified commerce payments in H1 2026; Circle USDC led DeFi and trading use cases at $14B</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Australia's Travel Rule for crypto businesses took effect July 1 under AUSTRAC, requiring identity data on virtual asset transfers.</title>
+      <title>       Hong Kong Monetary Authority outlines roadmap to prepare local banks for quantum-computing threats by 2030</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       EU MiCA's July 1 compliance deadline triggered a survival shakeout among European crypto platforms and exchanges.</title>
+      <title>       Nasdaq petitions SEC to remove portfolio concentration limits on BlackRock and Fidelity spot Bitcoin ETFs</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Securitize registered as an SEC investment adviser, enabling expanded services for institutional investors in real-world asset tokenization.</title>
+      <title>       Federal Reserve holds benchmark rate at 3.5%-3.75% at July meeting with no changes to forward guidance</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       SEC Commissioner Peirce warned that on-chain protocols generating yield through asset pooling may qualify as securities under federal law.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
