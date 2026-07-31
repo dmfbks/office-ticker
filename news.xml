@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard Mk3 firmware flaw lets attacker sweep 594 BTC ($38M) from ~500 single-sig wallets in 25 min; Coinkite advises seed migration</title>
+      <title>       Coldcard hardware wallet flaw let attacker drain 594 BTC (~$38M) from about 500 wallets in under 30 minutes on July 31.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC adds three proposed rules to 2026 agenda covering digital asset offerings, broker-dealer capital requirements, and market structure</title>
+      <title>       Crypto exploits have totaled roughly $972M so far in 2026, per year-to-date industry tracking data.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. Senate targets CLARITY Act floor vote before August recess as negotiators work to resolve stablecoin yield and DeFi disputes</title>
+      <title>       Bitcoin and Ethereum-linked protocols lost $35M across multiple attacks occurring within hours on July 23.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       MiCA fully in force from July 1; CASPs serving EU clients without authorisation face administrative penalties up to EUR 15M</title>
+      <title>       Arbitrum-based AFX Trade lost $24M in USDC after attackers used compromised hot-validator signatures to approve a withdrawal.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       FTX bankruptcy estate distributes $900M to creditors in fifth payout round, covering claimants across 45 jurisdictions</title>
+      <title>       DeFi protocol Ostium lost $18M in USDC after an oracle attack manipulated price-feed timestamps to trigger fraudulent payouts.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Australia's crypto Travel Rule takes effect July 1 with no minimum threshold; all regulated exchange transfers require counterparty identity data</title>
+      <title>       U.S. federal agencies missed the July 18 GENIUS Act deadline to finalize stablecoin rules, with no binding regulations issued.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       South Korea confirms 22% tax on crypto gains above ~$1,740 annually effective January 2027, ending four rounds of legislative delays</title>
+      <title>       SEC plans to propose three crypto rules in July covering token offerings, broker-dealer custody, and digital-asset trading venues.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Lido begins migrating $16.5B in staked ETH to new validator architecture projected to cut Ethereum's validator count by 29%</title>
+      <title>       The Digital Asset Market CLARITY Act faces a Senate make-or-break vote before August; failure likely kills the bill for this year.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Core Scientific Q2 2026 revenue doubles to $164M as AI and HPC colocation grows to 77% of total revenue, surpassing Bitcoin mining</title>
+      <title>       MiCA's transitional period ended July 1, forcing EU crypto-asset service providers without full licenses to halt operations.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Tether USDT handled $95B in identified commerce payments in H1 2026; Circle USDC led DeFi and trading use cases at $14B</title>
+      <title>       Tether's USDT has a two-year countdown to gain GENIUS Act compliance before U.S. platforms must remove non-compliant stablecoins.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Hong Kong Monetary Authority outlines roadmap to prepare local banks for quantum-computing threats by 2030</title>
+      <title>       BNY Mellon's European unit joined the EU's MiCA licensed CASP register in the third post-deadline update, expanding licensed coverage.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Nasdaq petitions SEC to remove portfolio concentration limits on BlackRock and Fidelity spot Bitcoin ETFs</title>
+      <title>       The EU is rewriting core parts of MiCA one year after its July 1 full-compliance deadline as the framework undergoes review.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Federal Reserve holds benchmark rate at 3.5%-3.75% at July meeting with no changes to forward guidance</title>
+      <title>       Morgan Stanley received preliminary OCC approval in June to establish a national trust bank for digital-asset custody and staking.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       JPMorgan began accepting Bitcoin ETF shares, including BlackRock's IBIT, as collateral for loans following GENIUS Act enactment.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       High MiCA compliance costs are expected to drive M&amp;A consolidation in the European crypto sector, benefiting licensed banks.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
