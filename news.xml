@@ -8,64 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       DTCC begins live limited production trades of tokenized U.S. stocks, ETFs, and Treasuries with 50+ participating institutions</title>
+      <title>       CLARITY Act needs Senate floor vote by Aug 10 as three disputes block the 60-vote cloture threshold required for passage.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SWIFT activates live blockchain settlement ledger with 17 banks across six continents for 24/7 cross-border tokenized payments</title>
+      <title>       SEC targets July 2026 for three crypto rulemaking proposals on token offerings, broker-dealer custody, and trading venue market structure.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Circle receives final U.S. federal bank charter, becoming the first stablecoin issuer under direct federal banking supervision</title>
+      <title>       OCC proposes $5 million capital floor for payment stablecoin issuers in GENIUS Act implementing rules due by July 18.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU MiCA regulation enters full enforcement with mandatory DAC8 tax reporting for all registered crypto-asset service providers</title>
+      <title>       Crypto security losses hit $1.1 billion across 212 incidents in H1 2026, the highest total recorded for any six-month period.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin final rules published by six U.S. agencies by July 18 deadline, establishing oversight for payment stablecoins</title>
+      <title>       Drift Protocol lost approximately $295 million in H1 2026's largest single crypto exploit.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC adds three crypto rulemaking proposals to July 2026 agenda covering token offerings, broker-dealer custody, and trading venues</title>
+      <title>       KelpDAO suffered a $292 million loss from a cross-chain vulnerability, the second-largest single exploit of H1 2026.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC opens 60-day public comment on Novel ETF framework covering crypto, leveraged, and prediction-market fund structures</title>
+      <title>       Morgan Stanley launched low-cost Ethereum and Solana ETFs on July 28, adding institutional equity-market access to both assets.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Blockaid: H1 2026 crypto exploits total $1.1B across 212 incidents, with North Korea responsible for 66% of losses</title>
+      <title>       BlackRock, Coinbase, and Fidelity co-founded the Bitcoin Security Consortium with $15 million pledged for network resilience research.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       DPRK-linked actors steal over $600M in crypto through 2026 as AI agent wallets emerge as a primary new attack surface</title>
+      <title>       Stripe, Coinbase, BlackRock, Mastercard, and Visa launched Open Standard, a digital dollar stablecoin network backed by 140 firms.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       AFX Trade loses $24M in USDC after attacker compromises five cross-chain bridge validator signing keys on Arbitrum</title>
+      <title>       FATF's Seventh Update found 83% of surveyed jurisdictions enacted Travel Rule laws but only 40% have begun enforcement actions.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       July 2026 crypto hack losses reach $97M, surpassing June's $76M as cross-chain bridge infrastructure remains primary attack vector</title>
+      <title>       Australia's Travel Rule for crypto businesses took effect July 1 under AUSTRAC, requiring identity data on virtual asset transfers.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       BNY Mellon adds USDC to its institutional digital asset custody platform as the first stablecoin supported on the bank's system</title>
+      <title>       EU MiCA's July 1 compliance deadline triggered a survival shakeout among European crypto platforms and exchanges.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       BNY Mellon launches Bitcoin and Ethereum custody in Abu Dhabi with plans to expand to stablecoins and tokenized real-world assets</title>
+      <title>       Securitize registered as an SEC investment adviser, enabling expanded services for institutional investors in real-world asset tokenization.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Morgan Stanley activates live Bitcoin, Ethereum, and Solana spot trading for retail and wealth clients through E*TRADE</title>
+      <title>       SEC Commissioner Peirce warned that on-chain protocols generating yield through asset pooling may qualify as securities under federal law.</title>
       <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       Bank of America integrates digital assets leadership under FICC electronic trading to accelerate institutional crypto market build-out</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
