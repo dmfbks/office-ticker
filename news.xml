@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       U.S. Senate delays Clarity Act vote before August 8 recess, leaving crypto market-structure bill unresolved for 2026</title>
+      <title>       Coldcard hardware wallet flaw exploited to sweep 594 BTC ($38M) from roughly 500 wallets, raising questions over key-generation security.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity, Franklin Templeton and Goldman Sachs publicly endorse the Clarity Act as Senate floor time runs out</title>
+      <title>       U.S. federal agencies missed the GENIUS Act's July 18 deadline to finalize stablecoin rules; Treasury has opened a second comment round.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Coldcard firmware flaw drains 594 BTC ($38M) from around 500 single-signature wallets in under 30 minutes</title>
+      <title>       BlackRock, Fidelity, Franklin Templeton, Goldman Sachs and SoFi publicly endorsed the U.S. CLARITY Act digital-asset framework bill.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Circle secures NYDFS limited-purpose trust charter, enabling custody and fiduciary services under New York banking law</title>
+      <title>       MiCA's transitional period ended July 1, triggering USDT delistings on EU exchanges as tokenized equity volumes hit a record $11.3B.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Minnesota authorizes state-chartered banks and credit unions to offer digital asset custody services, effective August 1</title>
+      <title>       Q2 2026 set a record as crypto's most-hacked quarter with 83 incidents totaling $755M in losses, led by bridge exploits.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. ether spot ETFs drew $342M in July inflows, outpacing bitcoin ETFs' record-low $205M monthly total</title>
+      <title>       SEC and CFTC opened joint public consultation on aligning portfolio margin rules across securities and crypto derivatives markets.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       EU MiCA review consultation opens through August 31, covering stablecoin interest prohibition and reserve thresholds</title>
+      <title>       JPMorgan will accept BlackRock's IBIT Bitcoin ETF shares as eligible loan collateral, expanding institutional crypto liquidity.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       New York Attorney General sues prediction market Kalshi, alleging it operates without a state gambling license</title>
+      <title>       UK FCA proposed mandatory client-asset segregation and private-key safeguards for crypto firms under the existing CASS framework.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan advances bitcoin and ether loan collateral program, potentially unlocking $20B in institutional lending capacity</title>
+      <title>       Ostium lost $18M in an oracle-manipulation attack on July 15, extending a wave of price-feed exploits targeting DeFi protocols.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Ripple achieves full MiCA compliance for payment services across all 30 European Economic Area nations</title>
+      <title>       BIS found a $3.5B stablecoin inflow moved three-month Treasury bill yields by four basis points within 10 days.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Binance withdraws EU MiCA license application and restricts new client onboarding after July 1 transitional deadline</title>
+      <title>       SEC ordered Bloom Protocol to register its BLT token as a security or face a $31M civil penalty.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Senate ethics proposal would prohibit senior officials from holding crypto equity stakes during their term of service</title>
+      <title>       Securitize and Computershare announced a partnership enabling onchain settlement for U.S. equities, a market valued at roughly $70T.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       SEC and CFTC open joint public consultation on aligning portfolio margin rules across securities and derivatives markets</title>
+      <title>       Tether reported $1.5B operating profit in Q2 2026 and added 14 metric tons of gold and approximately 1,800 BTC to its reserves.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Kraken launched CFTC-regulated perpetual futures for U.S. clients, extending regulated crypto derivatives trading onshore.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       European regulators opened the MiCA 2.0 review consultation, beginning the first formal revision of the bloc's landmark crypto rulebook.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
