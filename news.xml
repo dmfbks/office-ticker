@@ -8,64 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard hardware wallet flaw exploited to sweep 594 BTC ($38M) from roughly 500 wallets, raising questions over key-generation security.</title>
+      <title>       Circle secures NYDFS limited-purpose trust charter to provide custody and asset-management services under New York Banking Law</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. federal agencies missed the GENIUS Act's July 18 deadline to finalize stablecoin rules; Treasury has opened a second comment round.</title>
+      <title>       US federal agencies miss one-year GENIUS Act deadline for final stablecoin rules, extending regulatory uncertainty for issuers</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity, Franklin Templeton, Goldman Sachs and SoFi publicly endorsed the U.S. CLARITY Act digital-asset framework bill.</title>
+      <title>       BlackRock, Fidelity, Franklin Templeton, Goldman Sachs, and SoFi formally back the Digital Asset Market Clarity Act</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       MiCA's transitional period ended July 1, triggering USDT delistings on EU exchanges as tokenized equity volumes hit a record $11.3B.</title>
+      <title>       European Commission opens MiCA review consultation through Aug. 31, including potential revision of stablecoin interest ban</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Q2 2026 set a record as crypto's most-hacked quarter with 83 incidents totaling $755M in losses, led by bridge exploits.</title>
+      <title>       MiCA transition deadline reduced authorized EU crypto service providers to roughly 230 firms, eliminating ~80% of registrations</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC and CFTC opened joint public consultation on aligning portfolio margin rules across securities and crypto derivatives markets.</title>
+      <title>       SEC issues no-action letter for DTC tokenization; Nasdaq approved to list tokenized securities alongside conventional shares</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       JPMorgan will accept BlackRock's IBIT Bitcoin ETF shares as eligible loan collateral, expanding institutional crypto liquidity.</title>
+      <title>       US Treasury opens second public comment round on GENIUS Act rules for stablecoin issuers</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       UK FCA proposed mandatory client-asset segregation and private-key safeguards for crypto firms under the existing CASS framework.</title>
+      <title>       Tokenized real-world assets surpass $30 billion globally, up approximately sixfold from the start of 2025</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Ostium lost $18M in an oracle-manipulation attack on July 15, extending a wave of price-feed exploits targeting DeFi protocols.</title>
+      <title>       Tokenized equity volumes rose 288% to a record $11.3 billion following the EU MiCA transitional period expiry</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BIS found a $3.5B stablecoin inflow moved three-month Treasury bill yields by four basis points within 10 days.</title>
+      <title>       Institutions accounted for a record 72% of crypto spot volume in H1 2026, up from 61% in H2 2025, per Wintermute data</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC ordered Bloom Protocol to register its BLT token as a security or face a $31M civil penalty.</title>
+      <title>       Senate shelves Digital Asset Market Clarity Act until after August recess; industry awaits upper chamber's return</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Securitize and Computershare announced a partnership enabling onchain settlement for U.S. equities, a market valued at roughly $70T.</title>
+      <title>       Augustus raises $180 million at $1 billion valuation to build a federally chartered stablecoin-era clearing bank</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Tether reported $1.5B operating profit in Q2 2026 and added 14 metric tons of gold and approximately 1,800 BTC to its reserves.</title>
+      <title>       OCC authorizes US national banks to conduct digital asset custody services without obtaining prior agency approval</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       Kraken launched CFTC-regulated perpetual futures for U.S. clients, extending regulated crypto derivatives trading onshore.</title>
+      <title>       EDX Markets closes $76 million Series C funding round led by SBI Holdings</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-    <item>
-      <title>       European regulators opened the MiCA 2.0 review consultation, beginning the first formal revision of the bloc's landmark crypto rulebook.</title>
-      <guid isPermaLink="false">news-15</guid>
-    </item>
+
   </channel>
 </rss>
