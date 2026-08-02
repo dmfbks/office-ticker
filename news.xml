@@ -8,61 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard firmware flaw let attackers reconstruct seed phrases without touching devices, draining $70M in bitcoin from 1,196 wallets.</title>
+      <title>       U.S. law prohibiting a retail Federal Reserve digital token took effect July 10 after Trump let the bill become law unsigned.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       JPMorgan warned that fading odds for the CLARITY Act weigh on the crypto market outlook, citing regulatory uncertainty for institutions.</title>
+      <title>       U.S. Treasury released GENIUS Act stablecoin implementation rules in July; non-compliant issuers face market exit pressure by September.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       EU MiCA took full effect July 1, triggering USDT delistings on European exchanges as the EU Commission opens a regulatory review.</title>
+      <title>       Binance halted new spot orders, deposits and sign-ups for EU users on July 1 after withdrawing its MiCA license application in Greece.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC set targets for crypto rules on token offerings, broker-dealer custody and trading venues ahead of Senate CLARITY Act vote.</title>
+      <title>       MiCA enforcement fully active as of July 1; approximately 200 of an estimated 1,300 operators across the EU secured licenses.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC and CFTC signed an MOU to coordinate digital asset oversight, including joint rulemakings on clearing, margin and trade data.</title>
+      <title>       SEC extended its deadline to Aug. 26 to rule on BlackRock's request to allow in-kind redemptions for its iShares Ethereum ETF (ETHA).</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. regulators proposed Bank Secrecy Act-style KYC requirements for stablecoin issuers under the GENIUS Act framework.</title>
+      <title>       SEC and CFTC jointly classified Bitcoin, Ether, XRP, and Solana as digital commodities under CFTC jurisdiction in a March interpretation.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Stripe, Coinbase, Mastercard, Visa and BlackRock launched Open Standard and a new dollar-pegged stablecoin, Open USD.</title>
+      <title>       EU regulators moved in late July to ban crypto platforms operating from jurisdictions linked to Russian sanctions evasion.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BNY began letting institutional clients custody, mint and redeem Circle's USDC through its digital asset platform.</title>
+      <title>       CFTC approved KalshiEX to list the first U.S.-regulated Bitcoin perpetual futures contract in May, opening a path for onshore crypto perps.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Augustus raised $180M at a $1B valuation to build a federally chartered clearing bank for stablecoin-era payments and settlement.</title>
+      <title>       Laser Digital received conditional U.S. national trust bank charter approval in May, as at least 15 digital asset firms seek charters.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Crypto hacks totaled $972M in H1 2026, with Q2 the most-hacked quarter on record at 83 incidents, mostly from compromised keys.</title>
+      <title>       Citi is preparing to launch crypto custody for institutional clients in 2026, allowing it to hold native bitcoin and other digital assets.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Tokenized equity volumes surged 288% to a record $11.3B in Q2 2026 as institutional demand for on-chain securities accelerated.</title>
+      <title>       EU MiCA fines have exceeded EUR 540M since enforcement began; maximum penalties reach 12.5% of annual turnover for serious violations.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       MiCA's compliance costs are expected to drive a wave of M&amp;A consolidation among European crypto firms.</title>
+      <title>       BlackRock's iShares Bitcoin Trust holds 764,395 BTC worth approximately $45B, making it the world's largest Bitcoin ETF.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       EU Commission is consulting through Aug. 31 on whether MiCA needs updating as stablecoin and tokenization growth outpaces the law.</title>
+      <title>       BlackRock's staked Ether ETF stakes 70-95% of holdings and distributes 82% of gross staking rewards monthly to investors.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       The SEC's five-year strategic plan targets accelerated tokenized capital markets and updated rules for blockchain-based securities.</title>
+      <title>       Kelp DAO lost $293M in the largest DeFi exploit of 2026 on April 19 after attackers drained funds via a smart contract vulnerability.</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
+    <item>
+      <title>       Forty crypto hacks in June 2026 resulted in $75.87M in losses; Humanity Protocol suffered the largest single incident at over $30M.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
