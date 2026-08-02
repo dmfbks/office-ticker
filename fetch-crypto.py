@@ -66,4 +66,4 @@ def main() -> None:
 if __name__ == '__main__':
     main()
 
-# last-nudged: 2026-08-02T11:21:54Z (staleness-watchdog)
+# last-nudged: 2026-08-02T13:45:03Z (staleness-watchdog)
