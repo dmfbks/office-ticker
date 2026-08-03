@@ -8,56 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard firmware flaw lets attackers reconstruct private keys; $89M drained from 4,500 wallets in three waves since July 30.</title>
+      <title>       U.S. Senate shelves Clarity Act before August recess; Galaxy Digital cuts passage odds to 30% with four legislative days remaining.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. Senate has 4 legislative days before August recess to advance CLARITY Act; passage odds fall to 30%, per Galaxy Digital.</title>
+      <title>       BlackRock, Fidelity, Goldman Sachs and Franklin Templeton publicly endorse crypto Clarity Act as Senate timeline tightens.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity and other Wall Street firms formally back the CLARITY Act in letters to U.S. Senate leadership.</title>
+      <title>       JPMorgan, Citi and UBS settle $1M in cross-border payments using tokenized bank deposits in BIS pilot, clearing in 80 seconds.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Tether posts $1.5B Q2 operating profit driven by Treasury holdings; reserve buffer falls by half to $4.1B.</title>
+      <title>       Morgan Stanley begins trading Ether and Solana ETPs, passing staking rewards to investors at a 0.14% fee.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs record $265M net outflows on July 31 as stalled crypto legislation weighs on institutional demand.</title>
+      <title>       Coldcard hardware wallet bug linked to theft of approximately 600 BTC ($38M), raising questions about self-custody security.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       FATF warns criminal networks are deploying freeze-resistant stablecoins and urges jurisdictions to accelerate AML enforcement.</title>
+      <title>       Tether's USDT faces 2-year deadline to meet GENIUS Act rules that could restrict its availability on U.S. crypto platforms.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Morgan Stanley files with the SEC for spot Bitcoin and Solana ETFs, deepening traditional finance exposure to digital assets.</title>
+      <title>       GENIUS Act stablecoin framework turns 1; regulators still finalizing issuer KYC and capital compliance standards.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BNY Mellon's Belgian subsidiary registers as a crypto-asset service provider under the EU MiCA framework.</title>
+      <title>       BNY expands USDC custody for institutional clients, enabling minting and redemption through Circle integration.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Australia's AML/CTF Travel Rule takes full effect July 1, requiring VASPs to collect and share identity data on all crypto transfers.</title>
+      <title>       SEC and CFTC open joint consultation on unified portfolio margin rules for securities and derivatives markets.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       SEC and CFTC open joint public consultation on aligning portfolio margin rules across crypto securities and derivatives markets.</title>
+      <title>       MiCA 2.0 public consultation opens as BNY Mellon's Belgian unit joins Europe's crypto service provider register.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Crypto industry records worst quarter with 83 security incidents costing $755M in Q2 2026; bridge exploits are the top attack vector.</title>
+      <title>       SEC approves options on spot Ethereum ETFs from BlackRock, Fidelity and others, expanding institutional hedging tools.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       JPMorgan launches JPM Coin deposit token on Coinbase's Base network for near-instant institutional payments.</title>
+      <title>       US and UK regulators publish joint recommendations to align stablecoin collateral rules and tokenized asset settlement standards.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       JPMorgan, Bank of America and Citi plan a shared tokenized deposit network for institutional settlement, targeting H1 2027.</title>
+      <title>       Australia's Travel Rule took effect July 1, requiring identity verification on all regulated crypto exchange transfers.</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Kraken parent expands tokenized equity offerings to Hong Kong, UK and South Korea listed stocks via GTN partnership.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       JPMorgan, Citi and Bank of America plan tokenized deposit network for cross-border settlement, targeting 2027 launch.</title>
+      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
