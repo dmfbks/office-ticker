@@ -8,61 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard hardware wallet firmware exploit reaches $88M, draining 4,585 BTC wallets via reconstructed private keys</title>
+      <title>       Coldcard firmware flaw lets attackers reconstruct private keys; $89M drained from 4,500 wallets in three waves since July 30.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC proposes Regulation Crypto package covering token offerings, safe harbor rules, and broker-dealer custody standards</title>
+      <title>       U.S. Senate has 4 legislative days before August recess to advance CLARITY Act; passage odds fall to 30%, per Galaxy Digital.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. regulators miss GENIUS Act July 18 deadline to finalize stablecoin reserve and operational rules</title>
+      <title>       BlackRock, Fidelity and other Wall Street firms formally back the CLARITY Act in letters to U.S. Senate leadership.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU launches MiCA 2.0 consultation to revise stablecoin interest ban, reserve requirements, and multi-issuer token rules</title>
+      <title>       Tether posts $1.5B Q2 operating profit driven by Treasury holdings; reserve buffer falls by half to $4.1B.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Standard Chartered to complete full acquisition of its crypto custody unit by end of August 2026</title>
+      <title>       U.S. spot Bitcoin ETFs record $265M net outflows on July 31 as stalled crypto legislation weighs on institutional demand.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EU expands Travel Rule to cover crypto asset service providers in updated anti-money laundering framework</title>
+      <title>       FATF warns criminal networks are deploying freeze-resistant stablecoins and urges jurisdictions to accelerate AML enforcement.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Circle freezes accounts after $230M in stolen USDC routes through its cross-chain bridge</title>
+      <title>       Morgan Stanley files with the SEC for spot Bitcoin and Solana ETFs, deepening traditional finance exposure to digital assets.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC clarifies custody and trading framework for broker-dealers handling tokenized stocks and bonds</title>
+      <title>       BNY Mellon's Belgian subsidiary registers as a crypto-asset service provider under the EU MiCA framework.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       JPMorgan opens crypto collateral lending program for bank clients following GENIUS Act enactment</title>
+      <title>       Australia's AML/CTF Travel Rule takes full effect July 1, requiring VASPs to collect and share identity data on all crypto transfers.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Kelp DAO hacker launders approximately $220M following $293M DeFi protocol exploit</title>
+      <title>       SEC and CFTC open joint public consultation on aligning portfolio margin rules across crypto securities and derivatives markets.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Securitize and Computershare partner to enable on-chain settlement for $70 trillion U.S. equity market</title>
+      <title>       Crypto industry records worst quarter with 83 security incidents costing $755M in Q2 2026; bridge exploits are the top attack vector.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Deutsche Bank to launch institutional crypto custody service in 2026 via Bitpanda technology partnership</title>
+      <title>       JPMorgan launches JPM Coin deposit token on Coinbase's Base network for near-instant institutional payments.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Tether's USDT faces 2-year deadline to meet GENIUS Act reserve requirements or exit U.S. platforms</title>
+      <title>       JPMorgan, Bank of America and Citi plan a shared tokenized deposit network for institutional settlement, targeting H1 2027.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Tracked crypto hack losses reach $972M in 2026, led by Ethereum and Solana protocol exploits</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
-
   </channel>
 </rss>
