@@ -8,60 +8,53 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard firmware flaw from 2021 enables $89M in Bitcoin losses across 4,500 addresses in four successive attack waves.</title>
+      <title>       Coldcard hardware wallet exploit nears $114 million as attackers drain 4,585 Bitcoin addresses across five days of attacks</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC suspends Nasdaq bitcoin options approval as CME challenges whether CFTC holds exclusive jurisdiction over commodity-linked contracts.</title>
+      <title>       BlackRock launches tokenized access to $311 billion in money market funds in Europe via JPMorgan's Kinexys platform</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       US and UK recommend aligning stablecoin and tokenized-asset regulations ahead of their respective 2027 framework effective dates.</title>
+      <title>       U.S. Senate shelves Digital Asset Market Clarity Act before August recess; passage odds fall to 27% on prediction markets</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity, Goldman Sachs and Franklin Templeton publicly back the US Clarity Act crypto market structure bill.</title>
+      <title>       Stripe, Coinbase, BlackRock, Visa and Mastercard launch Open USD stablecoin network with over 140 founding partners</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC and CFTC open joint consultation on aligning portfolio margin rules across securities and derivatives markets.</title>
+      <title>       CME challenge stays Nasdaq's Bitcoin index options launch as SEC reopens cryptocurrency jurisdiction dispute with CFTC</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EU regulators open MiCA 2.0 consultation to revise the bloc's crypto framework, with public input accepted through September.</title>
+      <title>       UK FCA finalizes stablecoin regime at 1% capital buffer, opens licensing applications September 30 ahead of 2027 rollout</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       BNY Mellon launches institutional USDC custody and minting services, allowing clients to manage stablecoins alongside traditional assets.</title>
+      <title>       South Korea's KB Kookmin Bank deploys JPMorgan Kinexys blockchain for cross-border payments across 10 countries</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan plans to offer spot crypto trading for clients while using third-party custodians rather than holding digital assets itself.</title>
+      <title>       JPMorgan tokenizes private equity fund on Kinexys blockchain for high-net-worth clients in latest tokenization push</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Deutsche Bank prepares to launch institutional crypto custody accounts integrating digital assets with standard securities safekeeping.</title>
+      <title>       BlackRock, Fidelity, Goldman Sachs and Franklin Templeton publicly endorse U.S. Digital Asset Market Clarity Act</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Citigroup is on track to launch institutional bitcoin custody in 2026, offering a single account combining bitcoin, securities and cash.</title>
+      <title>       Crypto exploits hit $972 million year-to-date as Coldcard hardware attack and DeFi oracle exploits account for bulk of losses</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC orders Bloom Protocol to register its BLT token as a security within 30 days or pay a $31M civil penalty.</title>
+      <title>       UK FCA rules that any crypto custodian holding client assets beyond 24 hours must obtain a full safeguarding license</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Binance's UK subsidiary voluntarily withdraws its FCA cryptoasset registration, extending a pattern of large exchange European exits.</title>
+      <title>       Europe's MiCA compliance costs expected to trigger a new wave of crypto industry mergers and consolidation through 2027</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-    <item>
-      <title>       Ostium perpetuals protocol loses $18M to an oracle price manipulation attack, the latest in an ongoing wave targeting DeFi infrastructure.</title>
-      <guid isPermaLink="false">news-13</guid>
-    </item>
-    <item>
-      <title>       SEC opens comment period on overhauling US ETF listing rules, potentially lowering the bar for novel and crypto-linked fund approvals.</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
