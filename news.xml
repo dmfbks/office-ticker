@@ -8,53 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard hardware wallet exploit nears $114 million as attackers drain 4,585 Bitcoin addresses across five days of attacks</title>
+      <title>       Coldcard firmware exploit drains $130M+ in bitcoin from ~5,000 hardware wallets; multiple threat actors targeting unpatched devices</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       BlackRock launches tokenized access to $311 billion in money market funds in Europe via JPMorgan's Kinexys platform</title>
+      <title>       BlackRock purchased $111M in BTC via IBIT on Aug. 3 as U.S. spot bitcoin ETFs resumed net buying after weeks of outflows</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. Senate shelves Digital Asset Market Clarity Act before August recess; passage odds fall to 27% on prediction markets</title>
+      <title>       Ethereum ETFs attracted $3.87B in August, the first month ether ETF inflows surpassed bitcoin ETF inflows of roughly $750M</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Stripe, Coinbase, BlackRock, Visa and Mastercard launch Open USD stablecoin network with over 140 founding partners</title>
+      <title>       GENIUS Act stablecoin framework took effect July 18; OCC rules mandate 1:1 liquid USD reserves and two-day redemption for issuers</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       CME challenge stays Nasdaq's Bitcoin index options launch as SEC reopens cryptocurrency jurisdiction dispute with CFTC</title>
+      <title>       EU MiCA transitional period expired July 1; unauthorised crypto asset service providers barred from offering services to EU clients</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       UK FCA finalizes stablecoin regime at 1% capital buffer, opens licensing applications September 30 ahead of 2027 rollout</title>
+      <title>       U.S. Treasury proposed GENIUS Act AML rules designating permitted stablecoin issuers as financial institutions under the Bank Secrecy Act</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       South Korea's KB Kookmin Bank deploys JPMorgan Kinexys blockchain for cross-border payments across 10 countries</title>
+      <title>       FATF Travel Rule is enacted in 85 of 117 jurisdictions, with 2026 supervisory focus on stablecoins and unhosted wallets</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan tokenizes private equity fund on Kinexys blockchain for high-net-worth clients in latest tokenization push</title>
+      <title>       Morgan Stanley launched MSBT on NYSE Arca as the first bank-issued spot bitcoin ETF, charging 0.14%, undercutting BlackRock IBIT</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity, Goldman Sachs and Franklin Templeton publicly endorse U.S. Digital Asset Market Clarity Act</title>
+      <title>       Citi targeting 2026 launch of institutional bitcoin and Ethereum custody, combining in-house infrastructure and third-party key management</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Crypto exploits hit $972 million year-to-date as Coldcard hardware attack and DeFi oracle exploits account for bulk of losses</title>
+      <title>       OCC granted national trust bank charters to Circle, Paxos, and three other nonbank stablecoin issuers in December 2025</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       UK FCA rules that any crypto custodian holding client assets beyond 24 hours must obtain a full safeguarding license</title>
+      <title>       JPMorgan Kinexys tokenized collateral and payments platform processed $5B in daily transactions across five continents</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Europe's MiCA compliance costs expected to trigger a new wave of crypto industry mergers and consolidation through 2027</title>
+      <title>       Crypto hacks reached $1.3B across 276 incidents through mid-2026; Coldcard exploit ranked third-largest of the year per CertiK</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-
+    <item>
+      <title>       Spot bitcoin ETFs recovered under 4% of $8.2B in mid-July outflows before fresh institutional buying resumed in August 2026</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
   </channel>
 </rss>
