@@ -8,56 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard firmware exploit drains $130M+ in bitcoin from ~5,000 hardware wallets; multiple threat actors targeting unpatched devices</title>
+      <title>       Coldcard hardware wallet firmware flaw enables ongoing Bitcoin theft exceeding $130M from 5,200 addresses since July 30</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       BlackRock purchased $111M in BTC via IBIT on Aug. 3 as U.S. spot bitcoin ETFs resumed net buying after weeks of outflows</title>
+      <title>       U.S. court grants Bybit preliminary injunction to trace assets from $1.5B Lazarus Group hack; 90% of funds already laundered through mixers</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Ethereum ETFs attracted $3.87B in August, the first month ether ETF inflows surpassed bitcoin ETF inflows of roughly $750M</title>
+      <title>       BNY Mellon and Galaxy Digital to integrate crypto staking into BNY's $62.6 trillion custody platform, pending regulatory approval</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin framework took effect July 18; OCC rules mandate 1:1 liquid USD reserves and two-day redemption for issuers</title>
+      <title>       U.S. regulators issue joint proposed CIP rules for stablecoin issuers under the GENIUS Act; public comment period closes August 21</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period expired July 1; unauthorised crypto asset service providers barred from offering services to EU clients</title>
+      <title>       BlackRock launches iShares Bitcoin Premium Income ETF on Nasdaq targeting 15-25% annual yield via covered-call overlay</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       U.S. Treasury proposed GENIUS Act AML rules designating permitted stablecoin issuers as financial institutions under the Bank Secrecy Act</title>
+      <title>       Nomura's Laser Digital receives OCC conditional approval for U.S. national trust bank charter to custody tokenized and digital assets</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       FATF Travel Rule is enacted in 85 of 117 jurisdictions, with 2026 supervisory focus on stablecoins and unhosted wallets</title>
+      <title>       SEC generic crypto ETF listing standards cut approval timelines from 240 days to 75 days for eligible spot funds</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Morgan Stanley launched MSBT on NYSE Arca as the first bank-issued spot bitcoin ETF, charging 0.14%, undercutting BlackRock IBIT</title>
+      <title>       EU Transfer of Funds Regulation imposes zero-threshold Travel Rule on all stablecoin transfers, requiring full originator and beneficiary data</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Citi targeting 2026 launch of institutional bitcoin and Ethereum custody, combining in-house infrastructure and third-party key management</title>
+      <title>       EU stablecoin custodians now subject to dual MiCA and PSD2 licensing requirements, potentially doubling compliance costs for EMT service providers</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       OCC granted national trust bank charters to Circle, Paxos, and three other nonbank stablecoin issuers in December 2025</title>
+      <title>       GENIUS Act payment stablecoin framework requires 1:1 reserve backing and monthly public reserve disclosures; effective no later than January 18, 2027</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       JPMorgan Kinexys tokenized collateral and payments platform processed $5B in daily transactions across five continents</title>
+      <title>       OCC confirms national banks may engage in crypto custody, stablecoin issuance, and DLT activities without prior supervisory non-objection</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Crypto hacks reached $1.3B across 276 incidents through mid-2026; Coldcard exploit ranked third-largest of the year per CertiK</title>
+      <title>       Deutsche Bank is building an institutional crypto custody platform with Bitpanda and Taurus SA targeting a 2026 commercial launch</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Spot bitcoin ETFs recovered under 4% of $8.2B in mid-July outflows before fresh institutional buying resumed in August 2026</title>
+      <title>       CFTC-regulated crypto futures volumes rose 34% year-over-year in 2026 following SEC-CFTC jurisdictional harmonization</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
+
   </channel>
 </rss>
