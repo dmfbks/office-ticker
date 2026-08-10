@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Coldcard hardware wallet firmware flaw enables ongoing Bitcoin theft exceeding $130M from 5,200 addresses since July 30</title>
+      <title>       US Senate delays CLARITY Act vote to September, leaving SEC-CFTC crypto jurisdiction over $680B market unresolved</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. court grants Bybit preliminary injunction to trace assets from $1.5B Lazarus Group hack; 90% of funds already laundered through mixers</title>
+      <title>       Bitcoin ETFs drew $844M in weekly inflows Aug 3-7; Ethereum ETFs recorded $244M as institutional demand accelerates</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       BNY Mellon and Galaxy Digital to integrate crypto staking into BNY's $62.6 trillion custody platform, pending regulatory approval</title>
+      <title>       DTCC tokenization platform began initial trades July 2026 with 50+ financial firms; full production launch set for October</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. regulators issue joint proposed CIP rules for stablecoin issuers under the GENIUS Act; public comment period closes August 21</title>
+      <title>       EU MiCA full compliance enforcement began July 1 with mandatory DAC8 tax reporting obligations for crypto asset service providers</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       BlackRock launches iShares Bitcoin Premium Income ETF on Nasdaq targeting 15-25% annual yield via covered-call overlay</title>
+      <title>       Deutsche Bank to launch crypto custody in 2026 via Bitpanda Technology Solutions partnership, joining major bank push into digital assets</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Nomura's Laser Digital receives OCC conditional approval for U.S. national trust bank charter to custody tokenized and digital assets</title>
+      <title>       Citi targeting 2026 launch of institutional crypto custody after three years of development on its $2.57T global custodian platform</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC generic crypto ETF listing standards cut approval timelines from 240 days to 75 days for eligible spot funds</title>
+      <title>       Cecabank activates MiCA-licensed crypto custody for its EUR 400B AUM Spanish wholesale client base via Bit2Me exchange partnership</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU Transfer of Funds Regulation imposes zero-threshold Travel Rule on all stablecoin transfers, requiring full originator and beneficiary data</title>
+      <title>       Minnesota law authorizes state-chartered banks and credit unions to hold Bitcoin for customers beginning August 2026</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU stablecoin custodians now subject to dual MiCA and PSD2 licensing requirements, potentially doubling compliance costs for EMT service providers</title>
+      <title>       GENIUS Act stablecoin compliance deadline may slip to January 2027 as Federal Reserve has not yet published proposed rules</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       GENIUS Act payment stablecoin framework requires 1:1 reserve backing and monthly public reserve disclosures; effective no later than January 18, 2027</title>
+      <title>       Drift Protocol lost approximately $295M to hackers in H1 2026, the largest single crypto theft of the period</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       OCC confirms national banks may engage in crypto custody, stablecoin issuance, and DLT activities without prior supervisory non-objection</title>
+      <title>       H1 2026 crypto losses totaled $1.3B across 344 incidents; North Korean-linked groups attributed with 66% of stolen funds</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Deutsche Bank is building an institutional crypto custody platform with Bitpanda and Taurus SA targeting a 2026 commercial launch</title>
+      <title>       Coinbase custodies over 80% of US Bitcoin and Ethereum ETF assets as of Q2 2026, consolidating custody market position</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       CFTC-regulated crypto futures volumes rose 34% year-over-year in 2026 following SEC-CFTC jurisdictional harmonization</title>
+      <title>       SEC and CFTC signed MOU in March 2026 to formally coordinate crypto oversight, ending years of jurisdictional rivalry between agencies</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Humanity Protocol suffered $30M+ breach in June 2026 as crypto platforms collectively lost $75.87M across 40 hacks that month</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       60% of the top 25 US banks have launched or announced Bitcoin-related products including custody, trading, and crypto-backed lending</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
