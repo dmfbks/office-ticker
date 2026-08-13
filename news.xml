@@ -8,52 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC votes Aug 14 on "Regulation Crypto," proposed offering rules for digital assets -- first formal rulemaking under Chairman Atkins.</title>
+      <title>       Circle names BlackRock, Visa, Mastercard, and DTCC among 11 founding validators for Arc institutional blockchain ahead of Sept. 16 mainnet.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       US Senate departs for five-week recess without floor vote on Digital Asset Market Clarity Act, extending regulatory uncertainty.</title>
+      <title>       Mastercard closes $1.8B acquisition of stablecoin infrastructure firm BVNK, adding $30B in annual settlement volume across 130 countries.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Bybit wins preliminary court injunction against North Korea and Lazarus Group over $1.5B ETH theft; lawsuit filed in DC district court Aug 7.</title>
+      <title>       U.S. Senate files cloture on CLARITY Act before August recess, scheduling first procedural floor vote for September 15.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Coldcard firmware exploit drains over $100M from 7,700+ addresses since late July; Galaxy Research estimates total losses near $130M.</title>
+      <title>       SEC launches tokenized-stock sandbox exemption and new crypto investment contract issuance mechanism for U.S. capital markets.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       BlackRock cuts IBIT in-kind creation minimum 96% to $1M, opening Bitcoin ETF conversions to mid-sized institutional participants.</title>
+      <title>       EU MiCA enforcement now active: CASPs without full authorization barred from onboarding new EU clients as of July 1 deadline.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Fidelity files with SEC to add Ethereum staking to FETH ETF; fund to stake up to 100% of holdings and distribute quarterly cash returns.</title>
+      <title>       Galaxy Research cuts CLARITY Act passage odds to 30% as Trump crypto ethics provision stalls bipartisan Senate agreement.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Wintermute USA registers with SEC and FINRA as broker-dealer, enabling equity trading and authorized participant role for crypto ETPs.</title>
+      <title>       JPMorgan confirms institutional crypto spot trading now live, disclosed during the bank's most recent quarterly earnings call.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       US spot Bitcoin ETFs attracted $853M in net inflows during the week of Aug 3-7, largest weekly total since mid-April; BlackRock took 81%.</title>
+      <title>       BlackRock to deploy BUIDL tokenized money-market fund on Circle's Arc blockchain ahead of September 16 institutional mainnet launch.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Hong Kong OSL becomes first SFC-licensed exchange to list XRP for retail trading as the city broadens its regulated digital asset access.</title>
+      <title>       EU Transfer of Funds Regulation requires crypto service providers to collect sender and recipient identity data on all transfers, no threshold.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       South Korea's FSC proposes merging 10 existing crypto bills into a single Digital Asset Basic Act covering market structure and custody.</title>
+      <title>       Coldcard hardware wallet firmware flaw linked to theft of at least $38M in bitcoin, one of the largest self-custody security failures on record.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       EU MiCA transition ended July 1; unlicensed crypto-asset service providers must now halt EU operations under full enforcement regime.</title>
+      <title>       Cross-chain bridge and DeFi protocols lose $35M in three coordinated exploits across a six-hour window.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Boltz suspends non-custodial Bitcoin swap service Aug 3 after AI-assisted attacks outpace patch capacity; no user funds reported lost.</title>
+      <title>       Aave governance overhauls asset-listing standards following $230M rsETH bridge exploit that exposed cross-chain collateral custody risks.</title>
       <guid isPermaLink="false">news-12</guid>
+    </item>
+    <item>
+      <title>       JPMorgan, Citi, and Wells Fargo building tokenized settlement rails to connect on-chain assets to existing Wall Street clearing infrastructure.</title>
+      <guid isPermaLink="false">news-13</guid>
     </item>
   </channel>
 </rss>
