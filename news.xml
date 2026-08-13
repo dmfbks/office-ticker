@@ -8,56 +8,52 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC schedules Aug. 14 vote on Reg Crypto proposal allowing token issuers to raise up to $75M without securities registration.</title>
+      <title>       SEC votes Aug 14 on "Regulation Crypto," proposed offering rules for digital assets -- first formal rulemaking under Chairman Atkins.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC to simultaneously vote on digital securities trading exemption that could enable 24/7 stock token trading on blockchain platforms.</title>
+      <title>       US Senate departs for five-week recess without floor vote on Digital Asset Market Clarity Act, extending regulatory uncertainty.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       DTCC completes first live production trades of tokenized equities and Treasuries with JPMorgan, BlackRock, Goldman Sachs, and Vanguard.</title>
+      <title>       Bybit wins preliminary court injunction against North Korea and Lazarus Group over $1.5B ETH theft; lawsuit filed in DC district court Aug 7.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       CFTC charges Florida man and Goliath Ventures with operating a $397M Ponzi scheme targeting more than 1,600 retail customers.</title>
+      <title>       Coldcard firmware exploit drains over $100M from 7,700+ addresses since late July; Galaxy Research estimates total losses near $130M.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       U.S. Clarity Act fails Senate procedural vote, leaving digital asset framework development to SEC and CFTC rulemaking.</title>
+      <title>       BlackRock cuts IBIT in-kind creation minimum 96% to $1M, opening Bitcoin ETF conversions to mid-sized institutional participants.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       SEC approves generic listing standards for spot crypto ETPs, with Bitwise projecting over 100 new crypto ETFs eligible to list.</title>
+      <title>       Fidelity files with SEC to add Ethereum staking to FETH ETF; fund to stake up to 100% of holdings and distribute quarterly cash returns.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Coldcard hardware wallet exploit costs approximately $130M as a cryptographic library flaw present since 2021 enables mass Bitcoin theft.</title>
+      <title>       Wintermute USA registers with SEC and FINRA as broker-dealer, enabling equity trading and authorized participant role for crypto ETPs.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Harmony blockchain exploit mints 4 billion unauthorized ONE tokens, equal to over 25% of existing supply; token falls approximately 40%.</title>
+      <title>       US spot Bitcoin ETFs attracted $853M in net inflows during the week of Aug 3-7, largest weekly total since mid-April; BlackRock took 81%.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Circle receives final OCC approval to operate First National Digital Currency Bank N.A. as a federally chartered trust institution.</title>
+      <title>       Hong Kong OSL becomes first SFC-licensed exchange to list XRP for retail trading as the city broadens its regulated digital asset access.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BNY launches USDC custody and minting services for institutional clients through expanded Circle partnership.</title>
+      <title>       South Korea's FSC proposes merging 10 existing crypto bills into a single Digital Asset Basic Act covering market structure and custody.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Morgan Stanley plans to bring crypto custody, staking, and lending services in-house at its planned digital asset trust bank.</title>
+      <title>       EU MiCA transition ended July 1; unlicensed crypto-asset service providers must now halt EU operations under full enforcement regime.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       EU's MiCA regulation fully enforced as transitional period expires; only 194 licensed crypto firms operating across the bloc.</title>
+      <title>       Boltz suspends non-custodial Bitcoin swap service Aug 3 after AI-assisted attacks outpace patch capacity; no user funds reported lost.</title>
       <guid isPermaLink="false">news-12</guid>
-    </item>
-    <item>
-      <title>       CFTC exercises emergency authority ordering prediction market Kalshi to continue operations despite New York state lawsuit.</title>
-      <guid isPermaLink="false">news-13</guid>
     </item>
   </channel>
 </rss>
