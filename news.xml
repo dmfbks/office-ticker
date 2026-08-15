@@ -8,56 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Circle names BlackRock, Visa, Mastercard, and DTCC among 11 founding validators for Arc institutional blockchain ahead of Sept. 16 mainnet.</title>
+      <title>       KPMG issues unqualified opinion on Tether's $180 billion USDT reserves in company's first full financial audit.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Mastercard closes $1.8B acquisition of stablecoin infrastructure firm BVNK, adding $30B in annual settlement volume across 130 countries.</title>
+      <title>       SEC cancels planned Reg Crypto proposal meeting, leaving crypto offering framework with no scheduled date.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. Senate files cloture on CLARITY Act before August recess, scheduling first procedural floor vote for September 15.</title>
+      <title>       MSCI opens consultation that could exclude bitcoin treasury companies from its global investable market indexes.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC launches tokenized-stock sandbox exemption and new crypto investment contract issuance mechanism for U.S. capital markets.</title>
+      <title>       Harmony protocol confirms exploit minting 4 billion ONE tokens equal to 26% of supply; network considers rollback.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU MiCA enforcement now active: CASPs without full authorization barred from onboarding new EU clients as of July 1 deadline.</title>
+      <title>       JPMorgan plans to accept Bitcoin and Ethereum as loan collateral held at approved third-party custodians.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Galaxy Research cuts CLARITY Act passage odds to 30% as Trump crypto ethics provision stalls bipartisan Senate agreement.</title>
+      <title>       FATF reports stablecoins composed 84% of $154 billion in illicit virtual asset transaction volume recorded in 2025.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       JPMorgan confirms institutional crypto spot trading now live, disclosed during the bank's most recent quarterly earnings call.</title>
+      <title>       CFTC chair confirms agency plans to finalize crypto ruleset independently of stalled congressional Clarity Act.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BlackRock to deploy BUIDL tokenized money-market fund on Circle's Arc blockchain ahead of September 16 institutional mainnet launch.</title>
+      <title>       EU MiCA grace period expired July 1, requiring all crypto service providers to hold a valid regulatory license.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU Transfer of Funds Regulation requires crypto service providers to collect sender and recipient identity data on all transfers, no threshold.</title>
+      <title>       GENIUS Act stablecoin compliance framework awaits final implementing rules from OCC, FDIC, Fed, and Treasury.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Coldcard hardware wallet firmware flaw linked to theft of at least $38M in bitcoin, one of the largest self-custody security failures on record.</title>
+      <title>       FATF review finds 60% of jurisdictions with Travel Rule laws have yet to issue enforcement findings or directives.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Cross-chain bridge and DeFi protocols lose $35M in three coordinated exploits across a six-hour window.</title>
+      <title>       Kraken launches CFTC-regulated Bitcoin perpetual futures for U.S. customers, among first onshore perp listings.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Aave governance overhauls asset-listing standards following $230M rsETH bridge exploit that exposed cross-chain collateral custody risks.</title>
+      <title>       Augustus raises $180 million to build a federally chartered clearing bank for stablecoin-era payment settlement.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       JPMorgan, Citi, and Wells Fargo building tokenized settlement rails to connect on-chain assets to existing Wall Street clearing infrastructure.</title>
+      <title>       South Korea lowers the threshold for crypto Travel Rule obligations, expanding AML identification requirements.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
+    <item>
+      <title>       CFTC Innovation Advisory Committee to meet August 20 to discuss crypto market structure and AI-related regulation.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+
   </channel>
 </rss>
