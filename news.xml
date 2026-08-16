@@ -8,61 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       KPMG issues unqualified opinion on Tether's $180 billion USDT reserves in company's first full financial audit.</title>
+      <title>       SEC votes to begin rulemaking on Reg Crypto, a framework letting digital asset firms raise capital outside standard registration</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC cancels planned Reg Crypto proposal meeting, leaving crypto offering framework with no scheduled date.</title>
+      <title>       U.S. Senate clears first procedural vote on the Clarity Act, opening a path to a September floor vote on crypto market structure</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       MSCI opens consultation that could exclude bitcoin treasury companies from its global investable market indexes.</title>
+      <title>       Coinkite Coldcard hardware wallet exploit losses near $150M as attacks slow; flaw traced to flawed RNG in March 2021 firmware</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Harmony protocol confirms exploit minting 4 billion ONE tokens equal to 26% of supply; network considers rollback.</title>
+      <title>       North Korea-linked hackers stole $500M from DeFi platforms in 20 days, pushing 2026 total above $700M</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       JPMorgan plans to accept Bitcoin and Ethereum as loan collateral held at approved third-party custodians.</title>
+      <title>       Goldman Sachs acquires NEOS for $2.25B, gaining a $1.1B covered-call bitcoin income ETF to expand its derivatives offering</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       FATF reports stablecoins composed 84% of $154 billion in illicit virtual asset transaction volume recorded in 2025.</title>
+      <title>       Mastercard closes $1.8B acquisition of stablecoin firm BVNK, integrating its cross-border payment rails into Mastercard's network</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       CFTC chair confirms agency plans to finalize crypto ruleset independently of stalled congressional Clarity Act.</title>
+      <title>       CFTC chair says agency will finalize crypto rules before the current administration ends, independent of Clarity Act passage</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU MiCA grace period expired July 1, requiring all crypto service providers to hold a valid regulatory license.</title>
+      <title>       Bank of England moves digital pound testing to Phase 2, piloting stablecoin-CBDC interoperability in trade finance with Polygon</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin compliance framework awaits final implementing rules from OCC, FDIC, Fed, and Treasury.</title>
+      <title>       EU MiCA grandfathering ended July 1, requiring unlicensed CASPs to halt operations; Commission review open through Aug 31</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       FATF review finds 60% of jurisdictions with Travel Rule laws have yet to issue enforcement findings or directives.</title>
+      <title>       UK FCA releases crypto regulatory framework preserving access to global liquidity venues and permitting non-UK stablecoins</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Kraken launches CFTC-regulated Bitcoin perpetual futures for U.S. customers, among first onshore perp listings.</title>
+      <title>       Morgan Stanley raised its iShares Bitcoin Trust stake 23% to 16.5M shares and holds 2.57M shares in its own Bitcoin trust</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Augustus raises $180 million to build a federally chartered clearing bank for stablecoin-era payment settlement.</title>
+      <title>       Circle opens Arc blockchain mainnet with Visa, Mastercard, BlackRock, DTCC, and Standard Chartered as founding validators</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       South Korea lowers the threshold for crypto Travel Rule obligations, expanding AML identification requirements.</title>
+      <title>       EU regulators consult on revising MiCA's stablecoin interest ban as part of a broader framework overhaul through Aug 31</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       CFTC Innovation Advisory Committee to meet August 20 to discuss crypto market structure and AI-related regulation.</title>
+      <title>       Cboe files with SEC to list six funds tracking 3x daily performance of Bitcoin and Ethereum futures</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
-
+    <item>
+      <title>       Crypto startups raised $11.2B in H1 2026, with all disclosed funding flowing to regulated, permissioned businesses</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
