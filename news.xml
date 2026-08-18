@@ -8,64 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC cancels Aug. 14 Reg Crypto meeting, postponing its digital-asset offering framework proposal to an unspecified later date.</title>
+      <title>       KelpDAO loses $292M to cross-chain bridge exploit via LayerZero; Lazarus Group attributed as attacker.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC delays tokenization 'innovation exemption' after White House and Wall Street raise concerns over legal footing and market impact.</title>
+      <title>       Drift Protocol drained of $285M in separate Lazarus Group-linked breach, 2026's second-largest DeFi exploit.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       CFTC chair says agency will finalize crypto rules before administration ends regardless of whether CLARITY Act passes Congress.</title>
+      <title>       U.S. Senate departs for recess without CLARITY Act vote; Democrats blocked floor action over ethics provision.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin and Ethereum ETFs draw over $1B in weekly net inflows, best week since April; BlackRock's IBIT captures $693M.</title>
+      <title>       Coldcard hardware wallet exploit drains approximately $114M in bitcoin, raising scrutiny of institutional cold-storage.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       U.S. regulators miss GENIUS Act's July 18 deadline for final stablecoin rules, compressing the issuer implementation window to 2027.</title>
+      <title>       JPMorgan boosts BlackRock IBIT stake to $356M in Q2 2026 13F filing, up from $162M in Q1; ETH ETF position quadruples.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Banks and crypto firms clash over whether GENIUS Act permits interest-bearing stablecoins; joint KYC comment period closes Aug. 21.</title>
+      <title>       Morgan Stanley holds 16.5M IBIT shares at Q2 2026 close, up from 13.4M in Q1, per 13F SEC filing.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       FDIC proposes AML and customer-identification requirements for stablecoin issuers implementing the GENIUS Act framework.</title>
+      <title>       Japan's Travel Rule for crypto exchanges and payment service providers took effect August 3, requiring transfer-level data.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       Up to 20 banks and large tech firms are queued to issue stablecoins under the GENIUS Act, per a federally chartered custodian.</title>
+      <title>       SEC issues no-action letter to DTC permitting tokenization of ETFs and U.S. Treasury securities held in custody.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Approximately 594 BTC ($38M) drained from about 500 wallets after a key-generation flaw discovered in Coldcard hardware wallets.</title>
+      <title>       UK FCA set to open crypto asset firm licensing applications in September 2026 under new regulatory framework.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Basel Committee cryptoasset standard, effective Jan. 1 2026, assigns 1,250% risk weight to unbacked crypto on bank balance sheets.</title>
+      <title>       EU Commission's MiCA review consultation closes August 31; responses to weigh expanded stablecoin and DeFi coverage.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       FATF warns stablecoins now dominate illicit crypto transaction volume, urging jurisdictions to close Travel Rule enforcement gaps.</title>
+      <title>       DeFi exploits exceeded $840M in first five months of 2026; Chainalysis attributes 76% of crypto hack losses to Lazarus Group.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Crypto hack losses total $972M across a record 207 incidents in H1 2026, down from prior-year pace despite highest-ever attack count.</title>
+      <title>       Citi plans to launch crypto custody services in 2026, expanding institutional digital asset offerings per CNBC report.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       North Korea-linked actors account for 66% of global crypto hack losses in H1 2026, up from 64% in the same period last year.</title>
+      <title>       EU MiCA full compliance enforcement began July 1; unlicensed exchanges must cease offering services to EU clients.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       CFTC Innovation Advisory Committee holds Aug. 20 open meeting on crypto, AI, and prediction market regulations.</title>
+      <title>       SEC and CFTC signed crypto coordination MOU committing both agencies to harmonize digital asset classification and enforcement.</title>
       <guid isPermaLink="false">news-14</guid>
-    </item>
-    <item>
-      <title>       JPMorgan's Kinexys platform processes tokenized collateral and blockchain-based settlement transactions for institutional clients.</title>
-      <guid isPermaLink="false">news-15</guid>
     </item>
   </channel>
 </rss>
