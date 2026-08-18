@@ -8,60 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       KelpDAO loses $292M to cross-chain bridge exploit via LayerZero; Lazarus Group attributed as attacker.</title>
+      <title>       U.S. Treasury proposes GENIUS Act rules requiring stablecoin issuers to hold 1:1 reserves; mandatory licensing begins Jan. 18, 2027</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Drift Protocol drained of $285M in separate Lazarus Group-linked breach, 2026's second-largest DeFi exploit.</title>
+      <title>       Goldman Sachs to acquire Neos Investments for up to $2.25B, gaining three Bitcoin and Ether income ETFs with over $1.2B in AUM</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       U.S. Senate departs for recess without CLARITY Act vote; Democrats blocked floor action over ethics provision.</title>
+      <title>       U.S. spot Ether ETFs record $2.85B in weekly net inflows, more than five times the $548M recorded by spot Bitcoin ETFs in the same period</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Coldcard hardware wallet exploit drains approximately $114M in bitcoin, raising scrutiny of institutional cold-storage.</title>
+      <title>       Coldcard hardware wallet exploit drains $116M in Bitcoin from over 5,200 addresses via a five-year-old firmware flaw; total 2026 crypto losses top $1.2B</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       JPMorgan boosts BlackRock IBIT stake to $356M in Q2 2026 13F filing, up from $162M in Q1; ETH ETF position quadruples.</title>
+      <title>       Circle receives federal trust bank charter, granting the USDC issuer regulated federal banking status</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Morgan Stanley holds 16.5M IBIT shares at Q2 2026 close, up from 13.4M in Q1, per 13F SEC filing.</title>
+      <title>       Morgan Stanley receives conditional OCC approval for Morgan Stanley Digital Trust to custody digital assets, facilitate staking, and execute transfers</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Japan's Travel Rule for crypto exchanges and payment service providers took effect August 3, requiring transfer-level data.</title>
+      <title>       SEC approves T. Rowe Price TKNZ, the first actively managed multi-asset crypto ETF from a $1.9T traditional asset manager, to trade on NYSE Arca</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC issues no-action letter to DTC permitting tokenization of ETFs and U.S. Treasury securities held in custody.</title>
+      <title>       Coinbase, Visa, and Mastercard launch Open Standard stablecoin network with Open USD, backed by more than 140 financial and technology firms</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       UK FCA set to open crypto asset firm licensing applications in September 2026 under new regulatory framework.</title>
+      <title>       Moscow Exchange launches perpetual Bitcoin and Ether futures for qualified investors, with Solana, XRP, and TRON contracts planned</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       EU Commission's MiCA review consultation closes August 31; responses to weigh expanded stablecoin and DeFi coverage.</title>
+      <title>       SEC classifies 16 digital assets as commodities, clearing the way for spot ETF filings on SOL, XRP, ADA, LINK, AVAX, DOGE, and others</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       DeFi exploits exceeded $840M in first five months of 2026; Chainalysis attributes 76% of crypto hack losses to Lazarus Group.</title>
+      <title>       SEC and CFTC sign memorandum of understanding and issue joint interpretation clarifying how federal securities law applies to crypto assets</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Citi plans to launch crypto custody services in 2026, expanding institutional digital asset offerings per CNBC report.</title>
+      <title>       CFTC approves first cash-settled Bitcoin perpetual futures contracts on a registered U.S. designated contract market</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       EU MiCA full compliance enforcement began July 1; unlicensed exchanges must cease offering services to EU clients.</title>
+      <title>       Bank of America authorizes wealth advisers to recommend crypto allocations to clients as institutional digital asset adoption accelerates</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
     <item>
-      <title>       SEC and CFTC signed crypto coordination MOU committing both agencies to harmonize digital asset classification and enforcement.</title>
+      <title>       EU MiCA grandfathering period ends; all crypto asset service providers must now operate under full Markets in Crypto-Assets regulatory framework</title>
       <guid isPermaLink="false">news-14</guid>
     </item>
+
   </channel>
 </rss>
