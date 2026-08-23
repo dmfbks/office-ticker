@@ -8,56 +8,52 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       US Treasury proposes GENIUS Act rule on stablecoin issuance eligibility; violations carry up to $1M fine and 5-year prison term.</title>
+      <title>       SEC proposes Regulation Crypto Assets, allowing digital asset offerings up to $75M annually without full securities registration.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Citi confirms Bitcoin custody for institutional clients under new Custody+ platform, with launch expected before year-end 2026.</title>
+      <title>       U.S. Treasury proposes GENIUS Act stablecoin rules requiring issuers to conduct KYC checks comparable to traditional financial firms.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC plans to finalize Regulation Crypto Assets exemption rule as CLARITY Act stalls ahead of September 15 Senate cloture vote.</title>
+      <title>       Coldcard hardware wallet bug enabled theft of over $100M in Bitcoin from ~7,300 addresses in multiple coordinated attack waves.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       SEC and CFTC release joint interpretation on federal securities law for crypto assets, including custody standards for advisers.</title>
+      <title>       U.S. Senate departs for August recess without a vote on the CLARITY Act digital asset market-structure bill.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       EU Transfer of Funds Regulation drops Travel Rule threshold to zero for all crypto transfers effective August 3.</title>
+      <title>       CFTC chair directs staff to draft crypto market structure rules in the event Congress fails to pass the CLARITY Act.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Cboe BZX files with SEC for approval to list first 3x leveraged Bitcoin and Ether ETFs in the United States.</title>
+      <title>       BlackRock tokenizes $311B in European money market funds, enabling 24/7 on-chain transfers via JPMorgan's Kinexys blockchain platform.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       Coldcard firmware exploit drained $116M in Bitcoin from 5,200-plus addresses; flaw existed in devices manufactured since March 2021.</title>
+      <title>       JPMorgan will accept BlackRock's iShares Bitcoin Trust shares as loan collateral in an expansion of its crypto lending program.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       BNY adds staking to its digital asset custody platform, expanding services for institutional crypto clients.</title>
+      <title>       MiCA enforcement displaced over 1,700 unlicensed platforms from the EU, with regulators warning of a resulting rise in crypto scams.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Visa, Mastercard, and BlackRock join 140-firm Open USD consortium backing OUSD stablecoin launch on Solana.</title>
+      <title>       EU opens public consultation on MiCA 2.0 revisions through August 31, including potential changes to the stablecoin interest ban.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       EU MiCA full compliance and DAC8 mandatory crypto tax reporting entered into force July 1 across all member states.</title>
+      <title>       BTCPay Server vulnerability allowed attackers to drain merchant Lightning nodes by exploiting exposed credential configurations.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Cecabank, a Spanish wholesale custodian, goes live with crypto custody services via Bit2Me exchange partnership.</title>
+      <title>       US Bancorp has resumed Bitcoin custody services, adding support for spot Bitcoin ETF shares for institutional clients.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Crypto exploits totaled $1.32B across 276 incidents in H1 2026, with Coldcard ranking as the year's third-largest loss.</title>
+      <title>       SafePal disclosed a data breach exposing order records for approximately 40,000 customers from purchases made between 2025 and 2026.</title>
       <guid isPermaLink="false">news-12</guid>
-    </item>
-    <item>
-      <title>       OCC opens rulemaking on GENIUS Act federal charter requirements; stablecoin licensing deadline set for January 18, 2027.</title>
-      <guid isPermaLink="false">news-13</guid>
     </item>
 
   </channel>
