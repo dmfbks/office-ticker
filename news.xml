@@ -8,53 +8,56 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes Regulation Crypto Assets, allowing digital asset offerings up to $75M annually without full securities registration.</title>
+      <title>       SEC proposes Regulation Crypto Assets, a new bespoke offering regime for crypto with $5M and $75M exemptions; 60-day comment period open.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       U.S. Treasury proposes GENIUS Act stablecoin rules requiring issuers to conduct KYC checks comparable to traditional financial firms.</title>
+      <title>       Coldcard firmware flaw allows seed-phrase reconstruction remotely; attackers drain roughly $130M from 4,585 Bitcoin wallets since July 30.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Coldcard hardware wallet bug enabled theft of over $100M in Bitcoin from ~7,300 addresses in multiple coordinated attack waves.</title>
+      <title>       Japan registers Nomura-backed Laser Digital as first new crypto entrant in four years after reclassifying crypto as financial instruments.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. Senate departs for August recess without a vote on the CLARITY Act digital asset market-structure bill.</title>
+      <title>       U.S. spot Bitcoin ETFs draw $1.9B in weekly net inflows for the week ended August 21; spot Ethereum ETFs add $697M in the same period.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       CFTC chair directs staff to draft crypto market structure rules in the event Congress fails to pass the CLARITY Act.</title>
+      <title>       JPMorgan Q2 13F discloses $356M in BlackRock IBIT and quadrupled iShares ETH position; Morgan Stanley raises Fidelity FBTC by 38%.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BlackRock tokenizes $311B in European money market funds, enabling 24/7 on-chain transfers via JPMorgan's Kinexys blockchain platform.</title>
+      <title>       EU Commission MiCA review consultation closes August 31, covering stablecoin caps, CASP licensing, and potential DeFi provisions.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       JPMorgan will accept BlackRock's iShares Bitcoin Trust shares as loan collateral in an expansion of its crypto lending program.</title>
+      <title>       U.S. Senate pushes CLARITY Act procedural vote to September 15 after Democratic objections over DeFi and ethics provisions.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       MiCA enforcement displaced over 1,700 unlicensed platforms from the EU, with regulators warning of a resulting rise in crypto scams.</title>
+      <title>       EU Travel Rule now applies a zero-euro threshold to stablecoin transfers, requiring full sender and recipient data on all transactions.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU opens public consultation on MiCA 2.0 revisions through August 31, including potential changes to the stablecoin interest ban.</title>
+      <title>       X is exploring USDC stablecoin payouts for content creators as it sunsets its existing creator revenue-sharing program on September 7.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BTCPay Server vulnerability allowed attackers to drain merchant Lightning nodes by exploiting exposed credential configurations.</title>
+      <title>       Wanchain's Cardano-BNB Chain bridge loses $13M in a hack, representing roughly 97% of the bridge's total reserves.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       US Bancorp has resumed Bitcoin custody services, adding support for spot Bitcoin ETF shares for institutional clients.</title>
+      <title>       Coinsbuy centralized exchange loses $8M in a coordinated attack spanning Tron and Ethereum wallets on August 9.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SafePal disclosed a data breach exposing order records for approximately 40,000 customers from purchases made between 2025 and 2026.</title>
+      <title>       Maya Protocol DeFi platform exploited via six chained logic bugs on August 18; $1.7M in direct losses, roughly $11M broader market impact.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
-
+    <item>
+      <title>       SafePal discloses breach of 39,798 customer records including names and shipping addresses; private keys and funds were not exposed.</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
   </channel>
 </rss>
