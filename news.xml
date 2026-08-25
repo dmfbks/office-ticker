@@ -8,56 +8,60 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes Regulation Crypto Assets, a new bespoke offering regime for crypto with $5M and $75M exemptions; 60-day comment period open.</title>
+      <title>       SEC proposes Regulation Crypto Assets, creating a registration-exempt path for digital asset offerings up to $75M annually</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Coldcard firmware flaw allows seed-phrase reconstruction remotely; attackers drain roughly $130M from 4,585 Bitcoin wallets since July 30.</title>
+      <title>       CFTC chair directs staff to draft crypto market-structure rules as fallback if CLARITY Act fails Senate vote</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Japan registers Nomura-backed Laser Digital as first new crypto entrant in four years after reclassifying crypto as financial instruments.</title>
+      <title>       Citi plans to launch bitcoin custody for institutional clients later in 2026, integrating BTC alongside traditional assets</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       U.S. spot Bitcoin ETFs draw $1.9B in weekly net inflows for the week ended August 21; spot Ethereum ETFs add $697M in the same period.</title>
+      <title>       Fidelity files to add staking and quarterly payouts to its ~$900M ether ETF following IRS safe-harbor guidance</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       JPMorgan Q2 13F discloses $356M in BlackRock IBIT and quadrupled iShares ETH position; Morgan Stanley raises Fidelity FBTC by 38%.</title>
+      <title>       BNY selects Galaxy to provide staking infrastructure as it expands institutional crypto custody services</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       EU Commission MiCA review consultation closes August 31, covering stablecoin caps, CASP licensing, and potential DeFi provisions.</title>
+      <title>       Circle receives OCC approval for a national trust bank focused on crypto custody, reserves and settlement</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       U.S. Senate pushes CLARITY Act procedural vote to September 15 after Democratic objections over DeFi and ethics provisions.</title>
+      <title>       UK FCA sets stablecoin capital buffer at 1% of circulation, below EU MiCA's 2% requirement</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU Travel Rule now applies a zero-euro threshold to stablecoin transfers, requiring full sender and recipient data on all transactions.</title>
+      <title>       MiCA full enforcement passed July 1: over 1,700 unlicensed platforms halted EU services as only 323 held valid authorizations</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       X is exploring USDC stablecoin payouts for content creators as it sunsets its existing creator revenue-sharing program on September 7.</title>
+      <title>       EU regulators warn MiCA licensing gaps have spawned a new wave of fraud targeting customers of unlicensed platforms</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Wanchain's Cardano-BNB Chain bridge loses $13M in a hack, representing roughly 97% of the bridge's total reserves.</title>
+      <title>       Bitcoin cold-wallet exploit reaches $89M in losses across 4,500 addresses via Coldcard firmware vulnerability</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Coinsbuy centralized exchange loses $8M in a coordinated attack spanning Tron and Ethereum wallets on August 9.</title>
+      <title>       BTCPay patches critical flaw after attackers drain merchant Lightning wallets through stolen LND credentials</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Maya Protocol DeFi platform exploited via six chained logic bugs on August 18; $1.7M in direct losses, roughly $11M broader market impact.</title>
+      <title>       Israeli crypto broker Bits of Gold discloses breach exposing personal and bank data of 200,000 customers</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       SafePal discloses breach of 39,798 customer records including names and shipping addresses; private keys and funds were not exposed.</title>
+      <title>       SafePal plugin flaw exposes order records of nearly 40,000 customers including shipping addresses</title>
       <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       Trezor alerts 14,000 buyers after fulfillment partner ShipMonk suffers unauthorized access to customer shipping data</title>
+      <guid isPermaLink="false">news-14</guid>
     </item>
   </channel>
 </rss>
