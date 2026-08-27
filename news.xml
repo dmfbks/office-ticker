@@ -8,60 +8,57 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes Regulation Crypto Assets, creating a registration-exempt path for digital asset offerings up to $75M annually</title>
+      <title>       SEC proposes Regulation Crypto Assets framework, creating two token-sale paths outside standard securities registration</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       CFTC chair directs staff to draft crypto market-structure rules as fallback if CLARITY Act fails Senate vote</title>
+      <title>       SEC sends proposed crypto custody rules for investment advisers to federal review, governing how funds hold digital assets</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Citi plans to launch bitcoin custody for institutional clients later in 2026, integrating BTC alongside traditional assets</title>
+      <title>       Citi to launch Bitcoin custody via Custody+ platform before year-end, folding BTC into existing $34.5 trillion client asset framework</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Fidelity files to add staking and quarterly payouts to its ~$900M ether ETF following IRS safe-harbor guidance</title>
+      <title>       Coldcard hardware wallet exploit drained $116M from Bitcoin holders starting July 30, exploiting a five-year-old firmware flaw</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       BNY selects Galaxy to provide staking infrastructure as it expands institutional crypto custody services</title>
+      <title>       Visa, Stripe, Mastercard, BlackRock, and Coinbase join 140-plus firm consortium to launch Open USD stablecoin on Ethereum</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Circle receives OCC approval for a national trust bank focused on crypto custody, reserves and settlement</title>
+      <title>       Thailand SEC proposes locally-listed Bitcoin and Ethereum ETFs requiring domestic-regulated custody for all underlying assets</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       UK FCA sets stablecoin capital buffer at 1% of circulation, below EU MiCA's 2% requirement</title>
+      <title>       SEC generic listing standards cut crypto ETP approval window from 240 days to 75, accelerating pending altcoin ETF filings</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       MiCA full enforcement passed July 1: over 1,700 unlicensed platforms halted EU services as only 323 held valid authorizations</title>
+      <title>       MiCA grandfathering window for EU crypto service providers closed July 1; ESMA confirms no further extensions will be granted</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       EU regulators warn MiCA licensing gaps have spawned a new wave of fraud targeting customers of unlicensed platforms</title>
+      <title>       Travel Rule now enforced in 90-plus FATF jurisdictions, requiring full originator and beneficiary data on all transfers regardless of amount</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Bitcoin cold-wallet exploit reaches $89M in losses across 4,500 addresses via Coldcard firmware vulnerability</title>
+      <title>       GENIUS Act stablecoin law implementation advances as OCC, FDIC, and Treasury each issue proposed rules ahead of January 2027 deadline</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       BTCPay patches critical flaw after attackers drain merchant Lightning wallets through stolen LND credentials</title>
+      <title>       SEC and CFTC issue joint interpretation clarifying jurisdictional boundaries across digital asset classes</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Israeli crypto broker Bits of Gold discloses breach exposing personal and bank data of 200,000 customers</title>
+      <title>       Morgan Stanley developing internal Bitcoin custody and trading platform with lending and yield products also under exploration</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       SafePal plugin flaw exposes order records of nearly 40,000 customers including shipping addresses</title>
+      <title>       Crypto hacks totaled $972M across 207 incidents in H1 2026; access credential theft surpassed smart contract exploits as top attack vector</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-    <item>
-      <title>       Trezor alerts 14,000 buyers after fulfillment partner ShipMonk suffers unauthorized access to customer shipping data</title>
-      <guid isPermaLink="false">news-14</guid>
-    </item>
+
   </channel>
 </rss>
