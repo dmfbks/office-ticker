@@ -8,57 +8,64 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC proposes Regulation Crypto Assets framework, creating two token-sale paths outside standard securities registration</title>
+      <title>       SEC proposes Regulation Crypto Assets, creating first bespoke disclosure regime for crypto investment contracts</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       SEC sends proposed crypto custody rules for investment advisers to federal review, governing how funds hold digital assets</title>
+      <title>       U.S. Treasury proposes GENIUS Act stablecoin rules, opening 60-day public comment period on Jan 2027 licensing framework</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Citi to launch Bitcoin custody via Custody+ platform before year-end, folding BTC into existing $34.5 trillion client asset framework</title>
+      <title>       Coldcard hardware wallet exploit drains over $130M in bitcoin via five-year-old firmware flaw affecting pre-patch devices</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Coldcard hardware wallet exploit drained $116M from Bitcoin holders starting July 30, exploiting a five-year-old firmware flaw</title>
+      <title>       Bitcoin and Ethereum ETFs record $2.6B in combined inflows for week ending Aug. 21, strongest week since October 2025</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Visa, Stripe, Mastercard, BlackRock, and Coinbase join 140-plus firm consortium to launch Open USD stablecoin on Ethereum</title>
+      <title>       OCC conditionally grants national trust bank charters to Circle, Ripple, Paxos, BitGo, and Fidelity Digital Assets</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Thailand SEC proposes locally-listed Bitcoin and Ethereum ETFs requiring domestic-regulated custody for all underlying assets</title>
+      <title>       SEC issues no-action letter extending affiliated custodian approval to tokenized government money market fund shares</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC generic listing standards cut crypto ETP approval window from 240 days to 75, accelerating pending altcoin ETF filings</title>
+      <title>       Monthly Ethereum ETF inflows exceed Bitcoin's for first time in August as ether ETF total reaches $9.3B</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       MiCA grandfathering window for EU crypto service providers closed July 1; ESMA confirms no further extensions will be granted</title>
+      <title>       UK FCA opens cryptoasset authorization applications from Sept. 30 under Financial Services and Markets Act 2026</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Travel Rule now enforced in 90-plus FATF jurisdictions, requiring full originator and beneficiary data on all transfers regardless of amount</title>
+      <title>       CFTC invokes emergency authority requiring NY-sanctioned prediction market platform to continue operating under CEA</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       GENIUS Act stablecoin law implementation advances as OCC, FDIC, and Treasury each issue proposed rules ahead of January 2027 deadline</title>
+      <title>       MiCA grandfathering window for unlicensed CASPs closed July 1; full Travel Rule data collection now in effect across EU</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC and CFTC issue joint interpretation clarifying jurisdictional boundaries across digital asset classes</title>
+      <title>       BlackRock, Fidelity, Goldman Sachs, Franklin Templeton, and SoFi publicly back Clarity Act crypto market structure bill</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       Morgan Stanley developing internal Bitcoin custody and trading platform with lending and yield products also under exploration</title>
+      <title>       Visa reports $7B annualized stablecoin settlement run rate on VisaNet, with 160 stablecoin card programs live globally</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       Crypto hacks totaled $972M across 207 incidents in H1 2026; access credential theft surpassed smart contract exploits as top attack vector</title>
+      <title>       DeFi protocol Term Labs loses $8.5M in governance exploit targeting its Term vault contracts</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
-
+    <item>
+      <title>       Coinsbuy centralized exchange loses $8M in coordinated attack spanning Tron and Ethereum wallets on Aug. 9</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Cumulative 2026 crypto losses exceed $1.2B across 276 incidents through August, per blockchain monitoring firms</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
   </channel>
 </rss>
