@@ -8,56 +8,65 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       SEC sends proposed overhaul of crypto custody rules for investment advisers to White House OIRA for review.</title>
+      <title>       SEC proposes Regulation Crypto Assets with a $75M fundraising cap and a safe harbor allowing tokens to exit securities classification.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       Standard Chartered becomes first major global bank to offer institutional bitcoin and ether spot trading through its UAE FX platform.</title>
+      <title>       U.S. market structure bill faces pivotal Senate procedural vote on September 15, with stablecoin rewards provision still unresolved.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Singapore MAS proposes mandatory 100% liquid reserves and a ban on yield for stablecoin issuers, aligning with U.S. and EU frameworks.</title>
+      <title>       UK FCA opens cryptoasset authorisation application gateway on September 30, with full regulatory regime effective October 2027.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       EU begins MiCA 2.0 consultation targeting stablecoin reserve rules and DeFi treatment as July 1 CASP licensing transition deadline passes.</title>
+      <title>       OCC misses GENIUS Act deadline for final stablecoin rules, now targeting November 2026 for publication.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       Thailand SEC advances draft rules for domestically listed spot bitcoin and ether ETFs; public comments accepted until September 20.</title>
+      <title>       EU national MiCA grandfathering arrangements expired July 1; crypto firms without authorisation must now cease EU service provision.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       BlackRock, Fidelity, Franklin Templeton and Goldman Sachs endorse U.S. Clarity Act, which splits crypto oversight between the SEC and CFTC.</title>
+      <title>       SEC and CFTC publish joint token taxonomy distinguishing digital commodities, digital tools, stablecoins, and digital securities.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       UK government launches tokenization taskforce including BlackRock, Goldman Sachs, JPMorgan and Morgan Stanley to advance on-chain capital markets.</title>
+      <title>       SEC grants DTCC no-action relief to tokenize U.S. Treasuries, ETFs, and Russell 1000 equities starting late 2026.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       SEC opens review of automatic filing pathways for novel ETFs including crypto products after a surge of exchange-filed applications.</title>
+      <title>       OCC conditionally approves Circle, Ripple, Fidelity Digital Assets, and Paxos for national trust bank charters covering digital-asset custody.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       Citigroup plans to launch institutional bitcoin custody in 2026, integrating bitcoin into existing securities safekeeping frameworks.</title>
+      <title>       JPMorgan's Kinexys platform lets institutional clients pledge Bitcoin and Ether as collateral for U.S. dollar loans.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Deutsche Bank targets 2026 for a digital asset custody service built in partnership with Bitpanda's technology unit.</title>
+      <title>       Open Standard launches Open USD stablecoin with 140-plus founding partners including Stripe, Mastercard, Visa, and BlackRock.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       A bitcoin cold-wallet attack has expanded to 4,500 addresses with cumulative losses approaching $89 million as of August 2.</title>
+      <title>       Citigroup announces plans to launch institutional Bitcoin custody services integrated with its traditional asset management infrastructure.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC proposes new operational standards for U.S. transfer agents to accommodate securities issued and settled on blockchain networks.</title>
+      <title>       Bitcoin spot ETF cumulative net inflows reach $53.9 billion, with total net assets rising to $83.3 billion.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
     <item>
-      <title>       SEC granted a Cardano spot ETF application a 75-day accelerated review timeline, versus the 240 days required for the first bitcoin ETF.</title>
+      <title>       Coldcard hardware wallet vulnerability exploited for over $130 million in Bitcoin losses across at least 12 separate attacks.</title>
       <guid isPermaLink="false">news-13</guid>
     </item>
+    <item>
+      <title>       Attackers drain $295 million from Drift Protocol in the largest single crypto exploit of the first half of 2026.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+    <item>
+      <title>       Coinsbuy exchange loses $8 million in a cross-chain attack, contributing to July's $247 million in total industry theft losses.</title>
+      <guid isPermaLink="false">news-15</guid>
+    </item>
+
   </channel>
 </rss>
