@@ -8,56 +8,52 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       Blockstream's Liquid Network suffers $320M Bitcoin exploit via software bug; attacker claims white-hat status and offers to return funds.</title>
+      <title>       Senate set for Sept 15 cloture vote on Digital Asset Market Clarity Act, which would divide jurisdiction between the SEC and CFTC.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       BlackRock launches Open Issuance letting enterprises mint stablecoins backed by reserves held at BlackRock, Fidelity, and Superstate.</title>
+      <title>       Liquid Network Bitcoin sidechain lost $320M in Sept 6 exploit; attackers took roughly 4,000 of 4,200 BTC held in platform wallets.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       SEC submits revised crypto custody rule to White House OMB to qualify banks and trust companies as custodians for registered advisers.</title>
+      <title>       Treasury proposed rules Aug 18 defining stablecoin issuance and sales in the US under the GENIUS Act; comment period closes Oct 19.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       BlackRock, Coinbase, Ripple, and Mastercard join to launch OUSD open-standard dollar stablecoin with a multi-firm financial coalition.</title>
+      <title>       Morgan Stanley listed MSBT on NYSE Arca -- first bank-issued spot Bitcoin ETF -- at a 0.14% fee, drawing $34M on launch day.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC staff issues no-action letter allowing tokenized money market fund shares to be custodied by an affiliated transfer agent.</title>
+      <title>       SEC proposed Regulation Crypto Assets in August 2026 to create a formal framework for investment contracts involving digital assets.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       OCC confirms national banks may pursue crypto custody, stablecoin issuance, and distributed ledger activities without prior approval.</title>
+      <title>       OCC granted conditional national bank charters on Sept 2 to OpenReserve Bank and Revolut Bank US to issue and distribute stablecoins.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       EU MiCA transitional period ended July 1; crypto-asset service providers without full authorization must now cease EU operations.</title>
+      <title>       UK FCA opened its crypto firm licensing regime in September 2026, providing digital asset businesses a formal authorization pathway.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       EU Transfer of Funds Regulation drops Travel Rule threshold to zero, requiring compliance for all stablecoin transfers regardless of size.</title>
+      <title>       Block filed Sept 8 for an OCC national trust bank charter to provide bitcoin and stablecoin custody under federal bank supervision.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       US Clarity Act crypto market structure bill faces critical September congressional vote as SEC and CFTC reform negotiations continue.</title>
+      <title>       EU Transfer of Funds Regulation now applies Travel Rule with zero threshold, requiring full sender and recipient data on all transfers.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       Goldman Sachs, Citi, and Bank of America are among 21 global firms planning a joint USD stablecoin targeted for launch in H1 2027.</title>
+      <title>       Morgan Stanley applied to OCC for a National Trust Bank Charter to custody digital assets and offer staking services in-house.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       Institutional Bitcoin ETF holdings rose 7.5% to 535,723 BTC in Q2 2026, growing despite a 14.2% decline in Bitcoin's price.</title>
+      <title>       BlackRock and Coinbase finalized an 18% staking revenue split for the iShares Ethereum ETF under an updated fund prospectus.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       DTC's blockchain tokenization pilot, authorized by a December 2025 SEC no-action letter, is set to launch in H2 2026.</title>
+      <title>       SEC approved generic listing standards on major exchanges cutting spot commodity ETF approval time from 240 days to 75 days.</title>
       <guid isPermaLink="false">news-12</guid>
-    </item>
-    <item>
-      <title>       A five-year-old Coldcard firmware flaw exploited since July 30 has drained over $130M from hardware wallet users' funds.</title>
-      <guid isPermaLink="false">news-13</guid>
     </item>
   </channel>
 </rss>
