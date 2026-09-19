@@ -8,52 +8,61 @@
     <ttl>30</ttl>
 
     <item>
-      <title>       CFTC submitted proposed crypto asset rules to the White House for review after the Clarity Act stalled in the Senate</title>
+      <title>       Liquid Network lost $320M in BTC via Elements software bug; attacker returned $268M and retained $47M.</title>
       <guid isPermaLink="false">news-01</guid>
     </item>
     <item>
-      <title>       ECB President Lagarde blocked Binance's EU MiCA license; ESMA advised EU member states to reject the exchange's applications</title>
+      <title>       Circle launched Arc mainnet with BlackRock, DTCC, Visa, and Mastercard as founding validators; 10B ARC tokens minted.</title>
       <guid isPermaLink="false">news-02</guid>
     </item>
     <item>
-      <title>       Coinbase received conditional OCC approval to operate as a federal trust bank, expanding its custody and payment capabilities</title>
+      <title>       21 major banks including Bank of America, Citi, Goldman Sachs, and Fidelity announced a jointly-issued USD stablecoin for H1 2027.</title>
       <guid isPermaLink="false">news-03</guid>
     </item>
     <item>
-      <title>       Coinbase partnered with Stablecore to deliver crypto trading, custody, and stablecoins to more than 3,000 U.S. banks</title>
+      <title>       Deutsche Bank announced regulated BTC and ETH custody for European institutional clients by year-end, pending BaFin approval.</title>
       <guid isPermaLink="false">news-04</guid>
     </item>
     <item>
-      <title>       SEC issued a five-year exemption allowing licensed venues to list and trade tokenized securities without exchange registration</title>
+      <title>       SEC proposed Regulation Crypto Assets to create the first tailored offering framework for crypto investment contracts.</title>
       <guid isPermaLink="false">news-05</guid>
     </item>
     <item>
-      <title>       Coinbase and Moov launched stablecoin payment infrastructure covering more than 1,000 U.S. community banks and credit unions</title>
+      <title>       CFTC submitted crypto markets and transactions rulemaking to White House for review after Senate failed to advance the Clarity Act.</title>
       <guid isPermaLink="false">news-06</guid>
     </item>
     <item>
-      <title>       SEC began formal rulemaking to extend U.S. equity trading hours toward 24/7 operations, aligning with crypto market standards</title>
+      <title>       Coinbase partnered with Stablecore to offer crypto custody, trading, and stablecoin payments to 3,000+ community banks and credit unions.</title>
       <guid isPermaLink="false">news-07</guid>
     </item>
     <item>
-      <title>       JPMorgan filed to offer structured notes providing up to 1.5x leveraged exposure to BlackRock's iShares Bitcoin Trust</title>
+      <title>       Block filed for an OCC national trust bank charter for digital asset custody and stablecoin services.</title>
       <guid isPermaLink="false">news-08</guid>
     </item>
     <item>
-      <title>       The U.S. Senate voted to block the Clarity Act; the CFTC and SEC will pursue independent crypto market structure rulemaking</title>
+      <title>       SEC proposed modernizing transfer agent rules to permit distributed ledger technology as the official securities ownership record.</title>
       <guid isPermaLink="false">news-09</guid>
     </item>
     <item>
-      <title>       BlackRock, JPMorgan, and 33 other institutions launched products and services on Ethereum, advancing real-world asset tokenization</title>
+      <title>       SEC and CFTC issued joint interpretation clarifying how federal securities and commodities laws apply to crypto assets.</title>
       <guid isPermaLink="false">news-10</guid>
     </item>
     <item>
-      <title>       SEC proposed Regulation Crypto Assets, creating a registration and conduct framework for digital asset investment contracts</title>
+      <title>       Spot ether ETFs attracted $9.3 billion in net inflows over July and August as institutional allocations to Ethereum funds accelerated.</title>
       <guid isPermaLink="false">news-11</guid>
     </item>
     <item>
-      <title>       SEC proposed rules allowing registered transfer agents to use distributed ledger technology for securities ownership recordkeeping</title>
+      <title>       JPMorgan is exploring launching a proprietary USD stablecoin for institutional payments and settlement.</title>
       <guid isPermaLink="false">news-12</guid>
     </item>
+    <item>
+      <title>       Attackers stole more than $116 million in bitcoin by exploiting a firmware vulnerability in Coldcard hardware wallets.</title>
+      <guid isPermaLink="false">news-13</guid>
+    </item>
+    <item>
+      <title>       EU MiCA transitional period expired July 1, requiring all crypto-asset service providers to hold full authorization to operate in the bloc.</title>
+      <guid isPermaLink="false">news-14</guid>
+    </item>
+
   </channel>
 </rss>
