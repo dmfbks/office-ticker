@@ -133,4 +133,4 @@ def main() -> None:
 if __name__ == '__main__':
     main()
 
-# last-nudged: 2026-10-04T12:13:05Z (staleness-watchdog)
+# last-nudged: 2026-10-04T17:26:03Z (staleness-watchdog)
