@@ -192,8 +192,9 @@
       for (const r of HOLIDAY_RANGES) {
         if (key >= r.start && key <= r.end) return r.greeting;
       }
-      const wd = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()];
-      return 'Happy ' + wd + '!';
+      return new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Jerusalem', month: 'short', day: 'numeric', year: 'numeric'
+      }).format(d);
     }
 
     // ===== Build brand corner (if needed) =====
