@@ -287,7 +287,7 @@
       return brand;
     }
 
-    // Compute the time + weekday in the configured timezone (default Asia/Jerusalem)
+    // Compute the time + date in the configured timezone (default Asia/Jerusalem)
     // so the display doesn't depend on the rendering device's system clock.
     function updateClock() {
       const greetingEl = document.getElementById('greeting');
@@ -295,21 +295,20 @@
       const tz = window._TZ;
       const now = new Date();
       try {
-        const dayFmt  = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'long' });
+        const dateFmt = new Intl.DateTimeFormat('en-US', { timeZone: tz, month: 'short', day: 'numeric', year: 'numeric' });
         const timeFmt = new Intl.DateTimeFormat('en-US', {
           timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false,
         });
-        const dayName = dayFmt.format(now);
+        const dateStr = dateFmt.format(now);
         const parts = timeFmt.formatToParts(now);
         const hh = (parts.find(function (p) { return p.type === 'hour';   }) || {}).value || '00';
         const mm = (parts.find(function (p) { return p.type === 'minute'; }) || {}).value || '00';
-        greetingEl.textContent = 'Happy ' + dayName + '!';
+        greetingEl.textContent = dateStr;
         document.getElementById('time-h').textContent = (hh === '24') ? '00' : hh;
         document.getElementById('time-m').textContent = mm;
       } catch (e) {
         // Fall back to device-local time if Intl chokes on the timezone string
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        greetingEl.textContent = 'Happy ' + days[now.getDay()] + '!';
+        greetingEl.textContent = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         document.getElementById('time-h').textContent = String(now.getHours()).padStart(2, '0');
         document.getElementById('time-m').textContent = String(now.getMinutes()).padStart(2, '0');
       }
