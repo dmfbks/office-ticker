@@ -1,10 +1,12 @@
 name: Staleness check
 
-# Runs hourly. Reads the `_updated_at` timestamps on crypto.json + indices.json
-# from the feed branch. If either is stale beyond its threshold, pushes a no-op
-# comment-only change to fetch-crypto.py + fetch-indices.py on main — that push
-# matches the path filter on refresh-crypto.yml and refresh-indices.yml, which
-# revives them.
+# Runs 3x/hour. Reads the `_updated_at` timestamps on crypto.json + indices.json
+# from the feed branch. If either is stale beyond its threshold,
+# dispatches refresh-crypto.yml and refresh-indices.yml directly.
+#
+# Note: a previous version nudged via a commit to main, but pushes made with the
+# built-in GITHUB_TOKEN never trigger other workflows, so it revived nothing.
+# workflow_dispatch is the documented exception.
 #
 # Why this exists: GitHub Actions free-tier scheduled workflows are silently
 # skipped during high-load windows on github.com. The 2-min crypto cron and
@@ -13,11 +15,12 @@ name: Staleness check
 
 on:
   schedule:
-    - cron: '7 * * * *'   # every hour at HH:07 (offset from the 2-min/10-min jobs)
+    - cron: '7,27,47 * * * *'   # 3x/hour, offset from the 2-min/10-min jobs (this cron is throttled too)
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  actions: write
 
 concurrency:
   group: staleness-check
@@ -73,40 +76,10 @@ jobs:
               f.write(f"needs_nudge={'true' if needs_nudge else 'false'}\n")
           PY
 
-      - name: Checkout main (only if a nudge is needed)
+      - name: Dispatch refresh workflows
         if: steps.inspect.outputs.needs_nudge == 'true'
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          path: main_checkout
-
-      - name: Nudge main to revive refresh workflows
-        if: steps.inspect.outputs.needs_nudge == 'true'
-        working-directory: main_checkout
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          # Pass the timestamp via env var so the python heredoc can be quoted
-          # ('PY') — safer pattern (no shell expansion inside the heredoc) even
-          # though this workflow has no untrusted inputs.
-          export NUDGE_TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          python3 <<'PY'
-          import os, re
-          ts = os.environ['NUDGE_TS']
-          line = f"# last-nudged: {ts} (staleness-watchdog)\n"
-          for f in ('fetch-crypto.py', 'fetch-indices.py'):
-              with open(f) as fp: s = fp.read()
-              if '# last-nudged:' in s:
-                  s = re.sub(r'# last-nudged: .*\n', line, s)
-              else:
-                  s = s.rstrip() + '\n\n' + line
-              with open(f, 'w') as fp: fp.write(s)
-          PY
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add fetch-crypto.py fetch-indices.py
-          if git diff --staged --quiet; then
-            echo "Nothing to commit (files already at current timestamp). Stale data may indicate a deeper issue."
-          else
-            git commit -m "Auto-nudge: revive stale refresh workflows [watchdog]"
-            git push origin main
-            echo "Pushed nudge to main — path filter should now retrigger refresh-crypto + refresh-indices."
-          fi
+          gh workflow run refresh-crypto.yml --repo "$GITHUB_REPOSITORY" --ref main
+          gh workflow run refresh-indices.yml --repo "$GITHUB_REPOSITORY" --ref main
